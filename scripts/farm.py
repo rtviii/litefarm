@@ -87,7 +87,7 @@ def get_farm_locs(farm_id:str)->List:
         if location_categories[type] ==  'point':
             farm_objects.append({
                 "type"  : type,
-                "coords": point                })
+                "coords": [ point ]                })
         
     print(farm_objects)
     return farm_objects
@@ -95,12 +95,12 @@ def get_farm_locs(farm_id:str)->List:
 # ex. farm_id = "094a2776-3109-11ec-ad47-0242ac130002"
 
 farm_id = sys.argv[1]
-
 r       = get_farm_locs(farm_id)
 outpath = f"/home/rxz/dev/litefarm/locations/locations_{farm_id}.json"
 
-with open(outpath, 'w') as outfile:
-    json.dump(r, outfile)
+if not os.path.exists(outpath):
+    with open(outpath, 'w') as outfile:
+        json.dump(r, outfile)
 
 
 

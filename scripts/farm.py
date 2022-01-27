@@ -1,3 +1,4 @@
+from copyreg import pickle
 import os
 from pprint import pprint
 import sys
@@ -59,7 +60,7 @@ location_categories: dict = {
 }
 
 farmid = sys.argv[1]
-def get_farm_locs(farm_id:str):
+def get_farm_locs(farm_id:str)->List:
     CUR.execute("""SELECT fig.type, area.grid_points, ln.line_points , pt.point
     FROM "userFarm" ufarm
     JOIN  "location" loc ON ufarm.farm_id    = loc.farm_id
@@ -69,37 +70,37 @@ def get_farm_locs(farm_id:str):
     FULL  JOIN "point" pt  on pt.figure_id   = fig.figure_id 
     where ufarm.farm_id='%s'""" % farm_id)
 
-    objects      = CUR.fetchall()
+    resp      = CUR.fetchall()
     farm_objects = []
-    for datum in objects:
-        (type,grid_points,line_points, point) =datum
-        coords = []
-        if location_categories[type] ==  'area':
-            coords = grid_points
-            try:
-                farm_objects[type].append(Polygon([*map(lambda i : (i['lng'],i['lat'] ), coords)]))
-            except:
-                ...
-        elif location_categories[type] ==  'line':
-            coords = line_points
-            try:
-                farm_objects[type].append(LineString([*map(lambda i : (i['lng'],i['lat'] ), coords)]))
-            except:
-                ...
-        if location_categories[type] ==  'point':
-            x = point['lng']
-            y = point['lat']
-            try:
-                farm_objects.append(Point(x,y))
-            except:
-                ...
-    print(farm_objects)
 
+    for datum in resp:
+        (type,grid_points,line_points, point) =datum
+        if location_categories[type] ==  'area':
+            farm_objects.append({
+                "type"  : type,
+                "coords": grid_points})
+        elif location_categories[type] ==  'line':
+            farm_objects.append({
+            "type"  : type,
+            "coords": line_points
+            })
+        if location_categories[type] ==  'point':
+            farm_objects.append({
+                "type"  : type,
+                "coords": point                })
+        
+    print(farm_objects)
+    return farm_objects
 
 # ex. farm_id = "094a2776-3109-11ec-ad47-0242ac130002"
-farm_id = sys.argv[1]
-get_farm_locs(farm_id)
 
+farm_id = sys.argv[1]
+
+r       = get_farm_locs(farm_id)
+outpath = f"/home/rxz/dev/litefarm/locations/locations_{farm_id}.json"
+
+with open(outpath, 'w') as outfile:
+    json.dump(r, outfile)
 
 
 

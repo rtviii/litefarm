@@ -42,7 +42,8 @@ for datum in data:
     if datum['type'] not in farm_objects:
         farm_objects[datum['type']]=[]
     if location_categories[ datum['type'] ] ==  'area':
-        coords = datum['grid_points']
+        print()
+        coords = datum['coords']
         try:
             farm_objects[datum['type']].append(Polygon([*map(lambda i : (i['lng'],i['lat'] ), coords)]))
         except:

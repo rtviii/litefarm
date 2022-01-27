@@ -1,4 +1,5 @@
 from cmath import pi
+from enum import unique
 import os
 from pprint import pprint
 import sys
@@ -11,10 +12,9 @@ from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 import geopandas as gpd
 import numpy as np
-
 import json
 
-plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
+# plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
 
 location_categories: dict = {
 
@@ -41,19 +41,6 @@ location_categories: dict = {
     # -----
     "water_valve": "point",
     "gate"       : "point",
-}
-
-farmlocs_path = sys.argv[1]
-# farmlocs_path= "/home/rxz/dev/litefarm/locations/locations_26608372-54ab-11eb-9564-22000ab2b8c4.json"
-
-with open(farmlocs_path) as infile:
-    data = json.load(infile)
-
-m = Basemap(projection='sinu',lon_0=0,resolution='c')
-farm_objects = {
-    'barns' : [],
-    'fields': [],
-    "other" : []
 }
 
 def is_self_intersecting(E: List[Point])->bool:
@@ -91,65 +78,73 @@ def is_self_intersecting(E: List[Point])->bool:
     return False
 
 
-
-
-
-    
-
-
-areas = []
-for datum in data:
-    # print(datum['coords'])
-    if location_categories[ datum['type'] ] in  [ 'area', 'line' ] :
-        try:
-            poly = Polygon([*map(lambda i : np.round(m(i['lng'],i['lat'] ),4), datum['coords'])])
-            areas.append(poly)
-
-
-
-            points = [*map(lambda i : Point(np.round(m(i['lng'],i['lat'] ),4)), datum['coords'])]
-            print("Intersects self:" ,is_self_intersecting(points))
-            # print("line string:",LineString([points[0],points[1], points[2]]))
-
-            if datum['type'] == "field":
-                farm_objects["fields"].append(poly)
-            if datum['type'] == "barn":
-                farm_objects["barns"].append(poly)
-            else:
-                farm_objects['other'].append(poly)
-        except Exception:
-            # print("Not enough points to construct a polygon")
-            ...
-
 fig, ax = plt.subplots()
 ax.set_aspect('equal')
 # all_areas = [ *farm_objects['fields'], *farm_objects['barns'], *farm_objects['other'] ]
 
-
 # print(unary_union(farm_objects['barns']))
-
-geopandas.GeoSeries(unary_union(farm_objects['barns'])).plot(color=None,ax=ax,edgecolor='k',linewidth = 0.5, facecolor='none')
-print("Area of unary union:",unary_union(farm_objects['barns']).area)
-print("Area of unary union:",unary_union(farm_objects['fields']).area)
+# geopandas.GeoSeries(unary_union(farm_objects['barns'])).plot(color=None,ax=ax,edgecolor='k',linewidth = 0.5, facecolor='none')
+# print("Area of unary union:",unary_union(farm_objects['barns']).area)
+# print("Area of unary union:",unary_union(farm_objects['fields']).area)
 # print("Area of unary union:",unary_union(farm_objects['other']).area)
 
 
 # Filter duplicates:
-uniq_other = []
-for poly in farm_objects['other']:
-    if not any(p.equals(poly) for p in uniq_other):
-        uniq_other.append(poly)
 
-print("uniq", len(uniq_other))
+def farm_get_total_areas(farm_locations):
+    # farmlocs_path= "/home/rxz/dev/litefarm/locations/locations_26608372-54ab-11eb-9564-22000ab2b8c4.json"
+    m = Basemap(projection='sinu',lon_0=0,resolution='c')
+    farm_objects = {
+        'barns' : [],
+        'fields': [],
+        "other" : []
+    }
+    areas = []
+    selfintersecting = []
+    for datum in farm_locations:
+        if location_categories[ datum['type'] ] in  [ 'area', 'line' ] :
+            try:
+                pts = [*map(lambda i : Point(np.round(m(i['lng'],i['lat'] ),4)), datum['coords'])]                     
+                if is_self_intersecting(pts):
+                    poly = Polygon(pts)
+                    selfintersecting.append(poly)
+                    continue
+                poly = Polygon(pts)
+                areas.append(poly)
+                if datum['type'] == "field":
+                    farm_objects["fields"].append(poly)
+                if datum['type'] == "barn":
+                    farm_objects["barns"].append(poly)
+                else:
+                    farm_objects['other'].append(poly)
+            except Exception:
+                # print("Not enough points to construct a polygon")
+                ...
+    uniq_areas = []
+    for poly in areas:
+        if not any(p.equals(poly) for p in uniq_areas):
+            uniq_areas.append(poly)
 
-geopandas.GeoSeries(uniq_other).plot(color=None,ax=ax,edgecolor='k',linewidth = 0.5, facecolor='none')
-# geopandas.GeoSeries(farm_objects['other']).plot(color=None,ax=ax,edgecolor='k',linewidth = 0.5, facecolor='none')
-geopandas.GeoSeries(unary_union(farm_objects['fields'])).plot(color=None,ax=ax,edgecolor='green',linewidth = 0.5, facecolor='none')
-geopandas.GeoSeries(unary_union( farm_objects['barns'] )).plot(color=None,ax=ax,edgecolor='orange',linewidth = 0.5, facecolor='none')
+    return unary_union(areas).area
+
+farmlocs_path = sys.argv[1]
+# farm_get_total_areas(farmlocs_path)
+
+
+with open(farmlocs_path,'rb') as infile:
+    data = json.load(infile)
+
+with open(farmlocs_path,'w') as outfile:
+    json.dump({"locations":data,"total_area": farm_get_total_areas(data)}, outfile)
+
+
+# geopandas.GeoSeries(selfintersecting).plot(color=None,ax=ax,edgecolor='red',linewidth = 0.5, facecolor='none')
+# geopandas.GeoSeries(unary_union(farm_objects['other'])).plot(color=None,ax=ax,edgecolor='k',linewidth = 0.5, facecolor='none')
+# geopandas.GeoSeries(unary_union(farm_objects['fields'])).plot(color=None,ax=ax,edgecolor='green',linewidth = 0.5, facecolor='none')
+# geopandas.GeoSeries(unary_union(farm_objects['barns'] )).plot(color=None,ax=ax,edgecolor='orange',linewidth = 0.5, facecolor='none')
 # gpd.GeoSeries([ Point(14047665.998083537,5433135.0446869321) ]).plot(color='red',ax=ax,edgecolor='orange')
-plt.show()
+# plt.show()
 
-# print("area of fields is", np.round(fields.area, 3))
 
 # fields.plot(ax=ax,color=None,edgecolor='green',linewidth = 1, facecolor='green', alpha=0.2);
 # barns.plot(ax=ax,color=None,edgecolor='orange',linewidth = 1, facecolor='orange',alpha=0.2);
@@ -159,8 +154,6 @@ plt.show()
 # plt.savefig(f'{os.path.basename(farmlocs_path)[0:-5]}.png', bbox_inches='tight')
 
 
-
-# ---------------------------------- AREA CALCULATIONS as per https://gis.stackexchange.com/a/413350/162472
 #  b4c9ceb6-2e6e-11ea-9a69-22000b628b95 |  330
 #  0ad0ce20-3112-11ec-b36e-0242ac130002 |  248
 #  353f0b9e-5c6a-11ec-8795-0242ac130002 |  203

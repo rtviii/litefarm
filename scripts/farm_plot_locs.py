@@ -17,11 +17,8 @@ import json
 # plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
 
 location_categories: dict = {
-
-
-    # maps figure_type to location_category
-    # i.e. barn -> area etc.
-    "farm_site_boundary": "area",
+    # ------------------- Area
+   "farm_site_boundary": "area",
     "field"             : "area",
     "garden"            : "area",
     "barn"              : "area",
@@ -30,20 +27,24 @@ location_categories: dict = {
     "surface_water"     : "area",
     "residence"         : "area",
     "ceremonial_area"   : "area",
-
-    # ------------
+    # ------------ Line
       "fence"      : "line",
       "watercourse": "line",
       "buffer_zone": "line",
     # "road"       : "line",
     # "footpath"   : "line",
 
-    # -----
+    # ----- Point
+
     "water_valve": "point",
     "gate"       : "point",
 }
 
 def is_self_intersecting(E: List[Point])->bool:
+    """
+    E: a collection of shapely Point objects (projected from lat/lon via basemap)
+    True if a polygon has lines that intersect anywhere except endpoints else false.
+    """
     ll = len(E)
     if ll < 3:
         return False
@@ -72,44 +73,37 @@ def is_self_intersecting(E: List[Point])->bool:
                 if assume_is_edge == False:
                     return True
                 # print("Yep, one of the edges")
-
-
         i = i+1
     return False
 
-
-fig, ax = plt.subplots()
-ax.set_aspect('equal')
-# all_areas = [ *farm_objects['fields'], *farm_objects['barns'], *farm_objects['other'] ]
-
-# print(unary_union(farm_objects['barns']))
-# geopandas.GeoSeries(unary_union(farm_objects['barns'])).plot(color=None,ax=ax,edgecolor='k',linewidth = 0.5, facecolor='none')
-# print("Area of unary union:",unary_union(farm_objects['barns']).area)
-# print("Area of unary union:",unary_union(farm_objects['fields']).area)
-# print("Area of unary union:",unary_union(farm_objects['other']).area)
-
-
-# Filter duplicates:
-
-def farm_get_total_areas(farm_locations):
-    # farmlocs_path= "/home/rxz/dev/litefarm/locations/locations_26608372-54ab-11eb-9564-22000ab2b8c4.json"
-    m = Basemap(projection='sinu',lon_0=0,resolution='c')
+def farm_get_poly_objects(farm_locations:List[dict])->dict:
+    """Return a location_type->List[Polygon] mapping given @farm_locations of shape  
+    ```json
+    {
+        type: str 
+        lat: float
+        lng: float
+    }
+    ```
+    
+    """
+    # sinusoid projection for converting lon/lat to metric
+    m = Basemap(projection='sinu',lon_0=0,resolution='c') 
     farm_objects = {
         'barns' : [],
         'fields': [],
         "other" : []
     }
-    areas = []
-    selfintersecting = []
+    areas            = []
+    # selfintersecting = [] 
     for datum in farm_locations:
         if location_categories[ datum['type'] ] in  [ 'area', 'line' ] :
             try:
-                pts = [*map(lambda i : Point(np.round(m(i['lng'],i['lat'] ),4)), datum['coords'])]                     
-                if is_self_intersecting(pts):
-                    poly = Polygon(pts)
-                    selfintersecting.append(poly)
-                    continue
+                pts  = [*map(lambda i : Point(np.round(m(i['lng'],i['lat'] ),4)), datum['coords'])]
                 poly = Polygon(pts)
+                if is_self_intersecting(pts):
+                    # selfintersecting.append(poly)
+                    continue
                 areas.append(poly)
                 if datum['type'] == "field":
                     farm_objects["fields"].append(poly)
@@ -118,30 +112,77 @@ def farm_get_total_areas(farm_locations):
                 else:
                     farm_objects['other'].append(poly)
             except Exception:
-                # print("Not enough points to construct a polygon")
+                # print("Likely not enough points to construct a polygon")
                 ...
-    uniq_areas = []
+
+    uniq_areas = [] # Filter out duplicate areas
     for poly in areas:
         if not any(p.equals(poly) for p in uniq_areas):
             uniq_areas.append(poly)
 
-    return unary_union(areas).area
+def farm_get_total_areas(farm_locations:List[dict])->float:
+
+    """Return scalar area in square meters given a @farm_locations of shape  
+    ```json
+    {
+        type: str 
+        lat: float
+        lng: float
+    }
+    ```
+    
+    """
+    # sinusoid projection for converting lon/lat to metric
+    m = Basemap(projection='sinu',lon_0=0,resolution='c') 
+    farm_objects = {
+        'barns' : [],
+        'fields': [],
+        "other" : []
+    }
+    areas            = []
+    # selfintersecting = [] 
+    for datum in farm_locations:
+        if location_categories[ datum['type'] ] in  [ 'area', 'line' ] :
+            try:
+                pts  = [*map(lambda i : Point(np.round(m(i['lng'],i['lat'] ),4)), datum['coords'])]
+                poly = Polygon(pts)
+                if is_self_intersecting(pts):
+                    # selfintersecting.append(poly)
+                    continue
+                areas.append(poly)
+                if datum['type'] == "field":
+                    farm_objects["fields"].append(poly)
+                if datum['type'] == "barn":
+                    farm_objects["barns"].append(poly)
+                else:
+                    farm_objects['other'].append(poly)
+            except Exception:
+                # print("Likely not enough points to construct a polygon")
+                ...
+
+    uniq_areas = [] # Filter out duplicate areas
+    for poly in areas:
+        if not any(p.equals(poly) for p in uniq_areas):
+            uniq_areas.append(poly)
+
+    # unary_union dissolved overlapping polygons into one
+    return unary_union(uniq_areas).area 
 
 farmlocs_path = sys.argv[1]
-# farm_get_total_areas(farmlocs_path)
-
-
 with open(farmlocs_path,'rb') as infile:
     data = json.load(infile)
+print(data)
+print(farm_get_total_areas(data['locations']))
 
-with open(farmlocs_path,'w') as outfile:
-    json.dump({"locations":data,"total_area": farm_get_total_areas(data)}, outfile)
+
+fig, ax = plt.subplots()
+ax.set_aspect('equal')
 
 
-# geopandas.GeoSeries(selfintersecting).plot(color=None,ax=ax,edgecolor='red',linewidth = 0.5, facecolor='none')
-# geopandas.GeoSeries(unary_union(farm_objects['other'])).plot(color=None,ax=ax,edgecolor='k',linewidth = 0.5, facecolor='none')
-# geopandas.GeoSeries(unary_union(farm_objects['fields'])).plot(color=None,ax=ax,edgecolor='green',linewidth = 0.5, facecolor='none')
-# geopandas.GeoSeries(unary_union(farm_objects['barns'] )).plot(color=None,ax=ax,edgecolor='orange',linewidth = 0.5, facecolor='none')
+geopandas.GeoSeries(selfintersecting).plot(color=None,ax=ax,edgecolor='red',linewidth = 0.5, facecolor='none')
+geopandas.GeoSeries(unary_union(farm_objects['other'])).plot(color=None,ax=ax,edgecolor='k',linewidth = 0.5, facecolor='none')
+geopandas.GeoSeries(unary_union(farm_objects['fields'])).plot(color=None,ax=ax,edgecolor='green',linewidth = 0.5, facecolor='none')
+geopandas.GeoSeries(unary_union(farm_objects['barns'] )).plot(color=None,ax=ax,edgecolor='orange',linewidth = 0.5, facecolor='none')
 # gpd.GeoSeries([ Point(14047665.998083537,5433135.0446869321) ]).plot(color='red',ax=ax,edgecolor='orange')
 # plt.show()
 

@@ -5,9 +5,7 @@ import os
 from numpy import arange
 import seaborn as sns
 
-
 areas = []  #489 farms total
-
 for file in os.listdir('/home/rxz/dev/litefarm/locations'):
     with open("locations/"+file, 'rb') as infile:
         try:
@@ -16,6 +14,7 @@ for file in os.listdir('/home/rxz/dev/litefarm/locations'):
         except:
             # print("X")
             ...
+
 pprint([* map(lambda k: k/10**4,areas[10:450]) ])
 areas.sort()  
 sns.displot([* map(lambda k: k/10**4,areas[10:475]) ], bins=20)

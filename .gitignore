@@ -1,3 +1,5 @@
 *venv
 locations
 **/*.png
+**/*.json
+**/*.farm

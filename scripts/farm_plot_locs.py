@@ -3,7 +3,7 @@ from enum import unique
 import os
 from pprint import pprint
 import sys
-from typing import List
+from typing import List, Mapping
 import geopandas
 import matplotlib.pyplot as plt
 from shapely.geometry import Polygon, LineString, Point, MultiPolygon
@@ -76,7 +76,7 @@ def is_self_intersecting(E: List[Point])->bool:
         i = i+1
     return False
 
-def farm_get_poly_objects(farm_locations:List[dict])->dict:
+def farm_get_objects(farm_locations:List[dict])->dict:
     """Return a location_type->List[Polygon] mapping given @farm_locations of shape  
     ```json
     {
@@ -106,11 +106,14 @@ def farm_get_poly_objects(farm_locations:List[dict])->dict:
                     continue
                 areas.append(poly)
                 if datum['type'] == "field":
-                    farm_objects["fields"].append(poly)
+                    if not any(p.equals(poly) for p in farm_objects['fields']):
+                        farm_objects['fields'].append(poly)
                 if datum['type'] == "barn":
-                    farm_objects["barns"].append(poly)
+                    if not any(p.equals(poly) for p in farm_objects['barns']):
+                        farm_objects['barns'].append(poly)
                 else:
-                    farm_objects['other'].append(poly)
+                    if not any(p.equals(poly) for p in farm_objects['other']):
+                        farm_objects['other'].append(poly)
             except Exception:
                 # print("Likely not enough points to construct a polygon")
                 ...
@@ -119,89 +122,62 @@ def farm_get_poly_objects(farm_locations:List[dict])->dict:
     for poly in areas:
         if not any(p.equals(poly) for p in uniq_areas):
             uniq_areas.append(poly)
+    return farm_objects
 
-def farm_get_total_areas(farm_locations:List[dict])->float:
-
-    """Return scalar area in square meters given a @farm_locations of shape  
-    ```json
-    {
-        type: str 
-        lat: float
-        lng: float
-    }
-    ```
-    
-    """
-    # sinusoid projection for converting lon/lat to metric
-    m = Basemap(projection='sinu',lon_0=0,resolution='c') 
-    farm_objects = {
-        'barns' : [],
-        'fields': [],
-        "other" : []
-    }
-    areas            = []
-    # selfintersecting = [] 
-    for datum in farm_locations:
-        if location_categories[ datum['type'] ] in  [ 'area', 'line' ] :
-            try:
-                pts  = [*map(lambda i : Point(np.round(m(i['lng'],i['lat'] ),4)), datum['coords'])]
-                poly = Polygon(pts)
-                if is_self_intersecting(pts):
-                    # selfintersecting.append(poly)
-                    continue
-                areas.append(poly)
-                if datum['type'] == "field":
-                    farm_objects["fields"].append(poly)
-                if datum['type'] == "barn":
-                    farm_objects["barns"].append(poly)
-                else:
-                    farm_objects['other'].append(poly)
-            except Exception:
-                # print("Likely not enough points to construct a polygon")
-                ...
-
-    uniq_areas = [] # Filter out duplicate areas
-    for poly in areas:
-        if not any(p.equals(poly) for p in uniq_areas):
-            uniq_areas.append(poly)
-
+def farm_get_area(objects)->float:
+    """Return scalar area in square meters given a list of polygons (possibly overlapping)"""
     # unary_union dissolved overlapping polygons into one
-    return unary_union(uniq_areas).area 
+
+    if type(objects)==dict:
+        all_poly = [];[all_poly.extend(list_of_poly) for list_of_poly in objects.values()]
+        return unary_union(all_poly).area
+    elif type(objects)==list:
+        return unary_union(farm_get_objects).area 
+    else:
+        print("Pass either a list or dict with farm location polygons")
+        exit(1)
+
+
+
+def plot_farm(
+    farm_objects:Mapping[str, List[Polygon]], 
+    **kwargs):
+    """
+    --merged to display unary_union
+    """
+
+    # ideally this bit is a comprehension over all types of loc.. gardens etc
+
+    other  = geopandas.GeoSeries(farm_objects['other'])
+    fields = geopandas.GeoSeries(farm_objects['fields'])
+    barns  = geopandas.GeoSeries(farm_objects['barns'])
+
+    if kwargs.pop('merged', False):
+        other  = geopandas.GeoSeries(unary_union(farm_objects['other']))
+        fields = geopandas.GeoSeries(unary_union(farm_objects['fields']))
+        barns  = geopandas.GeoSeries(unary_union(farm_objects['barns'] ))
+
+
+    fig, ax = plt.subplots()
+    ax.set_aspect('equal')
+
+    other.plot(color=None,ax=ax,edgecolor='k',linewidth = 0.5, facecolor='none')
+    fields.plot(color=None,ax=ax,edgecolor='green',linewidth = 0.5, facecolor='none')
+    barns.plot(color=None,ax=ax,edgecolor='orange',linewidth = 0.5, facecolor='none')
+
+    if kwargs.pop('savepath', False):
+        plt.savefig(kwargs['savepath'], bbox_inches='tight')
+    plt.show()
+
+
+
 
 farmlocs_path = sys.argv[1]
 with open(farmlocs_path,'rb') as infile:
     data = json.load(infile)
-print(data)
-print(farm_get_total_areas(data['locations']))
+objs = farm_get_objects(data['locations'])
+pprint(objs)
 
 
-fig, ax = plt.subplots()
-ax.set_aspect('equal')
-
-
-geopandas.GeoSeries(selfintersecting).plot(color=None,ax=ax,edgecolor='red',linewidth = 0.5, facecolor='none')
-geopandas.GeoSeries(unary_union(farm_objects['other'])).plot(color=None,ax=ax,edgecolor='k',linewidth = 0.5, facecolor='none')
-geopandas.GeoSeries(unary_union(farm_objects['fields'])).plot(color=None,ax=ax,edgecolor='green',linewidth = 0.5, facecolor='none')
-geopandas.GeoSeries(unary_union(farm_objects['barns'] )).plot(color=None,ax=ax,edgecolor='orange',linewidth = 0.5, facecolor='none')
-# gpd.GeoSeries([ Point(14047665.998083537,5433135.0446869321) ]).plot(color='red',ax=ax,edgecolor='orange')
-# plt.show()
-
-
-# fields.plot(ax=ax,color=None,edgecolor='green',linewidth = 1, facecolor='green', alpha=0.2);
-# barns.plot(ax=ax,color=None,edgecolor='orange',linewidth = 1, facecolor='orange',alpha=0.2);
-# other.plot(color=None,ax=ax,edgecolor='k',linewidth = 0.5, facecolor='none');
-
-# print("Showing ", sys.argv[1])
-# plt.savefig(f'{os.path.basename(farmlocs_path)[0:-5]}.png', bbox_inches='tight')
-
-
-#  b4c9ceb6-2e6e-11ea-9a69-22000b628b95 |  330
-#  0ad0ce20-3112-11ec-b36e-0242ac130002 |  248
-#  353f0b9e-5c6a-11ec-8795-0242ac130002 |  203
-#  2d930078-31a7-11ec-b8f3-0242ac130002 |  180
-#  094a2776-3109-11ec-ad47-0242ac130002 |  159
-#  06f0c1c8-329f-11ec-a4ff-0242ac130002 |  136
-#  26608372-54ab-11eb-9564-22000ab2b8c4 |  135
-#  ca713386-3050-11ec-b23b-0242ac130002 |  120
-
-
+plot_farm(objs)
+print(farm_get_area(objs))

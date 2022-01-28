@@ -152,7 +152,7 @@ def plot_farm(
     fields = geopandas.GeoSeries(farm_objects['fields'])
     barns  = geopandas.GeoSeries(farm_objects['barns'])
 
-    if kwargs.pop('merged', False):
+    if kwargs.pop('merged'):
         other  = geopandas.GeoSeries(unary_union(farm_objects['other']))
         fields = geopandas.GeoSeries(unary_union(farm_objects['fields']))
         barns  = geopandas.GeoSeries(unary_union(farm_objects['barns'] ))
@@ -165,7 +165,7 @@ def plot_farm(
     fields.plot(color=None,ax=ax,edgecolor='green',linewidth = 0.5, facecolor='none')
     barns.plot(color=None,ax=ax,edgecolor='orange',linewidth = 0.5, facecolor='none')
 
-    if kwargs.pop('savepath', False):
+    if kwargs['savepath']:
         plt.savefig(kwargs['savepath'], bbox_inches='tight')
     plt.show()
 

@@ -4,3 +4,4 @@ locations
 **/*.json
 *.json
 **/*.farm
+notes.md

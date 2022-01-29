@@ -89,20 +89,25 @@ class Location:
       lng     : float
       lat     : float
 
-@dataclass
 class Farm:
     locations : dict
     total_area: float
     farm_id   : str
+    def __init__(self, farm_id:str) -> None:
+        d               = farm_profile(farm_id)
+
+        self.total_area = d['total_area']
+        self.locations  = d['locations']
+        self.farm_id    = farm_id
+
+    
 
     def plot_farm(
         self,
         **kwargs):
-
         """
         @merged=True to display unary_union
         """
-
         plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
         fig, ax = plt.subplots(figsize=(4,4))
         ax.set_aspect('equal')
@@ -124,7 +129,6 @@ class Farm:
             legendPatches.append(Patch(facecolor=LOCTYPES[loctype]['color'], label= loctype,))
         if kwargs.pop('savepath', False):
             plt.savefig(kwargs['savepath'], bbox_inches='tight')
-
 
         handles, _ = ax.get_legend_handles_labels()
         ax.legend(handles=[*handles,*legendPatches], loc='best')

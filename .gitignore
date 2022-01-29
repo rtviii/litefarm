@@ -6,4 +6,9 @@ locations
 **/*.farm
 notes.md
 resources
+resources/
 resources/*
+farms/*
+farms/
+farms
+*.pickle

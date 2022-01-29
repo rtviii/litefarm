@@ -143,13 +143,3 @@ def plot_farm(
 
 
 
-
-# # farmlocs_path = sys.argv[1]
-# with open(farmlocs_path,'rb') as infile:
-#     data = json.load(infile)
-# objs = farm_get_objects(data['locations'])
-# pprint(objs)
-
-
-# plot_farm(objs)
-# print(farm_get_area(objs))

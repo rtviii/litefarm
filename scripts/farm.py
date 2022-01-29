@@ -93,12 +93,10 @@ class Farm:
     locations : dict
     total_area: float
     farm_id   : str
-    def __init__(self, farm_id:str) -> None:
-        d               = farm_profile(farm_id)
-
+    def __init__(self, d:dict) -> None:
         self.total_area = d['total_area']
         self.locations  = d['locations']
-        self.farm_id    = farm_id
+        self.farm_id    = d['farm_id']
 
     
 

@@ -13,16 +13,16 @@
 
 -- Locations in a given farm
 
--- SELECT 
--- -- ufarm.farm_id, loc.location_id, 
--- fig.type, area.grid_points, ln.line_points , pt.point
--- FROM "userFarm" ufarm 
--- JOIN  "location" loc ON ufarm.farm_id    = loc.farm_id
--- JOIN  "figure" fig ON  fig.location_id   = loc.location_id
--- FULL  JOIN "area" area on area.figure_id = fig.figure_id
--- FULL  JOIN "line" ln  on ln.figure_id    = fig.figure_id
--- FULL  JOIN "point" pt  on pt.figure_id   = fig.figure_id
--- where ufarm.farm_id = 'ca713386-3050-11ec-b23b-0242ac130002'
+SELECT 
+-- ufarm.farm_id, loc.location_id, 
+fig.type,area.grid_points, ln.line_points , pt.point
+FROM "userFarm" ufarm 
+JOIN  "location" loc ON ufarm.farm_id    = loc.farm_id
+JOIN  "figure" fig ON  fig.location_id   = loc.location_id
+FULL  JOIN "area" area on area.figure_id = fig.figure_id
+FULL  JOIN "line" ln  on ln.figure_id    = fig.figure_id
+FULL  JOIN "point" pt  on pt.figure_id   = fig.figure_id
+where ufarm.farm_id = 'ca713386-3050-11ec-b23b-0242ac130002'
 
 -- [744bd3ec-1e2e-11eb-ae60-22000bb9251f]
 -- [1c0480ec-3054-11ec-be02-0242ac130002]
@@ -35,7 +35,3 @@
 -- [39bf12e0-de89-11eb-bcd8-0242ac120002]
 -- [348443ec-5f20-11eb-bd86-22000ab2b8c4]
 -- [9386af92-304e-11ec-b382-0242ac130002]
-
-
-select *, f.figure_id, l.location_id, a.grid_points from "location" l join "figure" f join "area" a on f.location_id = l.location_id 
-where l.location_id ='b2f37e30-d448-11eb-a89c-0242ac120002'

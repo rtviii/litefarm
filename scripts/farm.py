@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import pickle
 from dataclasses import dataclass
 from dacite import from_dict
 import geopandas as gpd
@@ -34,9 +35,9 @@ connection = psycopg2.connect(
 
 CUR = connection.cursor()
 
-
 def get_farm_locs(farm_id:str)->List:
-    CUR.execute("""SELECT fig.type, area.grid_points, ln.line_points , pt.point
+    CUR.execute("""
+    SELECT fig.type, area.grid_points, ln.line_points , pt.point
     FROM "userFarm" ufarm
     JOIN  "location" loc ON ufarm.farm_id    = loc.farm_id
     JOIN  "figure" fig ON  fig.location_id   = loc.location_id
@@ -56,32 +57,27 @@ def get_farm_locs(farm_id:str)->List:
                 "coords": grid_points
             })
 
-        elif LOCTYPES[_type]['loctype'] ==  'line':
+        elif LOCTYPES[_type]['loctype'] == 'line':
             farm_objects.append({
                 "type"  : _type,
                 "coords": line_points
             })
 
-        if LOCTYPES[_type]['loctype'] ==  'point':
+        elif LOCTYPES[_type]['loctype'] ==  'point':
             farm_objects.append({
                 "type"  : _type,
                 "coords": [ point ]                
             })
-
-    # print("return from get_farm_locs type", type(farm_objects))
     return farm_objects
 
 def farm_profile (farm_id:str)->dict:
     locations = get_farm_locs(farm_id)
     polygons  = locations_to_polygons(locations)
-
     return {
         "farm_id"   : farm_id,
         "locations" : polygons,
         "total_area": farm_get_area(polygons)
     }
-    
-
 
 @dataclass
 class Location: 
@@ -93,12 +89,16 @@ class Farm:
     locations : dict
     total_area: float
     farm_id   : str
-    def __init__(self, d:dict) -> None:
-        self.total_area = d['total_area']
-        self.locations  = d['locations']
-        self.farm_id    = d['farm_id']
+    def __init__(self, farm_id:str, pickled:dict={}) -> None:
 
-    
+        if pickled =={}:
+            D = farm_profile(farm_id)
+        else:
+            D = pickled
+        self.total_area = D['total_area']
+        self.locations  = D['locations']
+        self.farm_id    = D['farm_id']
+        pprint(D)
 
     def plot_farm(
         self,
@@ -133,6 +133,60 @@ class Farm:
         handles, _ = ax.get_legend_handles_labels()
         ax.legend(handles=[*handles,*legendPatches], loc='best')
         plt.show()
+
+# farms:List[Farm] = []
+
+# def farm_ids()->List[str]:
+#     with open("/home/rxz/dev/litefarm/resources/farm_ids.txt",'r', encoding='utf-8') as infile:
+#         lines = list(map(str.strip,infile.readlines()))
+#         return lines
+
+def load_farms()->List[Farm]:
+    farms=[]
+    for file in os.listdir('/home/rxz/dev/litefarm/farms/'):
+        print("Opening {}".format(file))
+        with open('/home/rxz/dev/litefarm/farms/'+file,'rb') as infile:
+            d = pickle.load(infile)
+            farm_id= d['farm_id']
+            farms.append(Farm(farm_id, pickled=d))
+    return farms
+
+# all = farm_ids()
+# for farm in all:
+#     print(farm)
+    # print(Farm(farm))
+
+fms = load_farms()
+
+
+filtered = [*filter(lambda f: f.total_area != 0, fms)]
+f:Farm;
+
+def alllocs(f:Farm):
+    o = []
+    for x in f.locations.values():
+        o.append(list(x)) 
+    return o
+
+filtered_loc = [*filter(lambda f: len( alllocs(f) ) > 5, fms)]
+print(len(fms))
+print(len(filtered))
+print(len(filtered_loc))
+
+
+
+# areas = []
+# for f in farms:
+#     if 'barn' in f.locations and 'field' in f.locations:
+#         dtm = {"barn_to_field": unary_union(f.locations['barn']).area/unary_union(f.locations['field']).area}
+#         areas.append(f.total_area)
+#     else:
+#         print("False")
+    
+
+    
+# sns.displot(areas)
+# plt.show()
 
 # afarm = farm_profile("094a2776-3109-11ec-ad47-0242ac130002")
 # farm  = from_dict(data_class=Farm, data=afarm)

@@ -12,7 +12,6 @@ for file in os.listdir('/home/rxz/dev/litefarm/locations'):
             S =json.load(infile)['total_area']
             areas.append(S)
         except:
-            # print("X")
             ...
 
 pprint([* map(lambda k: k/10**4,areas[10:450]) ])

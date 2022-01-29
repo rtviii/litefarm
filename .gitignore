@@ -5,3 +5,5 @@ locations
 *.json
 **/*.farm
 notes.md
+resources
+resources/*

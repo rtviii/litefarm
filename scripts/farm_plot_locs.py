@@ -1,43 +1,29 @@
-from cmath import pi
-from enum import unique
-import os
-from pprint import pprint
-import sys
 from typing import List, Mapping
 import geopandas
 import matplotlib.pyplot as plt
-from shapely.geometry import Polygon, LineString, Point, MultiPolygon
+from shapely.geometry import Polygon, LineString, Point 
 from shapely.ops import unary_union
 from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
-import geopandas as gpd
 import numpy as np
-import json
 
-# plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
-
-location_categories: dict = {
-    # ------------------- Area
-   "farm_site_boundary": "area",
-    "field"             : "area",
-    "garden"            : "area",
-    "barn"              : "area",
-    "greenhouse"        : "area",
-    "natural_area"      : "area",
-    "surface_water"     : "area",
-    "residence"         : "area",
-    "ceremonial_area"   : "area",
-    # ------------ Line
-      "fence"      : "line",
-      "watercourse": "line",
-      "buffer_zone": "line",
-    # "road"       : "line",
-    # "footpath"   : "line",
-
-    # ----- Point
-
-    "water_valve": "point",
-    "gate"       : "point",
+LOCTYPES: dict = {
+    # maps figure_type to location_category
+    # i.e. barn -> area etc.
+    "farm_site_boundary" : { "loctype":"area" , "color":"indigo"    },
+    "field"              : { "loctype":"area" , "color":"green"     },
+    "garden"             : { "loctype":"area" , "color":"indianred" },
+    "barn"               : { "loctype":"area" , "color":"orange"    },
+    "greenhouse"         : { "loctype":"area" , "color":"olive"     },
+    "natural_area"       : { "loctype":"area" , "color":"seagreen"  },
+    "surface_water"      : { "loctype":"area" , "color":"royalblue" },
+    "residence"          : { "loctype":"area" , "color":"peru"      },
+    "ceremonial_area"    : { "loctype":"area" , "color":"orchid"    },
+    "fence"              : { "loctype":"line" , "color":"yellow"    },
+    "watercourse"        : { "loctype":"line" , "color":"aquamarine"},
+    "buffer_zone"        : { "loctype":"line" , "color":"darkgrey"  },
+    "water_valve"        : { "loctype":"point", "color":"blue"      },
+    "gate"               : { "loctype":"point", "color":"khaki"     },
 }
 
 def is_self_intersecting(E: List[Point])->bool:
@@ -76,7 +62,7 @@ def is_self_intersecting(E: List[Point])->bool:
         i = i+1
     return False
 
-def farm_get_objects(farm_locations:List[dict])->dict:
+def locations_to_polygons(farm_locations:List[dict])->dict:
     """Return a location_type->List[Polygon] mapping given @farm_locations of shape  
     ```json
     {
@@ -90,54 +76,38 @@ def farm_get_objects(farm_locations:List[dict])->dict:
     # sinusoid projection for converting lon/lat to metric
     m = Basemap(projection='sinu',lon_0=0,resolution='c') 
     farm_objects = {
-        'barns' : [],
-        'fields': [],
-        "other" : []
     }
-    areas            = []
-    # selfintersecting = [] 
-    for datum in farm_locations:
-        if location_categories[ datum['type'] ] in  [ 'area', 'line' ] :
-            try:
-                pts  = [*map(lambda i : Point(np.round(m(i['lng'],i['lat'] ),4)), datum['coords'])]
-                poly = Polygon(pts)
-                if is_self_intersecting(pts):
-                    # selfintersecting.append(poly)
-                    continue
-                areas.append(poly)
-                if datum['type'] == "field":
-                    if not any(p.equals(poly) for p in farm_objects['fields']):
-                        farm_objects['fields'].append(poly)
-                if datum['type'] == "barn":
-                    if not any(p.equals(poly) for p in farm_objects['barns']):
-                        farm_objects['barns'].append(poly)
-                else:
-                    if not any(p.equals(poly) for p in farm_objects['other']):
-                        farm_objects['other'].append(poly)
-            except Exception:
-                # print("Likely not enough points to construct a polygon")
-                ...
 
-    uniq_areas = [] # Filter out duplicate areas
-    for poly in areas:
-        if not any(p.equals(poly) for p in uniq_areas):
-            uniq_areas.append(poly)
+    for datum in farm_locations:
+
+        try:
+            pts  = [*map(lambda i : Point(np.round(m(i['lng'],i['lat'] ),4)), datum['coords'])]
+            poly = Polygon(pts)
+            if is_self_intersecting(pts):
+                continue
+            loctype = datum['type']
+            if loctype not in farm_objects:
+                farm_objects[loctype] = []
+
+            if not any(p.equals(poly) for p in farm_objects[loctype]):
+                farm_objects[loctype].append(poly)
+
+        except Exception:
+            ...
+
     return farm_objects
 
 def farm_get_area(objects)->float:
     """Return scalar area in square meters given a list of polygons (possibly overlapping)"""
     # unary_union dissolved overlapping polygons into one
-
     if type(objects)==dict:
         all_poly = [];[all_poly.extend(list_of_poly) for list_of_poly in objects.values()]
         return unary_union(all_poly).area
     elif type(objects)==list:
-        return unary_union(farm_get_objects).area 
+        return unary_union(objects).area 
     else:
         print("Pass either a list or dict with farm location polygons")
         exit(1)
-
-
 
 def plot_farm(
     farm_objects:Mapping[str, List[Polygon]], 
@@ -158,26 +128,28 @@ def plot_farm(
         barns  = geopandas.GeoSeries(unary_union(farm_objects['barns'] ))
 
 
+    plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
     fig, ax = plt.subplots()
     ax.set_aspect('equal')
 
-    other.plot(color=None,ax=ax,edgecolor='k',linewidth = 0.5, facecolor='none')
-    fields.plot(color=None,ax=ax,edgecolor='green',linewidth = 0.5, facecolor='none')
-    barns.plot(color=None,ax=ax,edgecolor='orange',linewidth = 0.5, facecolor='none')
+    other .plot(color=None,ax=ax,edgecolor='k'     ,linewidth = 0.5, facecolor='none')
+    fields.plot(color=None,ax=ax,edgecolor='green' ,linewidth = 0.5, facecolor='none')
+    barns .plot(color=None,ax=ax,edgecolor='orange',linewidth = 0.5, facecolor='none')
 
     if kwargs['savepath']:
         plt.savefig(kwargs['savepath'], bbox_inches='tight')
+
     plt.show()
 
 
 
 
-farmlocs_path = sys.argv[1]
-with open(farmlocs_path,'rb') as infile:
-    data = json.load(infile)
-objs = farm_get_objects(data['locations'])
-pprint(objs)
+# # farmlocs_path = sys.argv[1]
+# with open(farmlocs_path,'rb') as infile:
+#     data = json.load(infile)
+# objs = farm_get_objects(data['locations'])
+# pprint(objs)
 
 
-plot_farm(objs)
-print(farm_get_area(objs))
+# plot_farm(objs)
+# print(farm_get_area(objs))

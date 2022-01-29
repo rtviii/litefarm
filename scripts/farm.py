@@ -114,8 +114,10 @@ class Farm:
         for kvp in self.locations.items():
             loctype  = kvp[0]
             polygons = kvp[1]
+
             if kwargs.pop('merged', False):
                 polygons = unary_union(polygons)
+
             gpd.GeoSeries(polygons).plot( 
                 color     = None,
                 ax        = ax,

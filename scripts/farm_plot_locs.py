@@ -19,9 +19,11 @@ LOCTYPES: dict = {
     "surface_water"      : { "loctype":"area" , "color":"royalblue" },
     "residence"          : { "loctype":"area" , "color":"peru"      },
     "ceremonial_area"    : { "loctype":"area" , "color":"orchid"    },
+
     "fence"              : { "loctype":"line" , "color":"yellow"    },
     "watercourse"        : { "loctype":"line" , "color":"aquamarine"},
     "buffer_zone"        : { "loctype":"line" , "color":"darkgrey"  },
+
     "water_valve"        : { "loctype":"point", "color":"blue"      },
     "gate"               : { "loctype":"point", "color":"khaki"     },
 }
@@ -61,7 +63,6 @@ def is_self_intersecting(E: List[Point])->bool:
                 # print("Yep, one of the edges")
         i = i+1
     return False
-
 def locations_to_polygons(farm_locations:List[dict])->dict:
     """Return a location_type->List[Polygon] mapping given @farm_locations of shape  
     ```json
@@ -96,7 +97,6 @@ def locations_to_polygons(farm_locations:List[dict])->dict:
             ...
 
     return farm_objects
-
 def farm_get_area(objects)->float:
     """Return scalar area in square meters given a list of polygons (possibly overlapping)"""
     # unary_union dissolved overlapping polygons into one
@@ -108,6 +108,7 @@ def farm_get_area(objects)->float:
     else:
         print("Pass either a list or dict with farm location polygons")
         exit(1)
+
 
 def plot_farm(
     farm_objects:Mapping[str, List[Polygon]], 

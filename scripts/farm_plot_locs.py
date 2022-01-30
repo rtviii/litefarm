@@ -92,7 +92,6 @@ def locations_to_polygons(farm_locations:List[dict])->dict:
 
             if not any(p.equals(poly) for p in farm_objects[loctype]):
                 farm_objects[loctype].append(poly)
-
         except Exception:
             ...
 

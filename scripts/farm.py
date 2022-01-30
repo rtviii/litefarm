@@ -169,10 +169,9 @@ def alllocs(f:Farm):
     return o
 
 filtered_loc = [*filter(lambda f: len( alllocs(f) ) > 5, fms)]
-print(len(fms))
-print(len(filtered))
-print(len(filtered_loc))
 
+filtered_loc.sort(key=int(len( Farm.locations )))
+print(filtered_loc)
 
 
 # areas = []

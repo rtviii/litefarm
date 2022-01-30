@@ -56,7 +56,7 @@ def is_self_intersecting(E: List[Point])->bool:
                 pt_of_intersection = against_ls.intersection(current_ls)
                 assume_is_edge = False
                 for pt in E:
-                    if pt.equals(pt_of_intersection):
+                    if pt.almost_equals(pt_of_intersection):
                         assume_is_edge = True
                 if assume_is_edge == False:
                     return True
@@ -92,6 +92,7 @@ def locations_to_polygons(farm_locations:List[dict])->dict:
 
             if not any(p.equals(poly) for p in farm_objects[loctype]):
                 farm_objects[loctype].append(poly)
+
         except Exception:
             ...
 
@@ -105,8 +106,9 @@ def farm_get_area(objects)->float:
     elif type(objects)==list:
         return unary_union(objects).area 
     else:
-        print("Pass either enter a list or dict with farm location polygons")
+        print("Pass either a list or dict with farm location polygons")
         exit(1)
+
 
 def plot_farm(
     farm_objects:Mapping[str, List[Polygon]], 
@@ -126,6 +128,7 @@ def plot_farm(
         fields = geopandas.GeoSeries(unary_union(farm_objects['fields']))
         barns  = geopandas.GeoSeries(unary_union(farm_objects['barns'] ))
 
+
     plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
     fig, ax = plt.subplots()
     ax.set_aspect('equal')
@@ -138,6 +141,5 @@ def plot_farm(
         plt.savefig(kwargs['savepath'], bbox_inches='tight')
 
     plt.show()
-
 
 

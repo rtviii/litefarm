@@ -27,6 +27,15 @@ from typing import List, Mapping
 from farm_plot_locs import farm_get_area, locations_to_polygons, LOCTYPES
 import argparse
 
+dotenv.load_dotenv('/home/rxz/.ssh/secrets.env')
+connection = psycopg2.connect(
+    dbname=os.environ.get("litefarm_db"),
+    user=os.environ.get("litefarm_usr"),
+    host=os.environ.get("litefarm_host"),
+    port=os.environ.get("litefarm_port"),
+    password=os.environ.get("litefarm_pwd"))
+CUR    = connection.cursor()
+
 
 
 def get_farm_locs(farm_id:str)->List:
@@ -83,16 +92,15 @@ class Farm:
     locations : dict
     total_area: float
     farm_id   : str
-    def __init__(self, farm_id:str, pickled:dict={}) -> None:
-
-        if pickled =={}:
+    def __init__(self, farm_id:str, pkl:dict={}) -> None:
+        if pkl =={}:
             D = farm_profile(farm_id)
         else:
-            D = pickled
+            D = pkl
+
         self.total_area = D['total_area']
         self.locations  = D['locations']
         self.farm_id    = D['farm_id']
-        pprint(D)
 
     def all_poly(self)->List[Polygon]:
         o = []
@@ -148,25 +156,15 @@ class Farm:
                     )
 
                 legendPatches.append(Patch(facecolor=LOCTYPES[loctype]['color'], label= loctype,))
-        legendPatches.append(Patch(facecolor=None, label= "Total Area: {} m^2".format(round(self.total_area/10**6, 3))))
+        legendPatches.append(Patch(facecolor=None, label= "Total Area: {} km^2".format(round(self.total_area/10**6, 3))))
         legendPatches.append(Patch(facecolor=None, label= "Number of Locations: {}".format(self.nloc())))
         handles, _ = ax.get_legend_handles_labels()
         ax.legend(handles=[*handles,*legendPatches], loc='best')
         plt.show()
 
-
-
 def main():
 
-    dotenv.load_dotenv('/home/rxz/.ssh/secrets.env')
-    connection = psycopg2.connect(
-        dbname=os.environ.get("litefarm_db"),
-        user=os.environ.get("litefarm_usr"),
-        host=os.environ.get("litefarm_host"),
-        port=os.environ.get("litefarm_port"),
-        password=os.environ.get("litefarm_pwd"))
 
-    CUR = connection.cursor()
     parser = argparse.ArgumentParser(description='Hola')
     parser.add_argument("-f", "--farm", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
     args    = parser.parse_args()

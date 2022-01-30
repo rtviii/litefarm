@@ -37,8 +37,6 @@ connection = psycopg2.connect(
     password=os.environ.get("litefarm_pwd"))
 CUR    = connection.cursor()
 
-
-
 def get_farm_locs(farm_id:str)->List:
     CUR.execute("""
     SELECT fig.type, area.grid_points, ln.line_points , pt.point
@@ -82,8 +80,6 @@ def farm_profile (farm_id:str)->dict:
         "locations" : polygons,
         "total_area": farm_get_area(polygons)
     }
-
-
 
 class Farm:
     locations : dict
@@ -173,82 +169,10 @@ def main():
     if args.farm:
         Farm(args.farm).plot_farm()                        
     if args.all:
-        print(load_all_farms())
+        f:Farm
+        print(load_all_farms().sort(key=lambda f: f.nloc()))
 
 main()
-
-
-# farms:List[Farm] = []
-
-# def farm_ids()->List[str]:
-#     with open("/home/rxz/dev/litefarm/resources/farm_ids.txt",'r', encoding='utf-8') as infile:
-#         lines = list(map(str.strip,infile.readlines()))
-#         return lines
-
-# def load_farms()->List[Farm]:
-#     farms=[]
-#     for file in os.listdir('/home/rxz/dev/litefarm/farms/'):
-#         print("Opening {}".format(file))
-#         with open('/home/rxz/dev/litefarm/farms/'+file,'rb') as infile:
-#             d = pickle.load(infile)
-#             farm_id= d['farm_id']
-#             farms.append(Farm(farm_id, pickled=d))
-#     return farms
-
-# fms      = load_farms()
-# filtered = [*filter(lambda f: f.total_area != 0, fms)]
-
-
-# sorted_by_loc = sorted(fms, key=lambda f: f.nloc())
-
-# for _ in sorted_by_loc:
-#     print(_.farm_id, " :", _.nloc() )
-
-
-
-# areas = []
-# for f in farms:
-#     if 'barn' in f.locations and 'field' in f.locations:
-#         dtm = {"barn_to_field": unary_union(f.locations['barn']).area/unary_union(f.locations['field']).area}
-#         areas.append(f.total_area)
-#     else:
-#         print("False")
-    
-
-    
-# sns.displot(areas)
-# plt.show()
-
-# afarm = farm_profile("094a2776-3109-11ec-ad47-0242ac130002")
-# farm  = from_dict(data_class=Farm, data=afarm)
-
-
-# farm.plot_farm(merged=True)
-
-	
-    # BY DISTINCT LOC
-# 744bd3ec-1e2e-11eb-ae60-22000bb9251f
-# 06f0c1c8-329f-11ec-a4ff-0242ac130002
-# 0ad0ce20-3112-11ec-b36e-0242ac130002
-# 094a2776-3109-11ec-ad47-0242ac130002
-# 26608372-54ab-11eb-9564-22000ab2b8c4
-# ca713386-3050-11ec-b23b-0242ac130002
-# 9386af92-304e-11ec-b382-0242ac130002
-# 20a48ab0-2084-11eb-acc0-22000bb9251f
-# 1c0480ec-3054-11ec-be02-0242ac130002
-# b4c9ceb6-2e6e-11ea-9a69-22000b628b95
-
-    # BY LOC
-# b4c9ceb6-2e6e-11ea-9a69-22000b628b95
-# 0ad0ce20-3112-11ec-b36e-0242ac130002
-# 353f0b9e-5c6a-11ec-8795-0242ac130002
-# 2d930078-31a7-11ec-b8f3-0242ac130002
-# 094a2776-3109-11ec-ad47-0242ac130002
-# 06f0c1c8-329f-11ec-a4ff-0242ac130002
-# 26608372-54ab-11eb-9564-22000ab2b8c4
-# ca713386-3050-11ec-b23b-0242ac130002
-# 744bd3ec-1e2e-11eb-ae60-22000bb9251f
-# 1c0480ec-3054-11ec-be02-0242ac130002
 
 def load_all_farms() ->List[ Farm ]:
     pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms/{}.pickle'.format(farm_id)

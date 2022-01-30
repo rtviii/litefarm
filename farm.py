@@ -16,6 +16,7 @@ import pickle
 from dataclasses import dataclass
 from dacite import from_dict
 import geopandas as gpd
+import numpy as np
 from shapely.ops import unary_union
 import os
 from pprint import pprint
@@ -25,6 +26,7 @@ import psycopg2
 import dotenv
 from typing import List, Mapping
 from scripts.farm_plot_locs import farm_get_area, locations_to_polygons, LOCTYPES
+import seaborn as sns
 import argparse
 
 
@@ -157,22 +159,9 @@ class Farm:
         legendPatches.append(Patch(facecolor=None, label= "Number of Locations: {}".format(self.nloc())))
         handles, _ = ax.get_legend_handles_labels()
         ax.legend(handles=[*handles,*legendPatches], loc='best')
+
         plt.show()
 
-def main():
-
-
-    parser = argparse.ArgumentParser(description='Hola')
-    parser.add_argument("-f", "--farm", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
-    parser.add_argument("--all", action='store_true')
-    args    = parser.parse_args()
-    if args.farm:
-        Farm(args.farm).plot_farm()                        
-    if args.all:
-        f:Farm
-        print(load_all_farms().sort(key=lambda f: f.nloc()))
-
-main()
 
 def load_all_farms() ->List[ Farm ]:
     pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms/{}.pickle'.format(farm_id)
@@ -187,10 +176,55 @@ def load_all_farms() ->List[ Farm ]:
         except FileNotFoundError:
             print("Missing: ", id)
             missingids.append(id)
-    print("Len aggregate : ",len(agg))
+    agg.sort(key=lambda f: f.nloc())
     return agg
 
 def farm_ids()->List[str]:
     with open("/home/rxz/dev/litefarm/resources/farm_ids.txt",'r', encoding='utf-8') as infile:
         lines = list(map(str.strip,infile.readlines()))
         return lines
+
+def locations_by_number()->dict:
+    d ={}
+    for i in load_all_farms():
+        for item in i.locations.items():
+            if item[0] not in d:
+                d[item[0]] =0
+            d[item[0]] +=len( item[1] )
+    return d
+
+def plot_locations_n_pie():
+    sns.set_theme()
+    nlocs= locations_by_number()
+    y         = np.array([ *nlocs.values() ])
+    labels =[]
+    for key in nlocs.keys():
+        labels.append( "{}: {}".format   ( str( key[0] ).upper() + key[1:],nlocs[key]) )   
+    plt.pie(y, 
+    labels = labels, 
+    # explode = myexplode,
+    textprops={'fontsize':14},
+    # labeldistance=0.8,
+    shadow = True)
+    plt.legend(title = "")
+    plt.show() 
+
+def main():
+    parser = argparse.ArgumentParser(description='Hola')
+    parser.add_argument("-f", "--farm", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
+    parser.add_argument("--all", action='store_true')
+    parser.add_argument("--pie", action='store_true')
+    parser.add_argument("--test", action='store_true')
+    args    = parser.parse_args()
+    if args.farm:
+        Farm(args.farm).plot_farm()                        
+    if args.all:
+        print("{} \t{} \t{}".format("Total Area", "# Locations", "Farm Id"))
+        for f in load_all_farms():
+            print("{} \t{} \t{}".format(f.total_area, f.nloc(), f.farm_id))
+    if args.pie:
+        plot_locations_n_pie()
+    if args.test:
+        pprint(list(set(farm_ids())))
+
+main()

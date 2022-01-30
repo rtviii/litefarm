@@ -1,5 +1,17 @@
 #!/usr/bin/python3
 
+def dir_path(string):
+    if string == "0":
+        return None
+    if os.path.isdir(string):
+        return string
+    else:
+        try:
+            if not os.path.exists(string):
+                os.makedirs(string, exist_ok=True)
+                return string
+        except:
+            raise PermissionError(string)
 import pickle
 from dataclasses import dataclass
 from dacite import from_dict
@@ -13,27 +25,9 @@ import psycopg2
 import dotenv
 from typing import List, Mapping
 from farm_plot_locs import farm_get_area, locations_to_polygons, LOCTYPES
+import argparse
 
-# """
-# The schema is roughly this:
-# farm_id   ----> List[locations]
-# figure_id <---> location_id
-#     location_id <- barn | field | garden       | greenhouse      | residence |
-#                         | gate  | buffer_zone  | ceremonial_area | farm_site_boundary (all 50 of them)
-#                         | fence | natural_area | surface_water   | water_valve | watercourse
 
-#     figure_id   <- area | line  | point
-# """
-
-dotenv.load_dotenv('/home/rxz/.ssh/secrets.env')
-connection = psycopg2.connect(
-    dbname=os.environ.get("litefarm_db"),
-    user=os.environ.get("litefarm_usr"),
-    host=os.environ.get("litefarm_host"),
-    port=os.environ.get("litefarm_port"),
-    password=os.environ.get("litefarm_pwd"))
-
-CUR = connection.cursor()
 
 def get_farm_locs(farm_id:str)->List:
     CUR.execute("""
@@ -100,14 +94,11 @@ class Farm:
         self.farm_id    = D['farm_id']
         pprint(D)
 
-
     def all_poly(self)->List[Polygon]:
         o = []
         for _ in self.locations.values():
             o.extend(list(_)) 
         return o
-
-        
 
     def nloc(self)->int:
         return len(self.all_poly())
@@ -162,6 +153,28 @@ class Farm:
         handles, _ = ax.get_legend_handles_labels()
         ax.legend(handles=[*handles,*legendPatches], loc='best')
         plt.show()
+
+
+
+def main():
+
+    dotenv.load_dotenv('/home/rxz/.ssh/secrets.env')
+    connection = psycopg2.connect(
+        dbname=os.environ.get("litefarm_db"),
+        user=os.environ.get("litefarm_usr"),
+        host=os.environ.get("litefarm_host"),
+        port=os.environ.get("litefarm_port"),
+        password=os.environ.get("litefarm_pwd"))
+
+    CUR = connection.cursor()
+    parser = argparse.ArgumentParser(description='Hola')
+    parser.add_argument("-f", "--farm", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
+    args    = parser.parse_args()
+    if args.farm:
+        Farm(args.farm).plot_farm()                        
+
+main()
+
 
 # farms:List[Farm] = []
 

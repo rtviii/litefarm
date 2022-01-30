@@ -72,5 +72,8 @@ def plot_locations_n_pie():
 
 
  
-# def areas_distribution():
+def areas_distribution():
+    ...
+def user_activity():
+    ...
     

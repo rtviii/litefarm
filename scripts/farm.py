@@ -27,6 +27,8 @@ from typing import List, Mapping
 from farm_plot_locs import farm_get_area, locations_to_polygons, LOCTYPES
 import argparse
 
+from scripts.analyses import load_all_farms
+
 dotenv.load_dotenv('/home/rxz/.ssh/secrets.env')
 connection = psycopg2.connect(
     dbname=os.environ.get("litefarm_db"),
@@ -108,6 +110,10 @@ class Farm:
             o.extend(list(_)) 
         return o
 
+    def get_owner(self):
+        CUR.execute("""
+        """)
+
     def nloc(self)->int:
         return len(self.all_poly())
 
@@ -167,9 +173,12 @@ def main():
 
     parser = argparse.ArgumentParser(description='Hola')
     parser.add_argument("-f", "--farm", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
+    parser.add_argument("--all", action='store_true')
     args    = parser.parse_args()
     if args.farm:
         Farm(args.farm).plot_farm()                        
+    if args.all:
+        print(load_all_farms())
 
 main()
 

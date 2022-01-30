@@ -162,7 +162,6 @@ class Farm:
 
         plt.show()
 
-
 def load_all_farms() ->List[ Farm ]:
     pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms/{}.pickle'.format(farm_id)
     pklopen = lambda path:  pickle.load(open(pklpath(path),'rb'));
@@ -218,6 +217,8 @@ def main():
     args    = parser.parse_args()
     if args.farm:
         Farm(args.farm).plot_farm()                        
+        pprint(Farm(args.farm).get_owner())
+
     if args.all:
         print("{} \t{} \t{}".format("Total Area", "# Locations", "Farm Id"))
         for f in load_all_farms():

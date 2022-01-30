@@ -1,8 +1,9 @@
 
 -- By farm-id
--- SELECT ufarm.farm_id, COUNT(loc.created_at) AS nloc
--- FROM "userFarm" ufarm JOIN "location" loc ON ufarm.farm_id=loc.farm_id 
--- GROUP BY   ufarm.farm_id ORDER BY nloc DESC
+SELECT ufarm.farm_id, COUNT(distinct loc.location_id) AS nloc
+FROM "userFarm" ufarm 
+JOIN "location" loc ON ufarm.farm_id=loc.farm_id 
+GROUP BY ufarm.farm_id ORDER BY nloc DESC
 
 -- By user
 -- SELECT   u.last_name , fnloc.nloc FROM "users" u join 
@@ -13,16 +14,15 @@
 
 -- Locations in a given farm
 
-SELECT 
--- ufarm.farm_id, loc.location_id, 
-fig.type,area.grid_points, ln.line_points , pt.point
-FROM "userFarm" ufarm 
-JOIN  "location" loc ON ufarm.farm_id    = loc.farm_id
-JOIN  "figure" fig ON  fig.location_id   = loc.location_id
-FULL  JOIN "area" area on area.figure_id = fig.figure_id
-FULL  JOIN "line" ln  on ln.figure_id    = fig.figure_id
-FULL  JOIN "point" pt  on pt.figure_id   = fig.figure_id
-where ufarm.farm_id = 'ca713386-3050-11ec-b23b-0242ac130002'
+-- SELECT 
+-- fig.type,area.grid_points, ln.line_points , pt.point
+-- FROM "userFarm" ufarm 
+-- JOIN  "location" loc ON ufarm.farm_id    = loc.farm_id
+-- JOIN  "figure" fig ON  fig.location_id   = loc.location_id
+-- FULL  JOIN "area" area on area.figure_id = fig.figure_id
+-- FULL  JOIN "line" ln  on ln.figure_id    = fig.figure_id
+-- FULL  JOIN "point" pt  on pt.figure_id   = fig.figure_id
+-- where ufarm.farm_id = 'ca713386-3050-11ec-b23b-0242ac130002'
 
 -- [744bd3ec-1e2e-11eb-ae60-22000bb9251f]
 -- [1c0480ec-3054-11ec-be02-0242ac130002]

@@ -100,36 +100,65 @@ class Farm:
         self.farm_id    = D['farm_id']
         pprint(D)
 
+
+    def all_poly(self)->List[Polygon]:
+        o = []
+        for _ in self.locations.values():
+            o.extend(list(_)) 
+        return o
+
+        
+
+    def nloc(self)->int:
+        return len(self.all_poly())
+
     def plot_farm(
         self,
         **kwargs):
         """
         @merged=True to display unary_union
         """
+
         plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
         fig, ax = plt.subplots(figsize=(4,4))
         ax.set_aspect('equal')
         legendPatches = [ ]
 
-        for kvp in self.locations.items():
-            loctype  = kvp[0]
-            polygons = kvp[1]
 
-            if kwargs.pop('merged', False):
-                polygons = unary_union(polygons)
+        # if kwargs.pop('savepath', False):
+        #     plt.savefig(kwargs['savepath'], bbox_inches='tight')
 
-            gpd.GeoSeries(polygons).plot( 
+        if 'merged' in kwargs:
+            
+            gpd.GeoSeries(unary_union(self.all_poly())).plot( 
                 color     = None,
                 ax        = ax,
-                edgecolor = LOCTYPES[loctype]['color'],
-                linewidth = 0.5,
-                facecolor = 'none',
+                edgecolor = "royalblue",
+                linewidth = 0.4,
+                facecolor = 'blue',
+                alpha     = 0.3
                 )
+        else: 
 
-            legendPatches.append(Patch(facecolor=LOCTYPES[loctype]['color'], label= loctype,))
-        if kwargs.pop('savepath', False):
-            plt.savefig(kwargs['savepath'], bbox_inches='tight')
+            for kvp in self.locations.items():
+                loctype  = kvp[0]
+                polygons = kvp[1]
 
+                if kwargs.pop('merged', False):
+                    print("GOT MERGED TRUE")
+                    polygons = unary_union(polygons)
+
+                gpd.GeoSeries(polygons).plot( 
+                    color     = None,
+                    ax        = ax,
+                    edgecolor = LOCTYPES[loctype]['color'],
+                    linewidth = 0.5,
+                    facecolor = 'none',
+                    )
+
+                legendPatches.append(Patch(facecolor=LOCTYPES[loctype]['color'], label= loctype,))
+        legendPatches.append(Patch(facecolor=None, label= "Total Area: {} m^2".format(round(self.total_area/10**6, 3))))
+        legendPatches.append(Patch(facecolor=None, label= "Number of Locations: {}".format(self.nloc())))
         handles, _ = ax.get_legend_handles_labels()
         ax.legend(handles=[*handles,*legendPatches], loc='best')
         plt.show()
@@ -141,37 +170,25 @@ class Farm:
 #         lines = list(map(str.strip,infile.readlines()))
 #         return lines
 
-def load_farms()->List[Farm]:
-    farms=[]
-    for file in os.listdir('/home/rxz/dev/litefarm/farms/'):
-        print("Opening {}".format(file))
-        with open('/home/rxz/dev/litefarm/farms/'+file,'rb') as infile:
-            d = pickle.load(infile)
-            farm_id= d['farm_id']
-            farms.append(Farm(farm_id, pickled=d))
-    return farms
+# def load_farms()->List[Farm]:
+#     farms=[]
+#     for file in os.listdir('/home/rxz/dev/litefarm/farms/'):
+#         print("Opening {}".format(file))
+#         with open('/home/rxz/dev/litefarm/farms/'+file,'rb') as infile:
+#             d = pickle.load(infile)
+#             farm_id= d['farm_id']
+#             farms.append(Farm(farm_id, pickled=d))
+#     return farms
 
-# all = farm_ids()
-# for farm in all:
-#     print(farm)
-    # print(Farm(farm))
-
-fms = load_farms()
+# fms      = load_farms()
+# filtered = [*filter(lambda f: f.total_area != 0, fms)]
 
 
-filtered = [*filter(lambda f: f.total_area != 0, fms)]
-f:Farm;
+# sorted_by_loc = sorted(fms, key=lambda f: f.nloc())
 
-def alllocs(f:Farm):
-    o = []
-    for x in f.locations.values():
-        o.append(list(x)) 
-    return o
+# for _ in sorted_by_loc:
+#     print(_.farm_id, " :", _.nloc() )
 
-filtered_loc = [*filter(lambda f: len( alllocs(f) ) > 5, fms)]
-
-filtered_loc.sort(key=int(len( Farm.locations )))
-print(filtered_loc)
 
 
 # areas = []
@@ -190,5 +207,30 @@ print(filtered_loc)
 # afarm = farm_profile("094a2776-3109-11ec-ad47-0242ac130002")
 # farm  = from_dict(data_class=Farm, data=afarm)
 
+
 # farm.plot_farm(merged=True)
 
+	
+    # BY DISTINCT LOC
+# 744bd3ec-1e2e-11eb-ae60-22000bb9251f
+# 06f0c1c8-329f-11ec-a4ff-0242ac130002
+# 0ad0ce20-3112-11ec-b36e-0242ac130002
+# 094a2776-3109-11ec-ad47-0242ac130002
+# 26608372-54ab-11eb-9564-22000ab2b8c4
+# ca713386-3050-11ec-b23b-0242ac130002
+# 9386af92-304e-11ec-b382-0242ac130002
+# 20a48ab0-2084-11eb-acc0-22000bb9251f
+# 1c0480ec-3054-11ec-be02-0242ac130002
+# b4c9ceb6-2e6e-11ea-9a69-22000b628b95
+
+    # BY LOC
+# b4c9ceb6-2e6e-11ea-9a69-22000b628b95
+# 0ad0ce20-3112-11ec-b36e-0242ac130002
+# 353f0b9e-5c6a-11ec-8795-0242ac130002
+# 2d930078-31a7-11ec-b8f3-0242ac130002
+# 094a2776-3109-11ec-ad47-0242ac130002
+# 06f0c1c8-329f-11ec-a4ff-0242ac130002
+# 26608372-54ab-11eb-9564-22000ab2b8c4
+# ca713386-3050-11ec-b23b-0242ac130002
+# 744bd3ec-1e2e-11eb-ae60-22000bb9251f
+# 1c0480ec-3054-11ec-be02-0242ac130002

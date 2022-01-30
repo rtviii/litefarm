@@ -13,36 +13,7 @@ from matplotlib.patches import Patch, Polygon
 import numpy as np
 from shapely.ops  import unary_union
 import seaborn as sns
-
-from farm import Farm, farm_profile
-
-def farm_ids()->List[str]:
-    with open("/home/rxz/dev/litefarm/resources/farm_ids.txt",'r', encoding='utf-8') as infile:
-        lines = list(map(str.strip,infile.readlines()))
-        return lines
-
-def load_all_farms() ->List[ Farm ]:
-    agg        = []
-    missingids = []
-
-    for id in farm_ids():
-        try:
-            agg.append(Farm(id, pkl=pklopen(id)))
-        except FileNotFoundError:
-            print("Missing: ", id)
-            missingids.append(id)
-    print("Len aggregate : ",len(agg))
-    # print("Missing total : ",len(missingids))
-
-    return agg
-
-pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms/{}.pickle'.format(farm_id)
-pklopen = lambda path:  pickle.load(open(pklpath(path),'rb'));
-
-a            = load_all_farms()
-nonzero_area = list(filter(lambda f: f.total_area>5,a))
-
-print("nonzero are", len(nonzero_area))
+from farm import load_all_farms
 
 
 def locations_by_number()->dict:

@@ -56,7 +56,7 @@ def is_self_intersecting(E: List[Point])->bool:
                 pt_of_intersection = against_ls.intersection(current_ls)
                 assume_is_edge = False
                 for pt in E:
-                    if pt.almost_equals(pt_of_intersection):
+                    if pt.equals(pt_of_intersection):
                         assume_is_edge = True
                 if assume_is_edge == False:
                     return True

@@ -24,10 +24,9 @@ import matplotlib.pyplot as plt
 import psycopg2
 import dotenv
 from typing import List, Mapping
-from farm_plot_locs import farm_get_area, locations_to_polygons, LOCTYPES
+from scripts.farm_plot_locs import farm_get_area, locations_to_polygons, LOCTYPES
 import argparse
 
-from scripts.analyses import load_all_farms
 
 dotenv.load_dotenv('/home/rxz/.ssh/secrets.env')
 connection = psycopg2.connect(
@@ -84,11 +83,7 @@ def farm_profile (farm_id:str)->dict:
         "total_area": farm_get_area(polygons)
     }
 
-@dataclass
-class Location: 
-      type    : str
-      lng     : float
-      lat     : float
+
 
 class Farm:
     locations : dict
@@ -254,3 +249,24 @@ main()
 # ca713386-3050-11ec-b23b-0242ac130002
 # 744bd3ec-1e2e-11eb-ae60-22000bb9251f
 # 1c0480ec-3054-11ec-be02-0242ac130002
+
+def load_all_farms() ->List[ Farm ]:
+    pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms/{}.pickle'.format(farm_id)
+    pklopen = lambda path:  pickle.load(open(pklpath(path),'rb'));
+    from farm import Farm, farm_profile
+    agg        = []
+    missingids = []
+
+    for id in farm_ids():
+        try:
+            agg.append(Farm(id, pkl=pklopen(id)))
+        except FileNotFoundError:
+            print("Missing: ", id)
+            missingids.append(id)
+    print("Len aggregate : ",len(agg))
+    return agg
+
+def farm_ids()->List[str]:
+    with open("/home/rxz/dev/litefarm/resources/farm_ids.txt",'r', encoding='utf-8') as infile:
+        lines = list(map(str.strip,infile.readlines()))
+        return lines

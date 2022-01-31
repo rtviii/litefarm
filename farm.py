@@ -201,7 +201,18 @@ class Farm:
         legendPatches.append(Patch(facecolor=None, label= "Total Area: {} km^2".format(round(self.total_area/10**6, 3))))
         legendPatches.append(Patch(facecolor=None, label= "Number of Locations: {}".format(self.nloc())))
         handles, _ = ax.get_legend_handles_labels()
+
+        U = self.get_users()
+        ownern = 1
+        for u in U:
+            print(u)
+            legendPatches.append(Patch(facecolor=None, fill=None, label= "Owner {}: {}(owns {} other farms)".format(ownern,u['first_name'] + " " + u['last_name'], int( u['nfarms'] )-1)))
+            ownern+=1
+            
+
         ax.legend(handles=[*handles,*legendPatches], loc='best')
+        ax.set_title("")
+
 
         plt.show()
 
@@ -251,7 +262,6 @@ def plot_locations_n_pie():
     plt.legend(title = "")
     plt.show() 
 
-
 def user_by_farm():
     CUR.execute("""
     select uf.user_id, u.first_name, u.last_name,
@@ -280,7 +290,6 @@ def user_by_farm():
         })
     return agg
 
-
 def main():
     parser = argparse.ArgumentParser(description='Hola')
     parser.add_argument("-f", "--farm", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
@@ -288,9 +297,14 @@ def main():
     parser.add_argument("--all", action='store_true')
     parser.add_argument("--pie", action='store_true')
     parser.add_argument("--test", action='store_true')
+    parser.add_argument("--merged", action='store_true')
     args    = parser.parse_args()
     if args.farm:
+        if args.merged:
+            Farm(args.farm).plot_farm(merged=True)                        
+            return
         Farm(args.farm).plot_farm()                        
+        return
 
     if args.farm_users:
         for user in Farm(args.farm_users).get_users():
@@ -307,20 +321,19 @@ def main():
     if args.test:
         pprint(list(set(farm_ids())))
 
-# main()
+main()
 
-# sns.set_theme()
+# _ = user_by_farm()
+# _.sort(key=lambda o: o['aum'])
+# pprint(_)
 
-# all = load_all_farms(hasarea=True)
 
-_ = user_by_farm()
-_.sort(key=lambda o: o['aum'])
-pprint(_)
+
+# --------------------------------------------
 
     
-sns.distplot(list(map(lambda k: k['aum'], _[len(_)-20:])),bins=30,kde=False)
-plt.show()
-print(len(_))
+# sns.distplot(list(map(lambda k: k['aum'], _[len(_)-20:])),bins=30,kde=False)
+# plt.show()
 # print("Loaded ",len(all), " farms.")
 # total_areas = []
 # all.sort(key=lambda k: k.total_area)

@@ -108,7 +108,6 @@ def farm_get_area(objects)->float:
     else:
         print("Pass either a list or dict with farm location polygons")
         exit(1)
-
 def plot_farm(
     farm_objects:Mapping[str, List[Polygon]], 
     **kwargs):

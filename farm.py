@@ -191,7 +191,7 @@ class Farm:
 
         plt.show()
 
-def load_all_farms() ->List[ Farm ]:
+def load_all_farms(hasarea=False) ->List[ Farm ]:
     pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms/{}.pickle'.format(farm_id)
     pklopen = lambda path:  pickle.load(open(pklpath(path),'rb'));
     from farm import Farm, farm_profile
@@ -205,6 +205,8 @@ def load_all_farms() ->List[ Farm ]:
             print("Missing: ", id)
             missingids.append(id)
     agg.sort(key=lambda f: f.nloc())
+    if hasarea:
+        agg =list(filter(lambda f: f.total_area > 5, agg))
     return agg
 
 def farm_ids()->List[str]:
@@ -264,3 +266,11 @@ def main():
         pprint(list(set(farm_ids())))
 
 main()
+
+
+sns.set_theme()
+all = load_all_farms()
+print(len(all))
+total_areas = []
+for i in all:
+    total_areas.append(i.total_area)

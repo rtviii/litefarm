@@ -14,6 +14,7 @@ def dir_path(string):
             raise PermissionError(string)
 import pickle
 from dataclasses import dataclass
+from attr import has
 from dacite import from_dict
 import geopandas as gpd
 import numpy as np
@@ -28,6 +29,9 @@ from typing import List, Mapping
 from scripts.farm_plot_locs import farm_get_area, locations_to_polygons, LOCTYPES
 import seaborn as sns
 import argparse
+import networkx as nx
+import matplotlib.pyplot as plt
+
 
 
 dotenv.load_dotenv('/home/rxz/.ssh/secrets.env')
@@ -37,7 +41,10 @@ connection = psycopg2.connect(
     host=os.environ.get("litefarm_host"),
     port=os.environ.get("litefarm_port"),
     password=os.environ.get("litefarm_pwd"))
-CUR    = connection.cursor()
+CUR     = connection.cursor()
+pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms/{}.pickle'.format(farm_id)
+pklopen = lambda _id:  pickle.load(open(pklpath(_id),'rb'))
+
 
 def get_farm_locs(farm_id:str)->List:
     CUR.execute("""
@@ -88,9 +95,16 @@ class Farm:
     total_area: float
     farm_id   : str
     users : List[dict]
-    def __init__(self, farm_id:str, pkl:dict={}) -> None:
-        if pkl =={}:
-            D = farm_profile(farm_id)
+    def __init__(self, farm_id:str, pkl=True) -> None:
+        if pkl:
+            try:
+                D = pklopen(farm_id)
+            except FileNotFoundError:
+                D = {
+                    'total_area': 0,
+                    'locations' : [],
+                    'farm_id'   : farm_id
+                }
         else:
             D = pkl
 
@@ -192,8 +206,6 @@ class Farm:
         plt.show()
 
 def load_all_farms(hasarea=False) ->List[ Farm ]:
-    pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms/{}.pickle'.format(farm_id)
-    pklopen = lambda path:  pickle.load(open(pklpath(path),'rb'));
     from farm import Farm, farm_profile
     agg        = []
     missingids = []
@@ -225,9 +237,9 @@ def locations_by_number()->dict:
 
 def plot_locations_n_pie():
     sns.set_theme()
-    nlocs= locations_by_number()
-    y         = np.array([ *nlocs.values() ])
-    labels =[]
+    nlocs  = locations_by_number()
+    y      = np.array([ *nlocs.values() ])
+    labels = []
     for key in nlocs.keys():
         labels.append( "{}: {}".format   ( str( key[0] ).upper() + key[1:],nlocs[key]) )   
     plt.pie(y, 
@@ -238,6 +250,36 @@ def plot_locations_n_pie():
     shadow = True)
     plt.legend(title = "")
     plt.show() 
+
+
+def user_by_farm():
+    CUR.execute("""
+    select uf.user_id, u.first_name, u.last_name,
+    array_agg(uf.farm_id) as farmids,
+    count(distinct( uf.farm_id )) as nfarms
+    from "userFarm" uf 
+    join "users" u on uf.user_id = u.user_id
+    GROUP BY uf.user_id, u.first_name, u.last_name
+    ORDER BY nfarms DESC""")
+    rows = CUR.fetchall()
+    print(rows)
+    agg  = []
+    for row in rows:
+        (userid, fname, lname,farms,nfarms) = row
+        farms                               = farms[1:-1].split(',')
+        w_agg                               = 0
+        for farm in farms:
+            w_agg += Farm(farm).total_area
+        agg.append({
+            "userid"    : userid,
+            "last_name" : lname,
+            "first_name": fname,
+            "aum_km2"   : w_agg/10**6,
+            "aum"       : w_agg,
+            "fum"       : nfarms
+        })
+    return agg
+
 
 def main():
     parser = argparse.ArgumentParser(description='Hola')
@@ -265,12 +307,52 @@ def main():
     if args.test:
         pprint(list(set(farm_ids())))
 
-main()
+# main()
+
+# sns.set_theme()
+
+# all = load_all_farms(hasarea=True)
+
+_ = user_by_farm()
+_.sort(key=lambda o: o['aum'])
+pprint(_)
+
+    
+sns.distplot(list(map(lambda k: k['aum'], _[len(_)-20:])),bins=30,kde=False)
+plt.show()
+print(len(_))
+# print("Loaded ",len(all), " farms.")
+# total_areas = []
+# all.sort(key=lambda k: k.total_area)
+# for i in all[:450]:
+#     total_areas.append(i.total_area)
+# print(total_areas)
 
 
-sns.set_theme()
-all = load_all_farms()
-print(len(all))
-total_areas = []
-for i in all:
-    total_areas.append(i.total_area)
+# sns.distplot(total_areas,bins=30,kde=False)
+# plt.title("Distribution by total area",fontsize=15)
+# plt.ylabel("Number of Farms",fontsize=15)
+# plt.xlabel("Area(m**2 sq.m)",fontsize=15)
+# plt.show()
+
+# G = nx.Graph()
+# G.add_edge(userid, farm)
+
+# # # explicitly set positions
+# # pos = {1: (0, 0),
+# #  2: (-1, 0.3), 3: (2, 0.17), 4: (4, 0.255), 5: (5, 0.03)}
+
+# pos = nx.spring_layout(G)
+# options = {
+#     "font_size": 8,
+#     "node_size": 20,
+#     "node_color": "white",
+#     "edgecolors": "black",
+#     "linewidths": 5,
+#     "width": 5,
+# }
+# nx.draw_networkx(G, pos, **options)
+# ax = plt.gca()
+# ax.margins(0.20)
+# plt.axis("off")
+# plt.show()

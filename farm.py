@@ -87,6 +87,7 @@ class Farm:
     locations : dict
     total_area: float
     farm_id   : str
+    users : List[dict]
     def __init__(self, farm_id:str, pkl:dict={}) -> None:
         if pkl =={}:
             D = farm_profile(farm_id)
@@ -103,9 +104,37 @@ class Farm:
             o.extend(list(_)) 
         return o
 
-    def get_owner(self):
+    def get_users(self):
         CUR.execute("""
-        """)
+                select  json_build_object(
+            'id'         , u       .user_id    ,
+            'first_name' , u       .first_name ,
+            'last_name'  , u       .last_name  ,
+            'email'      , u       .email      ,
+            'bday'       , u       .birth_year ,
+            'logincount', count(ul.user_log_id),
+            'nfarms', userfarms.nfarms,
+            'farmids', userfarms.farmids
+        )
+        from "userFarm" uf
+        join "users"    u  on uf.user_id = u.user_id
+        join "userLog"  ul on  u.user_id = ul.user_id
+        join (
+            select uf.user_id,
+            array_agg(uf.farm_id) as farmids,
+            count(distinct( uf.farm_id )) as nfarms
+            from "userFarm" uf 
+            GROUP BY uf.user_id ) userfarms
+        on uf.user_id = userfarms.user_id
+        where uf.farm_id = '%s'
+        GROUP BY u.user_id,u.first_name,u.last_name, u.email,u.birth_year, 
+        userfarms.nfarms, userfarms.farmids
+        """%self.farm_id)
+        _ = CUR.fetchall()
+        self.users = []
+        for o in _:
+            self.users.append(o[0])
+        return self.users
 
     def nloc(self)->int:
         return len(self.all_poly())
@@ -211,20 +240,26 @@ def plot_locations_n_pie():
 def main():
     parser = argparse.ArgumentParser(description='Hola')
     parser.add_argument("-f", "--farm", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
+    parser.add_argument("-fu", "--farm_users", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
     parser.add_argument("--all", action='store_true')
     parser.add_argument("--pie", action='store_true')
     parser.add_argument("--test", action='store_true')
     args    = parser.parse_args()
     if args.farm:
         Farm(args.farm).plot_farm()                        
-        pprint(Farm(args.farm).get_owner())
+
+    if args.farm_users:
+        for user in Farm(args.farm_users).get_users():
+            pprint(user)
 
     if args.all:
         print("{} \t{} \t{}".format("Total Area", "# Locations", "Farm Id"))
         for f in load_all_farms():
             print("{} \t{} \t{}".format(f.total_area, f.nloc(), f.farm_id))
+
     if args.pie:
         plot_locations_n_pie()
+
     if args.test:
         pprint(list(set(farm_ids())))
 

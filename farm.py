@@ -36,14 +36,15 @@ import matplotlib.pyplot as plt
 
 dotenv.load_dotenv('/home/rxz/.ssh/secrets.env')
 connection = psycopg2.connect(
-    dbname=os.environ.get("litefarm_db"),
-    user=os.environ.get("litefarm_usr"),
-    host=os.environ.get("litefarm_host"),
-    port=os.environ.get("litefarm_port"),
-    password=os.environ.get("litefarm_pwd"))
+    dbname   = os.environ.get("litefarm_prod_db"),
+    user     = os.environ.get("litefarm_prod_usr"),
+    host     = os.environ.get("litefarm_prod_host"),
+    port     = os.environ.get("litefarm_prod_port"),
+    password = os.environ.get("litefarm_prod_pwd"))
 CUR     = connection.cursor()
-pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms/{}.pickle'.format(farm_id)
+pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms_prod/{}.pickle'.format(farm_id)
 pklopen = lambda _id:  pickle.load(open(pklpath(_id),'rb'))
+
 
 
 def get_farm_locs(farm_id:str)->List:
@@ -296,9 +297,11 @@ def main():
     parser.add_argument("-fu", "--farm_users", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
     parser.add_argument("--all", action='store_true')
     parser.add_argument("--pie", action='store_true')
+    parser.add_argument("--prod", action='store_true')
     parser.add_argument("--test", action='store_true')
     parser.add_argument("--merged", action='store_true')
     args    = parser.parse_args()
+        
     if args.farm:
         if args.merged:
             Farm(args.farm).plot_farm(merged=True)                        

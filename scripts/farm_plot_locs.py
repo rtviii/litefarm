@@ -108,37 +108,6 @@ def farm_get_area(objects)->float:
     else:
         print("Pass either a list or dict with farm location polygons")
         exit(1)
-def plot_farm(
-    farm_objects:Mapping[str, List[Polygon]], 
-    **kwargs):
-    """
-    --merged to display unary_union
-    """
-
-    # ideally this bit is a comprehension over all types of loc.. gardens etc
-
-    other  = geopandas.GeoSeries(farm_objects['other'])
-    fields = geopandas.GeoSeries(farm_objects['fields'])
-    barns  = geopandas.GeoSeries(farm_objects['barns'])
-
-    if kwargs.pop('merged'):
-        other  = geopandas.GeoSeries(unary_union(farm_objects['other']))
-        fields = geopandas.GeoSeries(unary_union(farm_objects['fields']))
-        barns  = geopandas.GeoSeries(unary_union(farm_objects['barns'] ))
-
-
-    plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
-    fig, ax = plt.subplots()
-    ax.set_aspect('equal')
-
-    other .plot(color=None,ax=ax,edgecolor='k'     ,linewidth = 0.5, facecolor='none')
-    fields.plot(color=None,ax=ax,edgecolor='green' ,linewidth = 0.5, facecolor='none')
-    barns .plot(color=None,ax=ax,edgecolor='orange',linewidth = 0.5, facecolor='none')
-
-    if kwargs['savepath']:
-        plt.savefig(kwargs['savepath'], bbox_inches='tight')
-
-    plt.show()
 
 
 

@@ -15,7 +15,6 @@ def dir_path(string):
 import pickle
 from dataclasses import dataclass
 from attr import has
-from dacite import from_dict
 import geopandas as gpd
 import numpy as np
 from shapely.ops import unary_union
@@ -32,8 +31,6 @@ import argparse
 import networkx as nx
 import matplotlib.pyplot as plt
 
-
-
 dotenv.load_dotenv('/home/rxz/.ssh/secrets.env')
 connection = psycopg2.connect(
     dbname   = os.environ.get("litefarm_prod_db"),
@@ -44,8 +41,6 @@ connection = psycopg2.connect(
 CUR     = connection.cursor()
 pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms_prod/{}.pickle'.format(farm_id)
 pklopen = lambda _id:  pickle.load(open(pklpath(_id),'rb'))
-
-
 
 def get_farm_locs(farm_id:str)->List:
     CUR.execute("""
@@ -92,10 +87,12 @@ def farm_profile (farm_id:str)->dict:
     }
 
 class Farm:
+
     locations : dict
     total_area: float
     farm_id   : str
-    users : List[dict]
+    users     : List[dict]
+
     def __init__(self, farm_id:str, pkl=True) -> None:
         if pkl:
             try:
@@ -171,7 +168,6 @@ class Farm:
         #     plt.savefig(kwargs['savepath'], bbox_inches='tight')
 
         if 'merged' in kwargs:
-            
             gpd.GeoSeries(unary_union(self.all_poly())).plot( 
                 color     = None,
                 ax        = ax,
@@ -181,7 +177,6 @@ class Farm:
                 alpha     = 0.3
                 )
         else: 
-
             for kvp in self.locations.items():
                 loctype  = kvp[0]
                 polygons = kvp[1]
@@ -215,14 +210,14 @@ class Farm:
         ax.set_title("")
 
 
-        plt.show()
+        plt.savefig("/home/rxz/dev/litefarm/prod_plots/{}.png".format(self.farm_id))
+        # plt.show()
 
 def load_all_farms(hasarea=False) ->List[ Farm ]:
-    from farm import Farm, farm_profile
     agg        = []
     missingids = []
 
-    for id in farm_ids():
+    for id in farm_ids_prod():
         try:
             agg.append(Farm(id, pkl=pklopen(id)))
         except FileNotFoundError:
@@ -233,8 +228,12 @@ def load_all_farms(hasarea=False) ->List[ Farm ]:
         agg =list(filter(lambda f: f.total_area > 5, agg))
     return agg
 
-def farm_ids()->List[str]:
-    with open("/home/rxz/dev/litefarm/resources/farm_ids.txt",'r', encoding='utf-8') as infile:
+# def farm_ids()->List[str]:
+#     with open("/home/rxz/dev/litefarm/resources/farm_ids.txt",'r', encoding='utf-8') as infile:
+#         lines = list(map(str.strip,infile.readlines()))
+#         return lines
+def farm_ids_prod()->List[str]:
+    with open("/home/rxz/dev/litefarm/resources/farmids_prod.txt",'r', encoding='utf-8') as infile:
         lines = list(map(str.strip,infile.readlines()))
         return lines
 
@@ -299,9 +298,23 @@ def main():
     parser.add_argument("--pie", action='store_true')
     parser.add_argument("--prod", action='store_true')
     parser.add_argument("--test", action='store_true')
+    parser.add_argument("-pkl_save","--save_farm_profile", type=str, help="generate a polygon-profile of a farm and save it as a pkl")
+
+    # Throwaway
     parser.add_argument("--merged", action='store_true')
+    parser.add_argument("--hasarea", action='store_true')
+
+    
+
     args    = parser.parse_args()
         
+    if args.save_farm_profile:
+        farmid=args.save_farm_profile
+        profile = farm_profile(farmid)
+        with open(pklpath(farmid), 'wb') as outfile:
+            pickle.dump(profile, outfile)
+        print(pklpath(farmid))
+        exit(0)
     if args.farm:
         if args.merged:
             Farm(args.farm).plot_farm(merged=True)                        
@@ -315,23 +328,21 @@ def main():
 
     if args.all:
         print("{} \t{} \t{}".format("Total Area", "# Locations", "Farm Id"))
-        for f in load_all_farms():
+        all = load_all_farms(hasarea=args.hasarea)
+        for f in all:
             print("{} \t{} \t{}".format(f.total_area, f.nloc(), f.farm_id))
 
     if args.pie:
         plot_locations_n_pie()
 
     if args.test:
-        pprint(list(set(farm_ids())))
+        pprint(list(set(farm_ids_prod())))
 
 main()
 
 # _ = user_by_farm()
 # _.sort(key=lambda o: o['aum'])
 # pprint(_)
-
-
-
 # --------------------------------------------
 
     

@@ -3,7 +3,6 @@ import os
 import reverse_geocoder as rg
 import pycountry
 import psycopg2
-
 #-⋯⋯⋅⋱⋰⋆⋅⋅⋄⋅⋅∶⋅⋅⋄▫▪▭┈┅✕⋅⋅⋄⋅[environment]⋯⋯⋯⋯⋅⋱⋰⋆⋅⋅⋄⋅⋅∶⋅⋅⋄▫▪▭┈
 connection = psycopg2.connect(
     dbname   = os.environ.get("litefarm_prod_db"),
@@ -32,7 +31,7 @@ for i in CUR.fetchone()[0]:
         }
         })
     except:
-        # print("Could not locate 2-letter code for ", i)
+        print("Could not locate 2-letter code for ", i)
         ...
 
 
@@ -49,7 +48,7 @@ def fix_c_id_huh(farm_id:str, grid_pts:dict, country_id)->None:
         alpha2ccs
         if len(alpha2ccs) > 0:
             sought_cc = ISO3166_1[alpha2ccs[0]]['cc']
-            print("{}\t{} ".format(farm_id,sought_cc))
+            print("Update {}'s country_id to {} ".format(farm_id,sought_cc))
             # CUR.execute("UPDATE farm SET country_id=%s  WHERE farm_id=%s;"%(sought_cc, farm_id))
     return
 

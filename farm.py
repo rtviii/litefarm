@@ -158,7 +158,8 @@ class Farm:
         @merged=True to display unary_union
         """
 
-        plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
+        # plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
+        plt.rcParams["figure.figsize"] = (20,3)
         fig, ax = plt.subplots(figsize=(4,4))
         ax.set_aspect('equal')
         legendPatches = [ ]
@@ -209,9 +210,12 @@ class Farm:
         ax.legend(handles=[*handles,*legendPatches], loc='best')
         ax.set_title("")
 
-
-        plt.savefig("/home/rxz/dev/litefarm/prod_plots/{}.png".format(self.farm_id))
-        # plt.show()
+        if 'save' in kwargs:
+            figure = plt.gcf() # get current figure
+            figure.set_size_inches(16, 8)
+            plt.savefig("/home/rxz/dev/litefarm/prod_plots/{}.png".format(self.farm_id),  dpi = 300)
+            return
+        plt.show()
 
 def load_all_farms(hasarea=False) ->List[ Farm ]:
     agg        = []
@@ -232,6 +236,7 @@ def load_all_farms(hasarea=False) ->List[ Farm ]:
 #     with open("/home/rxz/dev/litefarm/resources/farm_ids.txt",'r', encoding='utf-8') as infile:
 #         lines = list(map(str.strip,infile.readlines()))
 #         return lines
+
 def farm_ids_prod()->List[str]:
     with open("/home/rxz/dev/litefarm/resources/farmids_prod.txt",'r', encoding='utf-8') as infile:
         lines = list(map(str.strip,infile.readlines()))
@@ -292,14 +297,16 @@ def user_by_farm():
 
 def main():
     parser = argparse.ArgumentParser(description='Hola')
-    parser.add_argument("-f", "--farm", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
-    parser.add_argument("-fu", "--farm_users", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
+    parser.add_argument("-i", "--farm_id", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
     parser.add_argument("--all", action='store_true')
     parser.add_argument("--pie", action='store_true')
     parser.add_argument("--prod", action='store_true')
     parser.add_argument("--test", action='store_true')
-    parser.add_argument("-pkl_save","--save_farm_profile", type=str, help="generate a polygon-profile of a farm and save it as a pkl")
+    parser.add_argument("--save_farm_profile", type=str, help="generate a polygon-profile of a farm and save it as a pkl")
 
+    # ------ Single farm flags
+    parser.add_argument("--plot", action='store_true')
+    parser.add_argument("--plotsave", action='store_true')
     # Throwaway
     parser.add_argument("--merged", action='store_true')
     parser.add_argument("--hasarea", action='store_true')
@@ -315,11 +322,18 @@ def main():
             pickle.dump(profile, outfile)
         print(pklpath(farmid))
         exit(0)
-    if args.farm:
+
+    if args.farm_id:
         if args.merged:
-            Farm(args.farm).plot_farm(merged=True)                        
+            Farm(args.farm_id).plot_farm(merged=True)                        
             return
-        Farm(args.farm).plot_farm()                        
+
+        if args.plotsave:
+            Farm(args.farm_id).plot_farm(save=True)                        
+            return
+        if args.plot:
+            Farm(args.farm_id).plot_farm()
+            return
         return
 
     if args.farm_users:
@@ -338,48 +352,7 @@ def main():
     if args.test:
         pprint(list(set(farm_ids_prod())))
 
+
+
 main()
-
-# _ = user_by_farm()
-# _.sort(key=lambda o: o['aum'])
-# pprint(_)
-# --------------------------------------------
-
-    
-# sns.distplot(list(map(lambda k: k['aum'], _[len(_)-20:])),bins=30,kde=False)
-# plt.show()
-# print("Loaded ",len(all), " farms.")
-# total_areas = []
-# all.sort(key=lambda k: k.total_area)
-# for i in all[:450]:
-#     total_areas.append(i.total_area)
-# print(total_areas)
-
-
-# sns.distplot(total_areas,bins=30,kde=False)
-# plt.title("Distribution by total area",fontsize=15)
-# plt.ylabel("Number of Farms",fontsize=15)
-# plt.xlabel("Area(m**2 sq.m)",fontsize=15)
-# plt.show()
-
-# G = nx.Graph()
-# G.add_edge(userid, farm)
-
-# # # explicitly set positions
-# # pos = {1: (0, 0),
-# #  2: (-1, 0.3), 3: (2, 0.17), 4: (4, 0.255), 5: (5, 0.03)}
-
-# pos = nx.spring_layout(G)
-# options = {
-#     "font_size": 8,
-#     "node_size": 20,
-#     "node_color": "white",
-#     "edgecolors": "black",
-#     "linewidths": 5,
-#     "width": 5,
-# }
-# nx.draw_networkx(G, pos, **options)
-# ax = plt.gca()
-# ax.margins(0.20)
-# plt.axis("off")
-# plt.show()
+ 

@@ -117,6 +117,7 @@ class Farm:
         [ fid, grid_pts, country ] = CUR.fetchall()[0]
         lat = grid_pts['lat']
         lng = grid_pts['lng']
+
         return {
             "lat"    : lat,
             "lng"    : lng,
@@ -190,10 +191,6 @@ class Farm:
         fig, ax = plt.subplots(figsize=(4,4))
         ax.set_aspect('equal')
         legendPatches = [ ]
-
-
-        # if kwargs.pop('savepath', False):
-        #     plt.savefig(kwargs['savepath'], bbox_inches='tight')
 
         if 'merged' in kwargs:
             gpd.GeoSeries(unary_union(self.all_poly())).plot( 

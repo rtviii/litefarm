@@ -13,8 +13,8 @@ def dir_path(string):
         except:
             raise PermissionError(string)
 import pickle
-from dataclasses import dataclass
-from attr import has
+import reverse_geocoder as rg
+import pycountry
 import geopandas as gpd
 import numpy as np
 from shapely.ops import unary_union
@@ -28,7 +28,6 @@ from typing import List, Mapping
 from scripts.farm_plot_locs import farm_get_area, locations_to_polygons, LOCTYPES
 import seaborn as sns
 import argparse
-import networkx as nx
 import matplotlib.pyplot as plt
 
 dotenv.load_dotenv('/home/rxz/.ssh/secrets.env')
@@ -86,11 +85,14 @@ def farm_profile (farm_id:str)->dict:
         "total_area": farm_get_area(polygons)
     }
 
-class Farm:
+class Farm: 
 
     locations : dict
     total_area: float
     farm_id   : str
+    country_code_2letter: str
+    grid_pts: dict
+
     users     : List[dict]
 
     def __init__(self, farm_id:str, pkl=True) -> None:
@@ -107,8 +109,19 @@ class Farm:
             D = pkl
 
         self.total_area = D['total_area']
-        self.locations  = D['locations']
+        self.locations  = dict(D['locations'])
         self.farm_id    = D['farm_id']
+
+    def farm_get_geocords(self)->dict:
+        CUR.execute("""select f.farm_id, f.grid_points, c.country_name from "farm" f  join "countries" c on f.country_id = c.id where f.farm_id ='%s';""" % self.farm_id)
+        [ fid, grid_pts, country ] = CUR.fetchall()[0]
+        lat = grid_pts['lat']
+        lng = grid_pts['lng']
+        return {
+            "lat"    : lat,
+            "lng"    : lng,
+            "country": country
+        }
 
     def all_poly(self)->List[Polygon]:
         o = []
@@ -150,6 +163,20 @@ class Farm:
 
     def nloc(self)->int:
         return len(self.all_poly())
+
+    def farm_get_crops(self):
+        CUR.execute("""
+        select * from (select array_agg(cv.crop_variety_name) as variety,
+        array_agg(c.crop_subgroup) as subgroup,
+        array_agg(c.crop_group) as group,
+        cv.farm_id 
+        from "crop_variety" cv  join "crop" c on c.crop_id = cv.crop_id 
+        GROUP BY cv.farm_id ) subq where subq.farm_id ='%s'""" % self.farm_id)
+
+        [varieties,subgroups,groups, farmid ] = CUR.fetchall()[0]
+        print(varieties)
+        print(subgroups)
+        print(groups)
 
     def plot_farm(
         self,
@@ -228,14 +255,10 @@ def load_all_farms(hasarea=False) ->List[ Farm ]:
             print("Missing: ", id)
             missingids.append(id)
     agg.sort(key=lambda f: f.nloc())
+
     if hasarea:
         agg =list(filter(lambda f: f.total_area > 5, agg))
     return agg
-
-# def farm_ids()->List[str]:
-#     with open("/home/rxz/dev/litefarm/resources/farm_ids.txt",'r', encoding='utf-8') as infile:
-#         lines = list(map(str.strip,infile.readlines()))
-#         return lines
 
 def farm_ids_prod()->List[str]:
     with open("/home/rxz/dev/litefarm/resources/farmids_prod.txt",'r', encoding='utf-8') as infile:
@@ -296,25 +319,30 @@ def user_by_farm():
     return agg
 
 def main():
+
     parser = argparse.ArgumentParser(description='Hola')
-    parser.add_argument("-i", "--farm_id", type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
-    parser.add_argument("--all", action='store_true')
-    parser.add_argument("--pie", action='store_true')
-    parser.add_argument("--prod", action='store_true')
-    parser.add_argument("--test", action='store_true')
+
+    parser.add_argument("-i"       ,        "--farm_id"   , type=str, help="Farm id. i.e. 094a2776-3109-11ec-ad47-0242ac130002")
+    parser.add_argument("-fu"      ,        "--farm_users", type=str                                                           )
+    parser.add_argument("--all"    , action='store_true'                                                                       )
+    parser.add_argument("--allhist", action='store_true'                                                                       )
+    parser.add_argument("--pie"    , action='store_true'                                                                       )
+    parser.add_argument("--prod"   , action='store_true'                                                                       )
+    parser.add_argument("--test"   , action='store_true'                                                                       )
     parser.add_argument("--save_farm_profile", type=str, help="generate a polygon-profile of a farm and save it as a pkl")
 
+    parser.add_argument("--by_country", type=str)
     # ------ Single farm flags
     parser.add_argument("--plot", action='store_true')
     parser.add_argument("--plotsave", action='store_true')
+
+
     # Throwaway
     parser.add_argument("--merged", action='store_true')
     parser.add_argument("--hasarea", action='store_true')
 
-    
-
     args    = parser.parse_args()
-        
+
     if args.save_farm_profile:
         farmid=args.save_farm_profile
         profile = farm_profile(farmid)
@@ -334,11 +362,12 @@ def main():
         if args.plot:
             Farm(args.farm_id).plot_farm()
             return
-        return
+        # return
 
     if args.farm_users:
         for user in Farm(args.farm_users).get_users():
             pprint(user)
+            return
 
     if args.all:
         print("{} \t{} \t{}".format("Total Area", "# Locations", "Farm Id"))
@@ -350,9 +379,16 @@ def main():
         plot_locations_n_pie()
 
     if args.test:
-        pprint(list(set(farm_ids_prod())))
+        print(Farm(args.farm_id).farm_get_geocords())
 
-
-
-main()
+    if args.by_country:
+        print(args.by_country)
+        
+if __name__ == "__main__":
+    main()
  
+
+#  barplots 
+#  crop varieties for a given farm
+#  more differentiated plotting of fields etc.
+#  shape annotations

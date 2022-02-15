@@ -14,9 +14,6 @@ CUR     = connection.cursor()
 #-⋯⋯⋅⋱⋰⋆⋅⋅⋄⋅⋅∶⋅⋅⋄▫▪▭┈┅✕⋅⋅⋄⋅⋅✕∶⋅⋅⋄⋱⋰⋯⋯⋯⋯⋅⋱⋰⋆⋅⋅⋄⋅⋅∶⋅⋅⋄▫▪▭┈
 
 
-
-
-
 # Grab country names and ids,their standard codes into dict
 CUR.execute("""select array_agg(json_build_object(country_name,id)) from countries;"""); 
 ISO3166_1 = {};
@@ -37,6 +34,7 @@ for i in CUR.fetchone()[0]:
 
 # country id fix
 def fix_c_id_huh(farm_id:str, grid_pts:dict, country_id)->None:
+
     if grid_pts == None :
         return
 

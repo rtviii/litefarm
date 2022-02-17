@@ -186,39 +186,37 @@ class Farm:
         @merged=True to display unary_union
         """
 
+        print("got kwargs")
+        pprint(kwargs)
         # plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
         plt.rcParams["figure.figsize"] = (20,3)
-        fig, ax = plt.subplots(figsize=(4,4))
+        highlight = kwargs.pop('highlight', 'NONE')
+        fig, ax = plt.subplots(figsize = (4,4))
         ax.set_aspect('equal')
         legendPatches = [ ]
+                    # color     = None,
+                    # ax        = ax,
+                    # edgecolor = LOCTYPES[loctype]['color'],
+                    # linewidth = 0.7,
+                    # facecolor = LOCTYPES[loctype]['color'],
+                    # alpha     = 0.5,
 
-        if 'merged' in kwargs:
-            gpd.GeoSeries(unary_union(self.all_poly())).plot( 
+        for kvp in self.locations.items():
+            loctype   = kvp[0]
+            polygons  = kvp[1]
+            print("HIGHLIGHT IS ", highlight)
+            print("Loctype: ", loctype)
+            legendPatches.append(Patch(facecolor=LOCTYPES[loctype]['color'], label= loctype,))
+
+            gpd.GeoSeries(unary_union(polygons)).plot( 
                 color     = None,
                 ax        = ax,
-                edgecolor = "royalblue",
-                linewidth = 0.4,
-                facecolor = 'blue',
-                alpha     = 0.3
+                edgecolor = LOCTYPES[loctype]['color'],
+                linewidth = 1,
+                alpha     = 1 if highlight != loctype else 0.5,
+                facecolor = LOCTYPES[loctype]['color'] if highlight == loctype else 'none',
                 )
-        else: 
-            for kvp in self.locations.items():
-                loctype  = kvp[0]
-                polygons = kvp[1]
 
-                if kwargs.pop('merged', False):
-                    print("GOT MERGED TRUE")
-                    polygons = unary_union(polygons)
-
-                gpd.GeoSeries(polygons).plot( 
-                    color     = None,
-                    ax        = ax,
-                    edgecolor = LOCTYPES[loctype]['color'],
-                    linewidth = 0.5,
-                    facecolor = 'none',
-                    )
-
-                legendPatches.append(Patch(facecolor=LOCTYPES[loctype]['color'], label= loctype,))
         legendPatches.append(Patch(facecolor=None, label= "Total Area: {} km^2".format(round(self.total_area/10**6, 3))))
         legendPatches.append(Patch(facecolor=None, label= "Number of Locations: {}".format(self.nloc())))
         handles, _ = ax.get_legend_handles_labels()
@@ -333,6 +331,7 @@ def main():
     parser.add_argument("--plot", action='store_true')
     parser.add_argument("--plotsave", action='store_true')
 
+    parser.add_argument("--hl_loctype", type=str)  # highlihgt loctype
 
     # Throwaway
     parser.add_argument("--merged", action='store_true')
@@ -352,12 +351,13 @@ def main():
         if args.merged:
             Farm(args.farm_id).plot_farm(merged=True)                        
             return
-
         if args.plotsave:
             Farm(args.farm_id).plot_farm(save=True)                        
             return
         if args.plot:
-            Farm(args.farm_id).plot_farm()
+            Farm(args.farm_id).plot_farm(**{
+                'highlight':args.hl_loctype
+                                            })
             return
         # return
 

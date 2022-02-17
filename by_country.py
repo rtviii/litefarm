@@ -48,11 +48,11 @@ country.plot(ax=ax,
              figsize   = (8,8),
              edgecolor = u'gray',
              cmap      = 'Pastel1',
-             alpha     = 0.2)
+             alpha     = 0.8)
 
 gdf.plot(ax=ax, 
         markersize = gdf['sizes']/np.array(farmsizes).mean()*6,
-        alpha      = 0.2,
+        alpha      = 0.3,
         edgecolor  = 'black',
         color      = 'blue'
         )

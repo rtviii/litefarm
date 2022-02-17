@@ -13,3 +13,7 @@ farms/
 farms
 *.pickle
 area_per_user.json
+
+**/*.xlsx
+**.xlsx
+*.xlsx

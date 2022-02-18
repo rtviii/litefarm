@@ -87,11 +87,11 @@ def farm_profile (farm_id:str)->dict:
 
 class Farm: 
 
-    locations : dict
-    total_area: float
-    farm_id   : str
+    locations           : dict
+    total_area          : float
+    farm_id             : str
     country_code_2letter: str
-    grid_pts: dict
+    grid_pts            : dict
 
     users     : List[dict]
 

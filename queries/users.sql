@@ -31,12 +31,15 @@
 
 
 -- 
-select array_agg(json_build_object(
-    'user_id',u.user_id,
-    'last_name',u.last_name,
-    'first_name',u.first_name)) as all_users_on_this_farm
-from "users" u
-join "userFarm" uf  on uf.user_id = u.user_id
-WHERE uf.farm_id='5118f598-8815-11eb-88f9-0a7facd3678d'
+-- select array_agg(json_build_object(
+--     'user_id',u.user_id,
+--     'last_name',u.last_name,
+--     'first_name',u.first_name)) as all_users_on_this_farm
+-- from "users" u
+-- join "userFarm" uf  on uf.user_id = u.user_id
+-- WHERE uf.farm_id='5118f598-8815-11eb-88f9-0a7facd3678d'
+
+
+-- select email from "users" u where u.user_id =  '5fd2672b8734ba0068f0444d'
 
 

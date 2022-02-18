@@ -55,7 +55,6 @@ def driver():
                     where f.farm_id = '%s'
                             """%xlfarmid)
                 resp = CUR.fetchall()[0]
-                print("GOT EMAILS fo rthis farm : ",resp)
             else: 
                 ...
                 

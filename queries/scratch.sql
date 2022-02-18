@@ -35,6 +35,6 @@
 -- GROUP BY cv.farm_id
 
 
-select * from  "farm" f 
--- on f.created_by_user_id = u.user_id
-where f.farm_id = 'be368218-3896-11eb-a04e-22000b479377'
+select * from  "farm" f  join "users" u
+on f.created_by_user_id = u.user_id
+where f.farm_id = 'd6a678fc-3e37-11eb-8784-22000ab8b02b'

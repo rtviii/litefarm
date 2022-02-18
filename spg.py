@@ -32,8 +32,7 @@ def rectify_via_email(email:str, original_farm_id=False, original_usr_id=False):
         GROUP BY uf.user_id, u.first_name, u.last_name,u.email, rl.role"""%email)
     
     resp = CUR.fetchall()
-    if len( resp ) > 1: print("Multiple users with email {}. Exiting ".format(email)); exit(1)
-
+    if len( resp ) > 1: print("Multiple users with email {}. Exiting ".format(email)); return ["","","","","","","","",            "","","",""]
     try:
         [theirfams, usr_id, email, role]                   = resp[0]
         theirfams = str(theirfams).strip('{').strip('}').split(',')[0]
@@ -114,6 +113,7 @@ def driver():
     sheet = df[['Active in Litefarm Spring 2022?','Farm ID', 'User ID', 'Associated Email Address']]
 
     for row in sheet.iterrows(): 
+
         index = row[0]
         # if index > 15: exit()
         _                               = row[1].tolist()
@@ -123,17 +123,29 @@ def driver():
             continue # all nan/empty row
     
         if str(xlemail) == 'nan':
-            if str(xlusrid) != 'nan':
+            if type(xlusrid) != float and str(xlusrid) != 'nan':
                 CUR.execute("""select email from "users" u where u.user_id =  '%s'"""%xlusrid)
                 xlemail = CUR.fetchone()[0]
-                print("REPAIRD EMAI :", xlemail)
                 df.loc[index,"Associated Email Address"] = xlemail
-            else:
-                continue
+
+            elif type(xlfarmid) != float and str(xlfarmid) != 'nan' :
+                CUR.execute("""
+                select u.email from  "farm" f  join "users" u
+                    on f.created_by_user_id = u.user_id
+                    where f.farm_id = '%s'
+                            """%xlfarmid)
+                resp = CUR.fetchall()[0]
+                print("GOT EMAILS fo rthis farm : ",resp)
+            else: 
+                ...
+                
+                
+        if type(xlusrid) == float: xlusrid  = False
+        if type(xlfarmid) == float: xlfarmid  = False
+
             # elif str(xlfarmid) != 'nan':
             #     str(xlfarmid).strip(" ")
 
-                # [28] 2c35294a-2e88-11eb-b2ae-22000b479377 --- no such farm
 
 
         
@@ -154,35 +166,35 @@ def driver():
                                                      original_farm_id = xlfarmid if str(xlfarmid)!='nan' and not ( '/'  in str( xlfarmid ) )else False,
                                                      original_usr_id  = xlusrid  if str(xlusrid) !='nan' else False)
 
-        if type("_") == type(xlfarmid) and xlfarmid != reference_farm_id:
-            # case: about to overwrite farmid
-            val = input("""FARM Original:\t\033[95m{}\033[0m\nIncoming:\t\033[93m{}\033[0m\n\033[95m[Y] to overwrite\033[0m|\033[93m[N] to overwrite\033[0m"""
-                        .format(xlfarmid,reference_farm_id))
-            if val == "Y":
-                df.loc[index,  "Farm ID"  ] = reference_farm_id
-            else:
-                ...
-        if type("_") == type(xlusrid) and xlusrid != reference_usr_id:
-            # case: about to overwrite farmid
-            val = input("""USER Original:\t\033[95m{}\033[0m\nIncoming:\t\033[93m{}\033[0m\n\033[95m[Y] to overwrite\033[0m|\033[93m[N] to overwrite\033[0m"""
-                        .format(xlfarmid,reference_farm_id))
-            if val == "Y":
-                df.loc[index,  "User ID"  ] = reference_usr_id
-            else:
-                ...
+        # if type("_") == type(xlfarmid) and xlfarmid != reference_farm_id:
+        #     # case: about to overwrite farmid
+        #     val = input("""FARM Original:\t\033[95m{}\033[0m\nIncoming:\t\033[93m{}\033[0m\n\033[95m[Y] to overwrite\033[0m|\033[93m[N] to overwrite\033[0m"""
+        #                 .format(xlfarmid,reference_farm_id))
+        #     if val == "Y":
+        #         df.loc[index,  "Farm ID"  ] = reference_farm_id
+        #     else:
+        #         ...
+        # if type("_") == type(xlusrid) and xlusrid != reference_usr_id:
+        #     # case: about to overwrite farmid
+        #     val = input("""USER Original:\t\033[95m{}\033[0m\nIncoming:\t\033[93m{}\033[0m\n\033[95m[Y] to overwrite\033[0m|\033[93m[N] to overwrite\033[0m"""
+        #                 .format(xlfarmid,reference_farm_id))
+        #     if val == "Y":
+        #         df.loc[index,  "User ID"  ] = reference_usr_id
+        #     else:
+                # ...
 
-        print("")
-        print("Attempting to set: ")
-        print("role:\t", role,)
-        print("user_ids_for_farm:\t", user_ids_for_farm,)
-        print("farm_site_boundary_exists:\t", farm_site_boundary_exists,)
-        print("bound_area_ha:\t", bound_area_ha,)
-        print("has_3_locations:\t", has_3_locations,)
-        print("n_locations:\t", n_locations,)
-        print("n_crop_plans:\t", n_crop_plans,)
-        print("n_unique_crop_subgroups:\t", n_unique_crop_subgroups,)
-        print("n_unique_crop_varieties:\t", n_unique_crop_varieties)
-        print("")
+        # print("")
+        # print("Attempting to set: ")
+        # print("role:\t", role,)
+        # print("user_ids_for_farm:\t", user_ids_for_farm,)
+        # print("farm_site_boundary_exists:\t", farm_site_boundary_exists,)
+        # print("bound_area_ha:\t", bound_area_ha,)
+        # print("has_3_locations:\t", has_3_locations,)
+        # print("n_locations:\t", n_locations,)
+        # print("n_crop_plans:\t", n_crop_plans,)
+        # print("n_unique_crop_subgroups:\t", n_unique_crop_subgroups,)
+        # print("n_unique_crop_varieties:\t", n_unique_crop_varieties)
+        # print("")
 
         
         # ================================================= Setter
@@ -195,7 +207,8 @@ def driver():
                       "n_locations",
                       "n_crop_plans",
                       "n_unique_crop_subgroups",
-                      "n_unique_crop_varieties"]] = [role,
+                      "n_unique_crop_varieties"]] = \
+        np.array([role,
         user_ids_for_farm,
         farm_site_boundary_exists,
         bound_area_ha,
@@ -203,7 +216,7 @@ def driver():
         n_locations,
         n_crop_plans,
         n_unique_crop_subgroups,
-        n_unique_crop_varieties]
+        n_unique_crop_varieties], dtype=object)
         # ================================================= 
 
 

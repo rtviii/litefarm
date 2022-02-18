@@ -41,5 +41,6 @@
 
 
 -- select email from "users" u where u.user_id =  '5fd2672b8734ba0068f0444d'
+select * from "users" u WHERE u.email = 'wagroeco16@gmail.com'
 
 

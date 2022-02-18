@@ -23,7 +23,7 @@ def driver():
                 CUR.execute("""select 
             array_agg(uf.farm_id) as farmids,
             uf.user_id, 
-            u.email,
+            u.email
             from "userFarm" uf 
             join "users" u on uf.user_id = u.user_id 
             join "role" rl on rl.role_id = uf.role_id 
@@ -36,7 +36,7 @@ def driver():
         try:
             [theirfarms, usr_id, email ]                   = resp[0]
             if type(xlfarmid) in [float]:
-                df.loc[index,"Farm ID"] = str( theirfarms ).strip("{").strip("}").split(",")
+                df.loc[index,"Farm ID"] = str( theirfarms ).strip("{").strip("}").split(",")[0]
             if type(xlusrid) in [float]:
                 df.loc[index,"User ID"] = usr_id
         except:
@@ -70,7 +70,7 @@ def driver():
 
 
     # Create a Pandas Excel writer using XlsxWriter as the engine.
-    writer = pd.ExcelWriter('SPG LiteFarm Census Data (in progress).xlsx', engine='openpyxl')
+    writer = pd.ExcelWriter('spg-filled.xlsx', engine='openpyxl')
     df.to_excel(writer, sheet_name='Master-SPG-Data-v2')
     writer.save()
 

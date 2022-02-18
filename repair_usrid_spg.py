@@ -34,7 +34,11 @@ def driver():
 
         if len( resp ) > 1: print("Multiple users with email {}. Exiting ".format(xlemail))
         try:
-            [theirfams, usr_id, email ]                   = resp[0]
+            [theirfarms, usr_id, email ]                   = resp[0]
+            if type(xlfarmid) in [float]:
+                df.loc[index,"Farm ID"] = str( theirfarms ).strip("{").strip("}").split(",")
+            if type(xlusrid) in [float]:
+                df.loc[index,"User ID"] = usr_id
         except:
             ...
 

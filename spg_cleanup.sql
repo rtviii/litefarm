@@ -1,1 +1,0 @@
-select * from "users" where email = 'oscarcortezgutierrez59@gmail.com';

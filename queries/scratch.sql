@@ -26,15 +26,15 @@
     -- where u.user_id = '58ceac20-3809-11ec-b613-0242ac150003'
 
 
--- select array_agg(cv.crop_variety_name) as variety,array_agg(c.crop_subgroup) as subgroup,cv.farm_id
--- from 
--- "crop_variety" cv  
--- left join "crop" c on c.crop_id    = cv.crop_id
--- left join "farm" f on c.farm_id    = f.farm_id
+select array_agg(cv.crop_variety_name) as variety,array_agg(c.crop_subgroup) as subgroup,cv.farm_id
+from 
+"crop_variety" cv  
+left join "crop" c on c.crop_id    = cv.crop_id
+left join "farm" f on c.farm_id    = f.farm_id
 -- where cv.farm_id = 'c670b7ce-3b1f-11eb-a4ba-22000ab8b02b'
--- GROUP BY cv.farm_id
+GROUP BY cv.farm_id
 
 
-select * from  "farm" f  join "users" u
-on f.created_by_user_id = u.user_id
-where f.farm_id = 'd6a678fc-3e37-11eb-8784-22000ab8b02b'
+-- select * from  "farm" f  join "users" u
+-- on f.created_by_user_id = u.user_id
+-- where f.farm_id = 'd6a678fc-3e37-11eb-8784-22000ab8b02b'

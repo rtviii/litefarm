@@ -2,7 +2,7 @@
 -- By farm-id
 SELECT ufarm.farm_id, COUNT(distinct loc.location_id) AS nloc
 FROM "userFarm" ufarm 
-JOIN "location" loc ON ufarm.farm_id=loc.farm_id 
+JOIN "location" loc ON ufarm.farm_id = loc.farm_id 
 GROUP BY ufarm.farm_id ORDER BY nloc DESC
 
 -- By user

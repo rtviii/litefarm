@@ -18,7 +18,7 @@ join (
     from "userFarm" uf 
     GROUP BY uf.user_id ) userfarms
 on uf.user_id = userfarms.user_id
-where uf.farm_id = '39bf12e0-de89-11eb-bcd8-0242ac120002'
+-- where uf.farm_id = '39bf12e0-de89-11eb-bcd8-0242ac120002'
 GROUP BY u.user_id,u.first_name,u.last_name, u.email,u.birth_year, 
 userfarms.nfarms, userfarms.farmids
 

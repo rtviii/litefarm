@@ -2,9 +2,9 @@
 --  join "farm" f on cv.farm_id = f.farm_id where f.farm_id = '56d00778-7abe-11ec-8e4a-0242ac150004';
 
 ---------------------------------------------------------------------------------------------------------------
+
 -- select *  from "crop" c;
 
----------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 -- select cv.crop_variety_name, cv.crop_id,  c.crop_common_name ,  cv.farm_id  from "crop_variety" cv
 -- left outer join "crop" c on c.crop_id = cv.crop_id  where cv.farm_id='f8efc7aa-4bb1-11ec-9a56-0242ac150004';

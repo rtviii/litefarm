@@ -131,6 +131,22 @@ for f in allfarms:
     water_valve_S        = [] if 'water_valve'        not in _farm.locations else listofpoly_to_listofpts( _farm.locations['water_valve'       ] )
     gate_S               = [] if 'gate'               not in _farm.locations else listofpoly_to_listofpts( _farm.locations['gate'              ] )
 
+    CUR.execute("""
+                select array_agg(cv.crop_variety_name) as variety,
+                    array_agg(c.crop_subgroup) as subgroup,
+                    count(c.crop_subgroup) as subgroup_count,
+                    cv.farm_id
+                from 
+                "crop_variety" cv  
+                join "crop" c on c.crop_id          = cv.crop_id
+                left join "farm" f on c.farm_id     = f.farm_id
+                where cv.farm_id = '%s'
+                GROUP BY cv.farm_id, f.country_id, f.grid_points"""% farm_id)
+
+    [varieties, subgroups, _1 , _2] = CUR.fetchall()[0]
+    print(varieties,subgroups)
+
+
     row = [farm_id, country, global_coordinates, total_area, natural_area, industrial_area, field_only_area,
             farm_site_boundary_S ,
             field_S              ,
@@ -148,7 +164,6 @@ for f in allfarms:
             gate_S               ]
 
 
-    print(row)
 
 
 

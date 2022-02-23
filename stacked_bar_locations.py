@@ -3,30 +3,14 @@ from farm import *
 
 x = load_all_farms()
 
-locs = {
-    "production": [
-        "field",
-        "garden",
-        "barn",
-        "greenhouse",
-        "residence",
-    ],
-    "natural": [
-        "farm_site_boundary",
-        "natural_area",
-        "surface_water",
 
-    ]
-
-}
 
 
 data = []
 for f in x:
-    if f.total_area < 1:
+    if f.total_area < 0.01:
         continue
     else:
-
         nat  = []
         prod = []
         for loc in f.locations:

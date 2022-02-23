@@ -15,22 +15,39 @@ CUR     = connection.cursor()
 
 
 # Grab country names and ids,their standard codes into dict
-CUR.execute("""select array_agg(json_build_object(country_name,id)) from countries;"""); 
-ISO3166_1 = {};
-for i in CUR.fetchone()[0]:
-    try:
-        litefarm_name, litefarm_cc = list(i.items())[0]
-        C_obj = pycountry.countries.search_fuzzy(litefarm_name)[0]
-        ISO3166_1.update({
-        C_obj.alpha_2: {
-            "name": litefarm_name,
-            "cc"  : litefarm_cc
-        }
-        })
-    except:
-        print("Could not locate 2-letter code for ", i)
-        ...
+def construct_ISO3166_1()->dict:
+    CUR.execute("""select array_agg(json_build_object(country_name,id)) from countries;"""); 
+    ISO3166_1 = {};
+    for i in CUR.fetchone()[0]:
+        try:
+            litefarm_name, litefarm_cc = list(i.items())[0]
+            C_obj = pycountry.countries.search_fuzzy(litefarm_name)[0]
+            ISO3166_1.update({
+                C_obj.alpha_2: {
+                    "name": litefarm_name,
+                    "cc"  : litefarm_cc
+                }
+            })
+        except:
+            # print("Could not locate 2-letter code for ", i)
+            ...
+    return ISO3166_1
 
+
+
+def lookup_country_by_gridpts(grid_pts:dict, ISO3166_1):
+    if grid_pts == None :
+        return
+
+    lat       = grid_pts['lat']
+    lng       = grid_pts['lng']
+    matches   = rg.search((lat,lng))
+    alpha2ccs = [match['cc'] for match in matches]
+    if len(alpha2ccs) > 0:
+        iso = ISO3166_1[alpha2ccs[0]]['cc']
+        return [None, None]
+    else:
+        return [None, None]
 
 # country id fix
 def fix_c_id_huh(farm_id:str, grid_pts:dict, country_id)->None:
@@ -39,8 +56,9 @@ def fix_c_id_huh(farm_id:str, grid_pts:dict, country_id)->None:
         return
 
     if country_id == None:
-        lat = grid_pts['lat']
-        lng = grid_pts['lng']
+
+        lat       = grid_pts['lat']
+        lng       = grid_pts['lng']
         matches   = rg.search((lat,lng))
         alpha2ccs = [match['cc'] for match in matches]
         alpha2ccs
@@ -51,9 +69,9 @@ def fix_c_id_huh(farm_id:str, grid_pts:dict, country_id)->None:
     return
 
 # Grab farms. for those that do not have country_id but do have grid points, issue update
-CUR.execute("""select farm_id, grid_points,country_id from "farm";""")
-farms = CUR.fetchall()
-[fix_c_id_huh(fid,grid_pts,cid) for (fid, grid_pts, cid) in farms]
+# CUR.execute("""select farm_id, grid_points,country_id from "farm";""")
+# farms = CUR.fetchall()
+# [fix_c_id_huh(fid,grid_pts,cid) for (fid, grid_pts, cid) in farms]
 
 
 

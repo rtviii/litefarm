@@ -13,6 +13,7 @@ query   = """select f.farm_name,
                 f.grid_points,
                 c.country_name 
                 from "farm" f  join "countries" c on f.country_id = c.id where c.country_name ='%s';""" % country
+
 CUR.execute(query)
 
 gridpts              = []
@@ -21,6 +22,7 @@ farmsizes            = []
 farms:List[Farm]     = []
 
 all       = CUR.fetchall()
+print("ALL FARMSL:", all)
 for (farm_name,farmid, grid_points, country) in all:
     gridpts.append(grid_points) 
     farmnames.append(farm_name)

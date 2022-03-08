@@ -5,7 +5,6 @@ import pandas as pd
 from farm import *
 
 def get_users_for_farm(farmid:str):
-    print(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>GOT FARMID ", farmid)
 
     CUR.execute("""
     select array_agg(json_build_object(
@@ -38,7 +37,7 @@ def rectify_via_email(email:str, original_farm_id=False, original_usr_id=False):
         theirfams = str(theirfams).strip('{').strip('}').split(',')[0]
     except:
         print("User with email {} not found".format(email))
-        return ["","","","","","","","",            "","","",""]
+        return ["","","","","","","","", "","","",""]
         
     #---------------+----------------ᢹ----------------|
 
@@ -108,15 +107,17 @@ def get_mps_for_usr(usrid:str) -> int:
 
 
 def driver():
-    sheetpath = './SPG.xlsx'
-    df     = pd.read_excel(sheetpath)
-    sheet = df[['Active in Litefarm Spring 2022?','Farm ID', 'User ID', 'Associated Email Address']]
+    sheetpath = './SPG-post-friday.xlsx'
+    df        = pd.read_excel(sheetpath)
+    kyc_cols  = ['Farm Name(s)','Farm ID','User ID', 'Associated Email Address']
+
+    sheet     = df[kyc_cols]
 
     for row in sheet.iterrows(): 
 
-        index = row[0]
-        # if index > 15: exit()
-        _                               = row[1].tolist()
+        index                                   = row[0]
+        _                                       = row[1].tolist()
+
         [ xlactive, xlfarmid, xlusrid,xlemail ] = _
         print("[{}]:".format(index), [ xlactive, xlfarmid, xlusrid,xlemail ])
         if type("") not in [type(xlfarmid),type(xlusrid), type(xlemail) ]:

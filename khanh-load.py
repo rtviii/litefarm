@@ -37,23 +37,34 @@ left join "crop" c on c.crop_id = cv.crop_id
 GROUP BY f.farm_id""")
 
 allfarms = CUR.fetchall()
-headers = ['farm_id'             ,
-                      'country'             ,
-                      'global_coordinates'  ,
-                      'total_area'          ,
-                      'natural_area'        ,
-                      'industrial_area'     ,
-                      'field_only_area'     ,
-                      'farm_site_boundary_S',
-                      'field_S'             ,
-                      'garden_S'            ,
-                      'barn_S'              ,
-                      'greenhouse_S'        ,
-                      'natural_area_S'      ,
-                      'natural_area_S'      ,
-                      'crop_subgroups'      ,
-                      'crop_varieties'      ]
-        
+headers = [                       'farm_id'              ,
+                                  'country'              ,
+                                  'global_coordinates'   ,
+                                  'total_area'           ,
+                                  'natural_area'         ,
+                                  'industrial_area'      ,
+                                  'field_only_area'      ,
+
+                                  "farm_site_boundary_S",
+                                  "field_S"              ,
+                                  "garden_S"             ,
+                                  "barn_S"               ,
+                                  "greenhouse_S"         ,
+                                  "natural_area_S"       ,
+                                  "surface_water_S"      ,
+                                  "residence_S"          ,
+                                  "ceremonial_area_S"    ,
+                                  "fence_S"              ,
+                                  "watercourse_S"        ,
+                                  "buffer_zone_S"        ,
+                                  "water_valve_S"        ,
+                                  "gate_S"               ,
+
+                                  'crop_varieties'      ,
+                                  'crop_subgroups'
+                      ]
+rows = []
+
         
 def get_natural_industrial_areas(f:Farm):    
     locs = {
@@ -90,15 +101,22 @@ def get_natural_industrial_areas(f:Farm):
              unary_union(nat).area,
              unary_union(prod).area
          ]
-    
-
+import pandas as pd
 def listofpoly_to_listofpts(l:List)->List:
     poly_to_pts = lambda poly: list(poly.exterior.coords)
     return list(map(poly_to_pts, l))
 
-for f in allfarms:
+spgdf  = pd.read_excel('./spg-filled1.xlsx')
+spgids = spgdf['Farm ID'].to_list()
+spgids = list(filter(lambda _ : str(_) != str('nan'), spgids))
+
+
+for ( i,f ) in enumerate( allfarms ):
 
     (farmid, country, coordinates,varieties_arr, subgroups_arr) = f
+    if farmid not in spgids:
+        continue
+
     try:
         _farm = Farm(farmid)
     except:
@@ -141,17 +159,27 @@ for f in allfarms:
                 join "crop" c on c.crop_id          = cv.crop_id
                 left join "farm" f on c.farm_id     = f.farm_id
                 where cv.farm_id = '%s'
-                GROUP BY cv.farm_id, f.country_id, f.grid_points"""% farm_id)
-
-    [varieties, subgroups, _1 , _2] = CUR.fetchall()[0]
-    print(varieties,subgroups)
+                GROUP BY cv.farm_id, f.country_id, f.grid_points"""%farmid)
 
 
-    row = [farm_id, country, global_coordinates, total_area, natural_area, industrial_area, field_only_area,
+
+    resp = CUR.fetchall()
+    ( crop_varieties, crop_subgroups, _1 , _2 ) = resp[0] if len(resp) >0  else [[] ,[]  ,0 ,farmid]
+
+
+    row = [
+           farm_id,
+           country,
+           global_coordinates,
+           total_area,
+           natural_area,
+           industrial_area,
+           field_only_area, 
+
             farm_site_boundary_S ,
             field_S              ,
             garden_S             ,
-            barn_S               ,
+            barn_S,
             greenhouse_S         ,
             natural_area_S       ,
             surface_water_S      ,
@@ -160,8 +188,19 @@ for f in allfarms:
             fence_S              ,
             watercourse_S        ,
             buffer_zone_S        ,
-            water_valve_S       ,
-            gate_S               ]
+            water_valve_S,
+            gate_S      ,
+            crop_varieties,
+            crop_subgroups         
+            
+            ]
+
+    rows.append(row)
+            
+
+df =pd.DataFrame(rows, columns=headers)
+df.to_csv('farms_SPG_data.csv')
+print(df)
 
 
 

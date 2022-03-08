@@ -2,10 +2,6 @@ from farm import *
 
 
 x = load_all_farms()
-
-
-
-
 data = []
 for f in x:
     if f.total_area < 0.01:

@@ -61,6 +61,7 @@ def is_self_intersecting(E: List[Point])->bool:
         i = i+1
     return False
 def locations_to_polygons(farm_locations:List[dict])->dict:
+
     """Return a location_type->List[Polygon] mapping given @farm_locations of shape  
     ```json
     {
@@ -72,11 +73,8 @@ def locations_to_polygons(farm_locations:List[dict])->dict:
     
     """
     # sinusoid projection for converting lon/lat to metric
-
-    m            = Basemap(projection='sinu',lon_0=0,resolution='c')
-    farm_objects = {
-
-    }
+    m            = Basemap(projection='sinu',lon_0=0, resolution='c')
+    farm_objects = {}
 
     for datum in farm_locations:
         try:
@@ -87,7 +85,6 @@ def locations_to_polygons(farm_locations:List[dict])->dict:
             loctype = datum['type']
             if loctype not in farm_objects:
                 farm_objects[loctype] = []
-
             if not any(p.equals(poly) for p in farm_objects[loctype]):
                 farm_objects[loctype].append(poly)
         except Exception:

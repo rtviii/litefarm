@@ -207,7 +207,10 @@ def get_rows_for_farmid(farmid:str, usrid:str):
         is_boundary_mapped      = 'farm_site_boundary' in f.locations
         area_within_boundary_ha = unary_union(f.locations['farm_site_boundary']).area / 10**4 if is_boundary_mapped  else 'N/A' 
         area_all_locations_ha   = f.total_area  /10**4
-        has_3_locations         = "True" if len(get_farm_locs(farmid)) > 2 else "False"
+        try:
+            has_3_locations         = "True" if len(get_farm_locs(farmid)) > 2 else "False"
+        except: 
+            has_3_locations = "False"
         try:
             n_locations                                 = len(get_farm_locs(farmid))
         except:

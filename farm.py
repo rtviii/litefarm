@@ -49,8 +49,8 @@ def get_farm_locs(farm_id:str)->List:
     JOIN  "figure" fig ON  fig.location_id   = loc.location_id
     FULL  JOIN "area" area on area.figure_id = fig.figure_id
     FULL  JOIN "line" ln  on ln.figure_id    = fig.figure_id
-    FULL  JOIN "point" pt  on pt.figure_id   = fig.figure_id 
-    where ufarm.farm_id='%s'""" % farm_id)
+    FULL  JOIN "point" pt  on pt.figure_id   = fig.figure_id
+    where ufarm.farm_id                      = '%s'""" % farm_id)
     resp         = CUR.fetchall()
     farm_objects = []
 
@@ -70,6 +70,7 @@ def get_farm_locs(farm_id:str)->List:
             })
 
         elif LOCTYPES[_type]['loctype'] ==  'point':
+
             farm_objects.append({
                 "type"  : _type,
                 "coords": [ point ]                
@@ -212,7 +213,7 @@ class Farm:
                 color     = None,
                 ax        = ax,
                 edgecolor = LOCTYPES[loctype]['color'],
-                linewidth = 1,
+                linewidth = 2,
                 alpha     = 1 if highlight != loctype else 0.5,
                 facecolor = LOCTYPES[loctype]['color'] if highlight == loctype else 'none',
                 )
@@ -225,7 +226,7 @@ class Farm:
         ownern = 1
         for u in U:
             print(u)
-            legendPatches.append(Patch(facecolor=None, fill=None, label= "Owner {}: {}(owns {} other farms)".format(ownern,u['first_name'] + " " + u['last_name'], int( u['nfarms'] )-1)))
+            # legendPatches.append(Patch(facecolor=None, fill=None, label= "Owner {}: {}(owns {} other farms)".format(ownern,u['first_name'] + " " + u['last_name'], int( u['nfarms'] )-1)))
             ownern+=1
             
 
@@ -379,6 +380,10 @@ def main():
         print(Farm(args.farm_id).farm_get_geocords())
 
     if args.by_country:
+        print("{} \t{} \t{}".format("Total Area", "# Locations", "Farm Id"))
+        all = load_all_farms(hasarea=args.hasarea)
+        for f in all:
+            print("{} \t{} \t{}".format(f.total_area, f.nloc(), f.farm_id))
         print(args.by_country)
         
 if __name__ == "__main__":

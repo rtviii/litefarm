@@ -61,7 +61,6 @@ def is_self_intersecting(E: List[Point])->bool:
         i = i+1
     return False
 def locations_to_polygons(farm_locations:List[dict])->dict:
-
     """Return a location_type->List[Polygon] mapping given @farm_locations of shape  
     ```json
     {
@@ -90,7 +89,6 @@ def locations_to_polygons(farm_locations:List[dict])->dict:
         except Exception:
             ...
     return farm_objects
-
 def farm_get_area(objects)->float:
     """Return scalar area in square meters given a list of polygons (possibly overlapping)"""
     # unary_union dissolved overlapping polygons into one

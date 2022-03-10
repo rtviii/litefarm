@@ -48,6 +48,7 @@ for i in x:
         "nat"  : nat
     })
         
+
 fig,ax =plt.subplots()
 ax.bar(np.arange(10),list(map(lambda x: x['prod'],subarrs)), width=0.2, color="None",edgecolor="black")
 ax.bar(np.arange(10),list(map(lambda x: x['nat'],subarrs)), width=0.2,bottom=list(map(lambda x: x['prod'],subarrs)), color="green", edgecolor='black')

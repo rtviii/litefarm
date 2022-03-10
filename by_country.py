@@ -20,7 +20,6 @@ gridpts              = []
 farmnames            = []
 farmsizes            = []
 farms:List[Farm]     = []
-
 all       = CUR.fetchall()
 print("ALL FARMSL:", all)
 for (farm_name,farmid, grid_points, country) in all:

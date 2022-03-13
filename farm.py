@@ -37,20 +37,23 @@ connection = psycopg2.connect(
     host     = os.environ.get("litefarm_prod_host"),
     port     = os.environ.get("litefarm_prod_port"),
     password = os.environ.get("litefarm_prod_pwd"))
+
 CUR     = connection.cursor()
 pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms_prod/{}.pickle'.format(farm_id)
 pklopen = lambda _id:  pickle.load(open(pklpath(_id),'rb'))
 
 def get_farm_locs(farm_id:str)->List:
+
     CUR.execute("""
-    SELECT fig.type, area.grid_points, ln.line_points , pt.point
-    FROM "userFarm" ufarm
-    JOIN  "location" loc ON ufarm.farm_id    = loc.farm_id
-    JOIN  "figure" fig ON  fig.location_id   = loc.location_id
-    FULL  JOIN "area" area on area.figure_id = fig.figure_id
-    FULL  JOIN "line" ln  on ln.figure_id    = fig.figure_id
-    FULL  JOIN "point" pt  on pt.figure_id   = fig.figure_id
-    where ufarm.farm_id                      = '%s'""" % farm_id)
+        SELECT fig.type, area.grid_points, ln.line_points , pt.point
+        FROM "farm" ufarm
+        JOIN  "location" loc ON ufarm.farm_id    = loc.farm_id
+        JOIN  "figure" fig ON  fig.location_id   = loc.location_id
+        FULL JOIN "area" area on area.figure_id = fig.figure_id 
+        FULL JOIN "line" ln  on ln.figure_id    = fig.figure_id
+        FULL JOIN "point" pt  on pt.figure_id   = fig.figure_id
+        where ufarm.farm_id = '%s' and loc.deleted = 'false'  """ % farm_id)
+
     resp         = CUR.fetchall()
     farm_objects = []
 
@@ -58,6 +61,7 @@ def get_farm_locs(farm_id:str)->List:
         (_type,grid_points,line_points, point) =datum
 
         if LOCTYPES[_type]['loctype'] ==  'area':
+
             farm_objects.append({
                 "type"  : _type,
                 "coords": grid_points
@@ -70,14 +74,15 @@ def get_farm_locs(farm_id:str)->List:
             })
 
         elif LOCTYPES[_type]['loctype'] ==  'point':
-
             farm_objects.append({
                 "type"  : _type,
                 "coords": [ point ]                
             })
+
     return farm_objects
 
 def farm_profile (farm_id:str)->dict:
+
     locations = get_farm_locs(farm_id)
     polygons  = locations_to_polygons(locations)
     return {
@@ -94,7 +99,7 @@ class Farm:
     country_code_2letter: str
     grid_pts            : dict
 
-    users     : List[dict]
+    users               : List[dict]
 
     def __init__(self, farm_id:str, pkl=True) -> None:
         if pkl:
@@ -349,6 +354,9 @@ def main():
         exit(0)
 
     if args.farm_id:
+        print("Locations for {}".format(args.farm_id))
+        print(Farm(args.farm_id).all_poly())
+        print("Len: ",len(Farm(args.farm_id).all_poly()))
         if args.merged:
             Farm(args.farm_id).plot_farm(merged=True)                        
             return

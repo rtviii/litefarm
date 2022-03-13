@@ -14,15 +14,37 @@
 
 
 
-select * from farm f 
-join users u
-on f.updated_by_user_id = u.user_id
-where u.email = 'carlosarzamendaapro@gmail.com'
+-- select * from farm f 
+-- join users u
+-- on f.updated_by_user_id = u.user_id
+-- where u.email = 'carlosarzamendaapro@gmail.com'
 
 
 
 
 
+-- select * from "location" where farm_id ='d68bad7a-6ff5-11eb-a53d-22000a6ddaf5'
+-- select count(*) from "location" where farm_id ='d68bad7a-6ff5-11eb-a53d-22000a6ddaf5' and deleted = 'false'
+
+-- select * from "location" where farm_id='d68bad7a-6ff5-11eb-a53d-22000a6ddaf5'
+
+
+
+SELECT fig.type, area.grid_points, ln.line_points , pt.point
+FROM "farm" ufarm
+JOIN  "location" loc ON ufarm.farm_id    = loc.farm_id
+JOIN  "figure" fig ON  fig.location_id   = loc.location_id
+FULL JOIN "area" area on area.figure_id = fig.figure_id 
+FULL JOIN "line" ln  on ln.figure_id    = fig.figure_id
+FULL JOIN "point" pt  on pt.figure_id   = fig.figure_id
+where ufarm.farm_id = 'd68bad7a-6ff5-11eb-a53d-22000a6ddaf5' and loc.deleted = 'false'
+
+
+-- SELECT location_id FROM "farm" ufarm
+-- FULL JOIN  "location" loc ON ufarm.farm_id = loc.farm_id
+-- where ufarm.farm_id = 'd68bad7a-6ff5-11eb-a53d-22000a6ddaf5'
+
+-- SELeCT * from "userFarm" uf where uf.farm_id ='d68bad7a-6ff5-11eb-a53d-22000a6ddaf5'
 
 -- 28 Brazil
 -- 37 Canada

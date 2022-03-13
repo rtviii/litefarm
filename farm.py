@@ -42,7 +42,7 @@ CUR     = connection.cursor()
 pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms_prod/{}.pickle'.format(farm_id)
 pklopen = lambda _id:  pickle.load(open(pklpath(_id),'rb'))
 
-def get_farm_locs(farm_id:str)->List:
+def get_farm_locs(farm_id:str, skip_boundary=False)->List:
 
     CUR.execute("""
         SELECT fig.type, area.grid_points, ln.line_points , pt.point
@@ -136,6 +136,20 @@ class Farm:
             o.extend(list(_)) 
         return o
 
+
+    def area_non_boundary(self):
+        all_locs = []
+        for k in self.locations:
+            if k == 'farm_site_boundary': continue
+            else:
+                all_locs.extend(self.locations[k])
+
+        return unary_union(all_locs).area
+            
+        
+        
+
+
     def get_users(self):
         CUR.execute("""
                 select  json_build_object(
@@ -192,8 +206,6 @@ class Farm:
         @merged=True to display unary_union
         """
 
-        print("got kwargs")
-        pprint(kwargs)
         # plt.rcParams.update({'figure.figsize':(7,5), 'figure.dpi':100})
         plt.rcParams["figure.figsize"] = (20,3)
         highlight = kwargs.pop('highlight', 'NONE')
@@ -231,9 +243,9 @@ class Farm:
         ownern = 1
         for u in U:
             print(u)
-            # legendPatches.append(Patch(facecolor=None, fill=None, label= "Owner {}: {}(owns {} other farms)".format(ownern,u['first_name'] + " " + u['last_name'], int( u['nfarms'] )-1)))
+            legendPatches.append(Patch(facecolor=None, fill=None, label= "Owner {}: {}(owns {} other farms)".format(ownern,u['first_name'] + " " + u['last_name'], int( u['nfarms'] )-1)))
             ownern+=1
-            
+
 
         ax.legend(handles=[*handles,*legendPatches], loc='best')
         ax.set_title("")
@@ -243,6 +255,7 @@ class Farm:
             figure.set_size_inches(16, 8)
             plt.savefig("/home/rxz/dev/litefarm/prod_plots/{}.png".format(self.farm_id),  dpi = 300)
             return
+
         plt.show()
 
 def load_all_farms(hasarea=False) ->List[ Farm ]:
@@ -262,7 +275,7 @@ def load_all_farms(hasarea=False) ->List[ Farm ]:
     return agg
 
 def farm_ids_prod()->List[str]:
-    with open("/home/rxz/dev/litefarm/resources/farmids_prod.txt",'r', encoding='utf-8') as infile:
+    with open("/home/rxz/dev/litefarm/resources/farm_ids_march13.txt",'r', encoding='utf-8') as infile:
         lines = list(map(str.strip,infile.readlines()))
         return lines
 
@@ -354,9 +367,6 @@ def main():
         exit(0)
 
     if args.farm_id:
-        print("Locations for {}".format(args.farm_id))
-        print(Farm(args.farm_id).all_poly())
-        print("Len: ",len(Farm(args.farm_id).all_poly()))
         if args.merged:
             Farm(args.farm_id).plot_farm(merged=True)                        
             return

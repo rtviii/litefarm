@@ -185,7 +185,7 @@ def driver():
         # ================================================= 
 
     # Create a Pandas Excel writer using XlsxWriter as the engine.
-    writer = pd.ExcelWriter('spg-monday.xlsx', engine='openpyxl')
+    writer = pd.ExcelWriter('spg-redone-separate-areas.xlsx', engine='openpyxl')
     df.to_excel(writer, sheet_name='Master-SPG-Data-v2')
     writer.save()
 
@@ -199,9 +199,14 @@ def get_rows_for_farmid(farmid:str, usrid:str):
         f                       = Farm(farmid)
         is_boundary_mapped      = 'farm_site_boundary' in f.locations
         area_within_boundary_ha = unary_union(f.locations['farm_site_boundary']).area / 10**4 if is_boundary_mapped  else 'N/A'
-        area_all_locations_ha   = f.total_area  /10**4
+        area_all_locations_ha   = f.area_non_boundary()  /10**4
         has_3_locations         = "True" if len(get_farm_locs(farmid)) > 2 else "False"
-        n_locations             = len(get_farm_locs(farmid))
+        locs                    = []
+
+        for k in f.locations:
+            if k != 'farm_site_boundary': locs.extend(f.locations[k])
+
+        n_locations             = len(locs)
         n_crop_plans            = get_mps_for_usr(usrid)
             
         [ n_crop_subgroups,n_unique_crop_varieties] = unique_varieties_and_subgroups(farmid)

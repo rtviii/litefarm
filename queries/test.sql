@@ -1,32 +1,22 @@
--- select * from farm f where f.farm_id = '3f13e920-89a9-11ec-84b5-0242ac150004'
--- select * from users u WHERE u.email = 'sitioflorbela@gmail.com'
--- [ "0f893636-3d8e-11ec-935a-0242ac150003", "1bdf2b9c-202b-11eb-bdb3-22000obb9251f" ]
+select * from farm f where f.farm_id = '3f13e920-89a9-11ec-84b5-0242ac150004'
+[ "0f893636-3d8e-11ec-935a-0242ac150003", "1bdf2b9c-202b-11eb-bdb3-22000obb9251f" ]
 
--- select count(r.role) from "userFarm" u join "role" r on u.role_id = r.role_id where role ='Owner'
--- select u.email from users u where u.user_id =  '5fce83c1748ff50068e28fdd'
+select count(r.role) from "userFarm" u join "role" r on u.role_id = r.role_id where role ='Owner'
+select u.email from users u where u.user_id =  '5fce83c1748ff50068e28fdd'
 
--- select farm_id from "farm" f where f.country_id = 211
-
--- select user_id from "users" u where u.email = 'maramoster@gmail.com'
--- select user_id from "users" u where u.email = 'maramoster@gmail.com'
-	
+select farm_id from "farm" f where f.country_id = 211
 
 
+select * from farm f 
+join users u
+on f.updated_by_user_id = u.user_id
+where u.email = ''
 
 
--- select * from farm f 
--- join users u
--- on f.updated_by_user_id = u.user_id
--- where u.email = 'carlosarzamendaapro@gmail.com'
+select * from "location" where farm_id ='d68bad7a-6ff5-11eb-a53d-22000a6ddaf5'
+select count(*) from "location" where farm_id ='d68bad7a-6ff5-11eb-a53d-22000a6ddaf5' and deleted = 'false'
 
-
-
-
-
--- select * from "location" where farm_id ='d68bad7a-6ff5-11eb-a53d-22000a6ddaf5'
--- select count(*) from "location" where farm_id ='d68bad7a-6ff5-11eb-a53d-22000a6ddaf5' and deleted = 'false'
-
--- select * from "location" where farm_id='d68bad7a-6ff5-11eb-a53d-22000a6ddaf5'
+select * from "location" where farm_id='d68bad7a-6ff5-11eb-a53d-22000a6ddaf5'
 
 
 
@@ -39,6 +29,7 @@ FULL JOIN "line" ln  on ln.figure_id    = fig.figure_id
 FULL JOIN "point" pt  on pt.figure_id   = fig.figure_id
 where ufarm.farm_id = 'd68bad7a-6ff5-11eb-a53d-22000a6ddaf5' and loc.deleted = 'false'
 
+select f.farm_id from farm f 
 
 -- SELECT location_id FROM "farm" ufarm
 -- FULL JOIN  "location" loc ON ufarm.farm_id = loc.farm_id

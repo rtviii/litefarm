@@ -12,8 +12,6 @@ def dir_path(string):
         except:
             raise PermissionError(string)
 import pickle
-from reprlib import aRepr
-import geopandas as gpd
 import numpy as np
 from shapely.ops import unary_union
 import os, sys
@@ -26,34 +24,25 @@ from farm import Farm, farm_profile, get_farm_locs
 import matplotlib.pyplot as plt
 
 
-
-
-fid        = sys.argv[1]
-farmlocs   = get_farm_locs(fid)
-total_area = unary_union(locations_to_polygons(farmlocs, get_list=True)).area
-
-print(total_area)
-
+fid           = sys.argv[1]
+farmlocs      = get_farm_locs(fid)
+total_area    = unary_union(locations_to_polygons(farmlocs, get_list=True)).area
 polygons      = locations_to_polygons(farmlocs)
 lentotal_dict = 0
 
-for p in polygons:
-    # print(polygons[p])
-    lentotal_dict +=len(polygons[p])
-    # print(p)
 
+pklpath = lambda farm_id: '/home/rxz/dev/litefarm/farms_prod/{}.pickle'.format(farm_id)
 
-print("Lend dict", lentotal_dict)
-print("len list", len(locations_to_polygons(farmlocs, get_list=True)))
+D = {
+    # in square meters
+    'total_area': total_area,
+    'farm_id'   : fid,
+    'locations' : locations_to_polygons (farmlocs),
+}
 
+with open(pklpath(fid), 'wb') as infile:
+    pickle.dump(D, infile)
+    print("Saved farm {}".format(fid) )
 
-
-
-# unary_union(polygons).area
-
-
-# print(len(farmlocs))
-# print(len(polygons))
-# farm_profile()
 
 

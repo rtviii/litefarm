@@ -145,9 +145,6 @@ class Farm:
                 all_locs.extend(self.locations[k])
 
         return unary_union(all_locs).area
-            
-        
-        
 
 
     def get_users(self):

@@ -1,0 +1,2305 @@
+,country_name,scale,Farm Number,type,edge density for plots m/ha,total area (ha) user input,calculated area (ha) using polygon,total perimeter (m) user input,calculated perimeter (m) using polygon
+0,Brazil,Other,Farm 1,field,297.89,3.7,3.34,,1102.89
+1,Brazil,Other,Farm 1,field,761.24,0.33,0.29,,248.77
+2,Brazil,Other,Farm 1,field,688.02,0.44,0.4,,302.52
+3,Brazil,Other,Farm 1,field,978.11,0.22,0.2,,214.7
+4,Brazil,Other,Farm 2,field,241.39,3.04,3.69,,732.73
+5,Brazil,Other,Farm 2,field,328.4,2.73,3.31,,895.05
+6,Brazil,Other,Farm 3,field,341.86,1.43,1.24,,490.46
+7,Brazil,Other,Farm 4,field,3259.36,0.02,0.01,,49.22
+8,Brazil,Other,Farm 4,field,3493.76,0.01,0.01,,45.77
+9,Brazil,Other,Farm 5,field,530.37,0.58,0.51,,308.83
+10,Brazil,Other,Farm 6,field,1225.57,0.11,0.16,,134.08
+11,Brazil,Other,Farm 6,field,605.46,0.48,0.72,,288.2
+12,Brazil,Other,Farm 7,field,303.05,2.43,1.96,,735.54
+13,Argentina,Other,Farm 8,field,3304.57,0.02,0.01,,50.23
+14,Brazil,Other,Farm 9,field,220.07,6.64,5.26,,1462.17
+15,Brazil,Other,Farm 10,field,88.42,20.64,16.93,,1825.01
+16,Brazil,Other,Farm 11,field,418.24,0.92,0.81,,385.37
+17,Brazil,Other,Farm 11,field,650.95,0.48,0.42,,310.63
+18,Brazil,Other,Farm 11,field,595.32,0.48,0.42,,286.41
+19,Brazil,Other,Farm 12,field,210.5,4.53,3.97,,953.3
+20,Argentina,Other,Farm 13,field,81.89,24.32,16.54,,1991.14
+21,Argentina,Other,Farm 14,field,710.22,0.32,0.14,,226.13
+22,Brazil,Other,Farm 15,field,1407.01,0.13,0.11,,184.04
+23,Brazil,Other,Farm 15,field,1255.04,0.12,0.1,,149.35
+24,Brazil,Other,Farm 15,field,183.02,4.95,4.21,,905.97
+25,Brazil,Other,Farm 15,field,1722.66,0.07,0.06,,121.1
+26,Brazil,Other,Farm 15,field,1747.4,0.05,0.04,,82.65
+27,Brazil,Other,Farm 11,field,225.96,3.09,2.71,,699.06
+28,Argentina,Other,Farm 16,field,672.64,0.45,0.28,,302.69
+29,Brazil,Other,Farm 17,field,2646.68,0.03,0.03,,87.61
+30,Brazil,Other,Farm 17,field,2965.07,0.02,0.01,,49.22
+31,Brazil,Other,Farm 18,field,616.12,0.54,0.42,331.0,330.85
+32,Argentina,Other,Farm 19,farm_site_boundary,2419.26,0.04,0.02,93.0,92.66
+33,Argentina,Other,Farm 19,garden,5041.34,0.01,0.0,32.0,31.76
+34,Argentina,Other,Farm 19,greenhouse,5750.85,0.01,0.0,33.0,32.78
+35,Argentina,Other,Farm 19,residence,0.0,0.0,0.0,26.0,25.61
+36,Argentina,Other,Farm 19,surface_water,17306.16,0.0,0.0,10.0,10.38
+37,Brazil,SPG 2023,Farm 20,residence,0.0,0.01,0.01,46.0,46.03
+38,Brazil,SPG 2023,Farm 20,residence,0.0,0.01,0.01,51.0,50.78
+39,Brazil,SPG 2023,Farm 20,surface_water,722.33,0.36,0.28,260.0,259.61
+40,Brazil,SPG 2023,Farm 20,field,279.68,2.13,1.68,596.0,595.13
+41,Brazil,SPG 2023,Farm 20,field,1328.67,0.14,0.11,183.0,183.09
+42,Brazil,SPG 2023,Farm 20,greenhouse,1807.2,0.05,0.04,93.0,92.53
+43,Brazil,SPG 2023,Farm 20,greenhouse,790.03,0.26,0.21,210.0,209.12
+44,Brazil,SPG 2023,Farm 20,barn,0.0,0.01,0.01,38.0,38.16
+45,Brazil,SPG 2023,Farm 20,barn,0.0,0.0,0.0,15.0,15.47
+46,Argentina,Other,Farm 14,greenhouse,4519.43,0.02,0.01,101.0,101.24
+47,Argentina,Other,Farm 14,greenhouse,5035.9,0.02,0.01,101.0,100.72
+48,Argentina,Other,Farm 14,greenhouse,2981.79,0.04,0.02,108.0,107.64
+49,Argentina,Other,Farm 14,greenhouse,7542.6,0.0,0.0,22.0,21.87
+50,Brazil,Other,Farm 18,field,4769.21,0.08,0.06,361.0,360.55
+51,Brazil,Other,Farm 18,field,1774.46,0.06,0.05,101.0,101.14
+52,Brazil,Other,Farm 18,surface_water,3875.02,0.01,0.01,39.0,38.75
+53,Brazil,Other,Farm 18,barn,0.0,0.02,0.02,69.0,69.44
+54,Brazil,Other,Farm 18,field,313.92,3.53,2.79,1110.0,1108.93
+55,Brazil,Other,Farm 18,natural_area,416.29,1.05,0.83,440.0,438.94
+56,Brazil,SPG 2023,Farm 21,residence,0.0,0.01,0.01,44.0,43.42
+57,Argentina,Other,Farm 22,field,396.28,1.13,0.49,446.0,446.14
+58,Argentina,Other,Farm 22,barn,0.0,0.02,0.01,54.0,54.1
+59,Argentina,Other,Farm 22,greenhouse,5490.39,0.01,0.0,36.0,36.24
+60,Argentina,Other,Farm 22,residence,0.0,0.01,0.01,47.0,47.13
+61,Argentina,Other,Farm 22,garden,605.73,0.45,0.2,273.0,272.94
+62,Brazil,Other,Farm 23,ceremonial_area,0.0,0.01,0.01,34.0,33.88
+63,Brazil,Other,Farm 23,garden,4305.4,0.01,0.01,40.0,39.61
+64,Brazil,Other,Farm 24,farm_site_boundary,791.07,0.33,0.3,263.0,262.56
+65,Brazil,Other,Farm 24,field,1871.36,0.09,0.09,176.0,175.91
+66,Brazil,Other,Farm 23,field,3243.32,0.02,0.01,51.0,50.92
+67,Brazil,SPG 2023,Farm 25,residence,0.0,0.01,0.01,40.0,40.01
+68,Brazil,SPG 2023,Farm 25,farm_site_boundary,203.09,5.06,3.99,1029.0,1028.1
+69,Brazil,SPG 2023,Farm 25,field,359.91,1.36,1.07,491.0,490.52
+70,Brazil,SPG 2023,Farm 25,natural_area,875.35,0.3,0.24,266.0,265.06
+71,Brazil,SPG 2023,Farm 25,natural_area,531.11,1.02,0.81,545.0,544.23
+72,Brazil,SPG 2023,Farm 21,field,357.94,2.95,2.33,1058.0,1056.98
+73,Brazil,SPG 2023,Farm 21,field,440.65,3.0,2.37,1326.0,1323.64
+74,Brazil,SPG 2023,Farm 21,natural_area,1075.53,1.27,1.0,1368.0,1365.93
+75,Brazil,SPG 2023,Farm 21,natural_area,1001.64,0.38,0.3,383.0,381.62
+76,Brazil,SPG 2023,Farm 21,natural_area,1279.42,0.19,0.15,241.0,240.53
+77,Brazil,SPG 2023,Farm 21,barn,0.0,0.01,0.01,45.0,44.94
+78,Brazil,SPG 2023,Farm 21,natural_area,954.94,0.25,0.2,239.0,238.83
+79,Brazil,SPG 2023,Farm 21,natural_area,789.39,0.29,0.23,228.0,227.66
+80,Brazil,SPG 2023,Farm 21,natural_area,442.98,1.14,0.9,507.0,506.14
+81,Brazil,SPG 2023,Farm 21,field,381.55,1.17,0.93,449.0,448.02
+82,Brazil,SPG 2023,Farm 21,natural_area,910.38,0.74,0.58,674.0,672.32
+83,Brazil,SPG 2023,Farm 21,barn,0.0,0.06,0.05,138.0,138.0
+84,Brazil,SPG 2023,Farm 26,farm_site_boundary,105.13,15.5,12.25,1632.0,1629.46
+85,Brazil,SPG 2023,Farm 26,field,280.12,2.42,1.92,680.0,678.93
+86,Brazil,SPG 2023,Farm 26,field,375.75,3.1,2.45,1167.0,1165.83
+87,Brazil,SPG 2023,Farm 27,residence,0.0,0.02,0.02,62.0,61.74
+88,Brazil,SPG 2023,Farm 27,barn,0.0,0.01,0.01,49.0,49.05
+89,Brazil,SPG 2023,Farm 27,barn,0.0,0.35,0.28,375.0,374.63
+90,Brazil,SPG 2023,Farm 28,field,466.12,0.75,0.91,353.0,351.59
+91,Brazil,SPG 2023,Farm 29,field,215.75,3.74,4.5,810.0,807.67
+92,Brazil,SPG 2023,Farm 29,field,668.24,0.36,0.44,244.0,242.84
+93,Brazil,SPG 2023,Farm 29,field,2092.96,0.04,0.04,77.0,76.39
+94,Brazil,SPG 2023,Farm 30,field,202.75,4.28,5.14,870.0,867.18
+95,Brazil,SPG 2023,Farm 31,farm_site_boundary,191.5,7.39,5.91,1418.0,1415.69
+96,Brazil,SPG 2023,Farm 31,field,555.83,0.55,0.44,305.0,304.65
+97,Brazil,SPG 2023,Farm 31,field,874.34,0.34,0.27,293.0,292.99
+98,Brazil,SPG 2023,Farm 31,surface_water,2101.98,0.04,0.03,77.0,77.14
+99,Brazil,SPG 2023,Farm 31,field,890.1,0.34,0.27,299.0,298.63
+100,Brazil,SPG 2023,Farm 31,greenhouse,2198.94,0.04,0.03,87.0,87.08
+101,Brazil,SPG 2023,Farm 31,residence,0.0,0.01,0.01,42.0,42.21
+102,Brazil,SPG 2023,Farm 32,residence,0.0,0.02,0.02,61.0,60.53
+103,Brazil,Other,Farm 33,residence,0.0,0.02,0.02,57.0,57.25
+104,Brazil,Other,Farm 33,greenhouse,2163.24,0.06,0.05,132.0,131.09
+105,Brazil,Other,Farm 33,greenhouse,2012.26,0.06,0.05,127.0,126.17
+106,Brazil,Other,Farm 33,surface_water,1504.77,0.06,0.05,97.0,97.06
+107,Brazil,Other,Farm 33,surface_water,2160.9,0.04,0.04,96.0,95.73
+108,Brazil,Other,Farm 33,farm_site_boundary,388.47,1.84,1.47,717.0,714.6
+109,Brazil,Other,Farm 33,field,809.24,0.29,0.23,236.0,235.0
+110,Brazil,Other,Farm 33,field,1411.09,0.1,0.08,140.0,139.7
+111,Brazil,SPG 2023,Farm 32,farm_site_boundary,174.85,19.74,15.78,3458.0,3450.77
+112,Brazil,Other,Farm 33,surface_water,4197.62,0.01,0.01,41.0,40.72
+113,Brazil,SPG 2023,Farm 32,field,589.51,0.64,0.51,380.0,379.05
+114,Brazil,SPG 2023,Farm 32,field,601.27,0.67,0.54,404.0,403.39
+115,Brazil,SPG 2023,Farm 32,field,786.8,0.36,0.29,287.0,286.32
+116,Brazil,SPG 2023,Farm 32,natural_area,789.93,0.94,0.75,747.0,745.14
+117,Brazil,SPG 2023,Farm 32,natural_area,267.66,2.49,1.99,668.0,666.34
+118,Brazil,SPG 2023,Farm 32,natural_area,596.54,0.68,0.54,404.0,403.56
+119,Brazil,SPG 2023,Farm 32,natural_area,415.79,1.31,1.05,547.0,545.02
+120,Brazil,SPG 2023,Farm 32,field,655.41,0.58,0.46,379.0,378.7
+121,Brazil,SPG 2023,Farm 32,field,393.59,1.28,1.02,503.0,502.11
+122,Brazil,SPG 2023,Farm 32,field,361.23,2.17,1.74,787.0,785.49
+123,Brazil,SPG 2023,Farm 32,field,713.6,0.66,0.53,473.0,471.9
+124,Brazil,SPG 2023,Farm 32,field,413.35,1.96,1.57,814.0,811.86
+125,Brazil,SPG 2023,Farm 32,natural_area,1285.65,0.26,0.21,333.0,332.21
+126,Brazil,SPG 2023,Farm 32,natural_area,1316.03,0.14,0.11,188.0,187.27
+127,Brazil,SPG 2023,Farm 32,natural_area,1223.53,0.21,0.17,254.0,253.39
+128,Brazil,SPG 2023,Farm 32,natural_area,1842.4,0.08,0.07,153.0,152.55
+129,Brazil,SPG 2023,Farm 32,natural_area,667.12,0.49,0.39,326.0,325.22
+130,Brazil,SPG 2023,Farm 32,field,355.61,2.7,2.16,963.0,960.79
+131,Brazil,SPG 2023,Farm 32,field,746.0,0.39,0.31,289.0,288.77
+132,Brazil,SPG 2023,Farm 34,field,960.44,0.2,0.16,194.0,193.72
+133,Brazil,SPG 2023,Farm 34,natural_area,1898.04,0.11,0.09,207.0,206.32
+134,Brazil,SPG 2023,Farm 34,greenhouse,4471.98,0.02,0.02,111.0,110.46
+135,Brazil,SPG 2023,Farm 34,natural_area,1026.31,1.04,0.83,1069.0,1067.97
+136,Brazil,SPG 2023,Farm 34,natural_area,1422.96,0.2,0.16,289.0,288.86
+137,Brazil,SPG 2023,Farm 34,field,704.73,0.82,0.65,575.0,574.7
+138,Brazil,SPG 2023,Farm 34,field,3024.31,0.02,0.02,64.0,63.51
+139,Brazil,SPG 2023,Farm 34,residence,0.0,0.02,0.01,53.0,52.7
+140,Brazil,SPG 2023,Farm 34,barn,0.0,0.0,0.0,27.0,26.68
+141,Brazil,SPG 2023,Farm 34,barn,0.0,0.01,0.01,44.0,44.28
+142,Brazil,SPG 2023,Farm 34,surface_water,1713.35,0.06,0.05,101.0,100.75
+143,Brazil,SPG 2023,Farm 34,barn,0.0,0.02,0.02,80.0,79.53
+144,Brazil,Other,Farm 35,surface_water,33986.69,0.0,0.0,7.0,6.8
+145,Brazil,Other,Farm 36,field,1050.91,0.15,0.13,157.0,157.11
+146,Brazil,Other,Farm 36,field,1087.16,0.16,0.14,175.0,175.14
+147,Brazil,Other,Farm 36,field,1204.09,0.16,0.14,189.0,188.08
+148,Brazil,SPG 2023,Farm 20,barn,0.0,0.02,0.02,65.0,64.49
+149,Brazil,Other,Farm 36,field,2541.47,0.03,0.03,78.0,77.51
+150,Brazil,SPG 2023,Farm 20,field,450.24,0.95,0.75,429.0,428.58
+151,Brazil,Other,Farm 36,field,8322.56,0.01,0.01,55.0,54.93
+152,Brazil,Other,Farm 36,field,2168.98,0.07,0.06,153.0,153.13
+153,Brazil,Other,Farm 37,farm_site_boundary,170.33,10.93,9.28,1861.0,1861.18
+154,Brazil,Other,Farm 37,residence,0.0,0.12,0.11,149.0,148.74
+155,Brazil,Other,Farm 37,field,752.95,0.31,0.26,236.0,235.07
+156,Brazil,Other,Farm 37,field,941.04,0.21,0.18,199.0,198.09
+157,Brazil,Other,Farm 37,surface_water,1164.62,0.14,0.12,162.0,162.23
+158,Brazil,Other,Farm 37,field,412.92,1.13,0.96,466.0,465.19
+159,Brazil,Other,Farm 37,field,661.6,0.37,0.32,247.0,246.51
+160,Brazil,Other,Farm 37,field,429.59,0.99,0.84,425.0,424.18
+161,Brazil,Other,Farm 37,field,1880.86,0.05,0.04,87.0,86.9
+162,Brazil,Other,Farm 37,natural_area,668.96,0.41,0.35,272.0,272.0
+163,Brazil,Other,Farm 37,field,960.51,0.32,0.27,309.0,308.52
+164,Brazil,Other,Farm 37,field,552.24,0.68,0.58,376.0,375.53
+165,Brazil,Other,Farm 37,field,524.33,0.58,0.49,305.0,304.48
+166,Brazil,Other,Farm 37,field,928.22,0.29,0.24,267.0,266.58
+167,Brazil,Other,Farm 37,barn,0.0,0.08,0.07,113.0,112.66
+168,Brazil,Other,Farm 37,field,622.37,0.65,0.56,408.0,407.53
+169,Brazil,Other,Farm 37,field,784.58,0.33,0.28,257.0,257.11
+170,Brazil,Other,Farm 37,field,623.74,0.5,0.43,315.0,314.61
+171,Brazil,Other,Farm 37,field,483.3,0.82,0.7,397.0,397.13
+172,Brazil,Other,Farm 37,field,563.79,0.8,0.68,454.0,452.44
+173,Brazil,Other,Farm 37,field,499.96,0.62,0.53,313.0,312.22
+174,Brazil,Other,Farm 37,field,1534.01,0.12,0.1,182.0,181.32
+175,Brazil,Other,Farm 37,field,1717.27,0.06,0.05,103.0,102.52
+176,Brazil,Other,Farm 37,field,1656.47,0.06,0.05,96.0,95.74
+177,Brazil,Other,Farm 37,field,1198.27,0.12,0.1,139.0,138.4
+178,Brazil,Other,Farm 37,field,1025.38,0.23,0.2,238.0,237.48
+179,Brazil,SPG 2023,Farm 38,natural_area,389.27,1.11,0.87,434.0,432.94
+180,Brazil,SPG 2023,Farm 38,residence,0.0,0.01,0.01,46.0,45.67
+181,Brazil,SPG 2023,Farm 38,barn,0.0,0.01,0.01,39.0,38.61
+182,Brazil,SPG 2023,Farm 39,residence,0.0,0.01,0.01,34.0,34.32
+183,Brazil,SPG 2023,Farm 40,farm_site_boundary,322.67,3.0,2.41,972.0,968.65
+184,Brazil,SPG 2023,Farm 40,surface_water,1850.19,0.08,0.07,153.0,152.64
+185,Brazil,SPG 2023,Farm 40,residence,0.0,0.02,0.01,52.0,51.48
+186,Brazil,Larisse Local & SPG 2023,Farm 41,barn,0.0,0.05,0.05,95.0,94.77
+187,Brazil,Other,Farm 42,farm_site_boundary,172.96,8.81,7.49,1524.0,1524.08
+188,Brazil,Other,Farm 42,residence,0.0,0.11,0.09,136.0,136.28
+189,Brazil,Other,Farm 42,field,285.3,2.32,1.97,662.0,661.19
+190,Brazil,Other,Farm 42,field,367.47,2.07,1.76,763.0,762.29
+191,Brazil,Other,Farm 42,garden,980.29,0.32,0.28,319.0,318.1
+192,Brazil,Other,Farm 42,natural_area,444.0,0.93,0.79,413.0,411.76
+193,Brazil,SPG 2023,Farm 43,farm_site_boundary,118.98,12.54,15.2,1498.0,1491.44
+194,Brazil,SPG 2023,Farm 43,natural_area,159.03,6.99,8.48,1115.0,1111.62
+195,Brazil,SPG 2023,Farm 43,field,1141.06,0.15,0.19,177.0,176.07
+196,Brazil,SPG 2023,Farm 43,field,662.87,0.94,1.14,625.0,622.83
+197,Brazil,SPG 2023,Farm 43,field,872.16,0.23,0.28,205.0,204.61
+198,Brazil,SPG 2023,Farm 43,natural_area,1400.48,0.23,0.28,321.0,319.87
+199,Brazil,SPG 2023,Farm 43,field,872.47,0.25,0.3,216.0,214.89
+200,Brazil,SPG 2023,Farm 43,natural_area,614.08,0.6,0.73,370.0,369.0
+201,Brazil,SPG 2023,Farm 43,field,635.5,0.66,0.8,422.0,420.7
+202,Brazil,SPG 2023,Farm 43,field,1107.56,0.13,0.16,146.0,145.98
+203,Brazil,SPG 2023,Farm 43,field,655.25,0.41,0.5,269.0,268.13
+204,Brazil,Larisse Local & SPG 2023,Farm 44,greenhouse,3236.72,0.03,0.03,108.0,107.14
+205,Brazil,Larisse Local,Farm 45,farm_site_boundary,114.39,18.7,16.24,2146.0,2139.53
+206,Brazil,Larisse Local,Farm 45,residence,0.0,0.02,0.01,53.0,52.84
+207,Brazil,Larisse Local,Farm 45,residence,0.0,0.01,0.01,70.0,69.5
+208,Brazil,Larisse Local,Farm 45,barn,0.0,0.0,0.0,20.0,19.9
+209,Brazil,Larisse Local,Farm 45,surface_water,2229.74,0.03,0.03,76.0,76.03
+210,Brazil,Larisse Local,Farm 45,surface_water,4311.95,0.01,0.01,40.0,39.67
+211,Brazil,Larisse Local,Farm 45,surface_water,7683.78,0.0,0.0,23.0,23.05
+212,Brazil,Larisse Local,Farm 45,field,633.91,0.46,0.4,294.0,293.12
+213,Brazil,Larisse Local,Farm 45,field,570.82,0.54,0.47,311.0,310.18
+214,Brazil,Larisse Local,Farm 45,field,929.55,0.2,0.17,182.0,182.01
+215,Brazil,Larisse Local,Farm 45,field,1015.89,0.14,0.13,147.0,146.59
+216,Brazil,Larisse Local,Farm 45,field,799.15,0.36,0.31,288.0,287.13
+217,Brazil,Larisse Local,Farm 45,field,806.85,0.25,0.22,202.0,201.55
+218,Brazil,Larisse Local,Farm 45,field,1535.62,0.06,0.06,100.0,99.66
+219,Brazil,Larisse Local,Farm 45,field,1293.8,0.09,0.08,118.0,117.61
+220,Brazil,Larisse Local,Farm 45,field,1820.43,0.05,0.04,84.0,83.92
+221,Brazil,Larisse Local & SPG 2023,Farm 46,farm_site_boundary,129.8,10.6,9.15,1378.0,1375.93
+222,Brazil,SPG 2023,Farm 47,greenhouse,4134.16,0.02,0.01,73.0,72.76
+223,Brazil,SPG 2023,Farm 47,greenhouse,5914.6,0.01,0.0,31.0,31.35
+224,Brazil,SPG 2023,Farm 47,garden,754.65,0.36,0.28,272.0,271.3
+225,Brazil,SPG 2023,Farm 47,surface_water,2022.2,0.04,0.03,75.0,74.62
+226,Brazil,SPG 2023,Farm 47,surface_water,1431.29,0.09,0.07,128.0,128.24
+227,Brazil,SPG 2023,Farm 47,surface_water,2196.93,0.03,0.02,67.0,67.01
+228,Brazil,SPG 2023,Farm 47,field,1793.18,0.06,0.05,103.0,103.11
+229,Brazil,SPG 2023,Farm 47,field,2573.21,0.03,0.03,86.0,85.69
+230,Brazil,SPG 2023,Farm 48,field,283.53,5.99,7.24,1704.0,1698.39
+231,Brazil,SPG 2023,Farm 48,field,1401.17,0.19,0.23,265.0,263.84
+232,Brazil,SPG 2023,Farm 48,field,984.11,0.55,0.66,538.0,536.73
+233,Brazil,SPG 2023,Farm 49,farm_site_boundary,154.54,8.69,10.54,1346.0,1343.47
+234,Brazil,SPG 2023,Farm 49,natural_area,345.23,1.85,2.24,640.0,638.68
+235,Brazil,SPG 2023,Farm 49,natural_area,633.2,0.61,0.74,389.0,388.03
+236,Brazil,SPG 2023,Farm 49,garden,1719.4,0.1,0.12,175.0,174.52
+237,Brazil,SPG 2023,Farm 49,field,1508.95,0.07,0.08,103.0,102.76
+238,Brazil,SPG 2023,Farm 49,field,1259.05,0.24,0.29,300.0,299.03
+239,Brazil,SPG 2023,Farm 49,field,613.81,0.54,0.66,334.0,333.05
+240,Brazil,SPG 2023,Farm 49,natural_area,306.32,2.58,3.13,792.0,789.67
+241,Brazil,SPG 2023,Farm 49,natural_area,1057.93,0.38,0.46,407.0,405.61
+242,Brazil,SPG 2023,Farm 49,natural_area,355.16,1.56,1.89,555.0,553.1
+243,Brazil,SPG 2023,Farm 49,surface_water,1847.98,0.13,0.15,234.0,233.22
+244,Brazil,SPG 2023,Farm 49,natural_area,1692.32,0.14,0.16,231.0,230.16
+245,Brazil,SPG 2023,Farm 49,field,1670.11,0.06,0.07,102.0,102.04
+246,Brazil,SPG 2023,Farm 49,field,1175.48,0.28,0.34,330.0,329.02
+247,Brazil,Larisse Local & SPG 2023,Farm 50,farm_site_boundary,181.22,9.84,8.49,1784.0,1782.82
+248,Brazil,Larisse Local & SPG 2023,Farm 50,farm_site_boundary,769.51,0.58,0.5,448.0,447.93
+249,Brazil,Larisse Local & SPG 2023,Farm 50,residence,0.0,0.02,0.02,62.0,61.43
+250,Brazil,Larisse Local & SPG 2023,Farm 50,surface_water,1106.36,0.14,0.12,160.0,159.76
+251,Brazil,Larisse Local & SPG 2023,Farm 50,surface_water,1268.84,0.1,0.09,131.0,130.69
+252,Brazil,Larisse Local & SPG 2023,Farm 46,residence,0.0,0.02,0.01,53.0,52.61
+253,Brazil,Larisse Local & SPG 2023,Farm 46,garden,1955.85,0.05,0.04,90.0,89.97
+254,Brazil,Larisse Local & SPG 2023,Farm 46,greenhouse,5211.3,0.01,0.01,34.0,34.39
+255,Brazil,Larisse Local & SPG 2023,Farm 46,barn,0.0,0.01,0.01,38.0,37.89
+256,Brazil,SPG 2023,Farm 51,farm_site_boundary,161.79,8.0,9.66,1299.0,1293.85
+257,Brazil,SPG 2023,Farm 20,farm_site_boundary,117.53,13.4,10.57,1579.0,1575.11
+258,Brazil,SPG 2023,Farm 20,natural_area,310.42,2.82,2.22,876.0,874.17
+259,Brazil,SPG 2023,Farm 20,surface_water,2627.88,0.02,0.02,58.0,58.34
+260,Brazil,SPG 2023,Farm 20,field,504.73,1.28,1.01,647.0,645.4
+261,Brazil,SPG 2023,Farm 20,field,516.12,0.9,0.71,466.0,465.18
+262,Brazil,SPG 2023,Farm 20,natural_area,595.16,1.79,1.42,1071.0,1068.2
+263,Brazil,SPG 2023,Farm 20,natural_area,971.71,0.69,0.54,672.0,670.77
+264,Brazil,SPG 2023,Farm 20,field,721.42,0.4,0.31,287.0,286.76
+265,Brazil,SPG 2023,Farm 48,natural_area,1273.3,0.21,0.26,270.0,269.05
+266,Brazil,SPG 2023,Farm 48,natural_area,1935.06,0.13,0.16,252.0,250.59
+267,Brazil,SPG 2023,Farm 52,natural_area,1242.23,0.19,0.23,232.0,231.55
+268,Brazil,SPG 2023,Farm 52,natural_area,712.04,0.36,0.44,258.0,257.19
+269,Brazil,SPG 2023,Farm 51,field,570.52,1.1,1.33,630.0,627.29
+270,Brazil,SPG 2023,Farm 25,field,407.41,1.18,0.93,481.0,479.97
+271,Brazil,SPG 2023,Farm 25,field,665.63,0.46,0.37,310.0,309.05
+272,Brazil,Other,Farm 18,field,454.68,0.99,0.78,449.0,448.63
+273,Brazil,Other,Farm 18,field,632.33,0.42,0.34,269.0,268.61
+274,Brazil,Other,Farm 18,natural_area,941.06,0.34,0.27,320.0,319.3
+275,Brazil,Other,Farm 18,natural_area,435.85,1.54,1.21,671.0,669.86
+276,Brazil,Other,Farm 18,field,284.19,3.05,2.41,868.0,866.78
+277,Brazil,Other,Farm 18,farm_site_boundary,102.92,16.02,12.66,1651.0,1649.02
+278,Brazil,Other,Farm 18,field,418.64,1.06,0.84,447.0,445.64
+279,Brazil,Other,Farm 18,field,897.54,0.2,0.16,184.0,183.46
+280,Brazil,Other,Farm 18,field,689.33,0.54,0.42,371.0,370.38
+281,Brazil,Other,Farm 18,field,423.29,1.13,0.89,478.0,477.26
+282,Brazil,SPG 2023,Farm 21,surface_water,4527.69,0.15,0.12,697.0,695.91
+283,Brazil,SPG 2023,Farm 21,farm_site_boundary,121.57,15.04,11.87,1829.0,1828.05
+284,Brazil,SPG 2023,Farm 21,field,696.76,0.9,0.71,630.0,629.25
+285,Argentina,Other,Farm 53,garden,4351.39,0.02,0.01,103.0,103.13
+286,Argentina,Other,Farm 53,garden,4025.3,0.03,0.01,105.0,105.06
+287,Argentina,Other,Farm 53,greenhouse,3292.92,0.04,0.02,115.0,115.25
+288,Argentina,Other,Farm 53,barn,0.0,0.01,0.0,48.0,47.65
+289,Argentina,Other,Farm 53,garden,3647.0,0.03,0.01,105.0,105.4
+290,Argentina,Other,Farm 53,garden,6073.86,0.02,0.01,100.0,100.22
+291,Argentina,Other,Farm 53,greenhouse,9983.81,0.0,0.0,24.0,23.96
+292,Brazil,SPG 2023,Farm 34,greenhouse,4941.54,0.01,0.01,40.0,39.53
+293,Brazil,SPG 2023,Farm 34,field,1910.93,0.08,0.06,144.0,143.51
+294,Brazil,SPG 2023,Farm 34,field,71.12,3.0,0.18,214.0,213.37
+295,Brazil,SPG 2023,Farm 34,farm_site_boundary,116.8,11.54,9.16,1351.0,1348.38
+296,Brazil,SPG 2023,Farm 34,surface_water,7269.54,0.0,0.0,23.0,23.26
+297,Brazil,SPG 2023,Farm 34,field,370.39,2.18,1.73,807.0,806.07
+298,Brazil,Other,Farm 54,farm_site_boundary,250.29,2.92,2.91,734.0,731.61
+299,Brazil,SPG 2023,Farm 40,field,942.2,0.21,0.17,198.0,197.39
+300,Brazil,SPG 2023,Farm 40,field,1060.16,0.2,0.16,212.0,211.61
+301,Brazil,SPG 2023,Farm 40,field,1449.66,0.14,0.11,205.0,204.69
+302,Brazil,SPG 2023,Farm 40,field,1306.78,0.18,0.14,231.0,230.39
+303,Brazil,SPG 2023,Farm 40,field,907.54,0.27,0.21,241.0,241.13
+304,Brazil,SPG 2023,Farm 40,field,1042.96,0.18,0.14,186.0,185.86
+305,Brazil,SPG 2023,Farm 40,greenhouse,3305.31,0.04,0.04,145.0,145.43
+306,Brazil,SPG 2023,Farm 40,greenhouse,3066.48,0.05,0.04,154.0,153.63
+307,Brazil,SPG 2023,Farm 40,greenhouse,2703.5,0.06,0.05,155.0,155.18
+308,Brazil,SPG 2023,Farm 40,greenhouse,1768.26,0.09,0.07,164.0,164.27
+309,Brazil,SPG 2023,Farm 39,farm_site_boundary,323.78,1.78,1.43,579.0,577.72
+310,Brazil,SPG 2023,Farm 55,farm_site_boundary,156.46,14.72,11.76,2312.0,2302.47
+311,Brazil,SPG 2023,Farm 55,residence,0.0,0.01,0.01,40.0,39.56
+312,Brazil,SPG 2023,Farm 55,field,417.87,1.0,0.8,417.0,416.49
+313,Brazil,SPG 2023,Farm 55,field,685.05,0.38,0.3,258.0,257.51
+314,Brazil,SPG 2023,Farm 55,field,968.75,0.27,0.22,266.0,265.15
+315,Brazil,SPG 2023,Farm 55,field,955.41,0.24,0.19,226.0,225.48
+316,Brazil,SPG 2023,Farm 55,field,537.8,0.65,0.52,352.0,350.54
+317,Brazil,SPG 2023,Farm 55,field,427.29,1.0,0.87,428.0,427.29
+318,Brazil,SPG 2023,Farm 55,field,2731.15,0.1,0.35,273.0,273.11
+319,Brazil,SPG 2023,Farm 55,field,833.02,0.28,0.22,232.0,231.58
+320,Brazil,SPG 2023,Farm 55,field,802.61,0.36,0.29,289.0,288.22
+321,Brazil,SPG 2023,Farm 55,field,406.17,1.08,0.86,438.0,437.2
+322,Brazil,SPG 2023,Farm 55,surface_water,2318.08,0.03,0.03,73.0,73.25
+323,Brazil,SPG 2023,Farm 32,greenhouse,3191.63,0.02,0.02,65.0,64.47
+324,Brazil,SPG 2023,Farm 32,greenhouse,4272.82,0.01,0.01,56.0,55.55
+325,Brazil,SPG 2023,Farm 32,greenhouse,1375.75,0.08,0.07,117.0,116.94
+326,Brazil,SPG 2023,Farm 32,field,1057.84,0.14,0.12,153.0,152.65
+327,Brazil,SPG 2023,Farm 32,field,2079.06,0.04,0.03,85.0,84.41
+328,Brazil,SPG 2023,Farm 32,field,2216.48,0.03,0.03,74.0,73.81
+329,Brazil,SPG 2023,Farm 31,field,543.19,0.57,0.46,311.0,309.89
+330,Brazil,SPG 2023,Farm 31,field,1449.3,0.1,0.08,145.0,144.49
+331,Brazil,SPG 2023,Farm 31,field,865.81,0.23,0.19,202.0,201.65
+332,Brazil,SPG 2023,Farm 31,field,756.59,0.37,0.3,280.0,280.39
+333,Brazil,SPG 2023,Farm 31,field,1066.92,0.18,0.15,194.0,193.65
+334,Brazil,SPG 2023,Farm 31,field,1392.88,0.14,0.11,193.0,192.91
+335,Brazil,SPG 2023,Farm 31,field,489.63,0.9,0.72,441.0,440.42
+336,Brazil,SPG 2023,Farm 31,field,580.01,0.45,0.36,260.0,259.61
+337,Brazil,SPG 2023,Farm 31,natural_area,538.06,1.53,1.22,824.0,823.39
+338,Brazil,SPG 2023,Farm 31,field,1319.92,0.09,0.07,124.0,123.41
+339,Brazil,SPG 2023,Farm 31,field,1572.05,0.29,0.23,455.0,454.01
+340,Brazil,Other,Farm 33,greenhouse,919.26,0.21,0.17,198.0,197.46
+341,Brazil,Other,Farm 33,barn,0.0,0.01,0.01,50.0,49.74
+342,Brazil,Other,Farm 33,field,1652.43,0.09,0.07,148.0,147.73
+343,Brazil,SPG 2023,Farm 56,farm_site_boundary,251.25,3.82,3.07,962.0,960.53
+344,Brazil,SPG 2023,Farm 56,residence,0.0,0.02,0.02,63.0,62.87
+345,Brazil,SPG 2023,Farm 56,greenhouse,2942.0,0.02,0.02,56.0,55.6
+346,Brazil,SPG 2023,Farm 56,surface_water,2275.5,0.04,0.03,81.0,80.33
+347,Brazil,SPG 2023,Farm 56,surface_water,3386.04,0.01,0.01,45.0,45.37
+348,Brazil,SPG 2023,Farm 56,barn,0.0,0.02,0.01,53.0,52.87
+349,Brazil,SPG 2023,Farm 56,field,1228.63,0.19,0.15,231.0,230.25
+350,Brazil,SPG 2023,Farm 56,field,2161.52,0.07,0.05,146.0,145.47
+351,Brazil,SPG 2023,Farm 56,field,2260.38,0.07,0.05,154.0,153.48
+352,Brazil,SPG 2023,Farm 56,field,835.85,0.36,0.29,304.0,302.83
+353,Brazil,SPG 2023,Farm 56,field,512.64,0.7,0.56,360.0,359.26
+354,Brazil,SPG 2023,Farm 56,field,835.14,0.52,0.42,437.0,435.69
+355,Brazil,SPG 2023,Farm 56,field,601.75,0.89,0.72,539.0,537.67
+356,Brazil,SPG 2023,Farm 56,field,714.97,0.3,0.24,214.0,213.28
+357,Brazil,SPG 2023,Farm 57,farm_site_boundary,344.27,1.88,1.51,648.0,647.12
+358,Brazil,SPG 2023,Farm 57,field,8123.38,0.03,0.03,272.0,271.32
+359,Brazil,SPG 2023,Farm 57,field,11620.96,0.02,0.02,239.0,238.23
+360,Brazil,SPG 2023,Farm 57,field,1556.59,0.08,0.07,132.0,131.84
+361,Brazil,SPG 2023,Farm 57,field,10088.11,0.02,0.02,212.0,210.84
+362,Brazil,SPG 2023,Farm 57,field,3485.31,0.04,0.03,136.0,135.93
+363,Brazil,SPG 2023,Farm 57,field,3060.67,0.06,0.04,170.0,169.56
+364,Brazil,SPG 2023,Farm 57,field,6558.38,0.03,0.02,192.0,190.85
+365,Brazil,SPG 2023,Farm 57,field,4272.98,0.05,0.04,215.0,214.5
+366,Brazil,SPG 2023,Farm 57,field,4519.94,0.05,0.04,232.0,231.42
+367,Brazil,SPG 2023,Farm 57,field,5979.79,0.04,0.04,263.0,262.51
+368,Brazil,SPG 2023,Farm 57,field,4158.02,0.08,0.06,330.0,329.31
+369,Brazil,SPG 2023,Farm 57,field,7242.84,0.04,0.04,318.0,317.24
+370,Brazil,SPG 2023,Farm 57,field,6666.41,0.05,0.04,308.0,306.66
+371,Brazil,SPG 2023,Farm 57,field,5440.47,0.05,0.04,291.0,290.52
+372,Brazil,SPG 2023,Farm 57,field,776.0,0.62,0.5,481.0,480.5
+373,Brazil,SPG 2023,Farm 57,greenhouse,3740.75,0.02,0.01,60.0,60.23
+374,Brazil,SPG 2023,Farm 57,field,4530.71,0.1,0.08,435.0,434.95
+375,Brazil,SPG 2023,Farm 51,field,629.45,0.46,0.55,288.0,287.09
+376,Brazil,SPG 2023,Farm 51,natural_area,258.13,2.61,3.16,677.0,674.3
+377,Brazil,SPG 2023,Farm 51,natural_area,438.19,1.45,1.75,638.0,634.9
+378,Brazil,SPG 2023,Farm 51,natural_area,465.81,1.21,1.46,563.0,561.4
+379,Brazil,SPG 2023,Farm 51,natural_area,1549.24,0.2,0.24,306.0,304.27
+380,Brazil,SPG 2023,Farm 51,field,2542.93,0.03,0.04,80.0,79.59
+381,Brazil,SPG 2023,Farm 51,field,746.0,0.33,0.4,247.0,246.55
+382,Brazil,SPG 2023,Farm 51,field,665.73,0.36,0.44,241.0,240.4
+383,Brazil,Larisse Local & SPG 2023,Farm 58,garden,2991.88,0.02,0.02,54.0,53.85
+384,Brazil,Larisse Local & SPG 2023,Farm 58,garden,1623.22,0.07,0.06,106.0,106.16
+385,Brazil,Larisse Local & SPG 2023,Farm 58,garden,3804.37,0.02,0.02,75.0,74.57
+386,Brazil,Larisse Local & SPG 2023,Farm 58,garden,1558.49,0.06,0.05,98.0,97.56
+387,Brazil,Larisse Local & SPG 2023,Farm 58,garden,1826.81,0.05,0.04,94.0,93.72
+388,Brazil,Larisse Local & SPG 2023,Farm 58,greenhouse,10260.61,0.0,0.0,29.0,28.73
+389,Brazil,Larisse Local & SPG 2023,Farm 58,greenhouse,4749.25,0.01,0.01,52.0,52.24
+390,Brazil,Larisse Local & SPG 2023,Farm 58,garden,2568.01,0.03,0.02,67.0,66.77
+391,Brazil,Larisse Local & SPG 2023,Farm 58,garden,1513.73,0.09,0.08,135.0,134.42
+392,Brazil,Larisse Local & SPG 2023,Farm 58,garden,3305.44,0.02,0.02,69.0,69.08
+393,Brazil,Larisse Local & SPG 2023,Farm 58,greenhouse,5469.55,0.01,0.01,42.0,42.12
+394,Brazil,Larisse Local & SPG 2023,Farm 58,garden,382.08,1.08,0.94,414.0,413.1
+395,Brazil,SPG 2023,Farm 39,field,2012.43,0.04,0.04,90.0,89.75
+396,Brazil,SPG 2023,Farm 39,field,2752.34,0.03,0.02,75.0,74.86
+397,Brazil,SPG 2023,Farm 39,field,443.23,1.59,1.27,705.0,702.93
+398,Brazil,SPG 2023,Farm 59,field,784.22,0.6,0.72,471.0,469.12
+399,Brazil,SPG 2023,Farm 59,field,826.84,0.37,0.45,307.0,305.35
+400,Brazil,SPG 2023,Farm 59,field,877.17,0.21,0.26,188.0,187.8
+401,Brazil,SPG 2023,Farm 59,garden,1770.99,0.06,0.07,104.0,103.6
+402,Brazil,SPG 2023,Farm 59,field,1176.8,0.29,0.35,343.0,341.74
+403,Brazil,SPG 2023,Farm 59,field,785.16,0.32,0.39,252.0,251.09
+404,Brazil,SPG 2023,Farm 59,field,1341.82,0.12,0.15,162.0,161.29
+405,Brazil,SPG 2023,Farm 59,field,594.51,0.83,1.01,497.0,495.64
+406,Brazil,SPG 2023,Farm 59,field,508.68,1.82,2.21,930.0,926.92
+407,Brazil,SPG 2023,Farm 59,farm_site_boundary,79.42,37.11,44.96,2958.0,2947.13
+408,Brazil,SPG 2023,Farm 59,natural_area,122.89,30.61,37.09,3776.0,3761.57
+409,Brazil,Larisse Local & SPG 2023,Farm 60,field,820.27,0.34,0.3,279.0,278.97
+410,Brazil,Larisse Local & SPG 2023,Farm 60,farm_site_boundary,265.53,4.85,4.23,1289.0,1288.73
+411,Brazil,Larisse Local & SPG 2023,Farm 60,field,884.66,0.26,0.23,233.0,232.93
+412,Brazil,Larisse Local & SPG 2023,Farm 60,field,1341.29,0.08,0.07,108.0,108.11
+413,Brazil,SPG 2023,Farm 61,farm_site_boundary,384.94,1.21,1.47,467.0,465.82
+414,Brazil,SPG 2023,Farm 61,field,607.59,0.78,0.94,474.0,472.65
+415,Brazil,SPG 2023,Farm 61,natural_area,1762.37,0.07,0.09,125.0,124.07
+416,Brazil,SPG 2023,Farm 61,natural_area,762.93,0.31,0.38,237.0,236.2
+417,Brazil,SPG 2023,Farm 61,field,1951.05,0.05,0.05,88.0,87.99
+418,Brazil,SPG 2023,Farm 62,farm_site_boundary,114.22,17.0,20.62,1951.0,1941.85
+419,Brazil,SPG 2023,Farm 62,field,1431.07,0.1,0.12,144.0,143.82
+420,Brazil,SPG 2023,Farm 62,field,1008.99,0.22,0.27,227.0,225.71
+421,Brazil,SPG 2023,Farm 62,field,1278.47,0.13,0.15,164.0,163.26
+422,Brazil,SPG 2023,Farm 62,field,2249.63,0.03,0.04,76.0,75.81
+423,Brazil,SPG 2023,Farm 62,natural_area,396.01,1.32,1.6,524.0,523.29
+424,Brazil,SPG 2023,Farm 62,natural_area,173.6,8.23,9.98,1435.0,1428.35
+425,Brazil,Larisse Local & SPG 2023,Farm 46,garden,2678.74,0.02,0.02,65.0,64.83
+426,Brazil,Larisse Local & SPG 2023,Farm 46,garden,4513.37,0.01,0.01,57.0,56.42
+427,Brazil,Larisse Local & SPG 2023,Farm 60,field,1808.92,0.07,0.06,118.0,117.94
+428,Brazil,Larisse Local & SPG 2023,Farm 63,farm_site_boundary,256.27,3.59,3.13,923.0,919.5
+429,Brazil,Larisse Local & SPG 2023,Farm 63,surface_water,4365.69,0.01,0.01,33.0,32.74
+430,Brazil,Larisse Local & SPG 2023,Farm 63,garden,686.83,0.39,0.34,267.0,266.56
+431,Brazil,Larisse Local & SPG 2023,Farm 63,greenhouse,4300.44,0.02,0.02,107.0,106.65
+432,Brazil,Larisse Local & SPG 2023,Farm 63,field,1835.47,0.08,0.07,153.0,153.08
+433,Brazil,Larisse Local & SPG 2023,Farm 63,residence,0.0,0.01,0.01,44.0,44.34
+434,Brazil,Larisse Local & SPG 2023,Farm 63,natural_area,324.81,2.78,2.43,908.0,904.59
+435,Brazil,Larisse Local & SPG 2023,Farm 63,barn,0.0,0.0,0.0,19.0,18.73
+436,Brazil,Larisse Local & SPG 2023,Farm 44,garden,1773.1,0.07,0.07,133.0,132.81
+437,Brazil,Larisse Local & SPG 2023,Farm 44,barn,0.0,0.0,0.0,24.0,23.86
+438,Brazil,Larisse Local & SPG 2023,Farm 44,barn,0.0,0.01,0.01,47.0,47.03
+439,Brazil,Larisse Local & SPG 2023,Farm 44,residence,0.0,0.02,0.02,58.0,57.82
+440,Brazil,Larisse Local & SPG 2023,Farm 44,farm_site_boundary,847.84,0.47,0.41,404.0,401.96
+441,Brazil,Larisse Local & SPG 2023,Farm 44,surface_water,7098.63,0.0,0.0,22.0,22.01
+442,Brazil,Larisse Local & SPG 2023,Farm 44,natural_area,3696.29,0.02,0.02,78.0,77.62
+443,Brazil,Larisse Local & SPG 2023,Farm 44,natural_area,8407.53,0.05,0.04,392.0,390.11
+444,Brazil,Larisse Local & SPG 2023,Farm 44,natural_area,9171.95,0.01,0.01,104.0,103.64
+445,Brazil,Larisse Local & SPG 2023,Farm 44,garden,1570.21,0.14,0.12,221.0,219.83
+446,Brazil,Larisse Local & SPG 2023,Farm 44,natural_area,5606.83,0.03,0.03,165.0,164.28
+447,Brazil,SPG 2023,Farm 64,farm_site_boundary,209.99,4.99,5.98,1052.0,1047.51
+448,Brazil,SPG 2023,Farm 64,farm_site_boundary,88.89,40.71,48.82,3631.0,3618.85
+449,Brazil,SPG 2023,Farm 64,farm_site_boundary,231.56,3.48,4.17,807.0,805.97
+450,Brazil,SPG 2023,Farm 64,farm_site_boundary,138.53,12.52,15.01,1739.0,1733.92
+451,Brazil,SPG 2023,Farm 64,field,221.04,12.31,14.77,2735.0,2721.81
+452,Brazil,SPG 2023,Farm 64,natural_area,204.63,4.33,5.19,888.0,885.26
+453,Brazil,SPG 2023,Farm 64,field,231.16,3.49,4.19,809.0,807.38
+454,Brazil,SPG 2023,Farm 64,field,473.56,1.71,2.05,814.0,809.65
+455,Brazil,SPG 2023,Farm 64,field,328.44,2.42,2.9,798.0,793.73
+456,Brazil,SPG 2023,Farm 64,natural_area,508.45,0.75,0.9,382.0,381.69
+457,Brazil,SPG 2023,Farm 64,field,151.12,11.74,14.08,1780.0,1774.27
+458,Brazil,Larisse Local & SPG 2023,Farm 50,farm_site_boundary,119.19,7.4,4.12,884.0,881.98
+459,Brazil,SPG 2023,Farm 62,field,1229.72,0.12,0.14,144.0,144.25
+460,Brazil,SPG 2023,Farm 62,field,1687.76,0.07,0.09,119.0,118.65
+461,Brazil,SPG 2023,Farm 62,field,1009.87,0.19,0.23,195.0,194.3
+462,Brazil,SPG 2023,Farm 62,field,3482.0,0.04,0.05,146.0,145.55
+463,Brazil,SPG 2023,Farm 62,field,3163.27,0.02,0.02,52.0,51.88
+464,Brazil,SPG 2023,Farm 62,field,3157.23,0.02,0.03,74.0,73.56
+465,Brazil,SPG 2023,Farm 62,field,1226.34,0.1,0.12,122.0,121.53
+466,Brazil,SPG 2023,Farm 62,field,1242.12,0.1,0.12,122.0,121.98
+467,Brazil,SPG 2023,Farm 62,natural_area,526.75,0.58,0.7,305.0,304.46
+468,Brazil,SPG 2023,Farm 62,field,1168.65,0.23,0.28,271.0,270.54
+469,Brazil,SPG 2023,Farm 62,natural_area,841.52,0.29,0.35,244.0,243.54
+470,Brazil,SPG 2023,Farm 62,natural_area,1748.89,0.28,0.34,486.0,484.62
+471,Brazil,SPG 2023,Farm 62,field,2508.12,0.05,0.06,121.0,121.14
+472,Brazil,SPG 2023,Farm 62,surface_water,3151.79,0.02,0.03,66.0,65.87
+473,Brazil,SPG 2023,Farm 62,surface_water,4224.32,0.02,0.02,74.0,73.93
+474,Brazil,SPG 2023,Farm 62,field,1305.66,0.1,0.12,125.0,124.95
+475,Brazil,SPG 2023,Farm 62,natural_area,808.78,0.29,0.35,235.0,234.3
+476,Brazil,SPG 2023,Farm 62,natural_area,650.13,0.56,0.68,367.0,366.41
+477,Brazil,SPG 2023,Farm 62,natural_area,1962.56,0.06,0.08,128.0,127.17
+478,Brazil,Larisse Local & SPG 2023,Farm 65,farm_site_boundary,85.06,36.84,31.92,3145.0,3133.84
+479,Brazil,Larisse Local & SPG 2023,Farm 65,farm_site_boundary,82.43,41.72,36.15,3452.0,3439.51
+480,Brazil,SPG 2023,Farm 66,farm_site_boundary,91.77,19.78,24.01,1820.0,1815.41
+481,Brazil,Larisse Local & SPG 2023,Farm 65,barn,0.0,0.02,0.02,60.0,60.09
+482,Brazil,Larisse Local & SPG 2023,Farm 65,barn,0.0,0.02,0.02,58.0,57.67
+483,Brazil,Larisse Local & SPG 2023,Farm 65,barn,0.0,0.02,0.02,61.0,60.91
+484,Brazil,Larisse Local & SPG 2023,Farm 65,barn,0.0,0.02,0.01,50.0,49.74
+485,Brazil,Larisse Local & SPG 2023,Farm 65,barn,0.0,0.01,0.01,49.0,48.58
+486,Brazil,Larisse Local & SPG 2023,Farm 65,garden,417.58,1.1,0.95,459.0,458.25
+487,Brazil,Larisse Local & SPG 2023,Farm 65,garden,968.32,0.22,0.19,216.0,215.84
+488,Brazil,SPG 2023,Farm 66,garden,3778.32,0.02,0.02,64.0,63.85
+489,Brazil,SPG 2023,Farm 66,field,2623.32,0.05,0.06,131.0,131.17
+490,Brazil,Larisse Local & SPG 2023,Farm 65,garden,524.28,1.19,1.03,623.0,621.74
+491,Brazil,Larisse Local & SPG 2023,Farm 65,residence,0.0,0.01,0.01,52.0,51.76
+492,Brazil,Larisse Local & SPG 2023,Farm 65,barn,0.0,0.01,0.01,41.0,41.37
+493,Brazil,SPG 2023,Farm 66,field,528.75,1.01,1.22,533.0,532.3
+494,Brazil,Larisse Local & SPG 2023,Farm 65,garden,610.39,0.5,0.44,308.0,307.15
+495,Brazil,Larisse Local & SPG 2023,Farm 65,garden,357.34,3.27,2.83,1171.0,1167.58
+496,Brazil,Larisse Local & SPG 2023,Farm 65,garden,914.04,0.18,0.15,163.0,162.42
+497,Brazil,Other,Farm 67,natural_area,92.75,18.68,16.38,1736.0,1732.13
+498,Brazil,Other,Farm 67,field,91.99,19.93,17.49,1836.0,1833.42
+499,Brazil,Larisse Local & SPG 2023,Farm 50,barn,0.0,0.0,0.0,23.0,22.77
+500,Brazil,Larisse Local & SPG 2023,Farm 50,garden,2625.98,0.05,0.04,121.0,120.27
+501,Brazil,Larisse Local & SPG 2023,Farm 50,garden,1381.15,0.14,0.12,191.0,190.32
+502,Brazil,Larisse Local & SPG 2023,Farm 50,garden,918.88,0.24,0.21,226.0,225.13
+503,Brazil,Larisse Local & SPG 2023,Farm 50,garden,1131.36,0.27,0.23,304.0,303.2
+504,Brazil,Larisse Local & SPG 2023,Farm 50,garden,685.58,0.39,0.33,265.0,265.05
+505,Brazil,Larisse Local & SPG 2023,Farm 50,garden,1310.67,0.1,0.09,137.0,136.57
+506,Brazil,Larisse Local & SPG 2023,Farm 50,garden,2196.4,0.04,0.03,78.0,77.53
+507,Brazil,Larisse Local & SPG 2023,Farm 50,surface_water,1750.04,0.05,0.04,85.0,85.23
+508,Brazil,Larisse Local & SPG 2023,Farm 46,natural_area,237.22,7.79,6.73,1850.0,1848.21
+509,Brazil,Larisse Local & SPG 2023,Farm 46,garden,727.32,0.32,0.27,231.0,230.2
+510,Brazil,Larisse Local & SPG 2023,Farm 46,garden,2393.0,0.05,0.04,111.0,111.04
+511,Brazil,Larisse Local & SPG 2023,Farm 46,garden,1716.89,0.05,0.05,94.0,93.4
+512,Brazil,Larisse Local & SPG 2023,Farm 46,garden,2523.0,0.03,0.03,78.0,77.46
+513,Brazil,Larisse Local & SPG 2023,Farm 46,residence,0.0,0.01,0.01,44.0,44.18
+514,Brazil,Larisse Local & SPG 2023,Farm 46,garden,2235.04,0.09,0.08,212.0,211.66
+515,Brazil,Larisse Local & SPG 2023,Farm 46,garden,1933.51,0.07,0.06,133.0,133.22
+516,Brazil,Larisse Local & SPG 2023,Farm 68,farm_site_boundary,84.35,33.66,29.03,2845.0,2839.49
+517,Brazil,Larisse Local & SPG 2023,Farm 68,surface_water,768.99,0.28,0.24,218.0,217.32
+518,Brazil,Larisse Local & SPG 2023,Farm 68,surface_water,1063.37,0.13,0.11,141.0,140.79
+519,Brazil,Larisse Local & SPG 2023,Farm 68,surface_water,1026.88,0.15,0.13,159.0,158.65
+520,Brazil,Larisse Local & SPG 2023,Farm 68,barn,0.0,0.01,0.01,44.0,44.21
+521,Brazil,Larisse Local & SPG 2023,Farm 68,barn,0.0,0.02,0.02,54.0,54.13
+522,Brazil,Larisse Local & SPG 2023,Farm 68,garden,1097.84,0.17,0.15,188.0,187.62
+523,Brazil,Larisse Local & SPG 2023,Farm 68,garden,856.27,0.34,0.29,289.0,288.82
+524,Brazil,Larisse Local & SPG 2023,Farm 68,garden,929.28,0.3,0.25,275.0,274.14
+525,Brazil,Larisse Local & SPG 2023,Farm 68,garden,2076.57,0.06,0.05,122.0,121.89
+526,Brazil,Larisse Local & SPG 2023,Farm 68,garden,2495.49,0.04,0.03,101.0,101.07
+527,Brazil,Larisse Local & SPG 2023,Farm 68,garden,374.3,1.84,1.59,690.0,688.11
+528,Brazil,Larisse Local & SPG 2023,Farm 68,natural_area,165.77,23.77,20.5,3949.0,3940.82
+529,Brazil,SPG 2023,Farm 66,natural_area,226.91,6.34,7.69,1442.0,1438.06
+530,Brazil,SPG 2023,Farm 66,natural_area,417.63,2.94,3.57,1231.0,1227.79
+531,Brazil,SPG 2023,Farm 66,natural_area,513.01,0.79,0.96,408.0,406.31
+532,Brazil,SPG 2023,Farm 66,field,2595.99,0.03,0.04,79.0,78.66
+533,Brazil,Other,Farm 69,farm_site_boundary,156.46,9.14,8.46,1434.0,1429.83
+534,Brazil,SPG 2023,Farm 43,garden,1034.66,0.15,0.18,156.0,155.61
+535,Brazil,SPG 2023,Farm 43,surface_water,719.37,0.49,0.59,352.0,350.98
+536,Brazil,Other,Farm 70,field,637.09,0.45,0.54,289.0,287.71
+537,Brazil,Other,Farm 70,field,1016.25,0.17,0.2,173.0,172.36
+538,Brazil,Other,Farm 35,farm_site_boundary,183.18,10.35,8.15,1896.0,1896.19
+539,Brazil,Other,Farm 35,natural_area,896.61,0.83,0.65,741.0,740.33
+540,Brazil,Other,Farm 35,natural_area,647.75,1.09,0.86,707.0,705.79
+541,Brazil,Other,Farm 35,natural_area,624.5,0.52,0.41,328.0,327.11
+542,Brazil,Other,Farm 35,natural_area,1626.28,0.1,0.08,157.0,157.42
+543,Brazil,Other,Farm 35,natural_area,1232.63,0.12,0.09,147.0,146.81
+544,Brazil,Other,Farm 35,residence,0.0,0.01,0.01,42.0,41.76
+545,Brazil,Other,Farm 35,natural_area,492.01,0.64,0.5,316.0,315.43
+546,Brazil,Other,Farm 35,field,1289.49,0.14,0.11,181.0,180.4
+547,Brazil,Other,Farm 35,field,1314.92,0.22,0.17,286.0,285.73
+548,Brazil,Other,Farm 71,greenhouse,4850.83,0.01,0.01,34.0,33.47
+549,Brazil,Other,Farm 71,garden,3252.01,0.02,0.02,60.0,59.84
+550,Brazil,Other,Farm 71,residence,0.0,0.03,0.03,78.0,78.27
+551,Brazil,Other,Farm 71,natural_area,1417.72,0.13,0.11,183.0,182.46
+552,Brazil,Other,Farm 72,garden,2246.44,0.03,0.02,65.0,64.92
+553,Brazil,Other,Farm 35,field,479.88,1.11,0.88,535.0,534.5
+554,Brazil,Larisse Local & SPG 2023,Farm 41,garden,643.41,0.43,0.38,280.0,279.82
+555,Brazil,SPG 2023,Farm 52,farm_site_boundary,415.27,1.41,1.71,589.0,587.15
+556,Brazil,SPG 2023,Farm 48,residence,0.0,0.01,0.02,49.0,48.74
+557,Brazil,Other,Farm 73,farm_site_boundary,45.24,105.93,108.69,4802.0,4792.59
+558,Brazil,Other,Farm 73,field,485.2,1.12,1.15,543.0,541.97
+559,Brazil,Other,Farm 74,farm_site_boundary,114.67,18.62,14.99,2142.0,2135.01
+560,Brazil,Other,Farm 75,surface_water,45.23,105.68,107.26,4784.0,4779.65
+561,Brazil,Other,Farm 75,field,89.28,22.48,22.8,2010.0,2006.48
+562,Brazil,SPG 2023,Farm 29,farm_site_boundary,233.56,4.15,4.99,973.0,969.8
+563,Brazil,SPG 2023,Farm 29,farm_site_boundary,970.18,0.2,0.24,191.0,190.45
+564,Brazil,SPG 2023,Farm 29,field,969.28,0.2,0.24,191.0,190.85
+565,Brazil,SPG 2023,Farm 28,farm_site_boundary,468.94,0.75,0.9,354.0,352.41
+566,Brazil,SPG 2023,Farm 28,farm_site_boundary,2022.74,0.11,0.13,218.0,217.24
+567,Brazil,SPG 2023,Farm 28,field,2009.15,0.11,0.13,218.0,217.19
+568,Brazil,SPG 2023,Farm 30,farm_site_boundary,203.58,4.27,5.12,871.0,868.76
+569,Brazil,SPG 2023,Farm 30,farm_site_boundary,301.09,2.61,3.13,788.0,785.23
+570,Brazil,SPG 2023,Farm 30,field,300.69,2.61,3.13,787.0,784.47
+571,Brazil,SPG 2023,Farm 30,farm_site_boundary,495.99,1.01,1.21,501.0,499.56
+572,Brazil,SPG 2023,Farm 30,field,495.77,1.0,1.21,500.0,498.1
+573,Brazil,SPG 2023,Farm 30,farm_site_boundary,894.59,0.3,0.36,271.0,270.35
+574,Brazil,SPG 2023,Farm 30,field,909.2,0.3,0.36,270.0,269.12
+575,Brazil,SPG 2023,Farm 30,farm_site_boundary,589.92,1.03,1.24,610.0,608.21
+576,Brazil,SPG 2023,Farm 30,field,593.04,1.02,1.23,609.0,607.75
+577,Brazil,Other,Farm 69,field,1149.91,0.14,0.13,164.0,163.98
+578,Brazil,Other,Farm 69,garden,1249.59,0.15,0.14,187.0,186.69
+579,Brazil,Other,Farm 69,field,623.84,0.44,0.41,275.0,273.81
+580,Brazil,Other,Farm 69,field,866.5,0.27,0.25,236.0,235.51
+581,Brazil,Other,Farm 69,residence,0.0,0.04,0.03,79.0,79.07
+582,Brazil,Other,Farm 69,residence,0.0,0.05,0.04,85.0,84.35
+583,Brazil,Other,Farm 69,field,875.61,0.22,0.2,192.0,191.06
+584,Brazil,Other,Farm 69,field,2028.0,0.04,0.03,75.0,74.63
+585,Brazil,Other,Farm 69,field,893.65,0.23,0.21,204.0,203.39
+586,Brazil,Other,Farm 69,surface_water,1093.82,0.34,0.31,367.0,366.54
+587,Brazil,Other,Farm 69,natural_area,433.3,1.69,1.56,735.0,732.54
+588,Brazil,Other,Farm 76,ceremonial_area,0.0,12.76,10.84,1952.0,1947.56
+589,Brazil,Larisse Local & SPG 2023,Farm 58,field,3714.66,0.01,0.01,46.0,45.69
+590,Brazil,Larisse Local & SPG 2023,Farm 58,field,4905.65,0.01,0.01,39.0,38.75
+591,Brazil,SPG 2023,Farm 52,field,474.07,0.86,1.03,407.0,405.75
+592,Argentina,Other,Farm 77,field,147.18,6.97,4.67,1028.0,1026.4
+593,Brazil,Larisse Local & SPG 2023,Farm 41,garden,1036.32,0.17,0.15,177.0,176.49
+594,Brazil,Larisse Local & SPG 2023,Farm 41,garden,1673.55,0.06,0.05,104.0,104.26
+595,Brazil,Larisse Local & SPG 2023,Farm 41,garden,1146.92,0.15,0.13,170.0,169.29
+596,Brazil,Larisse Local & SPG 2023,Farm 41,garden,1898.06,0.05,0.04,92.0,91.87
+597,Brazil,Larisse Local & SPG 2023,Farm 41,garden,1389.09,0.14,0.13,199.0,198.22
+598,Brazil,Larisse Local & SPG 2023,Farm 41,garden,1366.75,0.08,0.07,109.0,108.25
+599,Brazil,Larisse Local & SPG 2023,Farm 41,garden,909.24,0.28,0.24,252.0,251.77
+600,Brazil,Larisse Local & SPG 2023,Farm 41,garden,1504.75,0.12,0.11,188.0,187.19
+601,Brazil,Larisse Local & SPG 2023,Farm 41,garden,3776.86,0.02,0.02,75.0,75.16
+602,Brazil,Larisse Local & SPG 2023,Farm 41,garden,4306.56,0.01,0.01,45.0,44.79
+603,Brazil,Larisse Local & SPG 2023,Farm 41,garden,937.96,0.16,0.14,148.0,147.82
+604,Brazil,Larisse Local & SPG 2023,Farm 41,garden,2151.15,0.08,0.07,170.0,169.51
+605,Brazil,Larisse Local & SPG 2023,Farm 41,barn,0.0,0.01,0.01,47.0,47.29
+606,Brazil,Larisse Local & SPG 2023,Farm 41,garden,2880.58,0.03,0.02,77.0,76.34
+607,Brazil,Larisse Local & SPG 2023,Farm 41,garden,1215.17,0.18,0.15,216.0,214.72
+608,Brazil,Larisse Local & SPG 2023,Farm 41,garden,561.93,0.6,0.53,337.0,336.93
+609,Brazil,Larisse Local & SPG 2023,Farm 41,greenhouse,5060.28,0.01,0.01,32.0,32.39
+610,Brazil,Larisse Local & SPG 2023,Farm 41,barn,0.0,0.02,0.02,64.0,63.93
+611,Brazil,Larisse Local & SPG 2023,Farm 41,residence,0.0,0.01,0.01,42.0,41.59
+612,Brazil,Larisse Local & SPG 2023,Farm 41,residence,0.0,0.01,0.01,47.0,47.09
+613,Brazil,Larisse Local & SPG 2023,Farm 41,residence,0.0,0.0,0.0,28.0,28.34
+614,Brazil,Larisse Local & SPG 2023,Farm 41,farm_site_boundary,152.96,26.55,23.27,4066.0,4061.61
+615,Brazil,Other,Farm 78,farm_site_boundary,200.2,4.29,3.63,859.0,858.14
+616,Brazil,SPG 2023,Farm 79,surface_water,1222.78,0.11,0.08,130.0,129.86
+617,Brazil,SPG 2023,Farm 79,residence,0.0,0.03,0.02,69.0,68.55
+618,Brazil,SPG 2023,Farm 79,natural_area,223.11,13.41,10.59,3000.0,2992.76
+619,Brazil,SPG 2023,Farm 79,barn,0.0,0.03,0.02,67.0,66.77
+620,Brazil,SPG 2023,Farm 79,barn,0.0,0.01,0.01,37.0,36.96
+621,Brazil,SPG 2023,Farm 79,natural_area,404.65,1.27,1.01,516.0,515.03
+622,Brazil,SPG 2023,Farm 79,field,256.68,2.88,2.28,741.0,739.54
+623,Brazil,SPG 2023,Farm 79,farm_site_boundary,55.68,50.89,40.19,2838.0,2833.5
+624,Brazil,SPG 2023,Farm 79,field,362.87,2.98,2.35,1081.0,1080.41
+625,Brazil,Larisse Local & SPG 2023,Farm 58,field,1604.34,0.07,0.06,110.0,110.06
+626,Brazil,Larisse Local & SPG 2023,Farm 58,garden,4204.67,0.01,0.01,43.0,42.47
+627,Brazil,Larisse Local & SPG 2023,Farm 58,garden,3198.09,0.02,0.01,50.0,50.21
+628,Brazil,Larisse Local & SPG 2023,Farm 58,garden,3469.22,0.01,0.01,50.0,50.3
+629,Brazil,Other,Farm 35,field,367.76,1.47,1.16,543.0,542.41
+630,Brazil,SPG 2023,Farm 38,farm_site_boundary,235.62,9.98,7.85,2361.0,2351.73
+631,Brazil,SPG 2023,Farm 38,field,2837.12,0.04,0.03,114.0,114.05
+632,Brazil,SPG 2023,Farm 47,field,420.07,0.91,0.71,381.0,380.46
+633,Brazil,SPG 2023,Farm 47,field,2849.74,0.02,0.02,58.0,58.13
+634,Brazil,SPG 2023,Farm 47,field,2371.29,0.03,0.02,66.0,66.4
+635,Brazil,SPG 2023,Farm 28,field,1322.92,0.1,0.12,133.0,132.42
+636,Brazil,SPG 2023,Farm 28,farm_site_boundary,1305.82,0.1,0.12,133.0,132.93
+637,Brazil,SPG 2023,Farm 80,field,4011.67,0.01,0.01,43.0,43.33
+638,Brazil,Other,Farm 81,farm_site_boundary,232.73,5.31,4.5,1240.0,1235.82
+639,Brazil,Other,Farm 81,residence,0.0,0.01,0.01,43.0,43.05
+640,Brazil,Other,Farm 81,garden,1061.88,0.16,0.13,167.0,166.5
+641,Brazil,Other,Farm 82,field,1632.2,0.08,0.06,127.0,127.31
+642,Brazil,Other,Farm 82,ceremonial_area,0.0,6.92,5.53,1385.0,1383.35
+643,Brazil,Other,Farm 82,garden,643.18,0.45,0.36,290.0,289.75
+644,Brazil,Other,Farm 82,field,369.76,2.18,1.74,805.0,804.44
+645,Brazil,Other,Farm 82,field,770.76,0.32,0.26,247.0,246.72
+646,Brazil,Other,Farm 82,surface_water,2365.63,0.03,0.03,75.0,74.52
+647,Brazil,Other,Farm 82,greenhouse,649.31,1.07,0.85,693.0,692.42
+648,Brazil,Other,Farm 82,field,1421.48,0.13,0.1,183.0,182.8
+649,Brazil,Other,Farm 82,field,2387.46,0.05,0.04,108.0,108.15
+650,Brazil,Other,Farm 82,barn,0.0,2.3,1.84,740.0,739.26
+651,Brazil,Other,Farm 81,field,770.37,0.5,0.42,382.0,382.1
+652,Brazil,Other,Farm 83,surface_water,2034.79,0.05,0.04,92.0,91.97
+653,Brazil,Other,Farm 83,greenhouse,3948.56,0.01,0.01,42.0,41.46
+654,Brazil,Other,Farm 83,garden,2403.4,0.03,0.02,69.0,68.5
+655,Brazil,Other,Farm 83,farm_site_boundary,389.45,1.32,1.12,516.0,515.32
+656,Brazil,Other,Farm 83,residence,0.0,0.01,0.01,38.0,38.04
+657,Brazil,Other,Farm 83,residence,0.0,0.01,0.0,29.0,29.19
+658,Brazil,Other,Farm 81,field,1334.49,0.1,0.09,135.0,134.92
+659,Brazil,SPG 2023,Farm 48,farm_site_boundary,232.41,7.48,9.03,1743.0,1737.25
+660,Brazil,SPG 2023,Farm 21,field,984.6,0.36,0.28,355.0,354.46
+661,Brazil,Other,Farm 84,farm_site_boundary,541.19,0.86,0.74,466.0,463.8
+662,Brazil,Other,Farm 84,farm_site_boundary,596.63,0.46,0.39,273.0,272.9
+663,Brazil,SPG 2023,Farm 62,greenhouse,8540.99,0.0,0.0,19.0,18.79
+664,Brazil,SPG 2023,Farm 64,field,226.01,5.28,6.34,1199.0,1194.12
+665,Brazil,SPG 2023,Farm 64,field,179.67,9.69,11.62,1746.0,1740.39
+666,Brazil,Other,Farm 85,garden,2571.76,0.02,0.01,51.0,51.44
+667,Brazil,Other,Farm 85,garden,8352.84,0.0,0.0,22.0,21.72
+668,Brazil,Other,Farm 85,residence,0.0,0.01,0.0,29.0,28.8
+669,Brazil,Other,Farm 85,farm_site_boundary,1495.78,0.05,0.03,75.0,74.79
+670,Brazil,Larisse Local & SPG 2023,Farm 65,natural_area,113.86,28.82,24.97,3293.0,3281.67
+671,Brazil,Larisse Local & SPG 2023,Farm 65,natural_area,84.3,39.5,34.22,3342.0,3329.6
+672,Brazil,Larisse Local & SPG 2023,Farm 60,natural_area,287.51,3.26,2.84,936.0,936.17
+673,Brazil,Larisse Local & SPG 2023,Farm 60,natural_area,737.74,0.53,0.47,395.0,393.96
+674,Brazil,Larisse Local & SPG 2023,Farm 41,natural_area,158.35,21.09,18.48,3343.0,3339.71
+675,Brazil,Larisse Local & SPG 2023,Farm 41,natural_area,288.88,3.79,3.32,1096.0,1095.35
+676,Brazil,Larisse Local & SPG 2023,Farm 50,natural_area,204.25,8.33,7.19,1703.0,1701.74
+677,Brazil,Larisse Local & SPG 2023,Farm 50,natural_area,254.89,3.85,3.33,985.0,982.39
+678,Brazil,Larisse Local & SPG 2023,Farm 50,natural_area,2460.81,0.12,0.1,291.0,291.36
+679,Brazil,Larisse Local & SPG 2023,Farm 58,farm_site_boundary,39.23,131.4,113.91,5171.0,5154.62
+680,Brazil,Larisse Local & SPG 2023,Farm 58,natural_area,76.09,121.49,105.32,9270.0,9244.02
+681,Brazil,SPG 2023,Farm 86,residence,0.0,0.07,0.06,116.0,115.71
+682,Brazil,SPG 2023,Farm 86,farm_site_boundary,90.01,21.58,18.66,1947.0,1942.22
+683,Brazil,SPG 2023,Farm 86,garden,731.81,0.46,0.4,338.0,337.37
+684,Brazil,SPG 2023,Farm 86,garden,402.22,1.39,1.2,559.0,557.35
+685,Brazil,SPG 2023,Farm 86,garden,537.42,0.78,0.67,420.0,418.38
+686,Brazil,SPG 2023,Farm 86,garden,311.48,1.67,1.44,520.0,519.02
+687,Brazil,SPG 2023,Farm 86,natural_area,231.74,4.23,3.66,980.0,979.22
+688,Brazil,SPG 2023,Farm 86,natural_area,435.3,2.64,2.28,1152.0,1148.4
+689,Brazil,SPG 2023,Farm 86,garden,347.76,3.29,2.85,1148.0,1145.09
+690,Brazil,SPG 2023,Farm 86,garden,2876.04,0.02,0.02,70.0,69.31
+691,Brazil,SPG 2023,Farm 86,garden,2323.42,0.03,0.03,74.0,73.88
+692,Brazil,SPG 2023,Farm 86,garden,2186.15,0.11,0.1,252.0,250.97
+693,Brazil,SPG 2023,Farm 86,field,238.47,5.39,4.66,1289.0,1285.27
+694,Brazil,SPG 2023,Farm 86,garden,675.05,0.37,0.32,250.0,249.97
+695,Brazil,SPG 2023,Farm 86,garden,7348.86,0.01,0.01,79.0,79.37
+696,Brazil,SPG 2023,Farm 86,barn,0.0,0.01,0.01,50.0,49.86
+697,Brazil,SPG 2023,Farm 86,barn,0.0,0.02,0.02,70.0,69.99
+698,Brazil,SPG 2023,Farm 86,barn,0.0,0.02,0.02,70.0,69.99
+699,Brazil,Larisse Local & SPG 2023,Farm 87,residence,0.0,0.02,0.02,58.0,58.27
+700,Brazil,Larisse Local & SPG 2023,Farm 87,residence,0.0,0.01,0.01,46.0,45.5
+701,Brazil,Larisse Local & SPG 2023,Farm 87,farm_site_boundary,66.52,48.19,41.6,3208.0,3205.61
+702,Brazil,Larisse Local & SPG 2023,Farm 87,farm_site_boundary,98.21,28.05,24.21,2756.0,2755.33
+703,Brazil,Larisse Local & SPG 2023,Farm 87,garden,665.75,0.66,0.57,442.0,442.26
+704,Brazil,Larisse Local & SPG 2023,Farm 87,garden,516.39,1.59,1.37,820.0,819.31
+705,Brazil,Larisse Local & SPG 2023,Farm 87,garden,580.19,0.48,0.42,282.0,280.99
+706,Brazil,Larisse Local & SPG 2023,Farm 87,garden,699.33,0.58,0.5,407.0,407.15
+707,Brazil,Larisse Local & SPG 2023,Farm 87,garden,466.14,0.98,0.84,457.0,455.84
+708,Brazil,Larisse Local & SPG 2023,Farm 87,field,253.82,4.32,3.73,1098.0,1096.88
+709,Brazil,Larisse Local & SPG 2023,Farm 87,field,482.22,1.1,0.95,532.0,531.55
+710,Brazil,Larisse Local & SPG 2023,Farm 87,field,292.24,2.86,2.47,837.0,836.81
+711,Brazil,Larisse Local & SPG 2023,Farm 88,residence,0.0,0.02,0.02,58.0,58.11
+712,Brazil,Larisse Local & SPG 2023,Farm 88,farm_site_boundary,66.9,48.41,41.78,3241.0,3238.52
+713,Brazil,Larisse Local & SPG 2023,Farm 88,garden,623.85,0.79,0.68,494.0,493.96
+714,Brazil,Larisse Local & SPG 2023,Farm 88,garden,584.7,0.45,0.39,261.0,260.95
+715,Brazil,Larisse Local & SPG 2023,Farm 88,barn,0.0,0.01,0.01,44.0,43.53
+716,Brazil,Larisse Local & SPG 2023,Farm 88,garden,11650.77,0.0,0.0,14.0,13.98
+717,Brazil,Larisse Local & SPG 2023,Farm 88,surface_water,3659.53,0.01,0.01,45.0,45.38
+718,Brazil,Larisse Local & SPG 2023,Farm 88,surface_water,4862.13,0.01,0.01,33.0,33.06
+719,Brazil,Larisse Local & SPG 2023,Farm 88,garden,728.37,0.3,0.26,216.0,215.74
+720,Brazil,Larisse Local & SPG 2023,Farm 88,garden,1043.87,0.2,0.17,210.0,210.03
+721,Brazil,Larisse Local & SPG 2023,Farm 88,garden,2233.74,0.2,0.18,459.0,457.47
+722,Brazil,Larisse Local & SPG 2023,Farm 89,residence,0.0,0.02,0.01,56.0,55.97
+723,Brazil,Larisse Local & SPG 2023,Farm 89,residence,0.0,0.02,0.01,52.0,51.55
+724,Brazil,Larisse Local & SPG 2023,Farm 89,barn,0.0,0.0,0.0,24.0,23.7
+725,Brazil,Larisse Local & SPG 2023,Farm 89,farm_site_boundary,60.34,69.09,59.78,4182.0,4169.39
+726,Brazil,Larisse Local & SPG 2023,Farm 89,surface_water,1652.21,0.09,0.08,149.0,148.37
+727,Brazil,Larisse Local & SPG 2023,Farm 89,garden,477.62,1.19,1.03,569.0,567.7
+728,Brazil,Larisse Local & SPG 2023,Farm 89,garden,963.1,0.37,0.32,353.0,352.4
+729,Brazil,Larisse Local & SPG 2023,Farm 89,garden,1014.39,0.25,0.21,251.0,250.66
+730,Brazil,Larisse Local & SPG 2023,Farm 89,field,537.27,0.62,0.54,334.0,333.32
+731,Brazil,Larisse Local & SPG 2023,Farm 89,garden,1019.31,0.16,0.14,162.0,161.77
+732,Brazil,Larisse Local & SPG 2023,Farm 89,garden,721.92,0.74,0.64,531.0,530.75
+733,Brazil,Larisse Local & SPG 2023,Farm 89,garden,657.19,0.51,0.44,335.0,334.38
+734,Brazil,Larisse Local & SPG 2023,Farm 89,garden,321.68,1.75,1.52,566.0,564.43
+735,Brazil,Larisse Local & SPG 2023,Farm 89,natural_area,99.03,36.47,31.55,3621.0,3611.19
+736,Brazil,Larisse Local & SPG 2023,Farm 89,natural_area,273.11,4.81,4.16,1317.0,1313.48
+737,Brazil,Other,Farm 90,greenhouse,5687.69,0.01,0.01,38.0,38.11
+738,Brazil,Other,Farm 90,residence,0.0,0.02,0.02,60.0,60.26
+739,Brazil,Other,Farm 91,farm_site_boundary,1724.25,0.13,0.13,228.0,227.77
+740,Brazil,Other,Farm 91,garden,2333.78,0.04,0.04,85.0,84.72
+741,Brazil,Other,Farm 91,field,3442.81,0.01,0.01,50.0,50.26
+742,Brazil,Larisse Local & SPG 2023,Farm 68,natural_area,141.6,8.03,6.92,1139.0,1136.44
+743,Brazil,Larisse Local & SPG 2023,Farm 68,field,607.69,0.96,0.83,586.0,585.21
+744,Brazil,Larisse Local & SPG 2023,Farm 68,garden,678.94,0.4,0.35,275.0,274.9
+745,Brazil,Larisse Local & SPG 2023,Farm 68,garden,1567.32,0.08,0.07,119.0,118.96
+746,Brazil,Larisse Local & SPG 2023,Farm 68,garden,876.59,0.25,0.22,221.0,221.08
+747,Brazil,Larisse Local & SPG 2023,Farm 68,garden,838.44,0.22,0.19,186.0,186.13
+748,Brazil,Larisse Local & SPG 2023,Farm 68,garden,568.27,0.54,0.46,305.0,304.25
+749,Brazil,Other,Farm 92,garden,264.06,2.35,2.15,622.0,620.97
+750,Brazil,SPG 2023,Farm 80,farm_site_boundary,3803.01,0.01,0.01,44.0,43.73
+751,Brazil,Other,Farm 93,farm_site_boundary,186.09,4.47,3.83,833.0,831.89
+752,Brazil,Other,Farm 93,residence,0.0,0.01,0.01,44.0,43.67
+753,Brazil,Other,Farm 93,barn,0.0,0.01,0.01,44.0,43.76
+754,Brazil,Other,Farm 93,field,992.32,0.21,0.18,210.0,209.78
+755,Brazil,Other,Farm 93,garden,3182.29,0.02,0.01,52.0,51.87
+756,Brazil,Other,Farm 93,natural_area,417.55,1.47,1.26,613.0,612.71
+757,Brazil,Other,Farm 93,natural_area,1121.8,0.51,0.43,567.0,567.29
+758,Brazil,Other,Farm 93,field,394.07,1.52,1.31,601.0,600.64
+759,Brazil,Other,Farm 35,field,408.65,1.6,1.26,652.0,651.88
+760,Brazil,Other,Farm 35,field,825.99,0.53,0.42,438.0,436.95
+761,Brazil,SPG 2023,Farm 47,farm_site_boundary,82.2,41.22,32.46,3392.0,3387.79
+762,Brazil,SPG 2023,Farm 47,natural_area,316.01,3.28,2.58,1038.0,1036.23
+763,Brazil,SPG 2023,Farm 47,natural_area,341.24,1.53,1.21,523.0,522.27
+764,Brazil,SPG 2023,Farm 26,field,872.53,0.23,0.18,200.0,199.72
+765,Brazil,SPG 2023,Farm 26,field,840.81,0.25,0.2,215.0,214.07
+766,Brazil,SPG 2023,Farm 26,natural_area,507.17,2.99,2.36,1519.0,1516.03
+767,Brazil,SPG 2023,Farm 47,field,180.84,5.37,4.23,975.0,971.83
+768,Brazil,SPG 2023,Farm 47,natural_area,600.52,0.73,0.58,442.0,441.14
+769,Brazil,SPG 2023,Farm 26,field,282.91,3.53,2.79,1000.0,998.83
+770,Brazil,SPG 2023,Farm 26,surface_water,47732.52,0.0,0.0,5.0,4.77
+771,Brazil,SPG 2023,Farm 26,field,443.29,0.97,0.77,430.0,429.46
+772,Brazil,SPG 2023,Farm 34,field,641.44,0.73,0.58,467.0,466.58
+773,Brazil,SPG 2023,Farm 26,natural_area,908.2,0.32,0.25,290.0,289.63
+774,Brazil,SPG 2023,Farm 26,natural_area,2692.35,0.03,0.02,84.0,84.0
+775,Brazil,SPG 2023,Farm 26,natural_area,462.87,0.95,0.75,441.0,440.19
+776,Brazil,SPG 2023,Farm 26,residence,0.0,0.01,0.01,44.0,43.71
+777,Brazil,SPG 2023,Farm 26,barn,0.0,0.0,0.0,25.0,25.04
+778,Brazil,SPG 2023,Farm 27,field,463.53,1.05,0.83,489.0,488.88
+779,Brazil,SPG 2023,Farm 27,field,314.83,4.19,3.31,1321.0,1320.44
+780,Brazil,SPG 2023,Farm 27,field,1277.58,0.28,0.22,353.0,352.99
+781,Brazil,SPG 2023,Farm 27,field,442.94,1.58,1.25,702.0,701.57
+782,Brazil,SPG 2023,Farm 47,field,134.92,14.44,11.37,1951.0,1947.95
+783,Brazil,SPG 2023,Farm 27,field,682.78,0.69,0.54,470.0,469.89
+784,Brazil,SPG 2023,Farm 27,field,707.27,0.3,0.24,212.0,211.9
+785,Brazil,SPG 2023,Farm 27,field,525.02,2.27,1.79,1190.0,1189.59
+786,Brazil,SPG 2023,Farm 55,natural_area,266.49,7.94,6.35,2124.0,2116.88
+787,Brazil,SPG 2023,Farm 27,farm_site_boundary,122.87,23.13,18.25,2842.0,2841.95
+788,Brazil,SPG 2023,Farm 27,field,1035.1,0.19,0.15,195.0,194.7
+789,Brazil,SPG 2023,Farm 27,natural_area,389.77,2.23,1.76,869.0,868.84
+790,Brazil,SPG 2023,Farm 27,natural_area,315.84,4.72,3.72,1491.0,1489.84
+791,Brazil,SPG 2023,Farm 27,natural_area,1160.06,0.73,0.57,844.0,844.53
+792,Brazil,SPG 2023,Farm 27,natural_area,1611.46,0.12,0.1,200.0,200.14
+793,Brazil,SPG 2023,Farm 27,surface_water,1862.36,0.06,0.05,121.0,121.05
+794,Brazil,SPG 2023,Farm 27,garden,1310.95,0.13,0.1,168.0,168.06
+795,Brazil,SPG 2023,Farm 27,field,1159.5,0.24,0.19,279.0,278.51
+796,Brazil,SPG 2023,Farm 56,natural_area,1553.16,0.11,0.09,167.0,166.34
+797,Brazil,SPG 2023,Farm 27,surface_water,27802.26,0.0,0.0,8.0,8.34
+798,Brazil,SPG 2023,Farm 27,surface_water,23283.22,0.0,0.0,9.0,9.31
+799,Brazil,Larisse Local & SPG 2023,Farm 88,farm_site_boundary,529.31,1.35,1.17,716.0,715.41
+800,Brazil,Larisse Local & SPG 2023,Farm 88,garden,536.29,0.72,0.62,384.0,383.93
+801,Brazil,Larisse Local & SPG 2023,Farm 88,garden,755.28,0.54,0.46,406.0,404.98
+802,Argentina,Other,Farm 94,field,50.9,103.91,59.23,5299.0,5289.05
+803,Argentina,Other,Farm 95,garden,11533.92,0.0,0.0,14.0,13.84
+804,Brazil,Larisse Local & SPG 2023,Farm 96,farm_site_boundary,511.57,2.67,2.33,1366.0,1366.4
+805,Brazil,Larisse Local & SPG 2023,Farm 96,residence,0.0,0.02,0.02,60.0,59.94
+806,Brazil,Larisse Local & SPG 2023,Farm 96,surface_water,4660.33,0.01,0.01,35.0,34.95
+807,Brazil,Larisse Local & SPG 2023,Farm 96,garden,1733.28,0.05,0.05,92.0,92.21
+808,Brazil,Larisse Local & SPG 2023,Farm 96,barn,0.0,0.0,0.0,19.0,19.46
+809,Brazil,Larisse Local & SPG 2023,Farm 96,garden,858.98,0.23,0.2,199.0,198.94
+810,Brazil,Larisse Local & SPG 2023,Farm 96,barn,0.0,0.0,0.0,14.0,13.81
+811,Brazil,Larisse Local & SPG 2023,Farm 96,natural_area,567.0,1.99,1.74,1130.0,1130.55
+812,Brazil,SPG 2023,Farm 62,field,3223.88,0.03,0.03,81.0,81.24
+813,Brazil,SPG 2023,Farm 62,natural_area,2358.94,0.03,0.04,82.0,82.09
+814,Brazil,SPG 2023,Farm 62,natural_area,2910.41,0.02,0.03,64.0,63.74
+815,Brazil,SPG 2023,Farm 97,field,353.71,1.54,1.85,546.0,544.74
+816,Brazil,SPG 2023,Farm 97,field,422.01,1.47,1.77,624.0,622.3
+817,Brazil,SPG 2023,Farm 97,farm_site_boundary,419.64,1.48,1.78,624.0,622.24
+818,Brazil,SPG 2023,Farm 97,farm_site_boundary,353.92,1.54,1.85,547.0,545.85
+819,Brazil,Larisse Local & SPG 2023,Farm 98,farm_site_boundary,110.31,25.6,21.95,2829.0,2823.38
+820,Brazil,Larisse Local & SPG 2023,Farm 98,residence,0.0,0.01,0.01,44.0,43.68
+821,Brazil,Larisse Local & SPG 2023,Farm 98,barn,0.0,0.01,0.01,51.0,51.24
+822,Brazil,Larisse Local & SPG 2023,Farm 98,barn,0.0,0.0,0.0,19.0,19.04
+823,Brazil,Larisse Local & SPG 2023,Farm 98,barn,0.0,0.0,0.0,17.0,17.44
+824,Brazil,Larisse Local & SPG 2023,Farm 98,garden,5029.87,0.01,0.01,37.0,36.72
+825,Brazil,Larisse Local & SPG 2023,Farm 98,garden,601.91,0.56,0.48,340.0,339.29
+826,Brazil,Larisse Local & SPG 2023,Farm 98,garden,1553.38,0.06,0.05,99.0,98.48
+827,Brazil,Larisse Local & SPG 2023,Farm 98,garden,674.04,0.48,0.41,325.0,324.62
+828,Brazil,Larisse Local & SPG 2023,Farm 98,garden,820.85,0.31,0.27,258.0,257.17
+829,Brazil,Larisse Local & SPG 2023,Farm 98,garden,2420.29,0.04,0.03,94.0,94.15
+830,Brazil,Larisse Local & SPG 2023,Farm 98,garden,1151.38,0.11,0.1,129.0,128.61
+831,Brazil,Larisse Local & SPG 2023,Farm 98,garden,1735.03,0.19,0.16,324.0,323.58
+832,Brazil,Larisse Local & SPG 2023,Farm 98,garden,702.16,0.48,0.41,335.0,334.02
+833,Brazil,Larisse Local & SPG 2023,Farm 98,garden,2043.65,0.05,0.04,100.0,100.34
+834,Brazil,Larisse Local & SPG 2023,Farm 98,garden,6568.49,0.0,0.0,32.0,32.19
+835,Brazil,Larisse Local & SPG 2023,Farm 98,surface_water,3082.76,0.02,0.02,59.0,58.57
+836,Brazil,Larisse Local & SPG 2023,Farm 98,surface_water,3123.93,0.02,0.02,55.0,55.29
+837,Brazil,Larisse Local & SPG 2023,Farm 98,surface_water,4270.84,0.01,0.01,34.0,33.74
+838,Brazil,Larisse Local & SPG 2023,Farm 98,field,385.74,1.11,0.95,429.0,428.45
+839,Brazil,Larisse Local & SPG 2023,Farm 98,field,393.89,1.25,1.07,494.0,492.6
+840,Brazil,Larisse Local & SPG 2023,Farm 98,field,705.31,0.35,0.3,246.0,245.66
+841,Brazil,Larisse Local & SPG 2023,Farm 98,natural_area,249.99,3.78,3.24,946.0,944.54
+842,Brazil,Larisse Local & SPG 2023,Farm 98,natural_area,270.58,5.25,4.5,1422.0,1419.42
+843,Brazil,Larisse Local & SPG 2023,Farm 98,natural_area,391.57,2.15,1.84,842.0,840.0
+844,Brazil,SPG 2023,Farm 39,natural_area,5038.57,0.02,0.01,86.0,86.16
+845,Brazil,SPG 2023,Farm 39,natural_area,10661.59,0.03,0.02,323.0,321.98
+846,Brazil,SPG 2023,Farm 40,natural_area,844.28,0.28,0.22,236.0,235.47
+847,Brazil,SPG 2023,Farm 40,natural_area,1702.48,0.16,0.13,281.0,280.4
+848,Brazil,SPG 2023,Farm 40,natural_area,841.72,0.45,0.36,379.0,378.52
+849,Brazil,SPG 2023,Farm 79,field,234.91,8.31,6.56,1954.0,1951.05
+850,Brazil,SPG 2023,Farm 79,field,163.65,11.27,8.9,1848.0,1844.03
+851,Brazil,SPG 2023,Farm 79,field,227.64,3.25,2.57,742.0,740.29
+852,Brazil,SPG 2023,Farm 38,field,766.4,0.34,0.27,263.0,262.49
+853,Brazil,SPG 2023,Farm 38,field,347.31,1.51,1.19,527.0,525.31
+854,Brazil,SPG 2023,Farm 38,field,689.57,2.0,1.57,1384.0,1378.44
+855,Brazil,SPG 2023,Farm 38,field,484.42,1.39,1.09,674.0,671.75
+856,Brazil,SPG 2023,Farm 38,field,419.38,1.07,0.84,450.0,449.07
+857,Brazil,SPG 2023,Farm 38,field,1161.11,0.21,0.17,249.0,248.25
+858,Brazil,SPG 2023,Farm 38,field,469.43,1.24,0.98,584.0,582.89
+859,Brazil,SPG 2023,Farm 99,farm_site_boundary,220.1,4.17,5.01,920.0,917.84
+860,Brazil,SPG 2023,Farm 99,field,220.35,4.15,4.99,918.0,915.24
+861,Brazil,SPG 2023,Farm 97,natural_area,177.49,5.0,6.01,891.0,887.65
+862,Brazil,SPG 2023,Farm 97,farm_site_boundary,176.67,5.06,6.08,897.0,893.71
+863,Brazil,SPG 2023,Farm 30,natural_area,211.02,5.0,6.0,1059.0,1054.7
+864,Brazil,SPG 2023,Farm 30,farm_site_boundary,211.13,5.0,6.01,1060.0,1055.63
+865,Brazil,SPG 2023,Farm 29,natural_area,180.84,5.01,6.01,908.0,905.43
+866,Brazil,SPG 2023,Farm 29,farm_site_boundary,180.13,5.04,6.05,910.0,907.34
+867,Brazil,SPG 2023,Farm 99,natural_area,180.46,5.0,6.0,905.0,902.1
+868,Brazil,SPG 2023,Farm 99,farm_site_boundary,180.66,5.0,6.0,905.0,903.01
+869,Brazil,SPG 2023,Farm 28,natural_area,191.91,5.0,6.01,964.0,959.67
+870,Brazil,SPG 2023,Farm 28,farm_site_boundary,192.74,5.0,6.0,968.0,963.44
+871,Brazil,Other,Farm 100,field,53.32,84.6,74.16,4516.0,4511.11
+872,Brazil,Other,Farm 101,barn,0.0,0.01,0.01,42.0,42.07
+873,Brazil,Other,Farm 101,ceremonial_area,0.0,0.01,0.01,47.0,47.21
+874,Brazil,Larisse Local & SPG 2023,Farm 68,garden,7672.4,0.01,0.01,45.0,45.27
+875,Brazil,Other,Farm 101,farm_site_boundary,395.66,1.06,0.92,418.0,417.9
+876,Brazil,Other,Farm 101,field,1831.65,0.07,0.06,126.0,125.83
+877,Brazil,Other,Farm 101,garden,1590.71,0.1,0.09,160.0,160.18
+878,Brazil,Other,Farm 101,greenhouse,1690.64,0.06,0.05,98.0,97.38
+879,Brazil,Other,Farm 101,surface_water,2752363.09,0.0,0.24,19312.13,306.84
+880,Brazil,Other,Farm 101,natural_area,1.14,89.84,0.04,103.0,102.78
+881,Brazil,Other,Farm 101,field,340.42,2.56,2.23,873.0,872.87
+882,Brazil,Other,Farm 101,ceremonial_area,0.0,6.66,5.8,1327.0,1326.02
+883,Brazil,Other,Farm 101,garden,163.6,8.04,7.0,1318.0,1315.99
+884,Brazil,Other,Farm 102,field,679.41,0.35,0.3,241.0,240.24
+885,Brazil,Other,Farm 102,garden,2459.48,0.03,0.02,68.0,67.88
+886,Brazil,Other,Farm 102,farm_site_boundary,79.12,33.56,28.93,2659.0,2655.54
+887,Brazil,Other,Farm 102,residence,0.0,0.02,0.02,57.0,57.07
+888,Brazil,Other,Farm 102,residence,0.0,0.01,0.01,50.0,49.7
+889,Brazil,Other,Farm 102,surface_water,997.14,0.67,0.58,674.0,672.67
+890,Brazil,Other,Farm 102,natural_area,271.61,3.29,2.84,896.0,894.26
+891,Brazil,Other,Farm 102,natural_area,289.89,3.06,2.63,888.0,885.97
+892,Brazil,Other,Farm 102,barn,0.0,0.12,0.11,148.0,147.73
+893,Brazil,Other,Farm 102,field,170.05,6.68,5.76,1137.0,1135.56
+894,Brazil,Other,Farm 102,greenhouse,746.48,0.29,0.25,219.0,218.72
+895,Brazil,Other,Farm 103,residence,0.0,0.02,0.02,53.0,53.28
+896,Brazil,Other,Farm 103,residence,0.0,0.02,0.02,55.0,54.75
+897,Brazil,Other,Farm 103,field,432.96,0.87,1.07,378.0,377.45
+898,Brazil,Other,Farm 103,field,635.69,0.43,0.52,271.0,270.74
+899,Brazil,Other,Farm 103,field,246.42,4.6,5.65,1136.0,1132.86
+900,Brazil,Other,Farm 103,field,221.5,6.49,7.98,1443.0,1437.77
+901,Brazil,Other,Farm 104,field,151.46,8.21,9.97,1246.0,1242.79
+902,Brazil,Other,Farm 101,natural_area,205.94,5.63,4.9,1161.0,1160.2
+903,Brazil,SPG 2023,Farm 105,farm_site_boundary,162.06,10.33,8.15,1675.0,1674.5
+904,Brazil,SPG 2023,Farm 105,field,1118.79,0.22,0.18,251.0,250.27
+905,Brazil,SPG 2023,Farm 105,field,979.92,0.19,0.15,187.0,186.28
+906,Brazil,SPG 2023,Farm 105,surface_water,14759.13,0.0,0.0,15.0,14.76
+907,Brazil,SPG 2023,Farm 105,surface_water,21559.54,0.0,0.0,9.0,8.62
+908,Brazil,SPG 2023,Farm 105,barn,0.0,0.02,0.01,51.0,50.44
+909,Brazil,Larisse Local & SPG 2023,Farm 87,surface_water,2960.42,0.03,0.02,83.0,82.89
+910,Brazil,Larisse Local & SPG 2023,Farm 87,surface_water,3994.59,0.01,0.01,46.0,46.34
+911,Brazil,Larisse Local & SPG 2023,Farm 87,surface_water,1127.34,0.2,0.17,225.0,224.45
+912,Argentina,Other,Farm 106,field,42.86,88.58,49.75,3802.0,3796.69
+913,Argentina,Other,Farm 106,farm_site_boundary,33.77,134.19,75.4,4539.0,4531.88
+914,Argentina,Other,Farm 106,field,41.37,95.69,53.76,3965.0,3958.23
+915,Argentina,Other,Farm 107,field,40.55,97.11,54.54,3945.0,3937.75
+916,Argentina,Other,Farm 107,field,36.53,133.22,74.85,5800.0,4866.13
+917,Argentina,Other,Farm 108,field,63.69,45.6,25.33,2906.0,2904.59
+918,Brazil,Other,Farm 109,garden,4673.84,0.01,0.01,53.0,53.28
+919,Brazil,Other,Farm 109,residence,0.0,0.02,0.02,59.0,59.34
+920,Brazil,Other,Farm 109,field,807.36,0.26,0.25,209.0,208.86
+921,Argentina,Other,Farm 110,field,174.22,6.91,3.84,1208.0,1204.65
+922,Brazil,SPG 2023,Farm 79,field,1043.83,0.18,0.14,187.0,186.74
+923,Brazil,Other,Farm 111,greenhouse,4549.21,0.01,0.0,25.0,25.02
+924,Argentina,CREA,Farm 112,farm_site_boundary,32.12,238.0,140.69,7655.0,7645.61
+925,Argentina,CREA,Farm 112,field,83.42,40.0,23.67,3341.0,3336.89
+926,Argentina,CREA,Farm 112,natural_area,71.45,30.0,16.11,2147.0,2143.39
+927,Argentina,CREA,Farm 112,field,57.96,48.0,25.91,2784.0,2782.25
+928,Argentina,CREA,Farm 112,field,82.94,30.0,19.26,2489.0,2488.16
+929,Argentina,CREA,Farm 112,natural_area,598.19,0.39,0.22,232.0,231.44
+930,Argentina,CREA,Farm 112,field,75.87,35.0,20.56,2661.0,2655.35
+931,Argentina,CREA,Farm 112,field,54.75,56.0,32.52,3071.0,3065.8
+932,Argentina,CREA,Farm 112,natural_area,580.49,0.45,0.26,260.0,259.65
+933,Argentina,CREA,Farm 113,farm_site_boundary,26.92,385.0,222.69,10365.0,10365.47
+934,Argentina,CREA,Farm 113,field,42.38,126.0,71.02,5340.0,5339.57
+935,Argentina,CREA,Farm 113,field,47.65,114.0,65.63,5433.0,5432.1
+936,Argentina,CREA,Farm 113,field,42.39,130.0,80.54,5512.0,5510.86
+937,Argentina,CREA,Farm 113,residence,0.0,2.13,1.23,674.0,673.87
+938,Argentina,CREA,Farm 113,natural_area,78.55,30.0,16.41,2359.0,2356.41
+939,Argentina,CREA,Farm 114,field,48.26,70.0,38.74,3382.0,3378.42
+940,Argentina,CREA,Farm 114,field,41.93,117.0,72.57,4915.0,4905.67
+941,Argentina,CREA,Farm 114,residence,0.0,0.86,0.49,435.0,435.22
+942,Argentina,CREA,Farm 114,field,40.19,105.0,62.49,4226.0,4220.43
+943,Argentina,CREA,Farm 115,field,36.01,132.0,74.43,4757.0,4753.75
+944,Argentina,CREA,Farm 115,field,38.67,110.0,61.49,4258.0,4254.14
+945,Argentina,CREA,Farm 115,field,39.51,116.0,65.12,4587.0,4582.87
+946,Argentina,CREA,Farm 115,field,40.28,100.0,56.15,4032.0,4028.02
+947,Argentina,CREA,Farm 115,natural_area,230.28,3.72,2.08,858.0,856.67
+948,Argentina,CREA,Farm 115,natural_area,253.92,2.55,1.43,647.0,646.25
+949,Argentina,CREA,Farm 115,natural_area,258.0,2.4,1.35,621.0,620.25
+950,Argentina,CREA,Farm 116,field,26.5,230.0,132.95,6102.0,6094.57
+951,Argentina,CREA,Farm 116,field,26.15,238.0,134.19,6230.0,6223.23
+952,Argentina,CREA,Farm 116,field,34.96,132.0,74.96,4620.0,4615.01
+953,Argentina,CREA,Farm 116,natural_area,418.04,0.81,0.46,338.0,337.82
+954,Argentina,CREA,Farm 116,field,28.56,250.0,144.71,7144.0,7140.22
+955,Argentina,CREA,Farm 116,field,84.22,95.0,54.1,8015.0,8000.6
+956,Argentina,CREA,Farm 116,field,40.86,150.0,85.14,6144.0,6128.92
+957,Argentina,CREA,Farm 117,field,25.41,295.0,168.97,7509.0,7495.95
+958,Argentina,CREA,Farm 117,field,33.95,141.0,80.74,4793.0,4787.41
+959,Argentina,CREA,Farm 118,field,43.99,166.0,94.68,7304.0,7301.56
+960,Argentina,CREA,Farm 118,field,44.73,114.0,64.77,5109.0,5099.74
+961,Argentina,CREA,Farm 118,field,59.86,112.0,64.09,6716.0,6704.81
+962,Argentina,CREA,Farm 118,field,44.61,81.0,46.0,3617.0,3613.23
+963,Argentina,CREA,Farm 118,field,41.22,126.0,71.3,5203.0,5193.31
+964,Argentina,CREA,Farm 119,field,66.89,60.0,34.33,4020.0,4013.46
+965,Argentina,CREA,Farm 119,field,52.4,63.0,36.38,3303.0,3301.21
+966,Argentina,CREA,Farm 119,field,57.65,60.0,34.69,3467.0,3459.07
+967,Argentina,CREA,Farm 119,field,84.47,34.0,20.27,2879.0,2871.84
+968,Argentina,CREA,Farm 119,field,60.77,58.0,32.48,3529.0,3524.48
+969,Argentina,CREA,Farm 119,field,53.39,60.0,34.58,3206.0,3203.68
+970,Argentina,CREA,Farm 120,farm_site_boundary,17.37,811.94,461.92,14109.0,14105.51
+971,Argentina,CREA,Farm 120,field,42.96,150.0,85.89,6448.0,6443.32
+972,Argentina,CREA,Farm 120,field,49.09,75.0,42.87,3686.0,3681.84
+973,Argentina,CREA,Farm 120,field,77.36,65.0,37.07,5028.0,5028.59
+974,Argentina,CREA,Farm 120,field,85.08,40.0,25.2,3403.0,3403.37
+975,Argentina,CREA,Farm 120,field,42.64,118.0,64.01,5031.0,5031.31
+976,Argentina,CREA,Farm 120,field,47.18,99.0,59.55,4671.0,4670.33
+977,Argentina,CREA,Farm 120,field,48.41,94.0,53.39,4551.0,4551.01
+978,Argentina,CREA,Farm 120,field,69.16,50.0,28.75,3464.0,3457.76
+979,Argentina,CREA,Farm 120,field,45.28,90.0,51.34,4081.0,4074.99
+980,Argentina,CREA,Farm 120,residence,0.0,6.08,3.46,1016.0,1014.22
+981,Argentina,CREA,Farm 120,natural_area,600.21,0.45,0.26,269.0,269.01
+982,Argentina,CREA,Farm 120,natural_area,466.37,0.75,0.42,348.0,347.82
+983,Argentina,CREA,Farm 120,natural_area,596.6,1.14,0.65,681.0,679.82
+984,Argentina,Other,Farm 121,field,51.38,67.0,37.54,3444.0,3442.23
+985,Argentina,Other,Farm 121,field,55.03,56.0,31.52,3084.0,3081.65
+986,Argentina,Other,Farm 121,field,86.29,22.0,12.74,1900.0,1898.48
+987,Brazil,Larisse Local & SPG 2023,Farm 122,farm_site_boundary,306.47,1.86,1.6,571.0,569.45
+988,Brazil,Larisse Local & SPG 2023,Farm 122,garden,1885.91,0.07,0.06,135.0,135.22
+989,Brazil,Larisse Local & SPG 2023,Farm 122,residence,0.0,0.04,0.03,85.0,84.66
+990,Brazil,Larisse Local & SPG 2023,Farm 122,garden,2887.88,0.02,0.02,62.0,62.38
+991,Brazil,Larisse Local & SPG 2023,Farm 122,garden,3863.8,0.01,0.01,43.0,42.89
+992,Brazil,Larisse Local & SPG 2023,Farm 122,barn,0.0,0.0,0.0,15.0,15.44
+993,Brazil,Larisse Local & SPG 2023,Farm 122,garden,2519.63,0.03,0.02,70.0,69.54
+994,Brazil,Larisse Local & SPG 2023,Farm 122,surface_water,2878.85,0.03,0.03,86.0,86.08
+995,Brazil,Larisse Local & SPG 2023,Farm 122,natural_area,412.24,0.98,0.84,404.0,403.05
+996,Argentina,CREA,Farm 119,natural_area,164.43,8.0,4.84,1317.0,1315.42
+997,Argentina,CREA,Farm 123,field,35.22,130.0,75.62,4583.0,4578.2
+998,Argentina,CREA,Farm 123,natural_area,265.83,2.27,1.32,604.0,603.13
+999,Argentina,CREA,Farm 123,field,52.92,68.0,40.21,3602.0,3598.26
+1000,Argentina,CREA,Farm 123,field,40.08,107.0,62.17,4293.0,4288.05
+1001,Argentina,CREA,Farm 123,field,68.45,40.0,22.9,2741.0,2738.12
+1002,Argentina,CREA,Farm 123,field,48.78,76.0,44.73,3711.0,3707.0
+1003,Argentina,CREA,Farm 123,field,51.69,70.0,42.74,3622.0,3618.18
+1004,Argentina,CREA,Farm 123,field,46.53,74.0,43.22,3447.0,3442.88
+1005,Argentina,CREA,Farm 123,field,71.31,57.0,33.17,4069.0,4064.42
+1006,Argentina,CREA,Farm 123,field,71.76,37.0,21.76,2658.0,2655.01
+1007,Argentina,CREA,Farm 123,field,99.26,28.0,16.75,2783.0,2779.35
+1008,Argentina,CREA,Farm 123,field,72.23,35.0,20.31,2531.0,2527.88
+1009,Argentina,CREA,Farm 124,field,37.93,129.0,73.23,4902.0,4892.35
+1010,Argentina,CREA,Farm 125,field,52.58,78.0,44.24,4106.0,4100.89
+1011,Argentina,CREA,Farm 125,natural_area,287.7,3.16,1.8,910.0,909.62
+1012,Argentina,CREA,Farm 125,field,44.39,103.0,59.14,4577.0,4572.43
+1013,Argentina,CREA,Farm 125,field,34.79,182.0,104.17,6346.0,6332.13
+1014,Argentina,CREA,Farm 126,field,49.06,79.0,45.56,3882.0,3875.93
+1015,Argentina,CREA,Farm 126,field,30.74,200.0,115.58,6153.0,6148.03
+1016,Argentina,CREA,Farm 126,field,44.05,150.0,86.15,6609.0,6606.94
+1017,Argentina,CREA,Farm 126,field,47.43,120.0,69.03,5691.0,5691.33
+1018,Argentina,CREA,Farm 126,field,43.66,135.0,80.17,5895.0,5894.46
+1019,Argentina,CREA,Farm 126,residence,0.0,7.99,4.57,1211.0,1209.48
+1020,Argentina,CREA,Farm 127,field,39.0,114.0,65.11,4452.0,4445.85
+1021,Argentina,CREA,Farm 127,field,91.65,42.0,24.01,3849.0,3849.23
+1022,Argentina,CREA,Farm 127,field,171.08,10.0,5.34,1714.0,1710.81
+1023,Argentina,CREA,Farm 127,natural_area,94.28,50.77,29.04,4794.0,4786.26
+1024,Argentina,CREA,Farm 128,farm_site_boundary,7.94,4167.87,2369.71,33131.0,33106.72
+1025,Argentina,CREA,Farm 128,field,40.93,180.0,101.89,7379.0,7367.97
+1026,Argentina,CREA,Farm 128,field,27.11,229.0,130.11,6218.0,6207.14
+1027,Argentina,CREA,Farm 128,field,28.39,216.0,127.87,6143.0,6132.93
+1028,Argentina,CREA,Farm 128,residence,0.0,1.6,0.91,501.0,500.56
+1029,Argentina,CREA,Farm 128,field,27.21,216.0,122.59,5884.0,5877.65
+1030,Argentina,CREA,Farm 128,field,28.36,211.0,119.83,5994.0,5983.78
+1031,Argentina,CREA,Farm 128,field,29.38,200.0,113.43,5885.0,5875.01
+1032,Argentina,CREA,Farm 128,field,28.35,264.0,150.3,7494.0,7483.48
+1033,Argentina,CREA,Farm 128,field,43.85,115.0,65.38,5048.0,5042.75
+1034,Argentina,CREA,Farm 128,field,33.91,196.0,112.17,6663.0,6646.67
+1035,Argentina,CREA,Farm 129,farm_site_boundary,12.04,1240.74,713.21,14947.0,14939.02
+1036,Argentina,CREA,Farm 129,field,30.8,230.0,134.6,7099.0,7084.76
+1037,Argentina,CREA,Farm 129,field,21.47,400.0,231.5,8602.0,8588.17
+1038,Argentina,CREA,Farm 129,field,24.14,270.0,144.87,6522.0,6516.96
+1039,Brazil,Larisse Local & SPG 2023,Farm 58,garden,2771.57,0.05,0.04,134.0,133.59
+1040,Brazil,SPG 2023,Farm 130,farm_site_boundary,346.18,3.33,2.91,1154.0,1153.61
+1041,Brazil,SPG 2023,Farm 130,garden,2175.05,0.07,0.07,162.0,162.04
+1042,Brazil,SPG 2023,Farm 130,garden,1573.96,0.15,0.13,238.0,237.83
+1043,Brazil,SPG 2023,Farm 130,surface_water,2094.87,0.04,0.04,91.0,90.92
+1044,Brazil,SPG 2023,Farm 130,surface_water,2566.39,0.03,0.03,82.0,81.35
+1045,Brazil,SPG 2023,Farm 130,farm_site_boundary,981.52,0.18,0.16,180.0,179.72
+1046,Brazil,SPG 2023,Farm 130,farm_site_boundary,419.06,2.64,2.3,1105.0,1104.47
+1047,Brazil,SPG 2023,Farm 130,barn,0.0,0.01,0.01,40.0,40.32
+1048,Brazil,SPG 2023,Farm 130,residence,0.0,0.02,0.01,51.0,51.16
+1049,Brazil,SPG 2023,Farm 130,barn,0.0,0.01,0.01,40.0,39.61
+1050,Brazil,SPG 2023,Farm 130,natural_area,639.43,0.42,0.37,268.0,267.54
+1051,Brazil,SPG 2023,Farm 130,garden,4475.17,0.01,0.01,61.0,61.31
+1052,Brazil,SPG 2023,Farm 52,field,739.6,0.34,0.41,249.0,248.73
+1053,Brazil,SPG 2023,Farm 52,farm_site_boundary,737.2,0.34,0.41,250.0,249.39
+1054,Brazil,SPG 2023,Farm 97,field,981.56,0.21,0.26,211.0,210.64
+1055,Brazil,SPG 2023,Farm 97,farm_site_boundary,990.9,0.21,0.25,210.0,209.48
+1056,Brazil,SPG 2023,Farm 131,farm_site_boundary,355.56,1.9,1.5,678.0,677.26
+1057,Brazil,SPG 2023,Farm 131,residence,0.0,0.03,0.02,64.0,63.71
+1058,Brazil,SPG 2023,Farm 131,natural_area,376.5,1.23,0.97,464.0,463.59
+1059,Brazil,SPG 2023,Farm 131,garden,1921.65,0.09,0.07,168.0,167.57
+1060,Brazil,SPG 2023,Farm 131,greenhouse,4644.99,0.02,0.01,75.0,74.78
+1061,Brazil,SPG 2023,Farm 131,greenhouse,4303.67,0.01,0.01,44.0,43.47
+1062,Brazil,SPG 2023,Farm 131,greenhouse,4288.44,0.01,0.01,45.0,45.03
+1063,Argentina,CREA,Farm 132,field,45.57,100.0,60.37,4562.0,4557.07
+1064,Argentina,CREA,Farm 132,natural_area,302.34,8.0,4.33,2422.0,2418.72
+1065,Argentina,CREA,Farm 132,field,56.54,92.0,55.42,5207.0,5201.88
+1066,Argentina,CREA,Farm 132,field,31.75,158.0,95.53,5022.0,5016.02
+1067,Argentina,CREA,Farm 133,field,57.03,121.0,77.22,6910.0,6900.27
+1068,Argentina,CREA,Farm 133,field,48.3,79.0,50.74,3822.0,3815.52
+1069,Argentina,CREA,Farm 133,field,39.87,135.0,85.58,5392.0,5382.7
+1070,Argentina,CREA,Farm 134,field,111.49,30.0,24.82,3353.0,3344.71
+1071,Argentina,CREA,Farm 134,field,47.08,125.0,83.25,5898.0,5885.58
+1072,Argentina,CREA,Farm 134,field,34.19,146.0,86.3,4999.0,4992.06
+1073,Argentina,CREA,Farm 134,field,38.76,117.0,65.39,4538.0,4535.12
+1074,Argentina,CREA,Farm 134,field,76.31,103.5,57.81,7912.0,7897.9
+1075,Argentina,CREA,Farm 134,field,118.54,65.0,13.66,7720.0,7704.81
+1076,Argentina,CREA,Farm 134,field,38.85,129.0,84.94,5016.0,5011.06
+1077,Argentina,CREA,Farm 134,field,34.24,136.0,76.17,4663.0,4656.88
+1078,Argentina,CREA,Farm 134,field,30.68,173.0,96.32,5313.0,5307.52
+1079,Argentina,CREA,Farm 134,field,36.79,120.0,67.56,4421.0,4415.36
+1080,Argentina,CREA,Farm 134,field,38.32,134.0,74.96,5140.0,5135.44
+1081,Argentina,CREA,Farm 134,field,53.7,63.0,34.88,3388.0,3383.36
+1082,Argentina,CREA,Farm 134,field,75.56,43.0,24.5,3254.0,3249.09
+1083,Argentina,CREA,Farm 134,field,34.3,158.0,90.98,5425.0,5419.74
+1084,Argentina,CREA,Farm 134,field,28.61,233.0,131.18,6672.0,6666.17
+1085,Argentina,CREA,Farm 134,field,44.03,101.5,57.94,4477.0,4469.22
+1086,Brazil,Larisse Local & SPG 2023,Farm 135,garden,1555.41,0.08,0.07,131.0,130.81
+1087,Argentina,CREA,Farm 136,field,175.44,19.0,14.99,3340.0,3333.36
+1088,Argentina,CREA,Farm 136,field,51.75,54.0,39.42,2797.0,2794.46
+1089,Argentina,CREA,Farm 136,field,162.6,28.5,20.92,4641.0,4634.1
+1090,Argentina,CREA,Farm 136,field,125.79,22.0,15.72,2771.0,2767.29
+1091,Argentina,CREA,Farm 136,field,96.98,39.0,25.42,3787.0,3782.26
+1092,Argentina,CREA,Farm 136,field,51.31,64.0,44.14,3287.0,3283.95
+1093,Argentina,CREA,Farm 136,field,263.23,10.0,6.64,2634.0,2632.25
+1094,Argentina,CREA,Farm 136,field,47.64,64.0,44.29,3051.0,3048.72
+1095,Argentina,CREA,Farm 136,field,318.48,9.0,6.53,2868.0,2866.3
+1096,Argentina,CREA,Farm 137,field,66.5,166.0,116.09,11054.0,11038.81
+1097,Argentina,CREA,Farm 137,field,35.84,134.0,93.14,4806.0,4802.44
+1098,Argentina,CREA,Farm 138,farm_site_boundary,52.28,72.0,39.09,3772.0,3764.2
+1099,Argentina,CREA,Farm 138,field,211.52,4.0,2.38,848.0,846.06
+1100,Argentina,CREA,Farm 138,field,110.85,15.0,7.97,1667.0,1662.74
+1101,Argentina,CREA,Farm 138,field,114.37,14.0,6.88,1605.0,1601.13
+1102,Argentina,CREA,Farm 138,field,76.56,29.0,14.92,2224.0,2220.29
+1103,Argentina,CREA,Farm 139,farm_site_boundary,91.03,61.57,33.36,5617.0,5604.77
+1104,Argentina,CREA,Farm 139,field,134.79,10.0,6.23,1350.0,1347.95
+1105,Argentina,CREA,Farm 139,field,128.72,12.0,6.26,1548.0,1544.6
+1106,Argentina,CREA,Farm 139,field,149.41,12.0,6.1,1796.0,1792.89
+1107,Argentina,CREA,Farm 139,field,81.87,25.0,12.92,2051.0,2046.73
+1108,Argentina,CREA,Farm 139,field,105.18,12.0,5.2,1264.0,1262.21
+1109,Argentina,CREA,Farm 140,farm_site_boundary,73.59,62.99,34.13,4646.0,4635.94
+1110,Argentina,CREA,Farm 140,field,78.41,28.0,15.6,2200.0,2195.55
+1111,Argentina,CREA,Farm 140,field,192.65,5.0,3.08,965.0,963.25
+1112,Argentina,CREA,Farm 140,field,365.74,3.0,1.8,1100.0,1097.21
+1113,Brazil,Other,Farm 141,garden,1804.05,0.06,0.05,106.0,106.08
+1114,Brazil,Other,Farm 141,field,2669.11,0.04,0.03,99.0,99.29
+1115,Argentina,CREA,Farm 142,field,39.65,200.0,128.93,7940.0,7930.44
+1116,Argentina,CREA,Farm 143,field,55.04,54.0,33.86,2975.0,2971.92
+1117,Argentina,CREA,Farm 143,field,55.86,59.0,38.22,3298.0,3295.58
+1118,Argentina,CREA,Farm 143,field,62.99,52.0,33.82,3279.0,3275.3
+1119,Argentina,CREA,Farm 143,field,97.0,32.0,20.92,3108.0,3104.04
+1120,Argentina,CREA,Farm 143,field,62.34,43.0,28.11,2683.0,2680.54
+1121,Argentina,CREA,Farm 144,field,128.49,35.0,26.5,4502.0,4497.25
+1122,Argentina,CREA,Farm 144,field,64.51,45.0,28.93,2906.0,2903.01
+1123,Argentina,CREA,Farm 144,field,95.39,25.0,15.78,2387.0,2384.78
+1124,Argentina,CREA,Farm 144,field,49.67,75.0,48.16,3729.0,3725.24
+1125,Argentina,CREA,Farm 145,field,28.5,229.0,127.07,6541.0,6526.97
+1126,Argentina,CREA,Farm 145,field,44.42,157.5,87.26,7011.0,6996.0
+1127,Argentina,CREA,Farm 146,field,58.27,53.0,29.98,3095.0,3088.06
+1128,Argentina,CREA,Farm 147,field,39.45,106.0,60.27,4187.0,4181.91
+1129,Argentina,CREA,Farm 148,field,42.66,91.0,49.74,3887.0,3881.62
+1130,Argentina,CREA,Farm 149,field,48.13,102.0,56.66,4917.0,4909.42
+1131,Argentina,CREA,Farm 149,field,277.91,15.0,8.52,4176.0,4168.71
+1132,Argentina,Other,Farm 150,field,60.2,44.44,29.96,2679.0,2675.52
+1133,Argentina,CREA,Farm 151,field,60.85,43.7,26.13,2663.0,2659.27
+1134,Argentina,CREA,Farm 151,field,50.76,61.6,36.5,3131.0,3126.51
+1135,Argentina,CREA,Farm 151,field,56.41,49.0,28.24,2768.0,2764.04
+1136,Argentina,CREA,Farm 151,field,47.78,70.9,42.18,3393.0,3387.55
+1137,Argentina,CREA,Farm 151,field,50.48,58.1,32.11,2937.0,2933.12
+1138,Argentina,CREA,Farm 151,field,49.74,65.0,38.91,3238.0,3233.29
+1139,Argentina,CREA,Farm 151,field,51.88,64.7,38.74,3360.0,3356.8
+1140,Argentina,CREA,Farm 151,field,59.57,45.0,26.69,2684.0,2680.74
+1141,Argentina,CREA,Farm 151,field,53.75,67.4,40.37,3632.0,3622.94
+1142,Argentina,CREA,Farm 152,field,48.37,70.0,41.28,3390.0,3385.97
+1143,Argentina,CREA,Farm 152,field,43.32,85.0,48.83,3687.0,3682.39
+1144,Argentina,CREA,Farm 152,field,63.24,50.0,31.44,3167.0,3161.98
+1145,Argentina,CREA,Farm 152,field,93.01,26.0,17.36,2423.0,2418.26
+1146,Argentina,CREA,Farm 152,field,40.38,115.0,65.85,4647.0,4644.04
+1147,Argentina,CREA,Farm 152,field,58.47,50.0,30.34,2928.0,2923.74
+1148,Brazil,Other,Farm 153,garden,11343.56,0.0,0.0,20.0,20.42
+1149,Argentina,CREA,Farm 154,field,60.61,48.0,26.97,2915.0,2909.19
+1150,Argentina,CREA,Farm 154,field,61.44,47.0,25.93,2894.0,2887.72
+1151,Argentina,CREA,Farm 154,field,49.86,76.0,41.97,3794.0,3789.4
+1152,Argentina,CREA,Farm 155,field,86.34,25.0,15.24,2162.0,2158.51
+1153,Argentina,CREA,Farm 156,field,48.65,73.0,40.56,3557.0,3551.53
+1154,Argentina,CREA,Farm 157,field,45.14,86.0,46.83,3885.0,3882.15
+1155,Argentina,Other,Farm 158,field,491.09,1.05,0.45,514.0,514.17
+1156,Argentina,Other,Farm 158,garden,713.18,0.32,0.14,228.0,227.65
+1157,Argentina,Other,Farm 158,garden,972.17,0.18,0.08,178.0,178.1
+1158,Argentina,Other,Farm 158,garden,699.79,0.34,0.15,238.0,237.44
+1159,Brazil,Larisse Local & SPG 2023,Farm 96,garden,2811.18,0.02,0.02,57.0,57.07
+1160,Argentina,CREA,Farm 123,field,123.58,17.0,10.25,2103.0,2100.88
+1161,Argentina,CREA,Farm 123,field,212.29,4.0,2.55,850.0,849.18
+1162,Brazil,Other,Farm 159,field,298.04,2.33,2.17,697.0,694.43
+1163,Brazil,Other,Farm 159,field,353.94,2.11,1.96,748.0,746.67
+1164,Brazil,Other,Farm 160,greenhouse,304407.58,0.0,0.14,153.0,152.2
+1165,Brazil,Other,Farm 161,garden,8125.39,0.0,0.0,2.0,16.25
+1166,Brazil,Other,Farm 162,garden,1250.61,0.12,0.1,151.0,150.07
+1167,Brazil,Other,Farm 162,greenhouse,789.89,0.28,0.25,224.0,223.62
+1168,Brazil,Other,Farm 161,garden,6855.42,0.01,0.01,71.0,70.61
+1169,Brazil,Other,Farm 162,greenhouse,1396.43,0.09,0.08,123.0,123.16
+1170,Brazil,Other,Farm 161,greenhouse,13090.01,0.0,0.0,13.0,13.09
+1171,Brazil,Larisse Local,Farm 163,farm_site_boundary,988.57,0.16,0.14,163.0,162.42
+1172,Brazil,Larisse Local,Farm 163,garden,1363.33,0.1,0.09,141.0,140.83
+1173,Brazil,Larisse Local,Farm 164,farm_site_boundary,582.49,0.55,0.49,322.0,321.65
+1174,Brazil,Larisse Local,Farm 164,greenhouse,9158.2,0.0,0.0,17.0,17.4
+1175,Brazil,Larisse Local,Farm 164,greenhouse,9049.28,0.0,0.0,18.0,18.1
+1176,Brazil,Larisse Local,Farm 164,greenhouse,15702.5,0.0,0.0,11.0,10.99
+1177,Brazil,Larisse Local,Farm 164,garden,1485.63,0.07,0.06,101.0,100.43
+1178,Brazil,Larisse Local,Farm 164,greenhouse,5814.91,0.0,0.0,29.0,28.49
+1179,Brazil,Larisse Local,Farm 164,garden,5523.18,0.01,0.01,46.0,45.84
+1180,Brazil,Larisse Local,Farm 165,farm_site_boundary,649.18,0.44,0.38,284.0,283.24
+1181,Brazil,Larisse Local,Farm 165,greenhouse,4552.28,0.01,0.01,38.0,37.78
+1182,Brazil,Larisse Local,Farm 165,garden,7714.29,0.01,0.01,52.0,51.69
+1183,Brazil,Larisse Local,Farm 165,garden,1511.4,0.13,0.11,191.0,190.89
+1184,Brazil,Larisse Local,Farm 165,surface_water,3877.92,0.01,0.01,48.0,47.7
+1185,Brazil,Larisse Local,Farm 165,natural_area,6723.47,0.0,0.0,32.0,31.6
+1186,Brazil,Larisse Local,Farm 165,field,7096.5,0.01,0.01,64.0,63.87
+1187,Brazil,Larisse Local,Farm 165,ceremonial_area,0.0,0.01,0.01,46.0,45.83
+1188,Argentina,CREA,Farm 140,field,101.24,18.0,9.56,1823.0,1822.3
+1189,Argentina,CREA,Farm 166,field,87.04,31.0,17.33,2699.0,2698.34
+1190,Argentina,CREA,Farm 166,field,77.95,39.0,22.57,3041.0,3040.07
+1191,Argentina,CREA,Farm 167,field,36.6,119.0,66.65,4361.0,4355.14
+1192,Argentina,CREA,Farm 167,field,36.75,130.0,72.46,4787.0,4777.6
+1193,Brazil,Other,Farm 168,farm_site_boundary,154.39,7.19,9.18,1114.0,1110.38
+1194,Brazil,Other,Farm 168,field,778.91,0.37,0.47,286.0,285.31
+1195,Brazil,Other,Farm 169,farm_site_boundary,37.07,259.41,211.12,9635.0,9615.32
+1196,Brazil,Other,Farm 170,natural_area,448.2,1.4,1.72,628.0,627.49
+1197,Brazil,Larisse Local & SPG 2023,Farm 171,farm_site_boundary,175.08,6.83,5.92,1200.0,1196.43
+1198,Brazil,Larisse Local & SPG 2023,Farm 171,garden,1211.84,0.12,0.11,148.0,147.12
+1199,Brazil,Larisse Local & SPG 2023,Farm 171,garden,1131.66,0.15,0.13,170.0,169.64
+1200,Brazil,Larisse Local & SPG 2023,Farm 171,garden,483.07,1.07,0.93,518.0,517.22
+1201,Brazil,Other,Farm 172,residence,0.0,0.01,0.01,36.0,36.36
+1202,Brazil,Other,Farm 172,barn,0.0,0.0,0.0,32.0,31.81
+1203,Brazil,Other,Farm 172,farm_site_boundary,2263.72,0.03,0.03,71.0,70.63
+1204,Argentina,Other,Farm 158,greenhouse,13256.62,0.0,0.01,53.0,53.03
+1205,Brazil,Larisse Local,Farm 173,garden,845.87,0.25,0.22,209.0,208.25
+1206,Brazil,Larisse Local,Farm 173,field,3811.36,0.02,0.02,71.0,70.89
+1207,Brazil,Other,Farm 174,farm_site_boundary,788.08,0.26,0.23,207.0,206.24
+1208,Brazil,Larisse Local,Farm 175,farm_site_boundary,242.14,3.37,2.91,818.0,816.54
+1209,Brazil,Larisse Local,Farm 175,garden,2613.8,0.03,0.03,79.0,79.2
+1210,Brazil,Larisse Local,Farm 175,field,794.78,0.25,0.22,202.0,201.4
+1211,Brazil,Larisse Local,Farm 176,farm_site_boundary,376.63,1.77,1.55,669.0,667.7
+1212,Brazil,Larisse Local,Farm 176,field,2936.06,0.03,0.03,91.0,90.72
+1213,Brazil,Larisse Local,Farm 176,garden,3042.11,0.02,0.01,52.0,51.72
+1214,Brazil,Larisse Local,Farm 176,field,2326.32,0.04,0.04,98.0,98.17
+1215,Brazil,Larisse Local,Farm 176,field,1734.98,0.07,0.06,125.0,125.09
+1216,Brazil,Larisse Local,Farm 176,field,3629.14,0.02,0.02,88.0,88.19
+1217,Brazil,Larisse Local,Farm 176,field,1872.54,0.05,0.04,91.0,91.19
+1218,Brazil,Larisse Local,Farm 176,natural_area,976.87,0.3,0.26,296.0,295.31
+1219,Brazil,Larisse Local,Farm 176,ceremonial_area,0.0,0.02,0.01,53.0,52.9
+1220,Brazil,Larisse Local,Farm 176,natural_area,1861.3,0.06,0.05,116.0,115.59
+1221,Brazil,Larisse Local,Farm 176,field,4229.45,0.04,0.03,154.0,153.95
+1222,Brazil,Larisse Local,Farm 176,garden,3980.25,0.01,0.01,55.0,54.93
+1223,Brazil,Other,Farm 177,barn,0.0,0.24,0.2,210.0,209.39
+1224,Brazil,Other,Farm 178,field,1133.35,0.23,0.2,257.0,256.25
+1225,Brazil,Other,Farm 178,field,1611.25,0.12,0.1,188.0,187.71
+1226,Brazil,Other,Farm 178,barn,0.0,0.11,0.1,152.0,151.51
+1227,Brazil,Other,Farm 178,farm_site_boundary,787.15,0.65,0.56,512.0,510.86
+1228,Brazil,SPG 2023,Farm 179,farm_site_boundary,300.18,2.55,2.04,766.0,764.05
+1229,Brazil,SPG 2023,Farm 179,barn,0.0,0.01,0.01,50.0,49.94
+1230,Brazil,SPG 2023,Farm 179,barn,0.0,0.02,0.02,58.0,58.04
+1231,Brazil,SPG 2023,Farm 179,barn,0.0,0.04,0.03,80.0,79.56
+1232,Brazil,SPG 2023,Farm 179,residence,0.0,0.03,0.02,65.0,64.6
+1233,Brazil,SPG 2023,Farm 179,residence,0.0,0.02,0.01,53.0,53.11
+1234,Brazil,SPG 2023,Farm 179,garden,1601.33,0.07,0.05,108.0,107.93
+1235,Brazil,SPG 2023,Farm 179,garden,2159.44,0.04,0.04,97.0,96.53
+1236,Brazil,SPG 2023,Farm 179,field,2128.29,0.04,0.03,82.0,81.51
+1237,Brazil,SPG 2023,Farm 179,field,1005.8,0.17,0.14,173.0,172.19
+1238,Brazil,SPG 2023,Farm 179,field,1952.38,0.04,0.03,84.0,83.76
+1239,Brazil,SPG 2023,Farm 179,field,1330.81,0.11,0.08,141.0,140.67
+1240,Brazil,SPG 2023,Farm 179,natural_area,1298.18,0.23,0.18,299.0,298.06
+1241,Brazil,SPG 2023,Farm 179,garden,2035.44,0.16,0.13,324.0,323.43
+1242,Brazil,Other,Farm 180,farm_site_boundary,99.01,17.3,14.64,1717.0,1712.94
+1243,Brazil,Other,Farm 180,farm_site_boundary,419.6,1.0,0.82,420.0,419.6
+1244,Brazil,Other,Farm 180,residence,0.0,0.04,0.04,85.0,84.71
+1245,Brazil,Other,Farm 180,barn,0.0,0.02,0.01,54.0,54.16
+1246,Brazil,Other,Farm 180,field,338.11,1.89,1.51,641.0,638.14
+1247,Brazil,Other,Farm 180,field,346.36,1.49,1.11,518.0,516.08
+1248,Brazil,Other,Farm 181,field,81.83,40.88,33.77,3350.0,3345.27
+1249,Brazil,Other,Farm 181,field,112.69,49.77,41.11,5619.0,5608.65
+1250,Brazil,Other,Farm 181,field,317.79,2.45,2.03,781.0,779.85
+1251,Brazil,Other,Farm 181,field,477.66,0.92,0.76,441.0,439.45
+1252,Brazil,SPG 2023,Farm 182,farm_site_boundary,115.19,12.25,9.72,1413.0,1411.35
+1253,Brazil,SPG 2023,Farm 183,farm_site_boundary,118.09,11.82,10.17,1400.0,1396.46
+1254,Brazil,SPG 2023,Farm 183,barn,0.0,0.01,0.0,31.0,30.63
+1255,Brazil,SPG 2023,Farm 183,barn,0.0,0.01,0.01,34.0,34.19
+1256,Brazil,SPG 2023,Farm 183,garden,3534.96,0.01,0.01,47.0,47.02
+1257,Brazil,SPG 2023,Farm 183,garden,3934.64,0.01,0.01,41.0,41.31
+1258,Brazil,SPG 2023,Farm 183,natural_area,759.35,0.79,0.68,601.0,600.04
+1259,Brazil,SPG 2023,Farm 184,farm_site_boundary,127.24,12.9,11.11,1646.0,1641.88
+1260,Brazil,SPG 2023,Farm 184,garden,558.44,0.51,0.44,286.0,286.03
+1261,Brazil,SPG 2023,Farm 184,garden,624.89,0.52,0.45,325.0,324.75
+1262,Brazil,SPG 2023,Farm 184,garden,483.49,0.79,0.68,385.0,383.7
+1263,Brazil,SPG 2023,Farm 184,garden,528.7,0.66,0.56,347.0,346.46
+1264,Brazil,SPG 2023,Farm 184,greenhouse,3526.51,0.01,0.01,47.0,46.55
+1265,Brazil,SPG 2023,Farm 184,greenhouse,4344.65,0.01,0.01,40.0,39.97
+1266,Brazil,SPG 2023,Farm 184,residence,0.0,0.02,0.02,60.0,60.02
+1267,Brazil,SPG 2023,Farm 184,residence,0.0,0.01,0.01,46.0,46.02
+1268,Brazil,SPG 2023,Farm 184,residence,0.0,0.01,0.01,46.0,45.52
+1269,Brazil,SPG 2023,Farm 184,residence,0.0,0.02,0.02,58.0,58.08
+1270,Brazil,SPG 2023,Farm 184,garden,1041.01,0.15,0.13,156.0,155.84
+1271,Brazil,SPG 2023,Farm 105,field,802.34,0.36,0.29,291.0,290.85
+1272,Brazil,SPG 2023,Farm 105,field,622.21,0.58,0.46,361.0,359.89
+1273,Brazil,Other,Farm 185,farm_site_boundary,289.79,2.02,1.47,585.0,584.2
+1274,Brazil,Other,Farm 185,field,700.96,0.36,0.26,252.0,252.06
+1275,Brazil,Other,Farm 185,ceremonial_area,0.0,0.04,0.03,82.0,81.58
+1276,Brazil,Other,Farm 185,field,504.68,0.7,0.51,353.0,352.31
+1277,Brazil,Other,Farm 185,field,735.94,0.38,0.28,282.0,281.94
+1278,Brazil,SPG 2023,Farm 186,farm_site_boundary,104.07,31.09,26.85,3244.0,3235.94
+1279,Brazil,SPG 2023,Farm 186,greenhouse,2821.31,0.05,0.04,130.0,129.5
+1280,Brazil,SPG 2023,Farm 186,greenhouse,4281.27,0.01,0.01,45.0,44.53
+1281,Brazil,SPG 2023,Farm 186,barn,0.0,0.02,0.02,53.0,52.86
+1282,Brazil,SPG 2023,Farm 186,residence,0.0,0.02,0.02,61.0,60.55
+1283,Brazil,SPG 2023,Farm 186,garden,1132.57,0.25,0.22,284.0,283.71
+1284,Brazil,SPG 2023,Farm 186,garden,668.5,0.42,0.36,280.0,280.03
+1285,Brazil,SPG 2023,Farm 186,garden,1550.65,0.1,0.09,158.0,157.39
+1286,Brazil,SPG 2023,Farm 186,garden,1183.77,0.11,0.1,134.0,133.41
+1287,Brazil,SPG 2023,Farm 186,garden,3824.89,0.01,0.01,44.0,43.99
+1288,Brazil,SPG 2023,Farm 186,barn,0.0,0.01,0.01,38.0,38.18
+1289,Brazil,SPG 2023,Farm 186,field,1220.05,0.11,0.09,133.0,132.62
+1290,Brazil,SPG 2023,Farm 186,field,529.09,0.92,0.79,487.0,485.39
+1291,Brazil,SPG 2023,Farm 186,natural_area,126.34,15.1,13.04,1911.0,1907.99
+1292,Brazil,SPG 2023,Farm 186,natural_area,333.13,2.45,2.12,818.0,816.54
+1293,Brazil,Other,Farm 187,farm_site_boundary,2948.92,0.04,0.03,110.0,109.7
+1294,Brazil,Other,Farm 187,garden,21313.73,0.0,0.0,49.0,49.02
+1295,Brazil,Other,Farm 187,field,14231.69,0.0,0.0,41.0,41.27
+1296,Brazil,Other,Farm 187,field,16874.52,0.0,0.0,19.0,18.56
+1297,Brazil,Other,Farm 187,greenhouse,10550.02,0.0,0.0,14.0,13.72
+1298,Brazil,Other,Farm 187,garden,9770.64,0.0,0.0,18.0,17.59
+1299,Brazil,Other,Farm 187,field,10266.68,0.0,0.0,16.0,16.43
+1300,Brazil,Other,Farm 187,residence,0.0,0.01,0.01,44.0,44.15
+1301,Brazil,SPG 2023,Farm 188,farm_site_boundary,533.94,1.01,0.88,543.0,541.15
+1302,Brazil,SPG 2023,Farm 188,garden,1685.38,0.13,0.11,212.0,211.18
+1303,Brazil,SPG 2023,Farm 188,garden,1364.16,0.13,0.11,176.0,175.29
+1304,Brazil,SPG 2023,Farm 188,garden,2884.25,0.04,0.03,101.0,101.24
+1305,Brazil,SPG 2023,Farm 188,garden,1222.61,0.11,0.09,132.0,132.04
+1306,Brazil,SPG 2023,Farm 188,natural_area,800.2,0.33,0.28,262.0,261.51
+1307,Brazil,SPG 2023,Farm 188,residence,0.0,0.02,0.01,50.0,50.36
+1308,Brazil,SPG 2023,Farm 188,residence,0.0,0.01,0.01,39.0,38.7
+1309,Brazil,SPG 2023,Farm 188,barn,0.0,0.0,0.0,20.0,19.61
+1310,Brazil,SPG 2023,Farm 188,field,2104.97,0.05,0.04,102.0,101.88
+1311,Brazil,SPG 2023,Farm 188,field,3483.26,0.03,0.03,119.0,119.13
+1312,Brazil,SPG 2023,Farm 188,barn,0.0,0.0,0.0,28.0,27.89
+1313,Brazil,SPG 2023,Farm 188,garden,8662.06,0.0,0.0,31.0,31.18
+1314,Brazil,SPG 2023,Farm 188,garden,4449.31,0.01,0.01,43.0,43.16
+1315,Brazil,SPG 2023,Farm 188,garden,5349.67,0.01,0.01,31.0,31.03
+1316,Brazil,Other,Farm 189,greenhouse,2626.72,0.03,0.03,74.0,73.55
+1317,Brazil,Other,Farm 190,farm_site_boundary,624.52,0.47,0.38,294.0,293.4
+1318,Brazil,Other,Farm 190,field,4545.63,0.01,0.01,37.0,36.82
+1319,Brazil,Larisse Local,Farm 173,farm_site_boundary,143.43,13.43,11.74,1933.0,1926.57
+1320,Brazil,Other,Farm 190,garden,4682.78,0.01,0.01,42.0,41.68
+1321,Brazil,Other,Farm 191,garden,4864.3,0.01,0.0,33.0,33.08
+1322,Brazil,Other,Farm 192,field,59.87,47.51,47.97,2851.0,2844.81
+1323,Argentina,Other,Farm 193,field,112.78,17.37,7.73,1961.0,1958.75
+1324,Brazil,SPG 2023,Farm 194,farm_site_boundary,78.19,37.95,30.41,2975.0,2966.99
+1325,Brazil,SPG 2023,Farm 195,field,1652.85,0.2,0.24,333.0,332.39
+1326,Brazil,SPG 2023,Farm 195,farm_site_boundary,376.23,3.22,3.82,1215.0,1210.47
+1327,Brazil,SPG 2023,Farm 195,field,378.11,3.2,3.8,1214.0,1209.78
+1328,Brazil,SPG 2023,Farm 195,farm_site_boundary,1476.9,0.22,0.26,329.0,328.76
+1329,Brazil,SPG 2023,Farm 196,farm_site_boundary,251.1,3.49,2.78,880.0,876.91
+1330,Brazil,SPG 2023,Farm 196,field,394.96,1.1,0.87,433.0,432.48
+1331,Brazil,SPG 2023,Farm 196,field,652.17,0.41,0.32,265.0,264.59
+1332,Brazil,SPG 2023,Farm 196,field,1618.47,0.07,0.05,107.0,106.82
+1333,Brazil,SPG 2023,Farm 196,natural_area,427.13,1.63,1.3,698.0,696.69
+1334,Brazil,SPG 2023,Farm 196,natural_area,1084.36,0.18,0.14,193.0,193.23
+1335,Brazil,Larisse Local & SPG 2023,Farm 135,farm_site_boundary,846.03,0.23,0.2,192.0,191.37
+1336,Brazil,Other,Farm 197,farm_site_boundary,721.04,1.1,0.96,795.0,794.58
+1337,Brazil,Other,Farm 197,garden,1192.95,0.27,0.24,328.0,327.47
+1338,Brazil,Other,Farm 197,garden,1782.0,0.09,0.08,162.0,161.81
+1339,Brazil,Other,Farm 197,residence,0.0,0.02,0.01,50.0,49.81
+1340,Brazil,Other,Farm 197,farm_site_boundary,1285.95,0.12,0.11,155.0,154.57
+1341,Brazil,Other,Farm 180,field,210.89,3.68,2.95,778.0,775.8
+1342,Brazil,Other,Farm 180,field,334.36,1.8,1.44,603.0,600.37
+1343,Brazil,Other,Farm 180,field,356.25,1.53,1.22,545.0,543.63
+1344,Brazil,Other,Farm 180,garden,718.05,0.32,0.26,231.0,230.28
+1345,Brazil,Other,Farm 180,field,481.8,0.97,0.78,469.0,468.07
+1346,Brazil,Other,Farm 180,field,261.06,3.61,2.89,946.0,941.91
+1347,Brazil,Other,Farm 180,field,370.23,1.35,1.08,502.0,500.77
+1348,Brazil,Other,Farm 180,surface_water,4976.73,0.01,0.0,29.0,28.87
+1349,Brazil,Other,Farm 180,surface_water,1936.31,0.04,0.03,83.0,82.68
+1350,Brazil,Other,Farm 198,farm_site_boundary,92.18,20.07,15.97,1860.0,1850.15
+1351,Brazil,Other,Farm 198,field,200.54,4.21,3.35,846.0,843.74
+1352,Brazil,SPG 2023,Farm 199,farm_site_boundary,1276.83,0.23,0.27,292.0,292.27
+1353,Brazil,SPG 2023,Farm 199,field,1348.08,0.22,0.26,293.0,292.67
+1354,Brazil,SPG 2023,Farm 199,farm_site_boundary,358.77,4.36,5.17,1572.0,1563.68
+1355,Brazil,SPG 2023,Farm 199,field,359.38,4.35,5.16,1571.0,1563.0
+1356,Brazil,SPG 2023,Farm 200,farm_site_boundary,1022.55,0.24,0.28,244.0,243.37
+1357,Brazil,SPG 2023,Farm 200,field,1170.51,0.21,0.25,244.0,243.11
+1358,Brazil,SPG 2023,Farm 200,farm_site_boundary,327.41,5.39,6.4,1775.0,1765.44
+1359,Brazil,SPG 2023,Farm 200,field,327.1,5.39,6.4,1774.0,1764.23
+1360,Brazil,SPG 2023,Farm 194,greenhouse,1475.96,0.08,0.06,112.0,111.88
+1361,Brazil,SPG 2023,Farm 194,greenhouse,2009.06,0.08,0.06,160.0,159.32
+1362,Brazil,SPG 2023,Farm 194,greenhouse,2078.87,0.07,0.06,154.0,153.42
+1363,Brazil,SPG 2023,Farm 194,greenhouse,2360.44,0.04,0.03,87.0,86.63
+1364,Brazil,SPG 2023,Farm 194,greenhouse,2529.54,0.04,0.03,110.0,110.03
+1365,Brazil,SPG 2023,Farm 194,greenhouse,2185.57,0.06,0.05,123.0,123.27
+1366,Brazil,SPG 2023,Farm 194,surface_water,1978.76,0.04,0.03,75.0,74.6
+1367,Brazil,SPG 2023,Farm 194,surface_water,1143.75,0.11,0.09,124.0,124.21
+1368,Brazil,Other,Farm 201,farm_site_boundary,17262.74,0.0,0.0,36.0,36.25
+1369,Brazil,SPG 2023,Farm 194,field,762.67,1.14,0.91,868.0,868.08
+1370,Brazil,SPG 2023,Farm 194,surface_water,1426.74,0.08,0.06,109.0,108.57
+1371,Brazil,SPG 2023,Farm 194,surface_water,2335.27,0.03,0.02,60.0,59.55
+1372,Brazil,SPG 2023,Farm 194,surface_water,2120.32,0.03,0.03,71.0,71.24
+1373,Brazil,SPG 2023,Farm 194,surface_water,1551.48,0.07,0.06,111.0,110.93
+1374,Brazil,SPG 2023,Farm 194,surface_water,1741.56,0.05,0.04,95.0,94.57
+1375,Brazil,SPG 2023,Farm 194,field,158.3,9.46,7.58,1499.0,1497.31
+1376,Brazil,SPG 2023,Farm 194,field,897.6,0.31,0.25,276.0,275.74
+1377,Brazil,SPG 2023,Farm 194,field,1041.0,0.17,0.14,182.0,181.76
+1378,Brazil,SPG 2023,Farm 194,natural_area,359.68,2.0,1.61,723.0,721.05
+1379,Brazil,SPG 2023,Farm 194,natural_area,912.78,1.4,1.12,1280.0,1276.88
+1380,Brazil,SPG 2023,Farm 194,surface_water,2851.83,0.02,0.02,61.0,60.46
+1381,Brazil,SPG 2023,Farm 194,field,1086.95,0.14,0.11,151.0,150.65
+1382,Brazil,SPG 2023,Farm 194,field,1168.11,0.16,0.13,191.0,191.34
+1383,Brazil,SPG 2023,Farm 194,field,644.58,0.46,0.37,300.0,298.83
+1384,Brazil,SPG 2023,Farm 194,field,471.54,1.4,1.12,662.0,659.96
+1385,Brazil,SPG 2023,Farm 194,field,1435.56,0.14,0.11,198.0,198.39
+1386,Brazil,Other,Farm 202,garden,72.95,32.01,30.48,2341.0,2335.32
+1387,Brazil,Other,Farm 201,garden,1123.4,0.25,0.25,282.0,280.85
+1388,Brazil,SPG 2023,Farm 203,farm_site_boundary,360.32,1.37,1.19,493.0,492.73
+1389,Brazil,SPG 2023,Farm 203,garden,1183.58,0.11,0.1,130.0,130.19
+1390,Brazil,SPG 2023,Farm 203,garden,1863.6,0.05,0.05,102.0,101.75
+1391,Brazil,SPG 2023,Farm 203,field,907.74,0.48,0.42,437.0,435.9
+1392,Brazil,SPG 2023,Farm 203,surface_water,2169.05,0.03,0.03,75.0,75.05
+1393,Brazil,SPG 2023,Farm 203,surface_water,3780.94,0.01,0.01,37.0,36.68
+1394,Brazil,SPG 2023,Farm 203,residence,0.0,0.01,0.01,32.0,31.71
+1395,Brazil,SPG 2023,Farm 203,barn,0.0,0.0,0.0,27.0,26.77
+1396,Brazil,SPG 2023,Farm 203,natural_area,873.38,0.47,0.41,412.0,411.54
+1397,Brazil,SPG 2023,Farm 203,natural_area,2024.63,0.06,0.05,127.0,126.74
+1398,Brazil,SPG 2023,Farm 203,barn,0.0,0.0,0.0,19.0,19.34
+1399,Brazil,SPG 2023,Farm 203,barn,0.0,0.0,0.0,29.0,28.68
+1400,Brazil,SPG 2023,Farm 203,barn,0.0,0.0,0.0,18.0,17.52
+1401,Brazil,Other,Farm 204,farm_site_boundary,617.63,0.52,0.41,324.0,322.84
+1402,Brazil,Other,Farm 204,field,1473.76,0.07,0.06,110.0,109.35
+1403,Brazil,SPG 2023,Farm 194,barn,0.0,0.03,0.03,79.0,78.83
+1404,Brazil,SPG 2023,Farm 194,residence,0.0,0.01,0.01,42.0,42.25
+1405,Brazil,SPG 2023,Farm 194,residence,0.0,0.01,0.01,42.0,42.29
+1406,Brazil,SPG 2023,Farm 194,residence,0.0,0.02,0.02,58.0,57.76
+1407,Brazil,SPG 2023,Farm 194,barn,0.0,0.03,0.02,69.0,68.92
+1408,Brazil,SPG 2023,Farm 194,field,306.7,2.95,2.37,905.0,905.15
+1409,Brazil,SPG 2023,Farm 194,field,568.69,1.09,0.87,618.0,617.94
+1410,Brazil,SPG 2023,Farm 194,field,1184.01,0.14,0.11,170.0,169.79
+1411,Brazil,SPG 2023,Farm 194,natural_area,233.55,7.54,6.05,1767.0,1761.62
+1412,Brazil,SPG 2023,Farm 194,natural_area,320.49,5.57,4.47,1789.0,1786.27
+1413,Brazil,SPG 2023,Farm 194,natural_area,312.84,5.54,4.44,1736.0,1733.95
+1414,Brazil,SPG 2023,Farm 194,natural_area,1233.21,0.65,0.52,803.0,800.6
+1415,Brazil,SPG 2023,Farm 194,field,2163.37,0.13,0.1,273.0,272.8
+1416,Brazil,Other,Farm 205,farm_site_boundary,179.78,12.75,10.04,2292.0,2292.53
+1417,Brazil,Other,Farm 205,natural_area,742.0,1.09,0.86,809.0,807.22
+1418,Brazil,Other,Farm 205,natural_area,899.79,0.18,0.14,166.0,165.47
+1419,Brazil,Other,Farm 205,natural_area,1171.6,0.3,0.24,352.0,351.25
+1420,Brazil,Other,Farm 205,natural_area,894.72,0.47,0.37,422.0,421.95
+1421,Brazil,Other,Farm 205,field,463.76,1.23,0.97,573.0,571.91
+1422,Brazil,Other,Farm 205,field,634.07,0.55,0.43,349.0,348.99
+1423,Brazil,Other,Farm 205,field,1408.67,0.19,0.15,263.0,262.01
+1424,Brazil,Other,Farm 205,field,1151.46,0.16,0.13,190.0,189.42
+1425,Brazil,Other,Farm 205,field,1979.4,0.05,0.04,105.0,104.51
+1426,Brazil,Other,Farm 205,field,611.18,0.52,0.41,320.0,319.22
+1427,Brazil,Other,Farm 205,field,982.21,0.2,0.16,195.0,194.48
+1428,Brazil,Other,Farm 205,field,225.21,4.78,3.76,1077.0,1076.86
+1429,Brazil,Other,Farm 205,field,545.02,0.64,0.51,351.0,350.45
+1430,Brazil,Other,Farm 205,field,658.8,0.72,0.57,476.0,475.85
+1431,Brazil,Other,Farm 205,field,601.26,0.49,0.39,295.0,294.38
+1432,Brazil,Other,Farm 205,greenhouse,1938.58,0.07,0.05,130.0,129.5
+1433,Brazil,Other,Farm 205,garden,762.02,0.27,0.22,209.0,208.64
+1434,Brazil,Other,Farm 205,surface_water,1413.5,0.07,0.06,104.0,104.03
+1435,Brazil,Other,Farm 205,residence,0.0,0.02,0.01,53.0,52.72
+1436,Brazil,Other,Farm 205,field,2287.6,0.1,0.08,219.0,218.24
+1437,Brazil,Other,Farm 205,natural_area,2696.7,0.04,0.03,96.0,96.0
+1438,Brazil,Other,Farm 35,field,576.81,0.5,0.39,290.0,289.21
+1439,Brazil,Other,Farm 35,field,919.88,0.43,0.34,392.0,391.59
+1440,Brazil,Other,Farm 35,field,582.37,0.67,0.53,390.0,390.13
+1441,Brazil,SPG 2023,Farm 206,farm_site_boundary,116.4,16.08,13.91,1874.0,1872.3
+1442,Brazil,SPG 2023,Farm 206,natural_area,169.93,8.76,7.58,1490.0,1488.75
+1443,Brazil,SPG 2023,Farm 206,surface_water,2817.95,0.02,0.02,55.0,55.23
+1444,Brazil,SPG 2023,Farm 206,greenhouse,4532.9,0.02,0.01,71.0,70.71
+1445,Brazil,SPG 2023,Farm 206,greenhouse,3935.07,0.03,0.02,99.0,98.77
+1446,Brazil,SPG 2023,Farm 206,greenhouse,2736.4,0.04,0.04,119.0,118.76
+1447,Brazil,SPG 2023,Farm 206,garden,4082.74,0.01,0.01,40.0,40.42
+1448,Brazil,SPG 2023,Farm 206,garden,2285.91,0.03,0.03,72.0,72.01
+1449,Brazil,SPG 2023,Farm 206,garden,855.44,0.3,0.26,254.0,253.21
+1450,Brazil,SPG 2023,Farm 206,field,385.74,1.37,1.19,531.0,529.51
+1451,Brazil,SPG 2023,Farm 206,field,653.48,0.54,0.47,353.0,352.09
+1452,Brazil,SPG 2023,Farm 206,residence,0.0,0.01,0.01,50.0,49.92
+1453,Brazil,SPG 2023,Farm 206,residence,0.0,0.01,0.01,36.0,35.81
+1454,Brazil,SPG 2023,Farm 206,natural_area,449.94,1.69,1.47,764.0,762.06
+1455,Brazil,SPG 2023,Farm 182,natural_area,300.55,3.58,2.84,1076.0,1074.81
+1456,Brazil,SPG 2023,Farm 182,natural_area,753.63,0.33,0.27,253.0,252.24
+1457,Brazil,SPG 2023,Farm 182,natural_area,697.2,0.34,0.27,241.0,240.26
+1458,Brazil,SPG 2023,Farm 182,surface_water,1122.3,0.11,0.09,128.0,128.28
+1459,Brazil,SPG 2023,Farm 182,residence,0.0,0.05,0.04,92.0,91.54
+1460,Brazil,SPG 2023,Farm 182,field,540.35,1.86,1.47,1007.0,1004.02
+1461,Brazil,SPG 2023,Farm 182,field,288.06,3.37,2.67,973.0,971.15
+1462,Brazil,SPG 2023,Farm 182,natural_area,374.98,1.08,0.86,406.0,404.83
+1463,Brazil,SPG 2023,Farm 182,surface_water,2162.77,0.03,0.03,69.0,68.56
+1464,Brazil,SPG 2023,Farm 182,surface_water,2539.46,0.02,0.02,60.0,60.19
+1465,Brazil,SPG 2023,Farm 207,farm_site_boundary,2646.16,0.06,0.07,146.0,145.54
+1466,Brazil,SPG 2023,Farm 207,field,2694.63,0.05,0.06,145.0,144.43
+1467,Brazil,SPG 2023,Farm 207,farm_site_boundary,452.88,3.46,4.11,1577.0,1568.49
+1468,Brazil,SPG 2023,Farm 207,field,453.66,3.46,4.1,1577.0,1568.17
+1469,Brazil,SPG 2023,Farm 208,farm_site_boundary,517.91,0.7,0.83,365.0,363.62
+1470,Brazil,SPG 2023,Farm 208,field,519.69,0.7,0.83,365.0,363.78
+1471,Brazil,SPG 2023,Farm 208,farm_site_boundary,318.38,5.63,6.69,1803.0,1793.42
+1472,Brazil,SPG 2023,Farm 208,field,318.49,5.63,6.68,1802.0,1792.84
+1473,Brazil,Other,Farm 209,residence,0.0,0.01,0.01,42.0,41.99
+1474,Brazil,SPG 2023,Farm 40,barn,0.0,0.01,0.01,50.0,49.75
+1475,Brazil,SPG 2023,Farm 210,farm_site_boundary,115.39,15.47,13.32,1789.0,1784.58
+1476,Brazil,SPG 2023,Farm 210,garden,2726.66,0.05,0.04,129.0,128.43
+1477,Brazil,SPG 2023,Farm 210,garden,829.32,0.25,0.21,206.0,205.67
+1478,Brazil,SPG 2023,Farm 210,greenhouse,2561.55,0.03,0.02,73.0,73.0
+1479,Brazil,SPG 2023,Farm 210,residence,0.0,0.01,0.01,44.0,43.99
+1480,Brazil,SPG 2023,Farm 210,residence,0.0,0.01,0.01,48.0,47.62
+1481,Brazil,SPG 2023,Farm 210,garden,786.54,0.28,0.24,221.0,220.23
+1482,Brazil,SPG 2023,Farm 211,farm_site_boundary,89.09,29.69,23.74,2646.0,2645.07
+1483,Brazil,SPG 2023,Farm 211,natural_area,312.76,2.49,1.99,781.0,779.05
+1484,Brazil,SPG 2023,Farm 211,field,464.98,0.73,0.59,341.0,340.64
+1485,Brazil,SPG 2023,Farm 211,field,129.5,14.83,11.86,1922.0,1920.42
+1486,Brazil,SPG 2023,Farm 211,surface_water,1996.69,0.05,0.04,99.0,98.64
+1487,Brazil,SPG 2023,Farm 211,surface_water,2574.32,0.02,0.02,63.0,62.56
+1488,Brazil,SPG 2023,Farm 211,natural_area,683.19,0.61,0.49,418.0,416.2
+1489,Brazil,SPG 2023,Farm 211,residence,0.0,0.01,0.01,39.0,39.0
+1490,Brazil,SPG 2023,Farm 211,residence,0.0,0.02,0.02,63.0,63.21
+1491,Brazil,SPG 2023,Farm 211,residence,0.0,0.01,0.01,47.0,47.38
+1492,Brazil,SPG 2023,Farm 211,residence,0.0,0.04,0.03,91.0,90.82
+1493,Brazil,SPG 2023,Farm 211,residence,0.0,0.02,0.02,60.0,59.88
+1494,Brazil,SPG 2023,Farm 211,residence,0.0,0.02,0.02,60.0,59.71
+1495,Brazil,SPG 2023,Farm 211,field,224.88,4.52,3.61,1017.0,1015.68
+1496,Brazil,SPG 2023,Farm 211,field,633.39,0.52,0.41,327.0,326.7
+1497,Brazil,SPG 2023,Farm 211,field,314.56,1.93,1.54,608.0,606.98
+1498,Brazil,SPG 2023,Farm 211,field,1119.96,0.13,0.1,147.0,146.83
+1499,Brazil,SPG 2023,Farm 211,field,1418.8,0.09,0.07,122.0,122.02
+1500,Brazil,SPG 2023,Farm 211,field,1534.93,0.1,0.08,150.0,149.5
+1501,Brazil,SPG 2023,Farm 211,field,2190.21,0.04,0.03,84.0,84.1
+1502,Brazil,SPG 2023,Farm 211,field,2276.8,0.05,0.04,104.0,103.59
+1503,Brazil,SPG 2023,Farm 211,field,2182.25,0.05,0.04,108.0,107.37
+1504,Brazil,SPG 2023,Farm 211,field,1083.15,0.2,0.16,212.0,211.65
+1505,Brazil,SPG 2023,Farm 211,field,1557.98,0.07,0.06,111.0,110.93
+1506,Brazil,SPG 2023,Farm 211,field,1310.94,0.1,0.08,125.0,124.67
+1507,Brazil,SPG 2023,Farm 211,field,556.34,0.63,0.5,351.0,350.33
+1508,Brazil,SPG 2023,Farm 211,field,2025.34,0.1,0.08,210.0,210.23
+1509,Brazil,SPG 2023,Farm 211,field,1973.61,0.05,0.04,92.0,92.17
+1510,Brazil,SPG 2023,Farm 211,natural_area,1835.91,0.23,0.18,418.0,417.49
+1511,Brazil,SPG 2023,Farm 211,natural_area,1687.1,0.32,0.25,535.0,532.95
+1512,Brazil,SPG 2023,Farm 212,field,1121.79,0.13,0.1,147.0,147.07
+1513,Brazil,SPG 2023,Farm 212,field,568.86,0.67,0.54,384.0,382.22
+1514,Brazil,SPG 2023,Farm 212,farm_site_boundary,159.06,8.92,7.13,1419.0,1418.13
+1515,Brazil,SPG 2023,Farm 212,residence,0.0,0.01,0.01,38.0,37.77
+1516,Brazil,SPG 2023,Farm 212,residence,0.0,0.01,0.01,38.0,38.14
+1517,Brazil,SPG 2023,Farm 212,barn,0.0,0.02,0.01,52.0,51.97
+1518,Brazil,SPG 2023,Farm 212,natural_area,393.99,1.69,1.35,668.0,667.06
+1519,Brazil,SPG 2023,Farm 212,field,330.28,1.42,1.13,469.0,467.75
+1520,Brazil,SPG 2023,Farm 212,field,404.53,1.95,1.55,789.0,786.88
+1521,Brazil,SPG 2023,Farm 212,field,870.21,0.31,0.25,269.0,267.85
+1522,Brazil,SPG 2023,Farm 212,natural_area,647.91,0.6,0.48,386.0,385.57
+1523,Brazil,SPG 2023,Farm 212,natural_area,1034.79,0.87,0.7,904.0,901.51
+1524,Argentina,Other,Farm 213,farm_site_boundary,246.31,2.94,1.44,725.0,724.73
+1525,Brazil,SPG 2023,Farm 212,field,767.49,0.41,0.33,314.0,313.91
+1526,Brazil,SPG 2023,Farm 212,field,1096.05,0.26,0.21,282.0,281.47
+1527,Brazil,SPG 2023,Farm 212,field,3300.76,0.11,0.09,362.0,361.1
+1528,Brazil,SPG 2023,Farm 31,field,3130.27,0.03,0.03,98.0,97.98
+1529,Brazil,Other,Farm 214,farm_site_boundary,1891.02,0.06,0.05,109.0,108.73
+1530,Brazil,Other,Farm 214,residence,0.0,0.01,0.01,37.0,37.09
+1531,Brazil,Other,Farm 214,farm_site_boundary,3480.72,0.01,0.01,47.0,46.64
+1532,Brazil,SPG 2023,Farm 215,farm_site_boundary,175.63,7.74,6.08,1363.0,1359.06
+1533,Brazil,SPG 2023,Farm 215,residence,0.0,0.01,0.01,45.0,44.92
+1534,Brazil,SPG 2023,Farm 215,field,385.79,1.12,0.88,431.0,430.43
+1535,Brazil,SPG 2023,Farm 215,natural_area,698.76,0.49,0.38,340.0,339.81
+1536,Brazil,SPG 2023,Farm 216,farm_site_boundary,137.23,15.75,12.33,2162.0,2161.6
+1537,Brazil,SPG 2023,Farm 216,field,155.38,9.8,7.67,1523.0,1522.88
+1538,Brazil,SPG 2023,Farm 216,surface_water,953.94,0.27,0.21,261.0,260.43
+1539,Brazil,SPG 2023,Farm 216,surface_water,3017.52,0.01,0.01,45.0,44.96
+1540,Brazil,SPG 2023,Farm 216,field,622.09,0.48,0.38,299.0,299.04
+1541,Brazil,SPG 2023,Farm 216,field,626.2,0.42,0.33,260.0,260.0
+1542,Brazil,SPG 2023,Farm 216,field,363.0,1.22,0.96,444.0,442.97
+1543,Brazil,SPG 2023,Farm 216,field,656.4,0.53,0.42,351.0,350.65
+1544,Brazil,SPG 2023,Farm 216,field,456.49,0.82,0.64,375.0,374.27
+1545,Brazil,SPG 2023,Farm 216,natural_area,563.56,0.79,0.62,444.0,442.95
+1546,Brazil,SPG 2023,Farm 216,residence,0.0,0.02,0.01,55.0,55.37
+1547,Brazil,SPG 2023,Farm 216,barn,0.0,0.02,0.02,59.0,58.9
+1548,Brazil,Other,Farm 217,farm_site_boundary,408.16,1.0,0.8,411.0,409.88
+1549,Brazil,Other,Farm 217,garden,472.3,0.71,0.56,334.0,333.06
+1550,Brazil,Other,Farm 217,field,1120.3,0.13,0.1,143.0,142.17
+1551,Brazil,Other,Farm 217,field,1660.1,0.06,0.05,100.0,100.27
+1552,Brazil,Other,Farm 217,residence,0.0,0.02,0.01,52.0,52.19
+1553,Brazil,Other,Farm 217,garden,0.23,330.0,0.03,76.0,75.64
+1554,Brazil,Other,Farm 217,farm_site_boundary,88.96,20.84,16.68,1858.0,1853.65
+1555,Brazil,SPG 2023,Farm 218,farm_site_boundary,70.56,72.01,86.75,5100.0,5081.24
+1556,Brazil,SPG 2023,Farm 219,farm_site_boundary,1809.24,0.06,0.08,114.0,113.26
+1557,Brazil,SPG 2023,Farm 219,field,2869.0,0.05,0.06,145.0,144.6
+1558,Brazil,SPG 2023,Farm 215,field,312.79,1.57,1.24,493.0,492.2
+1559,Brazil,SPG 2023,Farm 215,field,260.22,3.04,2.39,793.0,791.6
+1560,Brazil,SPG 2023,Farm 215,field,521.27,0.85,0.67,444.0,442.82
+1561,Brazil,Other,Farm 217,field,466.1,1.06,0.85,496.0,494.07
+1562,Brazil,Other,Farm 220,farm_site_boundary,165.44,8.73,6.98,1446.0,1444.58
+1563,Brazil,Other,Farm 220,natural_area,370.93,1.74,1.39,646.0,645.01
+1564,Brazil,Other,Farm 220,natural_area,988.81,0.93,0.75,926.0,923.45
+1565,Brazil,Other,Farm 220,natural_area,817.39,0.48,0.39,396.0,395.45
+1566,Brazil,Other,Farm 220,field,1969.51,0.2,0.16,397.0,395.48
+1567,Brazil,Other,Farm 220,residence,0.0,0.01,0.01,36.0,36.04
+1568,Brazil,Other,Farm 220,residence,0.0,0.01,0.01,37.0,37.25
+1569,Brazil,Other,Farm 220,field,345.25,1.36,1.09,472.0,470.75
+1570,Brazil,Other,Farm 220,field,817.51,0.54,0.44,447.0,445.3
+1571,Brazil,Other,Farm 220,field,1420.36,0.09,0.07,124.0,123.57
+1572,Brazil,Other,Farm 220,field,997.54,0.29,0.23,288.0,287.39
+1573,Brazil,Other,Farm 220,field,557.49,0.61,0.49,339.0,338.4
+1574,Brazil,Other,Farm 220,field,417.54,1.35,1.08,564.0,562.88
+1575,Brazil,Other,Farm 220,field,1013.02,0.29,0.23,294.0,293.77
+1576,Brazil,Other,Farm 220,barn,0.0,0.01,0.01,51.0,51.34
+1577,Brazil,Other,Farm 220,field,901.36,0.31,0.25,281.0,279.96
+1578,Brazil,SPG 2023,Farm 199,natural_area,248.05,2.6,3.08,646.0,644.15
+1579,Brazil,SPG 2023,Farm 195,natural_area,248.09,2.6,3.08,646.0,644.47
+1580,Brazil,SPG 2023,Farm 200,natural_area,247.57,2.6,3.09,646.0,643.68
+1581,Brazil,SPG 2023,Farm 208,natural_area,248.4,2.6,3.09,648.0,645.84
+1582,Brazil,SPG 2023,Farm 207,natural_area,247.97,2.6,3.09,648.0,645.92
+1583,Brazil,SPG 2023,Farm 199,farm_site_boundary,247.84,2.6,3.09,646.0,644.37
+1584,Brazil,SPG 2023,Farm 200,farm_site_boundary,247.76,2.6,3.08,646.0,643.72
+1585,Brazil,SPG 2023,Farm 195,farm_site_boundary,247.89,2.6,3.09,646.0,644.74
+1586,Brazil,SPG 2023,Farm 208,farm_site_boundary,248.2,2.6,3.09,648.0,646.28
+1587,Brazil,SPG 2023,Farm 208,farm_site_boundary,248.22,2.6,3.09,648.0,646.14
+1588,Brazil,SPG 2023,Farm 207,farm_site_boundary,247.96,2.6,3.09,648.0,645.82
+1589,Brazil,SPG 2023,Farm 218,field,70.61,71.98,86.72,5102.0,5082.71
+1590,Brazil,SPG 2023,Farm 219,natural_area,235.14,2.97,3.57,699.0,697.68
+1591,Brazil,SPG 2023,Farm 219,farm_site_boundary,235.0,2.97,3.58,700.0,698.25
+1592,Brazil,SPG 2023,Farm 219,farm_site_boundary,180.12,11.0,13.24,1987.0,1982.15
+1593,Brazil,SPG 2023,Farm 219,field,180.49,11.0,13.23,1989.0,1984.56
+1594,Brazil,SPG 2023,Farm 179,natural_area,540.32,1.23,0.99,669.0,667.08
+1595,Brazil,Other,Farm 221,field,917.37,0.21,0.26,191.0,190.54
+1596,Brazil,Other,Farm 222,surface_water,153.29,33.35,30.79,5124.0,5111.93
+1597,Brazil,Other,Farm 223,field,365.05,1.71,1.58,628.0,625.87
+1598,Brazil,Other,Farm 224,farm_site_boundary,98.28,17.14,13.72,1689.0,1684.52
+1599,Brazil,Other,Farm 224,residence,0.0,0.01,0.01,48.0,47.79
+1600,Brazil,Other,Farm 224,residence,0.0,0.02,0.01,57.0,56.52
+1601,Brazil,Other,Farm 224,field,257.96,2.88,2.31,746.0,743.57
+1602,Brazil,Other,Farm 224,field,400.14,1.64,1.32,660.0,657.91
+1603,Brazil,Other,Farm 224,field,220.09,3.32,2.66,733.0,730.79
+1604,Brazil,Other,Farm 224,field,282.06,3.02,2.42,854.0,851.46
+1605,Brazil,Other,Farm 224,natural_area,502.34,0.64,0.51,322.0,321.09
+1606,Brazil,Other,Farm 224,field,884.42,0.41,0.33,364.0,362.7
+1607,Brazil,Other,Farm 224,barn,0.0,0.02,0.02,67.0,67.27
+1608,Brazil,Other,Farm 224,natural_area,201.92,4.46,3.57,902.0,899.97
+1609,Brazil,Other,Farm 224,ceremonial_area,0.0,0.37,0.3,249.0,248.09
+1610,Brazil,Other,Farm 224,garden,1300.82,0.11,0.08,137.0,136.85
+1611,Brazil,SPG 2023,Farm 225,natural_area,1349.18,0.19,0.15,261.0,261.2
+1612,Brazil,SPG 2023,Farm 225,natural_area,496.34,0.67,0.52,331.0,330.51
+1613,Brazil,SPG 2023,Farm 225,field,434.92,1.01,0.8,442.0,440.96
+1614,Brazil,SPG 2023,Farm 225,field,462.55,0.76,0.6,354.0,352.65
+1615,Brazil,SPG 2023,Farm 225,farm_site_boundary,167.29,8.35,6.56,1401.0,1397.11
+1616,Brazil,SPG 2023,Farm 225,field,298.96,3.66,2.88,1099.0,1095.22
+1617,Brazil,SPG 2023,Farm 225,residence,0.0,0.03,0.02,68.0,67.85
+1618,Brazil,SPG 2023,Farm 225,field,699.0,0.64,0.51,452.0,450.78
+1619,Brazil,SPG 2023,Farm 225,natural_area,572.1,0.51,0.4,292.0,291.37
+1620,Brazil,Other,Farm 102,farm_site_boundary,529.5,0.62,0.53,328.0,327.82
+1621,Brazil,Other,Farm 226,field,1343.97,0.11,0.15,145.0,144.21
+1622,Brazil,Other,Farm 227,field,75.16,29.86,27.72,2250.0,2244.3
+1623,Brazil,Other,Farm 228,garden,1152.26,0.12,0.17,143.0,142.3
+1624,Brazil,Other,Farm 229,residence,0.0,0.02,0.02,66.0,65.84
+1625,Argentina,Other,Farm 230,barn,0.0,5.17,2.78,930.0,928.33
+1626,Brazil,Other,Farm 231,natural_area,1346.91,0.47,0.4,630.0,628.74
+1627,Brazil,Other,Farm 232,greenhouse,3749.32,0.01,0.01,51.0,51.37
+1628,Brazil,Other,Farm 232,barn,0.0,0.0,0.0,29.0,29.06
+1629,Brazil,Other,Farm 232,surface_water,982.73,0.15,0.13,148.0,147.41
+1630,Brazil,Other,Farm 232,surface_water,1676.19,0.06,0.05,96.0,95.38
+1631,Brazil,Other,Farm 232,surface_water,1699.49,0.05,0.04,81.0,80.39
+1632,Brazil,Other,Farm 232,surface_water,3666.46,0.01,0.01,49.0,48.76
+1633,Brazil,Other,Farm 226,garden,672.73,0.55,0.78,371.0,369.67
+1634,Brazil,Other,Farm 233,surface_water,513.03,0.64,0.53,329.0,328.65
+1635,Brazil,Other,Farm 233,garden,845.19,0.31,0.25,261.0,260.66
+1636,Brazil,Other,Farm 233,residence,0.0,0.12,0.1,155.0,155.31
+1637,Brazil,Other,Farm 233,field,712.72,0.43,0.35,305.0,303.83
+1638,Brazil,Other,Farm 233,greenhouse,130.57,11.88,9.76,1553.0,1551.56
+1639,Brazil,Other,Farm 233,natural_area,200.24,4.44,3.65,890.0,888.93
+1640,Brazil,Other,Farm 234,surface_water,2063.43,0.04,0.06,88.0,87.49
+1641,Brazil,Other,Farm 234,field,1826.43,0.05,0.07,94.0,93.33
+1642,Brazil,Other,Farm 235,natural_area,75018.96,0.01,2.95,752.0,750.19
+1643,Brazil,Other,Farm 235,greenhouse,427.26,1.18,1.03,503.0,502.46
+1644,Brazil,Other,Farm 235,garden,543.56,0.68,0.59,369.0,367.66
+1645,Brazil,Other,Farm 235,surface_water,656.22,0.47,0.41,310.0,309.41
+1646,Brazil,Other,Farm 226,barn,0.0,0.13,0.19,143.0,142.42
+1647,Argentina,CREA,Farm 166,farm_site_boundary,43.93,142.55,80.08,6268.0,6262.79
+1648,Argentina,CREA,Farm 142,farm_site_boundary,17.7,518.34,320.86,9182.0,9172.38
+1649,Argentina,CREA,Farm 143,farm_site_boundary,25.79,555.17,346.57,14325.0,14316.09
+1650,Argentina,CREA,Farm 167,farm_site_boundary,12.93,1161.24,652.54,15044.0,15013.37
+1651,Argentina,CREA,Farm 125,farm_site_boundary,22.34,392.06,223.81,8772.0,8759.89
+1652,Argentina,CREA,Farm 144,farm_site_boundary,32.65,232.58,146.15,7602.0,7593.96
+1653,Argentina,CREA,Farm 136,farm_site_boundary,23.81,321.38,222.63,7663.0,7651.06
+1654,Argentina,CREA,Farm 151,farm_site_boundary,22.48,530.37,315.96,11947.0,11921.01
+1655,Argentina,CREA,Farm 134,farm_site_boundary,12.21,2021.14,1121.46,24743.0,24682.26
+1656,Argentina,CREA,Farm 123,farm_site_boundary,14.76,827.89,482.31,12234.0,12219.97
+1657,Brazil,Other,Farm 226,barn,0.0,0.22,0.31,224.0,222.68
+1658,Brazil,Other,Farm 236,residence,0.0,0.03,0.04,77.0,76.84
+1659,Brazil,Other,Farm 236,farm_site_boundary,494.58,0.75,0.77,371.0,369.85
+1660,Brazil,Other,Farm 236,garden,2385.62,0.03,0.03,72.0,71.81
+1661,Argentina,Other,Farm 230,garden,275.77,2.25,1.21,621.0,620.76
+1662,Brazil,Other,Farm 232,garden,2492.83,0.03,0.02,65.0,64.56
+1663,Brazil,Other,Farm 232,barn,0.0,0.02,0.02,69.0,68.78
+1664,Brazil,Other,Farm 237,farm_site_boundary,141.29,8.05,9.75,1141.0,1137.15
+1665,Brazil,Other,Farm 233,natural_area,280.83,2.77,2.27,780.0,778.35
+1666,Brazil,Other,Farm 233,farm_site_boundary,184.11,6.29,5.16,1159.0,1157.21
+1667,Brazil,Other,Farm 238,farm_site_boundary,76.85,30.75,31.66,2371.0,2363.07
+1668,Brazil,Other,Farm 238,greenhouse,4959.09,0.01,0.01,35.0,34.71
+1669,Brazil,Other,Farm 233,natural_area,256.75,3.12,2.56,802.0,800.76
+1670,Brazil,Other,Farm 226,garden,565.06,0.54,0.76,303.0,302.3
+1671,Brazil,Other,Farm 226,natural_area,563.79,0.56,0.79,318.0,317.02
+1672,Brazil,Other,Farm 239,barn,0.0,0.04,0.06,80.0,79.7
+1673,Brazil,Other,Farm 226,ceremonial_area,0.0,2.28,3.22,670.0,667.93
+1674,Brazil,Other,Farm 240,farm_site_boundary,83.24,28.25,24.17,2357.0,2351.29
+1675,Brazil,Other,Farm 231,garden,1684.45,0.24,0.2,401.0,399.89
+1676,Brazil,Other,Farm 231,garden,546.96,0.65,0.56,355.0,354.92
+1677,Brazil,Other,Farm 231,natural_area,471.56,1.9,1.63,900.0,897.14
+1678,Brazil,Other,Farm 231,residence,0.0,0.01,0.01,53.0,52.88
+1679,Brazil,Other,Farm 231,barn,0.0,0.02,0.02,63.0,62.93
+1680,Brazil,Other,Farm 231,field,1121.68,0.14,0.12,161.0,160.4
+1681,Brazil,Other,Farm 241,farm_site_boundary,310.67,1.66,1.42,517.0,515.65
+1682,Brazil,Other,Farm 241,garden,962.75,0.18,0.15,173.0,172.33
+1683,Brazil,Other,Farm 232,surface_water,2109.78,0.05,0.04,101.0,100.64
+1684,Brazil,Other,Farm 232,surface_water,2717.82,0.02,0.02,68.0,67.4
+1685,Brazil,Other,Farm 232,surface_water,3405.99,0.02,0.01,55.0,54.5
+1686,Brazil,Other,Farm 232,surface_water,2523.64,0.02,0.02,57.0,56.53
+1687,Brazil,Other,Farm 232,surface_water,1323.16,0.08,0.07,108.0,107.7
+1688,Brazil,Other,Farm 232,surface_water,7582.56,0.0,0.0,20.0,19.71
+1689,Brazil,Other,Farm 237,field,293.86,2.53,3.06,746.0,743.56
+1690,Brazil,Other,Farm 242,garden,1559.01,0.07,0.1,104.0,103.52
+1691,Brazil,Other,Farm 243,field,10973.42,0.0,0.0,18.0,17.56
+1692,Brazil,Other,Farm 168,ceremonial_area,0.0,0.01,0.01,39.0,39.38
+1693,Brazil,Other,Farm 168,field,709.2,0.26,0.33,184.0,183.9
+1694,Brazil,Other,Farm 168,natural_area,864.42,0.27,0.34,231.0,230.54
+1695,Brazil,Other,Farm 168,garden,1804.47,0.05,0.07,94.0,93.29
+1696,Brazil,Other,Farm 244,field,25.72,237.19,200.69,6116.0,6100.6
+1697,Argentina,CREA,Farm 156,farm_site_boundary,46.3,77.76,41.71,3606.0,3600.45
+1698,Argentina,CREA,Farm 157,farm_site_boundary,45.16,85.87,46.76,3881.0,3878.19
+1699,Argentina,CREA,Farm 154,farm_site_boundary,30.54,180.83,99.17,5534.0,5523.32
+1700,Argentina,CREA,Farm 114,farm_site_boundary,27.6,314.36,179.01,8687.0,8675.28
+1701,Argentina,CREA,Farm 115,farm_site_boundary,17.61,703.58,394.01,12410.0,12389.57
+1702,Argentina,CREA,Farm 116,farm_site_boundary,10.87,1681.47,959.4,18293.0,18279.0
+1703,Argentina,CREA,Farm 119,farm_site_boundary,16.43,781.8,447.0,12865.0,12847.36
+1704,Argentina,CREA,Farm 117,farm_site_boundary,22.86,442.02,252.47,10125.0,10105.09
+1705,Argentina,CREA,Farm 118,farm_site_boundary,11.35,1259.85,718.72,14308.0,14294.8
+1706,Argentina,CREA,Farm 152,farm_site_boundary,17.12,704.49,404.85,12079.0,12058.82
+1707,Argentina,CREA,Farm 155,farm_site_boundary,75.63,28.71,15.73,2175.0,2171.46
+1708,Argentina,CREA,Farm 127,farm_site_boundary,28.37,220.48,126.16,6263.0,6255.83
+1709,Argentina,CREA,Farm 126,farm_site_boundary,15.02,719.85,412.22,10831.0,10814.48
+1710,Argentina,CREA,Farm 124,farm_site_boundary,37.66,130.99,74.79,4943.0,4932.96
+1711,Brazil,Other,Farm 245,field,13299.47,0.0,0.0,16.0,15.96
+1712,Brazil,Other,Farm 246,field,585.0,0.6,0.55,352.0,350.59
+1713,Brazil,Other,Farm 246,field,384.54,2.07,1.89,797.0,795.68
+1714,Brazil,Other,Farm 246,field,413.01,1.3,1.19,539.0,538.03
+1715,Brazil,Other,Farm 246,natural_area,352.66,1.57,1.43,553.0,552.22
+1716,Brazil,Other,Farm 246,field,709.21,0.34,0.31,242.0,241.7
+1717,Brazil,Other,Farm 246,field,1037.82,0.15,0.14,160.0,159.93
+1718,Brazil,Other,Farm 246,surface_water,1011.49,0.16,0.15,165.0,164.16
+1719,Brazil,Other,Farm 246,field,703.21,0.41,0.37,288.0,287.05
+1720,Brazil,Other,Farm 246,field,711.01,0.34,0.31,239.0,238.47
+1721,Brazil,Other,Farm 246,field,899.31,0.2,0.18,178.0,177.7
+1722,Brazil,Other,Farm 246,field,596.64,0.53,0.48,315.0,314.61
+1723,Brazil,Other,Farm 246,field,572.31,0.65,0.6,375.0,374.63
+1724,Brazil,Other,Farm 246,residence,0.0,0.56,0.51,314.0,313.54
+1725,Brazil,Other,Farm 246,field,680.44,0.44,0.4,302.0,301.77
+1726,Brazil,Other,Farm 246,residence,0.0,0.13,0.12,169.0,168.9
+1727,Brazil,Other,Farm 247,garden,2191.14,0.04,0.04,85.0,84.8
+1728,Brazil,Other,Farm 246,surface_water,1235.58,0.13,0.12,157.0,156.43
+1729,Brazil,Other,Farm 246,surface_water,698.76,0.93,0.85,654.0,651.52
+1730,Brazil,Other,Farm 248,residence,0.0,0.18,0.26,176.0,175.3
+1731,Brazil,Other,Farm 209,garden,1602.61,0.07,0.07,108.0,107.53
+1732,Brazil,Other,Farm 209,garden,3316.17,0.02,0.02,63.0,63.01
+1733,Brazil,Other,Farm 209,garden,2574.06,0.04,0.05,116.0,115.58
+1734,Brazil,Other,Farm 209,garden,1269.74,0.1,0.11,133.0,132.69
+1735,Brazil,Other,Farm 209,garden,1632.5,0.08,0.08,125.0,124.07
+1736,Brazil,Other,Farm 209,garden,671.16,0.36,0.37,240.0,238.87
+1737,Brazil,Other,Farm 209,garden,764.67,0.29,0.3,219.0,218.16
+1738,Brazil,Other,Farm 249,garden,642.01,0.42,0.44,272.0,270.99
+1739,Brazil,Other,Farm 249,garden,1350.13,0.09,0.1,128.0,127.72
+1740,Brazil,Other,Farm 249,garden,1406.04,0.09,0.1,132.0,131.6
+1741,Brazil,Other,Farm 249,field,2948.15,0.02,0.02,57.0,56.6
+1742,Brazil,Other,Farm 250,garden,9579.6,0.0,0.0,20.0,20.12
+1743,Brazil,Other,Farm 250,garden,1366.89,0.09,0.09,119.0,118.65
+1744,Brazil,Other,Farm 251,garden,2454.85,0.03,0.03,65.0,65.3
+1745,Brazil,Other,Farm 251,garden,1473.61,0.1,0.11,154.0,153.55
+1746,Brazil,Other,Farm 251,garden,1465.15,0.08,0.08,113.0,112.52
+1747,Brazil,Other,Farm 252,garden,1125.86,0.13,0.13,144.0,143.21
+1748,Brazil,Other,Farm 252,garden,841.58,0.23,0.24,192.0,190.95
+1749,Brazil,Other,Farm 252,garden,1083.43,0.16,0.17,177.0,176.49
+1750,Brazil,Other,Farm 253,garden,1013.39,0.2,0.21,201.0,200.45
+1751,Brazil,Other,Farm 253,garden,962.44,0.21,0.21,199.0,198.65
+1752,Brazil,Other,Farm 254,garden,2373.18,0.03,0.04,82.0,81.4
+1753,Brazil,Other,Farm 255,garden,2235.48,0.04,0.04,89.0,88.75
+1754,Brazil,Other,Farm 255,garden,3566.43,0.01,0.01,45.0,44.94
+1755,Brazil,Other,Farm 256,garden,1271.52,0.11,0.11,138.0,137.58
+1756,Brazil,Other,Farm 256,garden,815.38,0.25,0.26,204.0,203.28
+1757,Brazil,Other,Farm 256,garden,1377.87,0.08,0.09,116.0,116.02
+1758,Brazil,Other,Farm 257,garden,627.37,0.41,0.43,259.0,257.79
+1759,Brazil,Other,Farm 257,garden,760.28,0.36,0.38,276.0,275.07
+1760,Brazil,Other,Farm 258,garden,4458.34,0.01,0.01,60.0,60.19
+1761,Brazil,Other,Farm 258,garden,3336.7,0.02,0.02,63.0,62.73
+1762,Brazil,Other,Farm 259,field,6287.19,0.01,0.01,51.0,50.93
+1763,Brazil,Other,Farm 247,garden,2058.78,0.04,0.04,79.0,78.65
+1764,Brazil,Other,Farm 260,garden,1574.89,0.07,0.08,114.0,113.71
+1765,Brazil,Other,Farm 260,garden,2464.58,0.03,0.03,82.0,81.58
+1766,Brazil,Other,Farm 260,garden,1059.91,0.14,0.15,152.0,151.78
+1767,Brazil,Other,Farm 261,garden,3017.61,0.02,0.02,57.0,56.43
+1768,Brazil,Other,Farm 262,garden,1419.1,0.08,0.08,114.0,113.39
+1769,Brazil,Other,Farm 262,garden,856.71,0.24,0.25,204.0,203.21
+1770,Brazil,Other,Farm 263,garden,1899.46,0.05,0.05,91.0,90.98
+1771,Brazil,Other,Farm 263,garden,1686.98,0.08,0.08,138.0,137.32
+1772,Brazil,Other,Farm 263,garden,1051.54,0.15,0.16,163.0,162.57
+1773,Brazil,Other,Farm 264,garden,299.98,2.17,2.26,653.0,652.1
+1774,Brazil,Other,Farm 264,garden,760.04,0.4,0.42,308.0,307.59
+1775,Brazil,Other,Farm 264,garden,1345.35,0.11,0.11,145.0,144.09
+1776,Brazil,Other,Farm 265,garden,1851.79,0.05,0.05,87.0,86.29
+1777,Brazil,Other,Farm 265,garden,4796.61,0.01,0.01,36.0,35.97
+1778,Brazil,Other,Farm 265,surface_water,7080.76,0.0,0.0,23.0,22.66
+1779,Brazil,Other,Farm 266,surface_water,7171.16,0.0,0.0,22.0,22.23
+1780,Brazil,Other,Farm 267,farm_site_boundary,456.62,1.07,1.1,488.0,486.48
+1781,Brazil,Other,Farm 267,surface_water,6581.09,0.0,0.0,21.0,21.06
+1782,Brazil,Other,Farm 268,surface_water,7531.66,0.0,0.0,19.0,18.83
+1783,Brazil,Other,Farm 269,farm_site_boundary,1069.44,0.62,0.63,662.0,658.03
+1784,Brazil,Other,Farm 269,farm_site_boundary,821.77,0.25,0.26,209.0,208.48
+1785,Brazil,Other,Farm 269,surface_water,8368.49,0.0,0.0,18.0,17.57
+1786,Brazil,Other,Farm 270,farm_site_boundary,953.44,0.26,0.27,252.0,251.04
+1787,Brazil,Other,Farm 270,surface_water,8078.37,0.0,0.0,18.0,17.77
+1788,Brazil,Other,Farm 271,farm_site_boundary,470.17,1.42,1.46,671.0,666.99
+1789,Brazil,Other,Farm 271,surface_water,6822.38,0.0,0.0,21.0,20.47
+1790,Brazil,Other,Farm 272,surface_water,7538.41,0.0,0.0,19.0,18.85
+1791,Brazil,Other,Farm 272,garden,5036.64,0.01,0.01,50.0,49.86
+1792,Brazil,Other,Farm 272,farm_site_boundary,437.83,1.51,1.56,664.0,662.34
+1793,Brazil,Other,Farm 273,surface_water,7136.57,0.0,0.0,20.0,19.98
+1794,Brazil,Other,Farm 239,farm_site_boundary,496.56,0.66,0.99,329.0,328.53
+1795,Brazil,Other,Farm 239,garden,1932.38,0.04,0.07,84.0,84.25
+1796,Brazil,Other,Farm 226,garden,1611.08,0.07,0.1,113.0,112.45
+1797,Brazil,Other,Farm 274,residence,0.0,0.01,0.01,43.0,42.49
+1798,Brazil,Other,Farm 231,farm_site_boundary,194.66,6.27,5.37,1223.0,1219.56
+1799,Brazil,Other,Farm 231,garden,615.72,0.44,0.38,272.0,271.35
+1800,Brazil,Other,Farm 231,garden,497.87,0.92,0.79,461.0,459.88
+1801,Brazil,Other,Farm 241,garden,784.8,0.3,0.26,238.0,237.09
+1802,Brazil,Other,Farm 241,garden,491.09,0.82,0.71,405.0,404.46
+1803,Brazil,Other,Farm 241,barn,0.0,0.02,0.02,54.0,53.88
+1804,Brazil,Other,Farm 237,natural_area,249.4,5.52,6.68,1381.0,1376.64
+1805,Brazil,Other,Farm 233,barn,0.0,5.29,4.34,958.0,955.84
+1806,Brazil,Other,Farm 233,barn,0.0,8.84,7.25,1486.0,1482.58
+1807,Brazil,Other,Farm 233,greenhouse,675.61,1.16,0.95,785.0,783.71
+1808,Brazil,Other,Farm 233,barn,0.0,1.84,1.51,650.0,648.52
+1809,Brazil,Other,Farm 275,surface_water,40919.61,0.0,0.0,4.0,4.09
+1810,Brazil,Other,Farm 276,farm_site_boundary,460.04,0.76,0.79,350.0,349.31
+1811,Brazil,Other,Farm 276,surface_water,6585.03,0.0,0.0,21.0,21.07
+1812,Brazil,Other,Farm 276,garden,11093.4,0.0,0.01,37.0,37.27
+1813,Brazil,Other,Farm 277,residence,0.0,0.02,0.02,60.0,59.56
+1814,Brazil,Other,Farm 278,farm_site_boundary,1129.84,0.16,0.16,178.0,177.72
+1815,Brazil,Other,Farm 279,farm_site_boundary,758.72,0.53,0.55,407.0,405.38
+1816,Brazil,Other,Farm 279,surface_water,7294.71,0.0,0.0,20.0,20.43
+1817,Brazil,Other,Farm 280,farm_site_boundary,133.69,15.54,16.13,2082.0,2078.11
+1818,Brazil,Other,Farm 281,farm_site_boundary,347.35,4.62,4.79,1606.0,1603.32
+1819,Brazil,Other,Farm 281,garden,3454.94,0.01,0.01,47.0,46.64
+1820,Brazil,Other,Farm 282,farm_site_boundary,267.22,3.27,3.38,876.0,872.67
+1821,Brazil,Other,Farm 282,greenhouse,2080.19,0.04,0.04,79.0,78.63
+1822,Brazil,Other,Farm 275,farm_site_boundary,319.05,12.93,13.38,4131.0,4123.9
+1823,Brazil,Other,Farm 283,farm_site_boundary,925.35,0.73,0.76,684.0,679.58
+1824,Brazil,Other,Farm 283,garden,13617321.15,0.0,0.12,164.0,163.41
+1825,Brazil,Other,Farm 283,garden,15269001.48,0.0,0.11,153.0,152.69
+1826,Brazil,Other,Farm 284,farm_site_boundary,427.87,3.07,3.18,1316.0,1314.79
+1827,Brazil,Other,Farm 285,farm_site_boundary,461.88,0.77,0.8,358.0,356.94
+1828,Brazil,Other,Farm 286,farm_site_boundary,647.73,0.4,0.41,258.0,257.54
+1829,Brazil,Other,Farm 286,garden,12325454.4,0.0,0.11,136.0,135.58
+1830,Brazil,Other,Farm 286,garden,3701.67,0.02,0.02,69.0,69.22
+1831,Brazil,Other,Farm 287,residence,0.0,0.02,0.02,52.0,51.97
+1832,Brazil,Other,Farm 288,farm_site_boundary,630.68,0.52,0.54,327.0,326.38
+1833,Brazil,Other,Farm 289,farm_site_boundary,327.54,12.63,13.07,4144.0,4137.28
+1834,Brazil,Other,Farm 290,garden,3697.3,0.01,0.01,51.0,50.65
+1835,Brazil,Other,Farm 291,residence,0.0,0.02,0.02,53.0,52.89
+1836,Brazil,Other,Farm 292,farm_site_boundary,855.14,0.98,1.01,842.0,838.89
+1837,Brazil,Other,Farm 293,garden,1466.99,0.08,0.09,122.0,121.91
+1838,Brazil,Other,Farm 293,garden,1963.1,0.04,0.04,81.0,80.68
+1839,Brazil,Other,Farm 294,garden,11215.66,0.0,0.01,45.0,44.86
+1840,Brazil,Other,Farm 294,garden,3118.54,0.02,0.02,63.0,62.37
+1841,Brazil,Other,Farm 294,farm_site_boundary,435.92,1.27,1.31,557.0,555.27
+1842,Brazil,Other,Farm 294,farm_site_boundary,450.37,1.06,1.09,478.0,476.45
+1843,Brazil,Other,Farm 295,farm_site_boundary,1416.07,0.55,0.57,786.0,785.64
+1844,Brazil,Other,Farm 295,garden,1926.34,0.06,0.07,122.0,121.74
+1845,Brazil,Other,Farm 296,farm_site_boundary,627.92,0.46,0.47,288.0,286.9
+1846,Brazil,Other,Farm 296,farm_site_boundary,507.14,0.63,0.65,322.0,320.87
+1847,Brazil,Other,Farm 297,farm_site_boundary,135.51,10.72,8.48,1454.0,1453.03
+1848,Brazil,Other,Farm 297,residence,0.0,0.01,0.01,37.0,36.82
+1849,Brazil,Other,Farm 297,field,574.47,0.87,0.69,501.0,500.36
+1850,Brazil,Other,Farm 297,field,850.6,0.29,0.23,250.0,249.22
+1851,Brazil,Other,Farm 297,field,493.33,1.81,1.43,895.0,893.56
+1852,Brazil,Other,Farm 297,field,470.43,0.79,0.62,371.0,370.65
+1853,Brazil,Other,Farm 297,field,1097.79,0.17,0.14,192.0,191.89
+1854,Brazil,Other,Farm 297,field,724.86,0.33,0.26,240.0,239.06
+1855,Brazil,Other,Farm 239,garden,2137.58,0.04,0.06,80.0,79.95
+1856,Brazil,Other,Farm 274,farm_site_boundary,426.77,1.51,1.55,647.0,643.53
+1857,Brazil,Other,Farm 231,surface_water,940.52,0.2,0.17,185.0,185.0
+1858,Brazil,Other,Farm 241,garden,2366.52,0.04,0.03,93.0,92.77
+1859,Brazil,Other,Farm 232,farm_site_boundary,114.72,20.1,17.09,2311.0,2306.06
+1860,Brazil,Other,Farm 233,ceremonial_area,0.0,6.47,5.31,1190.0,1187.52
+1861,Brazil,Other,Farm 233,barn,0.0,6.18,5.07,1058.0,1056.87
+1862,Brazil,Other,Farm 238,surface_water,6117.14,0.0,0.0,23.0,22.63
+1863,Brazil,Other,Farm 238,garden,1242.15,0.11,0.11,134.0,133.28
+1864,Brazil,Other,Farm 298,farm_site_boundary,209.36,3.66,3.18,768.0,766.24
+1865,Brazil,Other,Farm 298,residence,0.0,0.01,0.01,40.0,40.0
+1866,Brazil,Other,Farm 298,garden,4910.99,0.01,0.01,42.0,42.23
+1867,Brazil,Other,Farm 2,farm_site_boundary,69.98,55.31,67.18,3883.0,3870.5
+1868,Brazil,Other,Farm 2,greenhouse,604.28,0.57,0.69,345.0,343.17
+1869,Brazil,Other,Farm 2,natural_area,190.96,9.99,12.13,1915.0,1907.76
+1870,Brazil,Other,Farm 2,surface_water,964.86,0.63,0.77,613.0,610.47
+1871,Brazil,Other,Farm 299,field,5450.14,0.01,0.0,34.0,33.79
+1872,Brazil,Other,Farm 300,field,1411.3,0.12,0.14,166.0,165.26
+1873,Brazil,Other,Farm 301,farm_site_boundary,266.7,2.57,2.04,686.0,685.43
+1874,Argentina,Other,Farm 302,field,47.95,74.28,44.99,3566.0,3561.65
+1875,Brazil,Other,Farm 303,field,167.19,8.94,12.61,1500.0,1495.46
+1876,Brazil,SPG 2023,Farm 225,surface_water,1705.85,0.05,0.04,93.0,92.29
+1877,Brazil,Other,Farm 304,field,828.34,0.24,0.17,200.0,199.71
+1878,Brazil,Other,Farm 305,farm_site_boundary,40.12,93.8,74.74,3772.0,3763.74
+1879,Brazil,Other,Farm 305,field,67.09,38.19,30.43,2569.0,2562.35
+1880,Brazil,Other,Farm 304,farm_site_boundary,60.32,83.13,59.02,5027.0,5014.69
+1881,Brazil,Other,Farm 306,farm_site_boundary,205.0,3.89,2.81,799.0,796.73
+1882,Brazil,Other,Farm 306,barn,0.0,0.2,0.14,177.0,176.55
+1883,Brazil,Other,Farm 307,greenhouse,2274.21,0.03,0.02,70.0,69.82
+1884,Brazil,Other,Farm 308,farm_site_boundary,54.4,90.94,64.56,4959.0,4947.38
+1885,Brazil,Other,Farm 306,field,436.68,0.96,0.69,419.0,417.51
+1886,Brazil,Other,Farm 309,residence,0.0,1.28,0.91,453.0,451.55
+1887,Brazil,Other,Farm 307,garden,1339.39,0.1,0.07,132.0,131.39
+1888,Brazil,Other,Farm 310,field,2959.82,0.04,0.03,109.0,108.92
+1889,Brazil,Other,Farm 307,natural_area,176.64,5.12,3.65,907.0,904.71
+1890,Brazil,Other,Farm 308,field,61.9,80.61,57.23,5003.0,4990.03
+1891,Brazil,Other,Farm 306,residence,0.0,0.11,0.08,139.0,138.06
+1892,Brazil,Other,Farm 306,residence,0.0,0.11,0.08,135.0,134.35
+1893,Brazil,Other,Farm 311,farm_site_boundary,111.38,13.11,9.49,1465.0,1460.44
+1894,Brazil,Other,Farm 311,field,187.87,4.95,3.58,933.0,929.6
+1895,Brazil,Other,Farm 311,field,174.69,5.68,4.11,995.0,992.21
+1896,Brazil,Other,Farm 311,residence,0.0,0.24,0.17,200.0,199.16
+1897,Brazil,Other,Farm 311,greenhouse,2157.7,0.04,0.03,76.0,75.95
+1898,Brazil,Other,Farm 103,field,361.17,1.25,1.54,453.0,451.46
+1899,Brazil,Other,Farm 103,field,1087.78,0.18,0.22,194.0,193.41
+1900,Brazil,Other,Farm 103,barn,0.0,0.01,0.01,42.0,41.96
+1901,Brazil,Other,Farm 103,natural_area,159.77,10.6,13.04,1697.0,1694.31
+1902,Brazil,Other,Farm 103,field,229.81,3.07,3.77,707.0,704.45
+1903,Brazil,Other,Farm 312,field,624.0,0.5,0.73,313.0,312.0
+1904,Brazil,Other,Farm 168,field,1037.64,0.15,0.19,156.0,155.65
+1905,Brazil,Other,Farm 168,garden,3225.32,0.02,0.02,53.0,53.22
+1906,Brazil,Other,Farm 103,field,416.32,1.11,1.37,464.0,463.08
+1907,Brazil,Other,Farm 226,field,733.59,0.3,0.42,219.0,218.46
+1908,Brazil,Other,Farm 313,farm_site_boundary,130.97,9.6,13.54,1260.0,1257.23
+1909,Brazil,Other,Farm 314,farm_site_boundary,237.92,3.94,4.06,940.0,938.32
+1910,Brazil,Other,Farm 231,natural_area,2167.83,0.24,0.21,526.0,523.53
+1911,Brazil,Other,Farm 241,residence,0.0,0.01,0.01,44.0,44.14
+1912,Brazil,Other,Farm 232,residence,0.0,0.02,0.01,52.0,51.92
+1913,Brazil,Other,Farm 232,residence,0.0,0.01,0.01,44.0,43.5
+1914,Brazil,Other,Farm 315,field,75.28,43.55,38.16,3285.0,3278.65
+1915,Brazil,Other,Farm 238,greenhouse,3900.74,0.01,0.01,50.0,49.54
+1916,Brazil,Other,Farm 233,greenhouse,350.42,1.42,1.17,498.0,497.46
+1917,Brazil,Other,Farm 226,farm_site_boundary,96.04,19.94,28.16,1921.0,1914.75
+1918,Argentina,Other,Farm 230,barn,0.0,46.61,25.08,2795.0,2792.08
+1919,Brazil,Other,Farm 226,greenhouse,563.39,0.67,0.95,379.0,377.47
+1920,Brazil,Other,Farm 226,residence,0.0,0.34,0.49,259.0,258.07
+1921,Brazil,Other,Farm 226,surface_water,416.94,0.8,1.12,333.0,331.55
+1922,Brazil,Other,Farm 228,natural_area,732.67,0.3,0.42,220.0,219.8
+1923,Brazil,Other,Farm 314,residence,0.0,0.02,0.02,56.0,56.12
+1924,Brazil,Other,Farm 229,farm_site_boundary,437.99,1.99,2.05,873.0,872.22
+1925,Brazil,Other,Farm 316,farm_site_boundary,183.62,5.07,4.32,935.0,931.1
+1926,Brazil,Other,Farm 316,field,426.9,1.03,0.88,441.0,439.41
+1927,Argentina,CREA,Farm 149,farm_site_boundary,26.86,732.75,406.94,19702.0,19678.7
+1928,Argentina,CREA,Farm 146,farm_site_boundary,19.57,424.8,238.26,8326.0,8312.22
+1929,Argentina,CREA,Farm 145,farm_site_boundary,19.99,829.28,460.8,16606.0,16573.79
+1930,Argentina,CREA,Farm 147,farm_site_boundary,11.8,2014.03,1142.69,23838.0,23770.76
+1931,Argentina,CREA,Farm 148,farm_site_boundary,36.44,419.87,231.0,15315.0,15299.11
+1932,Brazil,Other,Farm 317,garden,3992.42,0.01,0.01,40.0,39.92
+1933,Brazil,Other,Farm 318,farm_site_boundary,250.31,3.5,4.63,879.0,876.1
+1934,Brazil,Other,Farm 318,garden,7386219.47,0.0,0.43,222.0,221.59
+1935,Brazil,Other,Farm 318,garden,7230411.69,0.0,0.5,254.0,253.06
+1936,Argentina,CREA,Farm 133,farm_site_boundary,19.56,1033.7,656.36,20252.0,20224.02
+1937,Argentina,CREA,Farm 132,farm_site_boundary,11.25,1486.22,898.83,16742.0,16723.12
+1938,Argentina,CREA,Farm 137,farm_site_boundary,36.5,200.54,139.6,7327.0,7318.84
+1939,Argentina,CREA,Farm 137,farm_site_boundary,35.46,136.71,95.1,4851.0,4847.02
+1940,Brazil,Other,Farm 319,ceremonial_area,0.0,9.11,8.37,1526.0,1522.85
+1941,Argentina,Other,Farm 320,residence,0.0,0.05,0.02,86.0,85.85
+1942,Argentina,Other,Farm 321,garden,3299.96,0.06,0.03,201.0,200.31
+1943,Argentina,Other,Farm 321,residence,0.0,0.15,0.06,158.0,157.53
+1944,Argentina,Other,Farm 321,field,170.32,5.65,2.45,964.0,962.47
+1945,Argentina,Other,Farm 320,farm_site_boundary,30.23,247.97,107.12,7490.0,7495.21
+1946,Argentina,Other,Farm 320,surface_water,3355.47,0.02,0.01,63.0,63.08
+1947,Argentina,Other,Farm 320,natural_area,35.69,142.74,61.64,5093.0,5094.25
+1948,Argentina,Other,Farm 321,field,937.64,0.29,0.13,272.0,272.1
+1949,Argentina,Other,Farm 322,garden,4920.73,0.01,0.01,54.0,54.13
+1950,Argentina,Other,Farm 321,farm_site_boundary,57.0,53.57,23.25,3060.0,3053.44
+1951,Argentina,Other,Farm 323,field,336.47,2.67,1.19,900000.0,898.38
+1952,Argentina,Other,Farm 321,barn,0.0,0.02,0.01,60.0,60.13
+1953,Argentina,Other,Farm 324,garden,950.0,0.25,0.11,239.0,239.21
+1954,Argentina,Other,Farm 325,farm_site_boundary,2333.55,0.03,0.02,71.0,71.41
+1955,Argentina,Other,Farm 325,greenhouse,20412.07,0.0,0.0,12.0,12.25
+1956,Argentina,Other,Farm 326,garden,1675.17,0.06,0.04,96.0,96.15
+1957,Argentina,Other,Farm 327,surface_water,110.77,12.71,5.52,1409.0,1407.99
+1958,Argentina,Other,Farm 327,natural_area,400.97,1.0,0.43,400.0,399.93
+1959,Argentina,Other,Farm 328,garden,485.25,0.9,0.39,440.0,439.11
+1960,Argentina,Other,Farm 325,field,10811.99,0.0,0.0,24.0,23.79
+1961,Argentina,Other,Farm 327,surface_water,3125.97,0.02,0.01,54.0,54.39
+1962,Argentina,Other,Farm 329,ceremonial_area,0.0,0.24,0.1,217.0,217.06
+1963,Argentina,Other,Farm 330,farm_site_boundary,71.53,36.57,21.95,2619.0,2616.06
+1964,Argentina,Other,Farm 330,farm_site_boundary,73.56,33.3,19.98,2455.0,2449.2
+1965,Brazil,Other,Farm 261,garden,11801.58,0.0,0.0,14.0,14.16
+1966,Brazil,Other,Farm 331,farm_site_boundary,1345.29,0.2,0.21,275.0,273.9
+1967,Brazil,Other,Farm 273,farm_site_boundary,467.0,0.98,1.01,459.0,456.49
+1968,Brazil,Other,Farm 332,farm_site_boundary,432.4,2.03,2.09,882.0,877.95
+1969,Brazil,Other,Farm 332,surface_water,5895.68,0.0,0.0,25.0,25.35
+1970,Brazil,Other,Farm 332,residence,0.0,0.01,0.01,50.0,49.47
+1971,Brazil,Other,Farm 333,farm_site_boundary,1172.22,0.87,0.9,1026.0,1020.42
+1972,Brazil,Other,Farm 333,surface_water,5713.86,0.0,0.0,25.0,25.14
+1973,Brazil,Other,Farm 333,residence,0.0,0.02,0.02,58.0,58.09
+1974,Brazil,Other,Farm 334,farm_site_boundary,678.13,0.34,0.36,233.0,232.66
+1975,Brazil,Other,Farm 334,residence,0.0,0.01,0.01,44.0,43.99
+1976,Brazil,Other,Farm 335,farm_site_boundary,569.82,0.62,0.64,356.0,354.43
+1977,Brazil,Other,Farm 335,surface_water,5594.36,0.0,0.0,26.0,26.29
+1978,Brazil,Other,Farm 335,residence,0.0,0.02,0.02,56.0,55.72
+1979,Brazil,Other,Farm 336,farm_site_boundary,286.7,2.18,2.26,627.0,624.9
+1980,Brazil,Other,Farm 336,residence,0.0,0.03,0.03,86.0,85.7
+1981,Brazil,Other,Farm 337,farm_site_boundary,1317.05,0.75,0.78,992.0,985.94
+1982,Brazil,Other,Farm 337,farm_site_boundary,795.35,1.37,1.42,1099.0,1092.5
+1983,Brazil,Other,Farm 337,barn,0.0,0.04,0.04,104.0,103.26
+1984,Brazil,Other,Farm 337,residence,0.0,0.01,0.01,47.0,46.63
+1985,Brazil,Other,Farm 338,farm_site_boundary,680.65,0.37,0.39,256.0,254.97
+1986,Brazil,Other,Farm 338,residence,0.0,0.02,0.02,60.0,60.07
+1987,Brazil,Other,Farm 339,farm_site_boundary,424.21,1.1,1.13,468.0,467.05
+1988,Brazil,Other,Farm 339,surface_water,4768.57,0.01,0.01,30.0,30.04
+1989,Brazil,Other,Farm 339,surface_water,3050.17,0.02,0.02,53.0,52.46
+1990,Brazil,Other,Farm 339,residence,0.0,0.01,0.01,37.0,36.65
+1991,Brazil,Other,Farm 340,farm_site_boundary,221.17,3.35,3.47,743.0,740.32
+1992,Brazil,Other,Farm 340,farm_site_boundary,380.24,6.31,6.54,2410.0,2397.82
+1993,Brazil,Other,Farm 340,residence,0.0,0.01,0.01,47.0,46.35
+1994,Brazil,Other,Farm 341,farm_site_boundary,600.95,0.48,0.5,291.0,289.9
+1995,Brazil,Other,Farm 341,residence,0.0,0.02,0.02,58.0,57.66
+1996,Brazil,Other,Farm 341,surface_water,4925.97,0.01,0.01,29.0,29.06
+1997,Brazil,Other,Farm 341,surface_water,3352.6,0.02,0.02,58.0,58.0
+1998,Brazil,Other,Farm 341,farm_site_boundary,404.68,1.11,1.14,450.0,448.46
+1999,Brazil,Other,Farm 341,surface_water,2265.36,0.03,0.03,69.0,68.87
+2000,Brazil,Other,Farm 342,farm_site_boundary,344.2,2.55,2.63,883.0,878.88
+2001,Brazil,Other,Farm 342,surface_water,5491.19,0.0,0.0,26.0,25.81
+2002,Brazil,Other,Farm 342,surface_water,1398.65,0.08,0.08,107.0,107.14
+2003,Brazil,Other,Farm 342,surface_water,1495.01,0.08,0.08,115.0,114.37
+2004,Brazil,Other,Farm 342,residence,0.0,0.01,0.02,49.0,49.11
+2005,Brazil,Other,Farm 343,farm_site_boundary,389.68,1.86,1.93,725.0,723.25
+2006,Brazil,Other,Farm 267,residence,0.0,0.01,0.01,50.0,49.91
+2007,Brazil,Other,Farm 314,surface_water,1097.88,0.18,0.18,195.0,194.11
+2008,Brazil,Other,Farm 293,residence,0.0,0.02,0.02,56.0,55.99
+2009,Brazil,Other,Farm 238,barn,0.0,0.03,0.03,66.0,65.37
+2010,Brazil,Other,Farm 238,barn,0.0,0.02,0.02,59.0,58.92
+2011,Brazil,Other,Farm 268,residence,0.0,0.03,0.03,67.0,67.24
+2012,Brazil,Other,Farm 268,residence,0.0,0.01,0.01,51.0,51.19
+2013,Brazil,Other,Farm 344,residence,0.0,0.02,0.02,54.0,53.66
+2014,Brazil,Other,Farm 344,farm_site_boundary,445.7,0.91,0.95,408.0,407.01
+2015,Brazil,Other,Farm 345,farm_site_boundary,167.95,12.73,13.12,2150.0,2138.4
+2016,Brazil,Other,Farm 345,farm_site_boundary,186.12,6.68,6.89,1250.0,1244.2
+2017,Brazil,Other,Farm 345,residence,0.0,0.02,0.02,62.0,62.11
+2018,Brazil,Other,Farm 345,residence,0.0,0.02,0.02,51.0,51.09
+2019,Brazil,Other,Farm 346,farm_site_boundary,613.1,0.51,0.52,311.0,309.8
+2020,Brazil,Other,Farm 346,residence,0.0,0.02,0.02,51.0,51.27
+2021,Brazil,Other,Farm 274,greenhouse,1884.77,0.02,0.01,38.0,37.7
+2022,Brazil,Other,Farm 294,residence,0.0,0.02,0.02,62.0,61.49
+2023,Brazil,Other,Farm 296,residence,0.0,0.02,0.02,60.0,59.78
+2024,Brazil,Other,Farm 296,surface_water,1624.44,0.06,0.06,96.0,95.84
+2025,Brazil,Other,Farm 294,barn,0.0,0.02,0.02,53.0,52.8
+2026,Brazil,Other,Farm 294,surface_water,2960.34,0.03,0.03,80.0,80.23
+2027,Brazil,Other,Farm 294,surface_water,2675.48,0.02,0.02,58.0,57.52
+2028,Brazil,Other,Farm 294,surface_water,1789.86,0.05,0.05,83.0,82.69
+2029,Brazil,Other,Farm 291,farm_site_boundary,552.19,2.35,2.41,1303.0,1295.04
+2030,Brazil,Other,Farm 284,residence,0.0,0.01,0.01,40.0,40.18
+2031,Brazil,Other,Farm 276,residence,0.0,0.02,0.02,50.0,49.66
+2032,Brazil,Other,Farm 347,residence,0.0,0.01,0.01,46.0,45.61
+2033,Brazil,Other,Farm 281,residence,0.0,0.02,0.02,60.0,59.64
+2034,Brazil,Other,Farm 281,surface_water,2904.3,0.02,0.02,59.0,58.67
+2035,Brazil,Other,Farm 281,surface_water,5405.76,0.01,0.01,30.0,30.27
+2036,Brazil,Other,Farm 278,residence,0.0,0.01,0.01,45.0,44.45
+2037,Brazil,Other,Farm 266,residence,0.0,0.01,0.01,38.0,37.5
+2038,Brazil,Other,Farm 266,surface_water,4676.73,0.01,0.01,37.0,36.48
+2039,Brazil,Other,Farm 266,surface_water,2362.15,0.03,0.04,81.0,80.55
+2040,Brazil,Other,Farm 266,surface_water,1986.21,0.04,0.04,84.0,84.22
+2041,Brazil,Other,Farm 266,surface_water,2741.52,0.02,0.03,68.0,67.99
+2042,Brazil,Other,Farm 266,surface_water,2234.13,0.04,0.04,82.0,81.77
+2043,Brazil,Other,Farm 266,barn,0.0,0.01,0.01,40.0,40.23
+2044,Brazil,Other,Farm 293,farm_site_boundary,435.01,2.05,2.11,892.0,890.95
+2045,Brazil,Other,Farm 348,surface_water,5553.11,0.0,0.0,27.0,26.65
+2046,Brazil,Other,Farm 280,garden,2122.95,0.03,0.02,59.0,59.02
+2047,Brazil,Other,Farm 280,farm_site_boundary,287.13,2.31,2.4,665.0,662.71
+2048,Brazil,Other,Farm 349,garden,53.63,1.46,0.04,78.0,78.25
+2049,Brazil,Other,Farm 349,residence,0.0,0.02,0.02,58.0,57.83
+2050,Brazil,Other,Farm 349,farm_site_boundary,349.56,1.66,1.72,583.0,581.12
+2051,Brazil,Other,Farm 275,surface_water,5995.39,0.0,0.0,25.0,24.58
+2052,Brazil,Other,Farm 275,residence,0.0,0.02,0.02,59.0,58.51
+2053,Brazil,Other,Farm 269,surface_water,1689.21,0.06,0.06,100.0,99.66
+2054,Brazil,Other,Farm 269,residence,0.0,0.02,0.02,53.0,52.56
+2055,Brazil,Other,Farm 270,residence,0.0,0.03,0.03,67.0,67.18
+2056,Brazil,Other,Farm 266,farm_site_boundary,773.01,1.34,1.38,1041.0,1035.22
+2057,Brazil,Other,Farm 279,residence,0.0,0.02,0.02,57.0,56.47
+2058,Brazil,Other,Farm 268,farm_site_boundary,797.05,0.77,0.79,615.0,611.49
+2059,Brazil,Other,Farm 268,farm_site_boundary,800.69,0.78,0.81,631.0,627.66
+2060,Brazil,Other,Farm 268,ceremonial_area,0.0,0.17,0.17,174.0,172.92
+2061,Brazil,Other,Farm 340,garden,1312.1,0.12,0.13,163.0,162.44
+2062,Brazil,Other,Farm 340,garden,2240.72,0.03,0.03,76.0,75.29
+2063,Brazil,Other,Farm 340,garden,1744.77,0.06,0.06,109.0,108.52
+2064,Brazil,Other,Farm 336,garden,1802.4,0.06,0.07,114.0,113.73
+2065,Brazil,Other,Farm 332,field,607.98,0.45,0.46,275.0,273.59
+2066,Brazil,Other,Farm 345,garden,279.51,0.5,0.11,140.0,139.76
+2067,Brazil,Other,Farm 339,garden,5146.95,0.01,0.01,32.0,31.4
+2068,Brazil,Other,Farm 339,farm_site_boundary,631.19,0.4,0.41,254.0,252.85
+2069,Brazil,Other,Farm 348,field,792.13,0.37,0.38,294.0,292.69
+2070,Brazil,Other,Farm 348,field,1248.8,0.11,0.12,142.0,141.49
+2071,Brazil,Other,Farm 348,farm_site_boundary,406.35,1.11,1.15,454.0,452.22
+2072,Brazil,Other,Farm 348,garden,930.74,0.1,0.05,93.0,93.07
+2073,Brazil,Other,Farm 348,barn,0.0,0.01,0.01,30.0,29.9
+2074,Brazil,Other,Farm 348,residence,0.0,0.02,0.02,50.0,50.26
+2075,Brazil,Other,Farm 272,residence,0.0,0.01,0.01,38.0,37.87
+2076,Brazil,Other,Farm 272,barn,0.0,0.01,0.01,36.0,35.73
+2077,Brazil,Other,Farm 277,field,1342.34,0.1,0.1,135.0,134.23
+2078,Brazil,Other,Farm 277,field,1345.82,0.09,0.09,122.0,121.8
+2079,Brazil,Other,Farm 280,barn,0.0,0.01,0.01,39.0,39.06
+2080,Brazil,Other,Farm 280,field,2032.27,0.12,0.12,238.0,236.96
+2081,Brazil,Other,Farm 347,farm_site_boundary,418.33,1.27,1.32,532.0,530.65
+2082,Brazil,Other,Farm 347,garden,2676.46,0.04,0.05,120.0,119.91
+2083,Brazil,Other,Farm 347,garden,1227.01,0.15,0.15,183.0,183.07
+2084,Brazil,Other,Farm 347,garden,1313.92,0.14,0.15,186.0,185.92
+2085,Brazil,Other,Farm 347,field,1397.42,0.17,0.18,242.0,241.48
+2086,Brazil,Other,Farm 290,residence,0.0,0.03,0.03,72.0,71.62
+2087,Brazil,Other,Farm 290,farm_site_boundary,112.19,35.24,36.2,3976.0,3953.45
+2088,Brazil,Other,Farm 290,farm_site_boundary,128.96,14.21,14.6,1841.0,1832.75
+2089,Brazil,Other,Farm 290,field,333.05,1.68,1.72,561.0,558.69
+2090,Brazil,Other,Farm 331,residence,0.0,0.02,0.02,52.0,51.99
+2091,Brazil,Other,Farm 295,residence,0.0,0.01,0.01,49.0,48.47
+2092,Brazil,Other,Farm 285,residence,0.0,0.02,0.02,60.0,59.95
+2093,Brazil,Other,Farm 285,farm_site_boundary,473.11,3.14,3.23,1492.0,1483.68
+2094,Brazil,Other,Farm 285,field,626.28,0.67,0.69,421.0,419.23
+2095,Brazil,Other,Farm 285,field,784.83,0.25,0.25,195.0,194.24
+2096,Brazil,Other,Farm 282,residence,0.0,0.02,0.02,59.0,58.9
+2097,Brazil,Other,Farm 282,barn,0.0,0.04,0.04,78.0,78.08
+2098,Brazil,Other,Farm 282,field,985.35,0.2,0.2,193.0,192.34
+2099,Brazil,Other,Farm 265,farm_site_boundary,803.84,1.09,1.13,883.0,878.19
+2100,Brazil,Other,Farm 265,residence,0.0,0.02,0.02,52.0,51.61
+2101,Brazil,Other,Farm 265,field,1126.05,0.34,0.35,388.0,386.12
+2102,Brazil,Other,Farm 265,field,1060.96,0.23,0.23,241.0,239.88
+2103,Brazil,Other,Farm 349,field,2226.22,0.06,0.06,125.0,124.45
+2104,Brazil,Other,Farm 349,field,1952.44,0.07,0.07,137.0,136.67
+2105,Brazil,Other,Farm 275,field,585.18,0.48,0.5,283.0,282.17
+2106,Brazil,Other,Farm 296,field,1328.05,0.11,0.11,146.0,145.55
+2107,Brazil,Other,Farm 350,residence,0.0,0.02,0.02,55.0,54.57
+2108,Brazil,Other,Farm 350,farm_site_boundary,1410.53,0.1,0.11,149.0,147.96
+2109,Brazil,Other,Farm 351,residence,0.0,0.03,0.03,74.0,73.5
+2110,Brazil,Other,Farm 283,residence,0.0,0.02,0.03,63.0,63.06
+2111,Brazil,Other,Farm 286,residence,0.0,0.01,0.01,40.0,40.28
+2112,Brazil,Other,Farm 352,farm_site_boundary,296.98,2.53,2.63,754.0,752.17
+2113,Brazil,Other,Farm 352,residence,0.0,0.02,0.02,54.0,53.76
+2114,Brazil,Other,Farm 352,garden,1810.6,0.05,0.05,96.0,95.78
+2115,Brazil,Other,Farm 352,garden,2931.78,0.03,0.03,85.0,84.73
+2116,Brazil,Other,Farm 352,farm_site_boundary,315.16,2.54,2.64,803.0,800.83
+2117,Brazil,Other,Farm 271,residence,0.0,0.01,0.01,48.0,47.66
+2118,Brazil,Other,Farm 353,garden,2006.82,0.05,0.06,90.0,100.34
+2119,Brazil,Other,Farm 353,farm_site_boundary,748.43,0.7,0.71,521.0,520.39
+2120,Brazil,Other,Farm 353,residence,0.0,0.01,0.01,46.0,45.86
+2121,Brazil,Other,Farm 289,residence,0.0,0.03,0.03,65.0,64.62
+2122,Brazil,Other,Farm 287,garden,1604.77,0.08,0.08,124.0,123.57
+2123,Brazil,Other,Farm 351,garden,1037.89,0.17,0.17,174.0,173.74
+2124,Brazil,Other,Farm 351,garden,1024.06,0.16,0.16,165.0,164.26
+2125,Brazil,Other,Farm 351,garden,1432.41,0.09,0.09,125.0,124.33
+2126,Brazil,Other,Farm 351,farm_site_boundary,345.92,1.4,1.44,487.0,485.8
+2127,Brazil,Other,Farm 295,garden,1841.92,0.06,0.06,104.0,103.52
+2128,Brazil,Other,Farm 281,field,841.38,0.32,0.33,266.0,265.62
+2129,Argentina,Other,Farm 354,farm_site_boundary,670.0,0.93,0.68,626.0,623.64
+2130,Argentina,Other,Farm 354,field,695.93,0.71,0.52,496.0,494.04
+2131,Argentina,Other,Farm 354,residence,0.0,0.02,0.01,49.0,49.26
+2132,Argentina,Other,Farm 354,garden,3276.22,0.02,0.01,63.0,62.58
+2133,Brazil,Other,Farm 341,garden,1849.79,0.06,0.08,110.0,110.06
+2134,Brazil,Other,Farm 341,garden,1517.35,0.09,0.08,134.0,133.53
+2135,Brazil,Other,Farm 341,garden,13503.13,0.0,0.01,34.0,34.35
+2136,Brazil,Other,Farm 283,garden,1360.77,0.12,0.13,167.0,166.56
+2137,Brazil,Other,Farm 355,garden,936.02,0.18,0.18,169.0,168.48
+2138,Brazil,Other,Farm 355,residence,0.0,0.02,0.02,55.0,54.44
+2139,Brazil,Other,Farm 355,surface_water,1505.2,0.08,0.08,124.0,123.73
+2140,Brazil,Other,Farm 355,farm_site_boundary,193.47,5.89,6.06,1141.0,1139.53
+2141,Brazil,Other,Farm 284,garden,669.12,0.57,0.59,382.0,380.93
+2142,Brazil,Other,Farm 273,residence,0.0,0.03,0.03,77.0,76.41
+2143,Brazil,Other,Farm 292,residence,0.0,0.01,0.01,45.0,45.16
+2144,Brazil,Other,Farm 356,farm_site_boundary,334.91,2.13,2.2,717.0,714.4
+2145,Brazil,Other,Farm 356,garden,1401.6,0.08,0.09,118.0,117.31
+2146,Brazil,Other,Farm 356,surface_water,6345.03,0.0,0.0,23.0,22.84
+2147,Brazil,Other,Farm 356,residence,0.0,0.01,0.01,43.0,42.4
+2148,Brazil,Other,Farm 278,garden,3437.44,0.02,0.02,67.0,66.69
+2149,Brazil,Other,Farm 288,residence,0.0,0.01,0.01,38.0,37.71
+2150,Brazil,Other,Farm 332,garden,1749.25,0.06,0.06,108.0,108.1
+2151,Brazil,Other,Farm 332,field,2222.31,0.05,0.05,110.0,109.78
+2152,Brazil,Other,Farm 272,field,2642.47,0.08,0.08,199.0,198.19
+2153,Brazil,Other,Farm 343,residence,0.0,0.03,0.03,68.0,67.43
+2154,Brazil,Other,Farm 345,field,319.54,1.59,1.64,511.0,508.74
+2155,Brazil,Other,Farm 345,garden,885.62,0.28,0.29,251.0,249.74
+2156,Brazil,Other,Farm 334,garden,1964.55,0.04,0.04,85.0,84.67
+2157,Brazil,Other,Farm 336,barn,0.0,0.02,0.02,55.0,54.6
+2158,Brazil,Other,Farm 336,garden,2032.27,0.05,0.05,92.0,91.86
+2159,Brazil,Other,Farm 340,garden,1092.58,0.17,0.18,185.0,184.75
+2160,Brazil,Other,Farm 340,field,732.05,0.28,0.3,209.0,208.19
+2161,Brazil,Other,Farm 340,field,422.66,1.63,1.69,690.0,687.38
+2162,Brazil,Other,Farm 342,field,406.28,1.07,1.1,437.0,435.74
+2163,Brazil,Other,Farm 356,field,417.57,1.26,1.3,527.0,525.01
+2164,Brazil,Other,Farm 341,garden,5272.94,0.01,0.01,34.0,34.27
+2165,Brazil,Other,Farm 341,field,1565.26,0.07,0.07,108.0,107.22
+2166,Brazil,Other,Farm 341,barn,0.0,0.07,0.07,126.0,125.47
+2167,Brazil,Other,Farm 341,barn,0.0,0.01,0.01,38.0,37.74
+2168,Brazil,Other,Farm 314,surface_water,4892.97,0.01,0.01,29.0,29.36
+2169,Brazil,Other,Farm 293,surface_water,3622.52,0.01,0.01,38.0,37.67
+2170,Brazil,Other,Farm 293,garden,1071.26,0.14,0.15,153.0,152.23
+2171,Brazil,Other,Farm 276,garden,2851.24,0.03,0.02,73.0,72.99
+2172,Brazil,Other,Farm 276,garden,5221.1,0.03,0.05,157.0,156.63
+2173,Brazil,Other,Farm 276,field,1153.19,0.21,0.22,246.0,245.28
+2174,Brazil,Other,Farm 276,field,1440.37,0.08,0.09,120.0,119.69
+2175,Brazil,Other,Farm 276,field,2245.73,0.04,0.04,96.0,95.44
+2176,Brazil,Other,Farm 291,surface_water,7277.72,0.0,0.0,19.0,18.92
+2177,Brazil,Other,Farm 238,field,1513.41,0.07,0.07,104.0,103.67
+2178,Brazil,Other,Farm 238,field,668.81,0.43,0.44,287.0,285.99
+2179,Brazil,Other,Farm 238,field,200.86,2.0,0.95,402.0,401.73
+2180,Brazil,Other,Farm 238,barn,0.0,0.01,0.01,35.0,35.03
+2181,Brazil,Other,Farm 238,residence,0.0,0.02,0.02,53.0,52.38
+2182,Brazil,Other,Farm 351,garden,484.78,0.3,0.13,146.0,145.43
+2183,Brazil,Other,Farm 314,field,598.57,0.45,0.47,273.0,272.17
+2184,Brazil,Other,Farm 333,field,1483.81,0.18,0.18,263.0,261.15
+2185,Brazil,Other,Farm 293,field,587.3,0.47,0.48,277.0,276.03
+2186,Brazil,Other,Farm 334,field,1051.2,0.17,0.18,182.0,181.65
+2187,Brazil,Other,Farm 335,field,785.08,0.28,0.29,219.0,218.25
+2188,Brazil,Other,Farm 335,field,1448.87,0.1,0.11,148.0,148.07
+2189,Brazil,Other,Farm 268,field,1319.45,0.1,0.1,128.0,127.72
+2190,Brazil,Other,Farm 268,field,1050.7,0.2,0.2,209.0,207.72
+2191,Brazil,Other,Farm 268,field,865.08,0.44,0.45,383.0,381.15
+2192,Brazil,Other,Farm 336,field,1111.98,0.17,0.18,195.0,194.37
+2193,Brazil,Other,Farm 336,field,1465.89,0.14,0.15,207.0,205.96
+2194,Brazil,Other,Farm 344,field,1241.99,0.14,0.15,180.0,179.09
+2195,Brazil,Other,Farm 331,field,1721.14,0.06,0.07,111.0,110.5
+2196,Brazil,Other,Farm 331,field,2330.26,0.04,0.04,97.0,96.24
+2197,Brazil,Other,Farm 338,field,1250.71,0.11,0.12,140.0,139.95
+2198,Brazil,Other,Farm 291,field,803.61,0.43,0.44,344.0,341.86
+2199,Brazil,Other,Farm 294,field,909.16,0.2,0.21,187.0,186.2
+2200,Brazil,Other,Farm 351,field,1228.19,0.11,0.12,141.0,140.26
+2201,Brazil,Other,Farm 351,surface_water,6409.8,0.0,0.0,22.0,21.79
+2202,Brazil,Other,Farm 339,field,1001.41,0.18,0.19,185.0,184.06
+2203,Brazil,Other,Farm 339,field,1654.99,0.07,0.07,113.0,112.71
+2204,Brazil,Other,Farm 229,field,851.83,0.26,0.26,218.0,217.3
+2205,Brazil,Other,Farm 229,field,647.12,0.43,0.44,276.0,275.35
+2206,Brazil,Other,Farm 341,field,1797.74,0.06,0.06,99.0,99.06
+2207,Brazil,Other,Farm 342,field,786.32,0.3,0.31,238.0,237.0
+2208,Brazil,Other,Farm 350,field,1829.07,0.05,0.05,97.0,96.58
+2209,Brazil,Other,Farm 270,field,1545.26,0.11,0.11,169.0,168.12
+2210,Brazil,Other,Farm 266,field,1298.34,0.26,0.27,339.0,337.44
+2211,Brazil,Other,Farm 355,field,849.52,0.35,0.36,299.0,298.44
+2212,Brazil,Other,Farm 355,surface_water,3977.29,0.01,0.01,34.0,33.81
+2213,Brazil,Other,Farm 355,field,388.35,1.21,1.25,472.0,470.96
+2214,Brazil,Other,Farm 289,field,590.02,0.48,0.5,285.0,284.27
+2215,Brazil,Other,Farm 284,field,598.97,0.56,0.58,335.0,334.17
+2216,Brazil,Other,Farm 273,field,1695.68,0.07,0.07,119.0,118.7
+2217,Brazil,Other,Farm 273,field,1589.87,0.07,0.07,111.0,111.13
+2218,Brazil,Other,Farm 271,field,836.41,0.32,0.33,272.0,270.41
+2219,Brazil,Other,Farm 292,surface_water,8065.44,0.0,0.0,20.0,20.16
+2220,Brazil,Other,Farm 292,field,1322.93,0.13,0.13,172.0,171.58
+2221,Brazil,Other,Farm 292,field,690.62,0.33,0.34,230.0,228.87
+2222,Brazil,Other,Farm 272,field,703.61,0.56,0.58,397.0,395.85
+2223,Brazil,Other,Farm 272,field,1312.47,0.1,0.1,127.0,126.65
+2224,Brazil,Other,Farm 272,field,1944.68,0.04,0.04,76.0,75.65
+2225,Brazil,Other,Farm 356,field,1218.51,0.17,0.17,203.0,202.64
+2226,Brazil,Other,Farm 356,field,1626.05,0.06,0.07,103.0,103.09
+2227,Brazil,Other,Farm 274,field,1180.76,0.17,0.18,204.0,202.85
+2228,Brazil,Other,Farm 274,surface_water,8963.15,0.0,0.0,16.0,16.13
+2229,Brazil,Other,Farm 274,field,755.8,0.31,0.31,232.0,230.75
+2230,Brazil,Other,Farm 269,field,1509.39,0.09,0.09,129.0,128.75
+2231,Brazil,Other,Farm 269,field,1040.66,0.15,0.15,155.0,154.85
+2232,Brazil,Other,Farm 278,field,2454.3,0.05,0.05,121.0,121.24
+2233,Brazil,Other,Farm 288,field,1430.47,0.1,0.1,145.0,144.19
+2234,Brazil,Other,Farm 288,field,1084.79,0.23,0.24,247.0,246.57
+2235,Brazil,Other,Farm 343,field,2928.97,0.02,0.02,61.0,60.92
+2236,Brazil,Other,Farm 343,field,3120.53,0.02,0.03,76.0,75.83
+2237,Brazil,Other,Farm 267,field,516.8,0.61,0.63,316.0,314.94
+2238,Brazil,Other,Farm 236,field,559.42,0.71,0.73,399.0,397.41
+2239,Brazil,Other,Farm 279,field,2216.29,0.03,0.03,74.0,73.58
+2240,Brazil,Other,Farm 341,garden,241.21,0.58,0.13,140.0,139.9
+2241,Brazil,Other,Farm 341,garden,489.8,0.32,0.12,157.0,156.74
+2242,Brazil,Other,Farm 341,garden,264.58,0.63,0.17,167.0,166.37
+2243,Brazil,Other,Farm 357,farm_site_boundary,199.21,12.79,10.95,2555.0,2547.3
+2244,Brazil,Other,Farm 357,garden,618.8,0.61,0.53,380.0,379.45
+2245,Brazil,Other,Farm 357,garden,2020.97,0.05,0.04,96.0,96.0
+2246,Brazil,Other,Farm 357,garden,1284.11,0.11,0.09,137.0,136.37
+2247,Brazil,Other,Farm 357,garden,882.82,0.26,0.22,228.0,227.24
+2248,Brazil,Other,Farm 357,field,891.69,0.2,0.18,183.0,182.8
+2249,Brazil,Other,Farm 357,surface_water,2127.49,0.05,0.04,105.0,104.89
+2250,Brazil,Other,Farm 357,surface_water,1196.61,0.11,0.09,131.0,130.79
+2251,Brazil,Other,Farm 357,natural_area,443.86,2.28,1.95,1013.0,1010.41
+2252,Brazil,Other,Farm 357,natural_area,630.48,0.81,0.69,509.0,508.29
+2253,Brazil,Other,Farm 357,residence,0.0,0.02,0.02,64.0,63.95
+2254,Brazil,Other,Farm 357,greenhouse,10421.37,0.0,0.0,28.0,28.14
+2255,Brazil,Other,Farm 357,barn,0.0,0.02,0.02,62.0,62.15
+2256,Brazil,Other,Farm 357,barn,0.0,0.01,0.01,40.0,39.79
+2257,Argentina,Other,Farm 358,garden,13328.3,0.0,0.0,36.0,42.65
+2258,Argentina,Other,Farm 358,garden,11938.41,0.0,0.0,38.0,40.59
+2259,Argentina,Other,Farm 358,garden,44518.53,0.0,0.0,12.0,22.26
+2260,Argentina,Other,Farm 358,garden,11022.78,0.0,0.0,38.0,37.48
+2261,Argentina,Other,Farm 358,garden,19875.01,0.0,0.0,22.0,35.78
+2262,Argentina,Other,Farm 358,garden,14428.06,0.0,0.0,32.0,31.74
+2263,Argentina,Other,Farm 358,garden,10844.41,0.0,0.0,33.0,32.53
+2264,Argentina,Other,Farm 358,garden,9793.53,0.0,0.0,37.0,37.22
+2265,Argentina,Other,Farm 358,surface_water,10123.78,0.0,0.0,15.0,15.19
+2266,Argentina,Other,Farm 358,garden,7755.14,0.0,0.0,29.0,28.69
+2267,Brazil,Other,Farm 359,farm_site_boundary,143.16,9.47,8.1,1359.0,1356.24
+2268,Brazil,Other,Farm 359,garden,294.33,1.94,1.66,573.0,571.76
+2269,Brazil,Other,Farm 359,garden,585.31,0.92,0.79,541.0,541.12
+2270,Brazil,Other,Farm 359,surface_water,856.33,0.22,0.19,188.0,188.05
+2271,Brazil,Other,Farm 359,garden,460.58,1.15,0.98,531.0,529.8
+2272,Brazil,Other,Farm 359,residence,0.0,0.02,0.02,57.0,57.19
+2273,Brazil,Other,Farm 359,barn,0.0,0.04,0.03,77.0,76.37
+2274,Brazil,Other,Farm 359,greenhouse,6497.52,0.01,0.01,40.0,39.63
+2275,Brazil,Other,Farm 359,natural_area,225.62,3.48,2.98,786.0,784.96
+2276,Brazil,Other,Farm 359,natural_area,1891.16,0.12,0.1,223.0,222.02
+2277,Brazil,Other,Farm 360,farm_site_boundary,161.89,6.91,5.91,1120.0,1119.1
+2278,Brazil,Other,Farm 360,field,582.27,0.92,0.79,539.0,538.25
+2279,Brazil,Other,Farm 360,garden,303.48,2.45,2.1,746.0,744.83
+2280,Brazil,Other,Farm 360,garden,464.4,1.48,1.26,686.0,686.34
+2281,Brazil,Other,Farm 360,residence,0.0,0.05,0.04,100.0,99.5
+2282,Brazil,Other,Farm 360,barn,0.0,0.05,0.04,94.0,93.63
+2283,Brazil,Other,Farm 360,natural_area,695.65,0.39,0.33,272.0,271.51
+2284,Brazil,Other,Farm 360,natural_area,822.05,0.26,0.22,215.0,215.05
+2285,Brazil,Other,Farm 360,barn,0.0,0.03,0.03,80.0,79.75
+2286,Brazil,Other,Farm 360,garden,1366.54,0.17,0.15,233.0,232.04
+2287,Brazil,Other,Farm 233,natural_area,638.5,0.48,0.39,306.0,305.2
+2288,Brazil,Other,Farm 233,greenhouse,653.66,0.57,0.47,371.0,370.17
+2289,Argentina,Other,Farm 361,field,48.37,88.51,51.69,4286.0,4280.9
+2290,Brazil,Other,Farm 362,field,213.79,5.49,5.45,1175.0,1174.49
+2291,Brazil,SPG 2023,Farm 26,field,664.95,0.64,0.5,423.0,422.64
+2292,Brazil,Other,Farm 363,garden,9726.76,0.0,0.0,35.0,35.02
+2293,Brazil,Other,Farm 364,farm_site_boundary,2032.17,0.06,0.05,125.0,125.38
+2294,Brazil,Other,Farm 364,field,6439.08,0.0,0.0,32.0,32.2
+2295,Brazil,Other,Farm 365,field,939.69,0.18,0.22,169.0,168.86
+2296,Brazil,Other,Farm 365,field,3900.29,0.01,0.01,43.0,43.29
+2297,Brazil,Other,Farm 301,ceremonial_area,0.0,0.09,0.07,123.0,122.35
+2298,Brazil,Other,Farm 301,ceremonial_area,0.0,0.1,0.08,125.0,124.49
+2299,Brazil,Other,Farm 301,ceremonial_area,0.0,0.1,0.08,128.0,128.17
+2300,Brazil,Other,Farm 301,ceremonial_area,0.0,0.1,0.08,128.0,127.42
+2301,Brazil,Other,Farm 366,farm_site_boundary,429.78,2.49,1.96,1071.0,1070.32
+2302,Brazil,Other,Farm 366,greenhouse,1297.33,0.1,0.08,126.0,125.71
+2303,Argentina,Other,Farm 367,field,399.82,2.59,1.55,1035.0,1035.46

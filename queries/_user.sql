@@ -1,1 +1,0 @@
-select * from users u where u.email ='janefelisbinoprs@gmail.com'

@@ -1,0 +1,48 @@
+,Country,Scale,Land Type,Patch Density
+0,Argentina,CREA,farm_site_boundary,0.16005329138201146
+1,Argentina,CREA,field,0.6558281207848274
+2,Argentina,CREA,natural_area,0.06245982102712643
+3,Argentina,CREA,residence,0.01951869407097701
+4,Argentina,Other,barn,0.5470750188871845
+5,Argentina,Other,ceremonial_area,0.1094150037774369
+6,Argentina,Other,farm_site_boundary,0.9847350339969322
+7,Argentina,Other,field,2.9542051019907962
+8,Argentina,Other,garden,2.8447900982133594
+9,Argentina,Other,greenhouse,1.094150037774369
+10,Argentina,Other,natural_area,0.2188300075548738
+11,Argentina,Other,residence,0.5470750188871845
+12,Argentina,Other,surface_water,0.5470750188871845
+13,Brazil,Larisse Local,barn,2.7197289226596357
+14,Brazil,Larisse Local,ceremonial_area,5.4394578453192715
+15,Brazil,Larisse Local,farm_site_boundary,19.038102458617452
+16,Brazil,Larisse Local,field,48.95512060787345
+17,Brazil,Larisse Local,garden,24.477560303936723
+18,Brazil,Larisse Local,greenhouse,13.59864461329818
+19,Brazil,Larisse Local,natural_area,8.159186767978907
+20,Brazil,Larisse Local,residence,5.4394578453192715
+21,Brazil,Larisse Local,surface_water,10.878915690638543
+22,Brazil,Larisse Local & SPG 2023,barn,3.028991267420286
+23,Brazil,Larisse Local & SPG 2023,farm_site_boundary,2.7765753284685952
+24,Brazil,Larisse Local & SPG 2023,field,2.019327511613524
+25,Brazil,Larisse Local & SPG 2023,garden,13.630460703391286
+26,Brazil,Larisse Local & SPG 2023,greenhouse,0.8834557863309167
+27,Brazil,Larisse Local & SPG 2023,natural_area,3.155199236896131
+28,Brazil,Larisse Local & SPG 2023,residence,2.145535481089369
+29,Brazil,Larisse Local & SPG 2023,surface_water,2.3979514200410597
+30,Brazil,Other,barn,1.8025841857865947
+31,Brazil,Other,ceremonial_area,0.6554851584678526
+32,Brazil,Other,farm_site_boundary,5.735495136593711
+33,Brazil,Other,field,12.740992767718884
+34,Brazil,Other,garden,7.128401098337897
+35,Brazil,Other,greenhouse,1.3929059617441868
+36,Brazil,Other,natural_area,2.171294587424762
+37,Brazil,Other,residence,4.506460464466487
+38,Brazil,Other,surface_water,3.5232327267647077
+39,Brazil,SPG 2023,barn,2.584769960107897
+40,Brazil,SPG 2023,farm_site_boundary,6.097406059741704
+41,Brazil,SPG 2023,field,19.15380816592775
+42,Brazil,SPG 2023,garden,3.3138076411639705
+43,Brazil,SPG 2023,greenhouse,2.2533891959915
+44,Brazil,SPG 2023,natural_area,8.615899867026322
+45,Brazil,SPG 2023,residence,3.1812553355174114
+46,Brazil,SPG 2023,surface_water,2.982426877047573

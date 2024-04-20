@@ -30,9 +30,9 @@ def connect_to_postgres(ssh_tunnel, db_user, db_password, db_name):
 
 if __name__ == "__main__":
 
-    SSH_HOST = 'app.litefarm.org'
-    SSH_PORT = 22
-    SSH_USER = 'litefarm'
+    SSH_HOST     = 'app.litefarm.org'
+    SSH_PORT     = 22
+    SSH_USER     = 'litefarm'
     SSH_KEY_PATH = '/home/rtviii/.ssh/litefarm_rsa'
 
     REMOTE_HOST = 'app.litefarm.org'

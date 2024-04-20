@@ -198,9 +198,7 @@ def expand_grid_points_coordinates(data, col="grid_points", expand=False):
         # Might be useful later for areas or lines with a list of points instead of a single point
         raise NotImplementedError("Todo")
     else:
-        return pd.json_normalize(json_struct).rename(
-            columns={"parsed_json.lat": "lat", "parsed_json.lng": "lon"}
-        )
+        return pd.json_normalize(json_struct).rename( columns={"parsed_json.lat": "lat", "parsed_json.lng": "lon"} )
 
 
 if __name__ == "__main__":
